@@ -1,0 +1,40 @@
+\begin{thebibliography}{7}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[{Kreuz et~al.(2009)Kreuz, Chicharro, Andrzejak, Haas, and
+  Abarbanel}]{Kreuz09}
+Kreuz, T., Chicharro, D., Andrzejak, R.~G., Haas, J.~S., Abarbanel, H. D.~I.,
+  2009. Measuring multiple spike train synchrony. J Neurosci Methods 183, 287.
+
+\bibitem[{Kreuz et~al.(2011)Kreuz, Chicharro, Greschner, and
+  Andrzejak}]{Kreuz11}
+Kreuz, T., Chicharro, D., Greschner, M., Andrzejak, R.~G., 2011. Time-resolved
+  and time-scale adaptive measures of spike train synchrony. J Neurosci Methods
+  195, 92.
+
+\bibitem[{Kreuz et~al.(2013)Kreuz, Chicharro, Houghton, Andrzejak, and
+  Mormann}]{Kreuz13}
+Kreuz, T., Chicharro, D., Houghton, C., Andrzejak, R.~G., Mormann, F., 2013.
+  Monitoring spike train synchrony. J Neurophysiology 109, 1457.
+
+\bibitem[{Kreuz et~al.(2007)Kreuz, Haas, Morelli, Abarbanel, and
+  Politi}]{Kreuz07c}
+Kreuz, T., Haas, J.~S., Morelli, A., Abarbanel, H. D.~I., Politi, A., 2007.
+  Measuring spike train synchrony. J Neurosci Methods 165, 151.
+
+\bibitem[{Rusu and Florian(2014)}]{Rusu14}
+Rusu, C.~V., Florian, R.~V., 2014. A new class of metrics for spike trains.
+  Neural Computation 26~(2), 306--348.
+
+\bibitem[{{van Rossum}(2001)}]{VanRossum01}
+{van Rossum}, M. C.~W., 2001. A novel spike distance. Neural Computation 13,
+  751.
+
+\bibitem[{Victor and Purpura(1996)}]{Victor96}
+Victor, J.~D., Purpura, K.~P., 1996. Nature and precision of temporal coding in
+  visual cortex: A metric-space analysis. J Neurophysiol 76, 1310.
+
+\end{thebibliography}

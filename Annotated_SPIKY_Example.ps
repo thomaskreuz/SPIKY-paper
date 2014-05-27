@@ -1,0 +1,2652 @@
+%!PS-Adobe-2.0 
+%%Creator: MATLAB, The Mathworks, Inc. Version 7.5.0.342 (R2007b). Operating System: Microsoft Windows XP.
+%%Title: .\Annotated SPIKY Example.ps
+%%CreationDate: 03/16/2013  00:05:37
+%%DocumentNeededFonts: Helvetica
+%%+ Helvetica-Bold
+%%DocumentProcessColors: Cyan Magenta Yellow Black
+%%Extensions: CMYK
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+
+%%BeginProlog
+% MathWorks dictionary
+/MathWorks 160 dict begin
+% definition operators
+/bdef {bind def} bind def
+/ldef {load def} bind def
+/xdef {exch def} bdef
+/xstore {exch store} bdef
+% operator abbreviations
+/c  /clip ldef
+/cc /concat ldef
+/cp /closepath ldef
+/gr /grestore ldef
+/gs /gsave ldef
+/mt /moveto ldef
+/np /newpath ldef
+/cm /currentmatrix ldef
+/sm /setmatrix ldef
+/rm /rmoveto ldef
+/rl /rlineto ldef
+/s {show newpath} bdef
+/sc {setcmykcolor} bdef
+/sr /setrgbcolor ldef
+/sg /setgray ldef
+/w /setlinewidth ldef
+/j /setlinejoin ldef
+/cap /setlinecap ldef
+/rc {rectclip} bdef
+/rf {rectfill} bdef
+% page state control
+/pgsv () def
+/bpage {/pgsv save def} bdef
+/epage {pgsv restore} bdef
+/bplot /gsave ldef
+/eplot {stroke grestore} bdef
+% orientation switch
+/portraitMode 0 def /landscapeMode 1 def /rotateMode 2 def
+% coordinate system mappings
+/dpi2point 0 def
+% font control
+/FontSize 0 def
+/FMS {/FontSize xstore findfont [FontSize 0 0 FontSize neg 0 0]
+  makefont setfont} bdef
+/ISOLatin1Encoding where {pop /WindowsLatin1Encoding 256 array bdef
+ISOLatin1Encoding WindowsLatin1Encoding copy pop
+/.notdef/.notdef/quotesinglbase/florin/quotedblbase/ellipsis/dagger
+/daggerdbl/circumflex/perthousand/Scaron/guilsinglleft/OE/.notdef/.notdef
+/.notdef/.notdef/quoteleft/quoteright/quotedblleft/quotedblright/bullet
+/endash/emdash/tilde/trademark/scaron/guilsinglright/oe/.notdef/.notdef
+/Ydieresis WindowsLatin1Encoding 128 32 getinterval astore pop}
+{/WindowsLatin1Encoding StandardEncoding bdef} ifelse
+/reencode {exch dup where {pop load} {pop StandardEncoding} ifelse
+  exch dup 3 1 roll findfont dup length dict begin
+  { 1 index /FID ne {def}{pop pop} ifelse } forall
+  /Encoding exch def currentdict end definefont pop} bdef
+/isroman {findfont /CharStrings get /Agrave known} bdef
+/FMSR {3 1 roll 1 index dup isroman {reencode} {pop pop} ifelse
+  exch FMS} bdef
+/csm {1 dpi2point div -1 dpi2point div scale neg translate
+ dup landscapeMode eq {pop -90 rotate}
+  {rotateMode eq {90 rotate} if} ifelse} bdef
+% line types: solid, dotted, dashed, dotdash
+/SO { [] 0 setdash } bdef
+/DO { [.5 dpi2point mul 4 dpi2point mul] 0 setdash } bdef
+/DA { [6 dpi2point mul] 0 setdash } bdef
+/DD { [.5 dpi2point mul 4 dpi2point mul 6 dpi2point mul 4
+  dpi2point mul] 0 setdash } bdef
+% macros for lines and objects
+/L {lineto stroke} bdef
+/MP {3 1 roll moveto 1 sub {rlineto} repeat} bdef
+/AP {{rlineto} repeat} bdef
+/PDlw -1 def
+/W {/PDlw currentlinewidth def setlinewidth} def
+/PP {closepath eofill} bdef
+/DP {closepath stroke} bdef
+/MR {4 -2 roll moveto dup  0 exch rlineto exch 0 rlineto
+  neg 0 exch rlineto closepath} bdef
+/FR {MR stroke} bdef
+/PR {MR fill} bdef
+/L1i {{currentfile picstr readhexstring pop} image} bdef
+/tMatrix matrix def
+/MakeOval {newpath tMatrix currentmatrix pop translate scale
+0 0 1 0 360 arc tMatrix setmatrix} bdef
+/FO {MakeOval stroke} bdef
+/PO {MakeOval fill} bdef
+/PD {currentlinewidth 2 div 0 360 arc fill
+   PDlw -1 eq not {PDlw w /PDlw -1 def} if} def
+/FA {newpath tMatrix currentmatrix pop translate scale
+  0 0 1 5 -2 roll arc tMatrix setmatrix stroke} bdef
+/PA {newpath tMatrix currentmatrix pop	translate 0 0 moveto scale
+  0 0 1 5 -2 roll arc closepath tMatrix setmatrix fill} bdef
+/FAn {newpath tMatrix currentmatrix pop translate scale
+  0 0 1 5 -2 roll arcn tMatrix setmatrix stroke} bdef
+/PAn {newpath tMatrix currentmatrix pop translate 0 0 moveto scale
+  0 0 1 5 -2 roll arcn closepath tMatrix setmatrix fill} bdef
+/vradius 0 def /hradius 0 def /lry 0 def
+/lrx 0 def /uly 0 def /ulx 0 def /rad 0 def
+/MRR {/vradius xdef /hradius xdef /lry xdef /lrx xdef /uly xdef
+  /ulx xdef newpath tMatrix currentmatrix pop ulx hradius add uly
+  vradius add translate hradius vradius scale 0 0 1 180 270 arc 
+  tMatrix setmatrix lrx hradius sub uly vradius add translate
+  hradius vradius scale 0 0 1 270 360 arc tMatrix setmatrix
+  lrx hradius sub lry vradius sub translate hradius vradius scale
+  0 0 1 0 90 arc tMatrix setmatrix ulx hradius add lry vradius sub
+  translate hradius vradius scale 0 0 1 90 180 arc tMatrix setmatrix
+  closepath} bdef
+/FRR {MRR stroke } bdef
+/PRR {MRR fill } bdef
+/MlrRR {/lry xdef /lrx xdef /uly xdef /ulx xdef /rad lry uly sub 2 div def
+  newpath tMatrix currentmatrix pop ulx rad add uly rad add translate
+  rad rad scale 0 0 1 90 270 arc tMatrix setmatrix lrx rad sub lry rad
+  sub translate rad rad scale 0 0 1 270 90 arc tMatrix setmatrix
+  closepath} bdef
+/FlrRR {MlrRR stroke } bdef
+/PlrRR {MlrRR fill } bdef
+/MtbRR {/lry xdef /lrx xdef /uly xdef /ulx xdef /rad lrx ulx sub 2 div def
+  newpath tMatrix currentmatrix pop ulx rad add uly rad add translate
+  rad rad scale 0 0 1 180 360 arc tMatrix setmatrix lrx rad sub lry rad
+  sub translate rad rad scale 0 0 1 0 180 arc tMatrix setmatrix
+  closepath} bdef
+/FtbRR {MtbRR stroke } bdef
+/PtbRR {MtbRR fill } bdef
+/stri 6 array def /dtri 6 array def
+/smat 6 array def /dmat 6 array def
+/tmat1 6 array def /tmat2 6 array def /dif 3 array def
+/asub {/ind2 exch def /ind1 exch def dup dup
+  ind1 get exch ind2 get sub exch } bdef
+/tri_to_matrix {
+  2 0 asub 3 1 asub 4 0 asub 5 1 asub
+  dup 0 get exch 1 get 7 -1 roll astore } bdef
+/compute_transform {
+  dmat dtri tri_to_matrix tmat1 invertmatrix 
+  smat stri tri_to_matrix tmat2 concatmatrix } bdef
+/ds {stri astore pop} bdef
+/dt {dtri astore pop} bdef
+/db {2 copy /cols xdef /rows xdef mul dup 3 mul string
+  currentfile exch readhexstring pop
+  dup 0 3 index getinterval /rbmap xdef
+  dup 2 index dup getinterval /gbmap xdef
+  1 index dup 2 mul exch getinterval /bbmap xdef pop pop}bdef
+/it {gs np dtri aload pop moveto lineto lineto cp c
+  cols rows 8 compute_transform 
+  rbmap gbmap bbmap true 3 colorimage gr}bdef
+/il {newpath moveto lineto stroke}bdef
+currentdict end def
+%%EndProlog
+
+%%BeginSetup
+MathWorks begin
+
+0 cap
+
+end
+%%EndSetup
+
+%%Page: 1 1
+%%BeginPageSetup
+%%PageBoundingBox:    -4     0   595   832
+MathWorks begin
+bpage
+%%EndPageSetup
+
+%%BeginObject: obj1
+bplot
+
+/dpi2point 12 def
+landscapeMode 0000 0000 csm
+
+    0   -48  9990  7191 MR c np
+90 dict begin %Colortable dictionary
+/c0 { 0.000000 0.000000 0.000000 sr} bdef
+/c1 { 1.000000 1.000000 1.000000 sr} bdef
+/c2 { 0.900000 0.000000 0.000000 sr} bdef
+/c3 { 0.000000 0.820000 0.000000 sr} bdef
+/c4 { 0.000000 0.000000 0.800000 sr} bdef
+/c5 { 0.910000 0.820000 0.320000 sr} bdef
+/c6 { 1.000000 0.260000 0.820000 sr} bdef
+/c7 { 0.000000 0.820000 0.820000 sr} bdef
+c0
+1 j
+1 sg
+   0    0 10103 7144 PR
+6 w
+0 2072 8586 0 0 -2072 758 2429 4 MP
+PP
+-8586 0 0 2072 8586 0 0 -2072 758 2429 5 MP stroke
+4 w
+DO
+SO
+6 w
+0 sg
+ 758  357 mt 9344  357 L
+ 758 2429 mt 9344 2429 L
+9344 2429 mt 9344  357 L
+ 758 2429 mt  758  357 L
+ 758 2429 mt 9344 2429 L
+ 758 2429 mt  758  357 L
+ 923 2429 mt  923 2343 L
+ 923  357 mt  923  442 L
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 120 FMSR
+
+ 890 2574 mt 
+(0) s
+1955 2429 mt 1955 2343 L
+1955  357 mt 1955  442 L
+1855 2574 mt 
+(500) s
+2987 2429 mt 2987 2343 L
+2987  357 mt 2987  442 L
+2854 2574 mt 
+(1000) s
+4019 2429 mt 4019 2343 L
+4019  357 mt 4019  442 L
+3886 2574 mt 
+(1500) s
+5051 2429 mt 5051 2343 L
+5051  357 mt 5051  442 L
+4918 2574 mt 
+(2000) s
+6082 2429 mt 6082 2343 L
+6082  357 mt 6082  442 L
+5949 2574 mt 
+(2500) s
+7114 2429 mt 7114 2343 L
+7114  357 mt 7114  442 L
+6981 2574 mt 
+(3000) s
+8146 2429 mt 8146 2343 L
+8146  357 mt 8146  442 L
+8013 2574 mt 
+(3500) s
+9178 2429 mt 9178 2343 L
+9178  357 mt 9178  442 L
+9045 2574 mt 
+(4000) s
+ 758 2189 mt  843 2189 L
+9344 2189 mt 9258 2189 L
+ 590 2233 mt 
+(40) s
+ 758 1791 mt  843 1791 L
+9344 1791 mt 9258 1791 L
+ 590 1835 mt 
+(30) s
+ 758 1393 mt  843 1393 L
+9344 1393 mt 9258 1393 L
+ 590 1437 mt 
+(20) s
+ 758  994 mt  843  994 L
+9344  994 mt 9258  994 L
+ 590 1038 mt 
+(10) s
+ 758  357 mt 9344  357 L
+ 758 2429 mt 9344 2429 L
+9344 2429 mt 9344  357 L
+ 758 2429 mt  758  357 L
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 156 FMSR
+
+4708 2743 mt 
+(Time [ms]) s
+gs 758 357 8587 2073 MR c np
+0 -35 1053 633 2 MP stroke
+0 -35 1575 633 2 MP stroke
+0 -35 2341 633 2 MP stroke
+0 -35 2867 633 2 MP stroke
+0 -35 3102 633 2 MP stroke
+0 -35 3622 633 2 MP stroke
+0 -35 4471 633 2 MP stroke
+0 -35 4910 633 2 MP stroke
+0 -35 5292 633 2 MP stroke
+0 -35 5822 633 2 MP stroke
+0 -35 6543 633 2 MP stroke
+0 -35 7030 633 2 MP stroke
+0 -35 7571 633 2 MP stroke
+0 -35 8091 633 2 MP stroke
+0 -35 8435 633 2 MP stroke
+0 -35 8997 633 2 MP stroke
+0 -36 1075 673 2 MP stroke
+0 -36 1581 673 2 MP stroke
+0 -36 2355 673 2 MP stroke
+0 -36 2863 673 2 MP stroke
+0 -36 3117 673 2 MP stroke
+0 -36 3626 673 2 MP stroke
+0 -36 4427 673 2 MP stroke
+0 -36 4943 673 2 MP stroke
+0 -36 5286 673 2 MP stroke
+0 -36 5841 673 2 MP stroke
+0 -36 6539 673 2 MP stroke
+0 -36 7032 673 2 MP stroke
+0 -36 7573 673 2 MP stroke
+0 -36 8087 673 2 MP stroke
+0 -36 8466 673 2 MP stroke
+0 -36 8749 673 2 MP stroke
+0 -36 1065 713 2 MP stroke
+0 -36 1577 713 2 MP stroke
+0 -36 2359 713 2 MP stroke
+0 -36 2846 713 2 MP stroke
+0 -36 3110 713 2 MP stroke
+0 -36 3655 713 2 MP stroke
+0 -36 4171 713 2 MP stroke
+0 -36 4716 713 2 MP stroke
+0 -36 5300 713 2 MP stroke
+0 -36 5866 713 2 MP stroke
+0 -36 6563 713 2 MP stroke
+0 -36 7032 713 2 MP stroke
+0 -36 7585 713 2 MP stroke
+0 -36 8080 713 2 MP stroke
+0 -36 8268 713 2 MP stroke
+0 -36 8877 713 2 MP stroke
+0 -36 1057 753 2 MP stroke
+0 -36 1589 753 2 MP stroke
+0 -36 2349 753 2 MP stroke
+0 -36 2863 753 2 MP stroke
+0 -36 3098 753 2 MP stroke
+0 -36 3659 753 2 MP stroke
+0 -36 4409 753 2 MP stroke
+0 -36 4927 753 2 MP stroke
+0 -36 5337 753 2 MP stroke
+0 -36 5864 753 2 MP stroke
+0 -36 6512 753 2 MP stroke
+0 -36 7053 753 2 MP stroke
+0 -36 7577 753 2 MP stroke
+0 -36 8091 753 2 MP stroke
+0 -36 8252 753 2 MP stroke
+0 -36 8896 753 2 MP stroke
+0 -36 1038 793 2 MP stroke
+0 -36 1587 793 2 MP stroke
+0 -36 2355 793 2 MP stroke
+0 -36 2873 793 2 MP stroke
+0 -36 3164 793 2 MP stroke
+0 -36 3610 793 2 MP stroke
+0 -36 4163 793 2 MP stroke
+0 -36 4698 793 2 MP stroke
+0 -36 5304 793 2 MP stroke
+0 -36 5818 793 2 MP stroke
+0 -36 6530 793 2 MP stroke
+0 -36 7048 793 2 MP stroke
+0 -36 7575 793 2 MP stroke
+0 -36 8095 793 2 MP stroke
+0 -36 8565 793 2 MP stroke
+0 -36 8706 793 2 MP stroke
+0 -36 1055 833 2 MP stroke
+0 -36 1589 833 2 MP stroke
+0 -36 2351 833 2 MP stroke
+0 -36 2852 833 2 MP stroke
+0 -36 3139 833 2 MP stroke
+0 -36 3649 833 2 MP stroke
+0 -36 4173 833 2 MP stroke
+0 -36 4623 833 2 MP stroke
+0 -36 5282 833 2 MP stroke
+0 -36 5812 833 2 MP stroke
+0 -36 6557 833 2 MP stroke
+0 -36 7059 833 2 MP stroke
+0 -36 7509 833 2 MP stroke
+0 -36 8029 833 2 MP stroke
+0 -36 8411 833 2 MP stroke
+0 -36 9032 833 2 MP stroke
+0 -36 1067 873 2 MP stroke
+0 -36 1567 873 2 MP stroke
+0 -36 2345 873 2 MP stroke
+0 -36 2846 873 2 MP stroke
+0 -36 3129 873 2 MP stroke
+0 -36 3626 873 2 MP stroke
+0 -36 4169 873 2 MP stroke
+0 -36 4700 873 2 MP stroke
+0 -36 5311 873 2 MP stroke
+0 -36 5818 873 2 MP stroke
+0 -36 6528 873 2 MP stroke
+0 -36 7055 873 2 MP stroke
+0 -36 7525 873 2 MP stroke
+0 -36 8033 873 2 MP stroke
+0 -36 8433 873 2 MP stroke
+0 -36 8788 873 2 MP stroke
+0 -36 1071 912 2 MP stroke
+0 -36 1581 912 2 MP stroke
+0 -36 2353 912 2 MP stroke
+0 -36 2865 912 2 MP stroke
+0 -36 3152 912 2 MP stroke
+0 -36 3628 912 2 MP stroke
+0 -36 4132 912 2 MP stroke
+0 -36 4650 912 2 MP stroke
+0 -36 5315 912 2 MP stroke
+0 -36 5882 912 2 MP stroke
+0 -36 6526 912 2 MP stroke
+0 -36 7069 912 2 MP stroke
+0 -36 7515 912 2 MP stroke
+0 -36 8033 912 2 MP stroke
+0 -36 8328 912 2 MP stroke
+0 -36 8790 912 2 MP stroke
+0 -36 1046 952 2 MP stroke
+0 -36 1575 952 2 MP stroke
+0 -36 2336 952 2 MP stroke
+0 -36 2877 952 2 MP stroke
+0 -36 3139 952 2 MP stroke
+0 -36 3620 952 2 MP stroke
+0 -36 4394 952 2 MP stroke
+0 -36 4887 952 2 MP stroke
+0 -36 5346 952 2 MP stroke
+0 -36 5839 952 2 MP stroke
+0 -36 6547 952 2 MP stroke
+0 -36 7063 952 2 MP stroke
+0 -36 7519 952 2 MP stroke
+0 -36 8031 952 2 MP stroke
+0 -36 8297 952 2 MP stroke
+0 -36 8982 952 2 MP stroke
+0 -36 1049 992 2 MP stroke
+0 -36 1562 992 2 MP stroke
+0 -36 2386 992 2 MP stroke
+0 -36 2865 992 2 MP stroke
+0 -36 3100 992 2 MP stroke
+0 -36 3645 992 2 MP stroke
+0 -36 4415 992 2 MP stroke
+0 -36 4968 992 2 MP stroke
+0 -36 5288 992 2 MP stroke
+0 -36 5808 992 2 MP stroke
+0 -36 6524 992 2 MP stroke
+0 -36 7040 992 2 MP stroke
+0 -36 7509 992 2 MP stroke
+0 -36 8033 992 2 MP stroke
+0 -36 8272 992 2 MP stroke
+0 -36 8885 992 2 MP stroke
+0 -36 1053 1032 2 MP stroke
+0 -36 1560 1032 2 MP stroke
+0 -36 2054 1032 2 MP stroke
+0 -36 2632 1032 2 MP stroke
+0 -36 3356 1032 2 MP stroke
+0 -36 3907 1032 2 MP stroke
+0 -36 4161 1032 2 MP stroke
+0 -36 4667 1032 2 MP stroke
+0 -36 5191 1032 2 MP stroke
+0 -36 5723 1032 2 MP stroke
+0 -36 6407 1032 2 MP stroke
+0 -36 6918 1032 2 MP stroke
+0 -36 7447 1032 2 MP stroke
+0 -36 7969 1032 2 MP stroke
+0 -36 8520 1032 2 MP stroke
+0 -36 9139 1032 2 MP stroke
+0 -36 1065 1072 2 MP stroke
+0 -36 1575 1072 2 MP stroke
+0 -36 2045 1072 2 MP stroke
+0 -36 2625 1072 2 MP stroke
+0 -36 3370 1072 2 MP stroke
+0 -36 3907 1072 2 MP stroke
+0 -36 4398 1072 2 MP stroke
+0 -36 4978 1072 2 MP stroke
+0 -36 5185 1072 2 MP stroke
+0 -36 5688 1072 2 MP stroke
+0 -36 6398 1072 2 MP stroke
+0 -36 6935 1072 2 MP stroke
+0 -36 7461 1072 2 MP stroke
+0 -36 7981 1072 2 MP stroke
+0 -36 8312 1072 2 MP stroke
+0 -36 9152 1072 2 MP stroke
+0 -36 1071 1112 2 MP stroke
+0 -36 1575 1112 2 MP stroke
+0 -36 2118 1112 2 MP stroke
+0 -36 2621 1112 2 MP stroke
+0 -36 3366 1112 2 MP stroke
+0 -36 3932 1112 2 MP stroke
+0 -36 4365 1112 2 MP stroke
+0 -36 4958 1112 2 MP stroke
+0 -36 5205 1112 2 MP stroke
+0 -36 5694 1112 2 MP stroke
+0 -36 6398 1112 2 MP stroke
+0 -36 6922 1112 2 MP stroke
+0 -36 7469 1112 2 MP stroke
+0 -36 7977 1112 2 MP stroke
+0 -36 8324 1112 2 MP stroke
+0 -36 8904 1112 2 MP stroke
+0 -35 1042 1151 2 MP stroke
+0 -35 1587 1151 2 MP stroke
+0 -35 2109 1151 2 MP stroke
+0 -35 2603 1151 2 MP stroke
+0 -35 3331 1151 2 MP stroke
+0 -35 3891 1151 2 MP stroke
+0 -35 4157 1151 2 MP stroke
+0 -35 4648 1151 2 MP stroke
+0 -35 5187 1151 2 MP stroke
+0 -35 5670 1151 2 MP stroke
+0 -35 6404 1151 2 MP stroke
+0 -35 6900 1151 2 MP stroke
+0 -35 7457 1151 2 MP stroke
+0 -35 7977 1151 2 MP stroke
+0 -35 8578 1151 2 MP stroke
+0 -35 8776 1151 2 MP stroke
+0 -36 1055 1191 2 MP stroke
+0 -36 1585 1191 2 MP stroke
+0 -36 2093 1191 2 MP stroke
+0 -36 2615 1191 2 MP stroke
+0 -36 3366 1191 2 MP stroke
+0 -36 3889 1191 2 MP stroke
+0 -36 4425 1191 2 MP stroke
+0 -36 4927 1191 2 MP stroke
+0 -36 5164 1191 2 MP stroke
+0 -36 5719 1191 2 MP stroke
+0 -36 6402 1191 2 MP stroke
+0 -36 6922 1191 2 MP stroke
+0 -36 7453 1191 2 MP stroke
+0 -36 7971 1191 2 MP stroke
+0 -36 8600 1191 2 MP stroke
+0 -36 8695 1191 2 MP stroke
+0 -36 1059 1231 2 MP stroke
+0 -36 1577 1231 2 MP stroke
+0 -36 2091 1231 2 MP stroke
+0 -36 2599 1231 2 MP stroke
+0 -36 3366 1231 2 MP stroke
+0 -36 3866 1231 2 MP stroke
+0 -36 4184 1231 2 MP stroke
+0 -36 4667 1231 2 MP stroke
+0 -36 5168 1231 2 MP stroke
+0 -36 5709 1231 2 MP stroke
+0 -36 6411 1231 2 MP stroke
+0 -36 6953 1231 2 MP stroke
+0 -36 7403 1231 2 MP stroke
+0 -36 7909 1231 2 MP stroke
+0 -36 8404 1231 2 MP stroke
+0 -36 9112 1231 2 MP stroke
+0 -36 1063 1271 2 MP stroke
+0 -36 1550 1271 2 MP stroke
+0 -36 2089 1271 2 MP stroke
+0 -36 2605 1271 2 MP stroke
+0 -36 3397 1271 2 MP stroke
+0 -36 3909 1271 2 MP stroke
+0 -36 4144 1271 2 MP stroke
+0 -36 4660 1271 2 MP stroke
+0 -36 5197 1271 2 MP stroke
+0 -36 5694 1271 2 MP stroke
+0 -36 6425 1271 2 MP stroke
+0 -36 6927 1271 2 MP stroke
+0 -36 7403 1271 2 MP stroke
+0 -36 7915 1271 2 MP stroke
+0 -36 8167 1271 2 MP stroke
+0 -36 8885 1271 2 MP stroke
+0 -36 1063 1311 2 MP stroke
+0 -36 1585 1311 2 MP stroke
+0 -36 2085 1311 2 MP stroke
+0 -36 2609 1311 2 MP stroke
+0 -36 3385 1311 2 MP stroke
+0 -36 3878 1311 2 MP stroke
+0 -36 4384 1311 2 MP stroke
+0 -36 4920 1311 2 MP stroke
+0 -36 5197 1311 2 MP stroke
+0 -36 5723 1311 2 MP stroke
+0 -36 6411 1311 2 MP stroke
+0 -36 6937 1311 2 MP stroke
+0 -36 7401 1311 2 MP stroke
+0 -36 7909 1311 2 MP stroke
+0 -36 8487 1311 2 MP stroke
+0 -36 8937 1311 2 MP stroke
+0 -36 1082 1351 2 MP stroke
+0 -36 1579 1351 2 MP stroke
+0 -36 2116 1351 2 MP stroke
+0 -36 2627 1351 2 MP stroke
+0 -36 3385 1351 2 MP stroke
+0 -36 3899 1351 2 MP stroke
+0 -36 4421 1351 2 MP stroke
+0 -36 4968 1351 2 MP stroke
+0 -36 5178 1351 2 MP stroke
+0 -36 5699 1351 2 MP stroke
+0 -36 6415 1351 2 MP stroke
+0 -36 6912 1351 2 MP stroke
+0 -36 7408 1351 2 MP stroke
+0 -36 7911 1351 2 MP stroke
+0 -36 8361 1351 2 MP stroke
+0 -36 9172 1351 2 MP stroke
+0 -36 1073 1391 2 MP stroke
+0 -36 1573 1391 2 MP stroke
+0 -36 2103 1391 2 MP stroke
+0 -36 2590 1391 2 MP stroke
+0 -36 3373 1391 2 MP stroke
+0 -36 3893 1391 2 MP stroke
+0 -36 4384 1391 2 MP stroke
+0 -36 4993 1391 2 MP stroke
+0 -36 5178 1391 2 MP stroke
+0 -36 5736 1391 2 MP stroke
+0 -36 6437 1391 2 MP stroke
+0 -36 6927 1391 2 MP stroke
+0 -36 7399 1391 2 MP stroke
+0 -36 7917 1391 2 MP stroke
+0 -36 8547 1391 2 MP stroke
+0 -36 9005 1391 2 MP stroke
+0 -36 1302 1430 2 MP stroke
+0 -36 1831 1430 2 MP stroke
+0 -36 2072 1430 2 MP stroke
+0 -36 2601 1430 2 MP stroke
+0 -36 3131 1430 2 MP stroke
+0 -36 3614 1430 2 MP stroke
+0 -36 4140 1430 2 MP stroke
+0 -36 4689 1430 2 MP stroke
+0 -36 5189 1430 2 MP stroke
+0 -36 5680 1430 2 MP stroke
+0 -36 6312 1430 2 MP stroke
+0 -36 6792 1430 2 MP stroke
+0 -36 7344 1430 2 MP stroke
+0 -36 7868 1430 2 MP stroke
+0 -36 8274 1430 2 MP stroke
+0 -36 9094 1430 2 MP stroke
+0 -36 1307 1470 2 MP stroke
+0 -36 1816 1470 2 MP stroke
+0 -36 2074 1470 2 MP stroke
+0 -36 2605 1470 2 MP stroke
+0 -36 3104 1470 2 MP stroke
+0 -36 3631 1470 2 MP stroke
+0 -36 4144 1470 2 MP stroke
+0 -36 4683 1470 2 MP stroke
+0 -36 5216 1470 2 MP stroke
+0 -36 5705 1470 2 MP stroke
+0 -36 6272 1470 2 MP stroke
+0 -36 6813 1470 2 MP stroke
+0 -36 7339 1470 2 MP stroke
+0 -36 7862 1470 2 MP stroke
+0 -36 8530 1470 2 MP stroke
+0 -36 8768 1470 2 MP stroke
+0 -36 1327 1510 2 MP stroke
+0 -36 1833 1510 2 MP stroke
+0 -36 2087 1510 2 MP stroke
+0 -36 2629 1510 2 MP stroke
+0 -36 3129 1510 2 MP stroke
+0 -36 3645 1510 2 MP stroke
+0 -36 4392 1510 2 MP stroke
+0 -36 4927 1510 2 MP stroke
+0 -36 5187 1510 2 MP stroke
+0 -36 5682 1510 2 MP stroke
+0 -36 6299 1510 2 MP stroke
+0 -36 6782 1510 2 MP stroke
+0 -36 7350 1510 2 MP stroke
+0 -36 7857 1510 2 MP stroke
+0 -36 8402 1510 2 MP stroke
+0 -36 9017 1510 2 MP stroke
+0 -36 1315 1550 2 MP stroke
+0 -36 1825 1550 2 MP stroke
+0 -36 2122 1550 2 MP stroke
+0 -36 2611 1550 2 MP stroke
+0 -36 3112 1550 2 MP stroke
+0 -36 3600 1550 2 MP stroke
+0 -36 4392 1550 2 MP stroke
+0 -36 4916 1550 2 MP stroke
+0 -36 5232 1550 2 MP stroke
+0 -36 5711 1550 2 MP stroke
+0 -36 6268 1550 2 MP stroke
+0 -36 6786 1550 2 MP stroke
+0 -36 7344 1550 2 MP stroke
+0 -36 7855 1550 2 MP stroke
+0 -36 8301 1550 2 MP stroke
+0 -36 8906 1550 2 MP stroke
+0 -36 1317 1590 2 MP stroke
+0 -36 1839 1590 2 MP stroke
+0 -36 2072 1590 2 MP stroke
+0 -36 2615 1590 2 MP stroke
+0 -36 3123 1590 2 MP stroke
+0 -36 3637 1590 2 MP stroke
+0 -36 4402 1590 2 MP stroke
+0 -36 4865 1590 2 MP stroke
+0 -36 5195 1590 2 MP stroke
+0 -36 5655 1590 2 MP stroke
+0 -36 6289 1590 2 MP stroke
+0 -36 6792 1590 2 MP stroke
+0 -36 7341 1590 2 MP stroke
+0 -36 7874 1590 2 MP stroke
+0 -36 8202 1590 2 MP stroke
+0 -36 9094 1590 2 MP stroke
+0 -36 1313 1630 2 MP stroke
+0 -36 1831 1630 2 MP stroke
+0 -36 2097 1630 2 MP stroke
+0 -36 2607 1630 2 MP stroke
+0 -36 3115 1630 2 MP stroke
+0 -36 3600 1630 2 MP stroke
+0 -36 4388 1630 2 MP stroke
+0 -36 4883 1630 2 MP stroke
+0 -36 5195 1630 2 MP stroke
+0 -36 5709 1630 2 MP stroke
+0 -36 6266 1630 2 MP stroke
+0 -36 6790 1630 2 MP stroke
+0 -36 7294 1630 2 MP stroke
+0 -36 7804 1630 2 MP stroke
+0 -36 8167 1630 2 MP stroke
+0 -36 8869 1630 2 MP stroke
+0 -35 1321 1669 2 MP stroke
+0 -35 1837 1669 2 MP stroke
+0 -35 2074 1669 2 MP stroke
+0 -35 2574 1669 2 MP stroke
+0 -35 3090 1669 2 MP stroke
+0 -35 3647 1669 2 MP stroke
+0 -35 4386 1669 2 MP stroke
+0 -35 4941 1669 2 MP stroke
+0 -35 5199 1669 2 MP stroke
+0 -35 5697 1669 2 MP stroke
+0 -35 6241 1669 2 MP stroke
+0 -35 6819 1669 2 MP stroke
+0 -35 7296 1669 2 MP stroke
+0 -35 7798 1669 2 MP stroke
+0 -35 8380 1669 2 MP stroke
+0 -35 9042 1669 2 MP stroke
+0 -36 1317 1709 2 MP stroke
+0 -36 1835 1709 2 MP stroke
+0 -36 2083 1709 2 MP stroke
+0 -36 2615 1709 2 MP stroke
+0 -36 3129 1709 2 MP stroke
+0 -36 3600 1709 2 MP stroke
+0 -36 4120 1709 2 MP stroke
+0 -36 4665 1709 2 MP stroke
+0 -36 5224 1709 2 MP stroke
+0 -36 5686 1709 2 MP stroke
+0 -36 6270 1709 2 MP stroke
+0 -36 6784 1709 2 MP stroke
+0 -36 7290 1709 2 MP stroke
+0 -36 7806 1709 2 MP stroke
+0 -36 8590 1709 2 MP stroke
+0 -36 8840 1709 2 MP stroke
+0 -36 1331 1749 2 MP stroke
+0 -36 1804 1749 2 MP stroke
+0 -36 2101 1749 2 MP stroke
+0 -36 2590 1749 2 MP stroke
+0 -36 3131 1749 2 MP stroke
+0 -36 3647 1749 2 MP stroke
+0 -36 4144 1749 2 MP stroke
+0 -36 4706 1749 2 MP stroke
+0 -36 5178 1749 2 MP stroke
+0 -36 5730 1749 2 MP stroke
+0 -36 6281 1749 2 MP stroke
+0 -36 6797 1749 2 MP stroke
+0 -36 7290 1749 2 MP stroke
+0 -36 7802 1749 2 MP stroke
+0 -36 8586 1749 2 MP stroke
+0 -36 8823 1749 2 MP stroke
+0 -36 1352 1789 2 MP stroke
+0 -36 1810 1789 2 MP stroke
+0 -36 2099 1789 2 MP stroke
+0 -36 2607 1789 2 MP stroke
+0 -36 3117 1789 2 MP stroke
+0 -36 3620 1789 2 MP stroke
+0 -36 4169 1789 2 MP stroke
+0 -36 4722 1789 2 MP stroke
+0 -36 5211 1789 2 MP stroke
+0 -36 5727 1789 2 MP stroke
+0 -36 6287 1789 2 MP stroke
+0 -36 6807 1789 2 MP stroke
+0 -36 7288 1789 2 MP stroke
+0 -36 7804 1789 2 MP stroke
+0 -36 8530 1789 2 MP stroke
+0 -36 8792 1789 2 MP stroke
+0 -36 1327 1829 2 MP stroke
+0 -36 1831 1829 2 MP stroke
+0 -36 2361 1829 2 MP stroke
+0 -36 2869 1829 2 MP stroke
+0 -36 3410 1829 2 MP stroke
+0 -36 3878 1829 2 MP stroke
+0 -36 4409 1829 2 MP stroke
+0 -36 4896 1829 2 MP stroke
+0 -36 5461 1829 2 MP stroke
+0 -36 5957 1829 2 MP stroke
+0 -36 6161 1829 2 MP stroke
+0 -36 6683 1829 2 MP stroke
+0 -36 7238 1829 2 MP stroke
+0 -36 7754 1829 2 MP stroke
+0 -36 8229 1829 2 MP stroke
+0 -36 8945 1829 2 MP stroke
+0 -36 1309 1869 2 MP stroke
+0 -36 1835 1869 2 MP stroke
+0 -36 2361 1869 2 MP stroke
+0 -36 2869 1869 2 MP stroke
+0 -36 3379 1869 2 MP stroke
+0 -36 3905 1869 2 MP stroke
+0 -36 4118 1869 2 MP stroke
+0 -36 4677 1869 2 MP stroke
+0 -36 5453 1869 2 MP stroke
+0 -36 5965 1869 2 MP stroke
+0 -36 6157 1869 2 MP stroke
+0 -36 6679 1869 2 MP stroke
+0 -36 7232 1869 2 MP stroke
+0 -36 7746 1869 2 MP stroke
+0 -36 8530 1869 2 MP stroke
+0 -36 9135 1869 2 MP stroke
+0 -36 1292 1909 2 MP stroke
+0 -36 1841 1909 2 MP stroke
+0 -36 2367 1909 2 MP stroke
+0 -36 2879 1909 2 MP stroke
+0 -36 3362 1909 2 MP stroke
+0 -36 3889 1909 2 MP stroke
+0 -36 4142 1909 2 MP stroke
+0 -36 4627 1909 2 MP stroke
+0 -36 5451 1909 2 MP stroke
+0 -36 5955 1909 2 MP stroke
+0 -36 6157 1909 2 MP stroke
+0 -36 6662 1909 2 MP stroke
+0 -36 7234 1909 2 MP stroke
+0 -36 7754 1909 2 MP stroke
+0 -36 8241 1909 2 MP stroke
+0 -36 9061 1909 2 MP stroke
+0 -36 1325 1948 2 MP stroke
+0 -36 1831 1948 2 MP stroke
+0 -36 2359 1948 2 MP stroke
+0 -36 2873 1948 2 MP stroke
+0 -36 3412 1948 2 MP stroke
+0 -36 3851 1948 2 MP stroke
+0 -36 4171 1948 2 MP stroke
+0 -36 4683 1948 2 MP stroke
+0 -36 5443 1948 2 MP stroke
+0 -36 5959 1948 2 MP stroke
+0 -36 6151 1948 2 MP stroke
+0 -36 6642 1948 2 MP stroke
+0 -36 7232 1948 2 MP stroke
+0 -36 7746 1948 2 MP stroke
+0 -36 8536 1948 2 MP stroke
+0 -36 8708 1948 2 MP stroke
+0 -36 1323 1988 2 MP stroke
+0 -36 1833 1988 2 MP stroke
+0 -36 2338 1988 2 MP stroke
+0 -36 2873 1988 2 MP stroke
+0 -36 3370 1988 2 MP stroke
+0 -36 3905 1988 2 MP stroke
+0 -36 4184 1988 2 MP stroke
+0 -36 4677 1988 2 MP stroke
+0 -36 5455 1988 2 MP stroke
+0 -36 5936 1988 2 MP stroke
+0 -36 6161 1988 2 MP stroke
+0 -36 6652 1988 2 MP stroke
+0 -36 7230 1988 2 MP stroke
+0 -36 7752 1988 2 MP stroke
+0 -36 8184 1988 2 MP stroke
+0 -36 9100 1988 2 MP stroke
+0 -36 1304 2028 2 MP stroke
+0 -36 1827 2028 2 MP stroke
+0 -36 2353 2028 2 MP stroke
+0 -36 2834 2028 2 MP stroke
+0 -36 3385 2028 2 MP stroke
+0 -36 3851 2028 2 MP stroke
+0 -36 4392 2028 2 MP stroke
+0 -36 4945 2028 2 MP stroke
+0 -36 5472 2028 2 MP stroke
+0 -36 5971 2028 2 MP stroke
+0 -36 6142 2028 2 MP stroke
+0 -36 6650 2028 2 MP stroke
+0 -36 7176 2028 2 MP stroke
+0 -36 7692 2028 2 MP stroke
+0 -36 8483 2028 2 MP stroke
+0 -36 8753 2028 2 MP stroke
+0 -36 1333 2068 2 MP stroke
+0 -36 1831 2068 2 MP stroke
+0 -36 2382 2068 2 MP stroke
+0 -36 2863 2068 2 MP stroke
+0 -36 3373 2068 2 MP stroke
+0 -36 3882 2068 2 MP stroke
+0 -36 4417 2068 2 MP stroke
+0 -36 4920 2068 2 MP stroke
+0 -36 5436 2068 2 MP stroke
+0 -36 5957 2068 2 MP stroke
+0 -36 6153 2068 2 MP stroke
+0 -36 6642 2068 2 MP stroke
+0 -36 7185 2068 2 MP stroke
+0 -36 7699 2068 2 MP stroke
+0 -36 8561 2068 2 MP stroke
+0 -36 8900 2068 2 MP stroke
+0 -36 1298 2108 2 MP stroke
+0 -36 1829 2108 2 MP stroke
+0 -36 2326 2108 2 MP stroke
+0 -36 2875 2108 2 MP stroke
+0 -36 3348 2108 2 MP stroke
+0 -36 3901 2108 2 MP stroke
+0 -36 4124 2108 2 MP stroke
+0 -36 4718 2108 2 MP stroke
+0 -36 5459 2108 2 MP stroke
+0 -36 5930 2108 2 MP stroke
+0 -36 6153 2108 2 MP stroke
+0 -36 6679 2108 2 MP stroke
+0 -36 7183 2108 2 MP stroke
+0 -36 7696 2108 2 MP stroke
+0 -36 8532 2108 2 MP stroke
+0 -36 8664 2108 2 MP stroke
+0 -36 1323 2148 2 MP stroke
+0 -36 1827 2148 2 MP stroke
+0 -36 2324 2148 2 MP stroke
+0 -36 2887 2148 2 MP stroke
+0 -36 3368 2148 2 MP stroke
+0 -36 3915 2148 2 MP stroke
+0 -36 4444 2148 2 MP stroke
+0 -36 4956 2148 2 MP stroke
+0 -36 5424 2148 2 MP stroke
+0 -36 5967 2148 2 MP stroke
+0 -36 6155 2148 2 MP stroke
+0 -36 6665 2148 2 MP stroke
+0 -36 7176 2148 2 MP stroke
+0 -36 7701 2148 2 MP stroke
+0 -36 8345 2148 2 MP stroke
+0 -36 9137 2148 2 MP stroke
+0 -35 1309 2187 2 MP stroke
+0 -35 1818 2187 2 MP stroke
+0 -35 2328 2187 2 MP stroke
+0 -35 2873 2187 2 MP stroke
+0 -35 3375 2187 2 MP stroke
+0 -35 3907 2187 2 MP stroke
+0 -35 4134 2187 2 MP stroke
+0 -35 4700 2187 2 MP stroke
+0 -35 5443 2187 2 MP stroke
+0 -35 5936 2187 2 MP stroke
+0 -35 6161 2187 2 MP stroke
+0 -35 6665 2187 2 MP stroke
+0 -35 7187 2187 2 MP stroke
+0 -35 7701 2187 2 MP stroke
+0 -35 8419 2187 2 MP stroke
+0 -35 8949 2187 2 MP stroke
+DO
+8586 0 758 2189 2 MP stroke
+8586 0 758 596 2 MP stroke
+0 -2072 923 2429 2 MP stroke
+0 -2072 9178 2429 2 MP stroke
+8255 0 923 994 2 MP stroke
+gr
+
+DO
+ 242  850 mt 
+(G1) s
+gs 758 357 8587 2073 MR c np
+8255 0 923 1393 2 MP stroke
+gr
+
+ 242 1248 mt 
+(G2) s
+gs 758 357 8587 2073 MR c np
+8255 0 923 1791 2 MP stroke
+gr
+
+ 242 1647 mt 
+(G3) s
+ 242 2045 mt 
+(G4) s
+gs 758 357 8587 2073 MR c np
+DA
+12 w
+8255 0 923 795 2 MP stroke
+8255 0 923 1193 2 MP stroke
+8255 0 923 1592 2 MP stroke
+8255 0 923 1990 2 MP stroke
+SO
+24 w
+8255 0 923 1393 2 MP stroke
+DA
+12 w
+0 -1593 1955 2189 2 MP stroke
+0 -1593 2987 2189 2 MP stroke
+0 -1593 4019 2189 2 MP stroke
+0 -1593 5051 2189 2 MP stroke
+0 -1593 6082 2189 2 MP stroke
+0 -1593 7114 2189 2 MP stroke
+0 -1593 8146 2189 2 MP stroke
+SO
+24 w
+/c8 { 1.000000 0.000000 0.000000 sr} bdef
+c8
+0 -1593 5566 2189 2 MP stroke
+/c9 { 0.000000 0.000000 0.562500 sr} bdef
+c9
+83 0 0 39 -83 0 923 596 4 MP
+PP
+6 w
+0 -39 83 0 0 39 -83 0 923 596 5 MP stroke
+-83 0 0 39 83 0 9178 596 4 MP
+PP
+0 -39 -83 0 0 39 83 0 9178 596 5 MP stroke
+83 0 0 40 -83 0 923 635 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 635 5 MP stroke
+-83 0 0 40 83 0 9178 635 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 635 5 MP stroke
+83 0 0 40 -83 0 923 675 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 675 5 MP stroke
+-83 0 0 40 83 0 9178 675 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 675 5 MP stroke
+83 0 0 40 -83 0 923 715 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 715 5 MP stroke
+-83 0 0 40 83 0 9178 715 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 715 5 MP stroke
+83 0 0 40 -83 0 923 755 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 755 5 MP stroke
+-83 0 0 40 83 0 9178 755 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 755 5 MP stroke
+83 0 0 40 -83 0 923 795 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 795 5 MP stroke
+-83 0 0 40 83 0 9178 795 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 795 5 MP stroke
+83 0 0 40 -83 0 923 835 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 835 5 MP stroke
+-83 0 0 40 83 0 9178 835 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 835 5 MP stroke
+83 0 0 39 -83 0 923 875 4 MP
+PP
+0 -39 83 0 0 39 -83 0 923 875 5 MP stroke
+-83 0 0 39 83 0 9178 875 4 MP
+PP
+0 -39 -83 0 0 39 83 0 9178 875 5 MP stroke
+83 0 0 40 -83 0 923 914 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 914 5 MP stroke
+-83 0 0 40 83 0 9178 914 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 914 5 MP stroke
+83 0 0 40 -83 0 923 954 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 954 5 MP stroke
+-83 0 0 40 83 0 9178 954 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 954 5 MP stroke
+/c10 { 0.000000 0.875000 1.000000 sr} bdef
+c10
+83 0 0 40 -83 0 923 994 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 994 5 MP stroke
+-83 0 0 40 83 0 9178 994 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 994 5 MP stroke
+83 0 0 40 -83 0 923 1034 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1034 5 MP stroke
+-83 0 0 40 83 0 9178 1034 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1034 5 MP stroke
+83 0 0 40 -83 0 923 1074 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1074 5 MP stroke
+-83 0 0 40 83 0 9178 1074 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1074 5 MP stroke
+83 0 0 39 -83 0 923 1114 4 MP
+PP
+0 -39 83 0 0 39 -83 0 923 1114 5 MP stroke
+-83 0 0 39 83 0 9178 1114 4 MP
+PP
+0 -39 -83 0 0 39 83 0 9178 1114 5 MP stroke
+83 0 0 40 -83 0 923 1153 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1153 5 MP stroke
+-83 0 0 40 83 0 9178 1153 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1153 5 MP stroke
+83 0 0 40 -83 0 923 1193 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1193 5 MP stroke
+-83 0 0 40 83 0 9178 1193 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1193 5 MP stroke
+83 0 0 40 -83 0 923 1233 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1233 5 MP stroke
+-83 0 0 40 83 0 9178 1233 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1233 5 MP stroke
+83 0 0 40 -83 0 923 1273 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1273 5 MP stroke
+-83 0 0 40 83 0 9178 1273 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1273 5 MP stroke
+83 0 0 40 -83 0 923 1313 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1313 5 MP stroke
+-83 0 0 40 83 0 9178 1313 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1313 5 MP stroke
+83 0 0 40 -83 0 923 1353 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1353 5 MP stroke
+-83 0 0 40 83 0 9178 1353 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1353 5 MP stroke
+/c11 { 1.000000 0.812500 0.000000 sr} bdef
+c11
+83 0 0 39 -83 0 923 1393 4 MP
+PP
+0 -39 83 0 0 39 -83 0 923 1393 5 MP stroke
+-83 0 0 39 83 0 9178 1393 4 MP
+PP
+0 -39 -83 0 0 39 83 0 9178 1393 5 MP stroke
+83 0 0 40 -83 0 923 1432 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1432 5 MP stroke
+-83 0 0 40 83 0 9178 1432 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1432 5 MP stroke
+83 0 0 40 -83 0 923 1472 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1472 5 MP stroke
+-83 0 0 40 83 0 9178 1472 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1472 5 MP stroke
+83 0 0 40 -83 0 923 1512 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1512 5 MP stroke
+-83 0 0 40 83 0 9178 1512 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1512 5 MP stroke
+83 0 0 40 -83 0 923 1552 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1552 5 MP stroke
+-83 0 0 40 83 0 9178 1552 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1552 5 MP stroke
+83 0 0 40 -83 0 923 1592 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1592 5 MP stroke
+-83 0 0 40 83 0 9178 1592 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1592 5 MP stroke
+83 0 0 39 -83 0 923 1632 4 MP
+PP
+0 -39 83 0 0 39 -83 0 923 1632 5 MP stroke
+-83 0 0 39 83 0 9178 1632 4 MP
+PP
+0 -39 -83 0 0 39 83 0 9178 1632 5 MP stroke
+83 0 0 40 -83 0 923 1671 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1671 5 MP stroke
+-83 0 0 40 83 0 9178 1671 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1671 5 MP stroke
+83 0 0 40 -83 0 923 1711 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1711 5 MP stroke
+-83 0 0 40 83 0 9178 1711 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1711 5 MP stroke
+83 0 0 40 -83 0 923 1751 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1751 5 MP stroke
+-83 0 0 40 83 0 9178 1751 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1751 5 MP stroke
+/c12 { 0.500000 0.000000 0.000000 sr} bdef
+c12
+83 0 0 40 -83 0 923 1791 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1791 5 MP stroke
+-83 0 0 40 83 0 9178 1791 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1791 5 MP stroke
+83 0 0 40 -83 0 923 1831 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1831 5 MP stroke
+-83 0 0 40 83 0 9178 1831 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1831 5 MP stroke
+83 0 0 40 -83 0 923 1871 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1871 5 MP stroke
+-83 0 0 40 83 0 9178 1871 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1871 5 MP stroke
+83 0 0 39 -83 0 923 1911 4 MP
+PP
+0 -39 83 0 0 39 -83 0 923 1911 5 MP stroke
+-83 0 0 39 83 0 9178 1911 4 MP
+PP
+0 -39 -83 0 0 39 83 0 9178 1911 5 MP stroke
+83 0 0 40 -83 0 923 1950 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1950 5 MP stroke
+-83 0 0 40 83 0 9178 1950 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1950 5 MP stroke
+83 0 0 40 -83 0 923 1990 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 1990 5 MP stroke
+-83 0 0 40 83 0 9178 1990 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 1990 5 MP stroke
+83 0 0 40 -83 0 923 2030 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 2030 5 MP stroke
+-83 0 0 40 83 0 9178 2030 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 2030 5 MP stroke
+83 0 0 40 -83 0 923 2070 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 2070 5 MP stroke
+-83 0 0 40 83 0 9178 2070 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 2070 5 MP stroke
+83 0 0 40 -83 0 923 2110 4 MP
+PP
+0 -40 83 0 0 40 -83 0 923 2110 5 MP stroke
+-83 0 0 40 83 0 9178 2110 4 MP
+PP
+0 -40 -83 0 0 40 83 0 9178 2110 5 MP stroke
+83 0 0 39 -83 0 923 2150 4 MP
+PP
+0 -39 83 0 0 39 -83 0 923 2150 5 MP stroke
+-83 0 0 39 83 0 9178 2150 4 MP
+PP
+0 -39 -83 0 0 39 83 0 9178 2150 5 MP stroke
+36 w
+/c13 { 0.000000 1.000000 0.000000 sr} bdef
+c13
+1032 0 1955 2309 2 MP stroke
+1032 0 1955 476 2 MP stroke
+1032 0 4019 2309 2 MP stroke
+1032 0 4019 476 2 MP stroke
+6 w
+gr
+
+c13
+SO
+1 sg
+0 1572 1571 0 0 -1572 729 4714 4 MP
+PP
+-1571 0 0 1572 1571 0 0 -1572 729 4714 5 MP stroke
+4 w
+DO
+SO
+6 w
+0 sg
+ 729 4714 mt 2300 4714 L
+ 729 4714 mt  729 3142 L
+1122 4714 mt 1122 4698 L
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 120 FMSR
+
+1056 4859 mt 
+(10) s
+1515 4714 mt 1515 4698 L
+1449 4859 mt 
+(20) s
+1907 4714 mt 1907 4698 L
+1841 4859 mt 
+(30) s
+2300 4714 mt 2300 4698 L
+2234 4859 mt 
+(40) s
+ 729 4340 mt  745 4340 L
+ 561 4384 mt 
+(30) s
+ 729 3948 mt  745 3948 L
+ 561 3992 mt 
+(20) s
+ 729 3555 mt  745 3555 L
+ 561 3599 mt 
+(10) s
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 156 FMSR
+
+1109 5028 mt 
+(Spike trains) s
+ 471 4334 mt  -90 rotate
+(Spike trains) s
+90 rotate
+%%IncludeResource: font Helvetica-Bold
+/Helvetica-Bold /WindowsLatin1Encoding 180 FMSR
+
+1454 3034 mt 
+(S) s
+gs 729 3143 1572 1572 MR c np
+gs np 729 3143 mt 0 1571 rl 1572 0 rl 0 -1571 rl cp c np
+[1572 0 0 1571 729 3143] cc
+/picstr 120 string def
+40 40 8
+[40.000000 0 0 40.000000 0 0] {currentfile picstr readhexstring pop} false 3 colorimage
+00008F0000DF1FFFDF0000DF0FFFEF00EFFF0FFFEF00FFFF0000EF000FFFFF2F00DFFF1FCFFF2FFF
+3F008FFF6FFF2F00FF2F00AFFF4F9FFF5FDFFF1FFF1F00FF2F008FFF6F7FFF7FBFFF3F9FFF5F8FFF
+6FFF3F00FF2F00FF4F00004FFF6FFF8F6FFF8F6FFF8F5FFF9F007FFF005FFF6FFF8F005FFF6FFF8F
+0000DF00008F1FFFDF0000AF1FFFDF0FFFEF2FFFCF1FFFDF0000EF0000BFFF1F009FFF5F8FFF6FFF
+2F006FFF8FFF2F00FF1F008FFF6F5FFF9F9FFF5FFF0F00FF0F006FFF8F6FFF8FAFFF4F9FFF5F4FFF
+AFFF0F00FF1F00FF3F00003FFF8FFF6F7FFF7F7FFF7F8FFF6F002FFF002FFF9FFF5F004FFF9FFF5F
+1FFFDF1FFFDF00008F00FFFF0000BF0000EF0000AF0000FF00EFFF2FFFCF7FFF7FFF1F00FF5F008F
+FF6FFF2F007FFF7F8FFF6FFF5F00FF2F00FF2F008FFF6F7FFF7FFF5F00FF6F00FF7F00FF7F00FF6F
+009FFF5F6FFF8F4FFFAF5FFF9F004FFF006FFF001FFF004FFF6FFF8F8FFF6F003FFFCFFF2F003FFF
+0000DF0000AF00FFFF00008F0FFFEF0FFFEF0FFFEF1FFFDF0000CF0000CFFF00008FFF6F8FFF6FFF
+1F006FFF8FFF1F00FF00007FFF7F6FFF8F9FFF5FFF0000FF0F005FFF9F5FFF9F8FFF6F8FFF6F4FFF
+AFFF0000FF1F00FF3F00001FFF8FFF6F7FFF7F6FFF8F6FFF8F001FFF001FFF7FFF7F005FFF7FFF7F
+0FFFEF1FFFDF0000BF0FFFEF00008F0000EF0000AF0000CF00EFFF4FFFAF6FFF8FFF0000FF3F007F
+FF7FFF0F007FFF7F7FFF7FFF3F00FF0F00FF1F006FFF8F6FFF8FFF3F00FF5F00FF4F00FF5F00FF5F
+009FFF5F5FFF9F6FFF8F6FFF8F001FFF003FFF0000FF001FFF8FFF6F9FFF5F002FFFAFFF4F000FFF
+00EFFF0FFFEF0000EF0FFFEF0000EF00008F0000DF0000CF1FFFDF2FFFCF7FFF7FFF1F00FF3F005F
+FF9FFF2F007FFF7F7FFF7FFF1F00FF3F00FF3F00AFFF4F9FFF5FFF3F00FF4F00FF3F00FF3F00FF3F
+009FFF5FAFFF4FAFFF4F8FFF6F005FFF002FFF003FFF004FFF8FFF6F9FFF5F008FFF9FFF5F006FFF
+0FFFEF2FFFCF0000AF0FFFEF0000AF0000DF00008F0000EF00EFFF4FFFAF6FFF8FFF0F00FF5F007F
+FF7FFF1F007FFF7F7FFF7FFF4F00FF1F00FF1F007FFF7F6FFF8FFF5F00FF6F00FF6F00FF6F00FF4F
+008FFF6F6FFF8F5FFF9F7FFF7F004FFF006FFF001FFF002FFF7FFF7F9FFF5F003FFFBFFF3F001FFF
+00FFFF1FFFDF0000FF1FFFDF0000CF0000CF0000EF00008F1FFFDF3FFFBF6FFF8FFF0000FF2F005F
+FF9FFF1F008FFF6F5FFF9FFF0000FF2F00FF0F008FFF6F7FFF7FFF0F00FF1F00FF2F00FF1F00FF2F
+006FFF8F8FFF6FAFFF4F8FFF6F000FFF001FFF002FFF003FFFAFFF4F9FFF5F003FFF7FFF7F002FFF
+0000EF0000EF00EFFF0000CF00EFFF1FFFDF00EFFF1FFFDF00008F000FFFFF2F00AFFF4F8FFF6FFF
+2F009FFF5FFF3F00FF2F007FFF7F8FFF6F9FFF5FFF2F00FF3F006FFF8F4FFFAF6FFF8F4FFFAF6FFF
+8FFF1F00FF5F00FF7F00001FFF6FFF8F7FFF7F3FFFBF3FFFBF004FFF005FFF3FFFBF006FFF3FFFBF
+000FFF0000BF2FFFCF0000CF4FFFAF2FFFCF4FFFAF3FFFBF000FFF00008FFF1F006FFF8F8FFF6FFF
+4F007FFF7FFF4F00FF3F008FFF6F5FFF9F6FFF8FFF1F00FF2F007FFF7F6FFF8F9FFF5F9FFF5F3FFF
+BFFF1F00FF2F00FF3F00004FFFAFFF4F8FFF6F8FFF6F9FFF5F004FFF001FFFBFFF3F006FFFBFFF3F
+FF2F00FF1F007FFF7FFF00006FFF8F7FFF7F6FFF8F6FFF8FFF2F00FF1F0000008F2FFFCF5FFF9F00
+00DF6FFF8F0000DF0000CF5FFF9F5FFF9F5FFF9F001FFF001FFF8FFF6FBFFF3F5FFF9F7FFF7FBFFF
+3F001FFF004FFF004FFFFF0F007FFF7F8FFF6F6FFF8F7FFF7FFF1F00FF0F009FFF5FFF2F008FFF6F
+DFFF1F9FFF5FFF1F008FFF6FFF0000FF1F00FF0F00FF0000AFFF4F6FFF8F2FFFCF00008F0000EF5F
+FF9F0000FF3FFFBF5FFF9F0000EF0000DF0000EFAFFF4FBFFF3F003FFF007FFF006FFF007FFF006F
+FF9FFF5FBFFF3FAFFF4F6FFF8FFF1F00FF2F00FF1F00FF2F003FFFBF5FFF9FFF2F006FFF8FFF1F00
+CFFF2F8FFF6FFF5F008FFF6FFF3F00FF3F00FF5F00FF2F008FFF6F8FFF6F5FFF9F0000EF00008F3F
+FFBF0000FF3FFFBF4FFFAF0000EF0000DF0000DF9FFF5FAFFF4F004FFF004FFF008FFF006FFF006F
+FF9FFF5F8FFF6F6FFF8F9FFF5FFF1F00FF0000FF2F00FF4F005FFF9F9FFF5FFF5F007FFF7FFF4F00
+FF3F00FF2F008FFF6FFF1F007FFF7F5FFF9F7FFF7F5FFF9FFF2F00FF4F000000DF5FFF9F3FFFBF00
+008F4FFFAF0000CF0000BF4FFFAF2FFFCF1FFFDF001FFF001FFF9FFF5F8FFF6F7FFF7F6FFF8FAFFF
+4F001FFF001FFF002FFFEF0000AFFF4F8FFF6F9FFF5F9FFF5FFF0F00FF0000BFFF3FFF2F009FFF5F
+8FFF6F6FFF8FFF2F006FFF8FFF0F00FF2F00FF1F00FF1F009FFF5F7FFF7F6FFF8F0000FF0000FF4F
+FFAF00008F3FFFBF4FFFAF0000BF0000CF0000FFAFFF4FAFFF4F001FFF003FFF004FFF004FFF005F
+FF8FFF6F9FFF5F7FFF7F7FFF7FFF0F00FF1F00FF0000FF0F006FFF8F4FFFAFFF2F006FFF8FFF1F00
+FF2F00FF2F007FFF7FFF1F007FFF7F7FFF7F7FFF7F8FFF6FFF3F00FF4F000000DF3FFFBF3FFFBF00
+00CF3FFFBF00008F0000BF2FFFCF4FFFAF0FFFEF001FFF001FFF7FFF7F8FFF6F5FFF9F4FFFAF8FFF
+6F002FFF002FFF002FFFFF0F00AFFF4FAFFF4F8FFF6F7FFF7FFF2F00FF0F00CFFF2FFF0F00BFFF3F
+FF2F00FF1F008FFF6FFF00007FFF7F7FFF7F7FFF7F5FFF9FFF2F00FF3F000000CF5FFF9F4FFFAF00
+00BF4FFFAF0000BF00008F3FFFBF4FFFAF3FFFBF0000FF0000FF9FFF5F9FFF5F6FFF8F6FFF8FAFFF
+4F0000FF001FFF002FFFFF00008FFF6F7FFF7F8FFF6F9FFF5FFF0000FF0F00AFFF4FFF2F008FFF6F
+AFFF4F8FFF6FFF5F007FFF7FFF3F00FF1F00FF4F00FF00007FFF7F8FFF6F5FFF9F0000EF0000EF4F
+FFAF0000BF2FFFCF3FFFBF00008F0000FF0000DF7FFF7F8FFF6F000FFF001FFF003FFF001FFF002F
+FF8FFF6F7FFF7F4FFFAF6FFF8FFF1F00FF0F00FF2F00FF2F005FFF9F4FFFAFFF2F00AFFF4FFF2F00
+9FFF5F5FFF9FFF2F006FFF8FFF0F00FF3F00FF1F00FF2F008FFF6F5FFF9F5FFF9F0000DF0000DF2F
+FFCF0000CF4FFFAF4FFFAF0000FF00008F0000EFBFFF3FCFFF2F004FFF005FFF008FFF007FFF008F
+FF9FFF5FBFFF3FAFFF4F7FFF7FFF1F00FF1F00FF0F00FF2F004FFFAF6FFF8FFF3F004FFFAFFF2F00
+DFFF1F9FFF5FFF2F009FFF5FFF1F00FF3F00FF1F00FF0F009FFF5F6FFF8F5FFF9F0000EF0000DF1F
+FFDF0000FF0FFFEF3FFFBF0000DF0000EF00008F9FFF5FAFFF4F005FFF005FFF008FFF005FFF004F
+FF9FFF5F6FFF8F7FFF7F9FFF5FFF0000FF0F00FF1F00FF1F005FFF9F7FFF7FFF1F008FFF6FFF0F00
+FF1F00FF0F008FFF6FFF00006FFF8FAFFF4F7FFF7F8FFF6FFF2F00FF1F00001FFFAFFF4F9FFF5F00
+1FFFAFFF4F001FFF0000FF7FFF7FBFFF3F9FFF5F00008F00009F3FFFBF3FFFBF00FFFF0FFFEF3FFF
+BF0000CF0000BF0000DFEF00008FFF6FAFFF4F9FFF5FBFFF3FEF0000EF0000AFFF4FDF00009FFF5F
+FF2F00FF0F007FFF7FFF0F006FFF8F9FFF5F6FFF8F7FFF7FFF3F00FF2F00001FFFBFFF3FAFFF4F00
+1FFFAFFF4F001FFF0000FF8FFF6FCFFF2FAFFF4F00009F00008F3FFFBF3FFFBF00FFFF0FFFEF3FFF
+BF0000BF0000CF0000DFEF00008FFF6F9FFF5F8FFF6FAFFF4FDF0000EF0000AFFF4FEF00009FFF5F
+8FFF6F6FFF8FFF5F005FFF9FFF3F00FF3F00FF5F00FF0F006FFF8F7FFF7F8FFF6F003FFF004FFF9F
+FF5F001FFF7FFF7F9FFF5F000FFF004FFF005FFF3FFFBF3FFFBF00008F0000CF0000DF0000DF0000
+DF4FFFAF3FFFBF0FFFEFAFFF4FEF0000FF0000FF0F00FF1F007FFF7F9FFF5FFF1F00CFFF2FFF0F00
+7FFF7F6FFF8FFF6F005FFF9FFF5F00FF4F00FF6F00FF1F004FFFAF6FFF8FBFFF3F007FFF004FFF8F
+FF6F003FFF8FFF6F9FFF5F001FFF005FFF005FFF3FFFBF3FFFBF0000CF00008F0000EF0000BF0000
+FF4FFFAF2FFFCF00EFFF9FFF5FFF0000FF0F00FF2F00FF3F007FFF7F9FFF5FFF3F00AFFF4FFF3F00
+BFFF3FAFFF4FFF7F008FFF6FFF4F00FF3F00FF6F00FF2F006FFF8F9FFF5F5FFF9F006FFF008FFF7F
+FF7F004FFF5FFF9F6FFF8F003FFF008FFF008FFF00FFFF00FFFF0000DF0000EF00008F0000CF000F
+FF0FFFEF0FFFEF00DFFFAFFF4FFF0F00FF1F00FF3F00FF2F00BFFF3FAFFF4FFF2F00FFFF00FF1F00
+9FFF5F9FFF5FFF7F008FFF6FFF5F00FF3F00FF6F00FF1F004FFFAF9FFF5F7FFF7F007FFF006FFF6F
+FF8F004FFF4FFFAF6FFF8F001FFF007FFF005FFF0FFFEF0FFFEF0000DF0000BF0000CF00008F0000
+FF1FFFDF00FFFF00BFFFAFFF4FFF0F00FF0F00FF3F00FF2F00AFFF4FBFFF3FFF3F00EFFF0FFF2F00
+8FFF6F4FFFAFFF6F004FFFAFFF5F00FF3F00FF4F00FF2F006FFF8F3FFFBFBFFF3F006FFF006FFFAF
+FF4F005FFF8FFF6FAFFF4F002FFF008FFF004FFF3FFFBF3FFFBF0000DF0000FF000FFF0000FF0000
+8F6FFF8F3FFFBF2FFFCF8FFF6FFF1F00FF2F00FF3F00FF2F007FFF7F6FFF8FFF1F00BFFF3FFF0F00
+FF3F00FF0F009FFF5FFF00009FFF5F9FFF5F8FFF6F6FFF8FFF1F00FF1F00001FFF9FFF5F9FFF5F00
+1FFF8FFF6F002FFF0000FF8FFF6F9FFF5F9FFF5F0000CF0000BF4FFFAF4FFFAF0FFFEF1FFFDF6FFF
+8F00008F0000EF0000FFEF00008FFF6FAFFF4FBFFF3FCFFF2FCF0000EF0000AFFF4FFF0F00AFFF4F
+FF2F00FF1F006FFF8FFF1F005FFF9FAFFF4F6FFF8F8FFF6FFF5F00FF2F00004FFFBFFF3F8FFF6F00
+1FFF9FFF5F002FFF001FFF7FFF7FBFFF3F6FFF8F0000BF0000CF3FFFBF2FFFCF0FFFEF00FFFF3FFF
+BF0000EF00008F0000BFEF0000AFFF4FBFFF3FAFFF4FCFFF2FEF0000EF00009FFF5FEF00008FFF6F
+FF4F00FF3F004FFFAFFF3F006FFF8FAFFF4F5FFF9FAFFF4FFF7F00FF3F00004FFFAFFF4F6FFF8F00
+2FFF7FFF7F002FFF002FFF4FFFAFAFFF4F7FFF7F0000DF0000DF0FFFEF00EFFF00DFFF00BFFF2FFF
+CF0000FF0000BF00008FFF0F00CFFF2FEFFF0FAFFF4FBFFF3FFF0F00FF00009FFF5FDF00009FFF5F
+004FFF003FFF5FFF9F001FFF6FFF8F8FFF6F7FFF7F8FFF6F001FFF004FFFFF0F006FFF8F9FFF5FEF
+00007FFF7FFF0F00FF00006FFF8F7FFF7F9FFF5FEF0000EF0000AFFF4F9FFF5FAFFF4FAFFF4F8FFF
+6FEF0000EF0000FF0F0000008F0FFFEF1FFFDF00FFFF0FFFEF0000DF0000BF1FFFDF000FFF2FFFCF
+6FFF8F8FFF6F004FFF8FFF6F001FFF005FFF004FFF000FFF6FFF8FAFFF4F7FFF7FFF1F00FF1F00AF
+FF4FFF0F00AFFF4F8FFF6FFF1F00FF1F00FF00008FFF6F8FFF6FEF0000FF0000FF0F00FF0F00FF1F
+008FFF6FAFFF4FCFFF2F0FFFEF00008F0000CF0000BF0000DF5FFF9F2FFFCF0000DF2FFFCF0000CF
+6FFF8F7FFF7F006FFF7FFF7F003FFF002FFF006FFF001FFF7FFF7F8FFF6F8FFF6FFF2F00FF00008F
+FF6FFF1F00AFFF4F7FFF7FFF0F00FF1F00FF0F00AFFF4F9FFF5FFF0000FF0F00FF1F00FF0F00FF2F
+00AFFF4FBFFF3FEFFF0F1FFFDF0000CF00008F0000DF0000FF4FFFAF1FFFDF000FFF1FFFDF0000FF
+6FFF8F7FFF7F001FFF6FFF8F0000FF003FFF001FFF002FFF3FFFBF8FFF6F6FFF8FFF1F00FF2F009F
+FF5FFF00008FFF6F8FFF6FFF2F00FF0F00FF1F009FFF5F8FFF6FFF0F00FF2F00FF3F00FF3F00FF3F
+00BFFF3FAFFF4FAFFF4F00FFFF0000BF0000DF00008F0000AF2FFFCF2FFFCF0000EF4FFFAF0000DF
+5FFF9F8FFF6F004FFF6FFF8F001FFF004FFF002FFF003FFF3FFFBF9FFF5F7FFF7FFF2F00FF4F009F
+FF5FFF0F007FFF7F9FFF5FFF2F00FF2F00FF1F00BFFF3FAFFF4FFF1F00FF3F00FF2F00FF2F00FF2F
+00CFFF2FCFFF2FBFFF3F0FFFEF0000DF0000FF0000AF00008F3FFFBF3FFFBF0000EF3FFFBF0000CF
+007FFF002FFF6FFF8F001FFF8FFF6F8FFF6F7FFF7FAFFF4F004FFF004FFFFF1F003FFFBF5FFF9FFF
+0F006FFF8FFF2F00FF00005FFF9F4FFFAF5FFF9FEF0000DF00007FFF7F7FFF7FBFFF3FAFFF4F7FFF
+7FCF0000EF0000FF0F000000DF5FFF9F4FFFAF2FFFCF3FFFBF00008F0000EF4FFFAF000FFF4FFFAF
+005FFF002FFF8FFF6F001FFF9FFF5F9FFF5F9FFF5F9FFF5F005FFF001FFFFF0F005FFF9F9FFF5FFF
+00004FFFAFFF0F00FF0F004FFFAF6FFF8F7FFF7FEF0000EF00009FFF5F9FFF5FAFFF4FBFFF3F6FFF
+8FEF0000EF0000FF00000000BF2FFFCF1FFFDF2FFFCF3FFFBF0000EF00008F3FFFBF000FFF4FFFAF
+6FFF8F9FFF5F003FFF7FFF7F002FFF008FFF003FFF003FFF3FFFBFBFFF3F9FFF5FFF2F00FF5F00BF
+FF3FFF2F00CFFF2FAFFF4FFF2F00FF3F00FF1F00AFFF4FAFFF4FFF1F00FF3F00FF2F00FF3F00FF1F
+00AFFF4F9FFF5F9FFF5F1FFFDF0000DF000FFF0000EF0000EF4FFFAF3FFFBF00008F0FFFEF0000AF
+005FFF004FFFCFFF2F005FFFAFFF4F9FFF5FBFFF3F7FFF7F006FFF006FFFFF2F006FFF8F7FFF7FFF
+2F006FFF8FFF0F00FF2F00AFFF4F4FFFAF8FFF6FDF0000EF0000CFFF2FAFFF4FFFFF00EFFF0FBFFF
+3FFF0F00EF0000DF0000000FFF2FFFCF1FFFDF4FFFAF3FFFBF000FFF000FFF0FFFEF00008F1FFFDF
+6FFF8F9FFF5F003FFF7FFF7F000FFF006FFF001FFF002FFF3FFFBFBFFF3F8FFF6FFF1F00FF4F009F
+FF5FFF1F00BFFF3F8FFF6FFF2F00FF2F00FF0F009FFF5F9FFF5FFF0F00FF3F00FF1F00FF2F00FF0F
+00AFFF4F8FFF6F9FFF5F2FFFCF0000CF0000FF0000DF0000CF4FFFAF4FFFAF0000AF1FFFDF00008F
+gr
+DO
+12 w
+1 sg
+1571 0 729 3535 2 MP stroke
+0 -1571 1122 4714 2 MP stroke
+1571 0 729 3928 2 MP stroke
+0 -1571 1515 4714 2 MP stroke
+1571 0 729 4321 2 MP stroke
+0 -1571 1907 4714 2 MP stroke
+SO
+18 w
+0 sg
+1571 0 729 3928 2 MP stroke
+0 -1571 1515 4714 2 MP stroke
+6 w
+gr
+
+1 sg
+0 1572 1573 0 0 -1572 728 6786 4 MP
+PP
+-1573 0 0 1572 1573 0 0 -1572 728 6786 5 MP stroke
+4 w
+DO
+SO
+6 w
+0 sg
+ 728 6786 mt 2301 6786 L
+ 728 6786 mt  728 5214 L
+ 767 6786 mt  767 6770 L
+ 805 6786 mt  805 6770 L
+ 844 6786 mt  844 6770 L
+ 882 6786 mt  882 6770 L
+ 920 6786 mt  920 6770 L
+ 959 6786 mt  959 6770 L
+ 997 6786 mt  997 6770 L
+1035 6786 mt 1035 6770 L
+1074 6786 mt 1074 6770 L
+1112 6786 mt 1112 6770 L
+1150 6786 mt 1150 6770 L
+1189 6786 mt 1189 6770 L
+1227 6786 mt 1227 6770 L
+1265 6786 mt 1265 6770 L
+1304 6786 mt 1304 6770 L
+1342 6786 mt 1342 6770 L
+1380 6786 mt 1380 6770 L
+1419 6786 mt 1419 6770 L
+1457 6786 mt 1457 6770 L
+1495 6786 mt 1495 6770 L
+1534 6786 mt 1534 6770 L
+1572 6786 mt 1572 6770 L
+1610 6786 mt 1610 6770 L
+1649 6786 mt 1649 6770 L
+1687 6786 mt 1687 6770 L
+1725 6786 mt 1725 6770 L
+1764 6786 mt 1764 6770 L
+1802 6786 mt 1802 6770 L
+1840 6786 mt 1840 6770 L
+1879 6786 mt 1879 6770 L
+1917 6786 mt 1917 6770 L
+1955 6786 mt 1955 6770 L
+1994 6786 mt 1994 6770 L
+2032 6786 mt 2032 6770 L
+2070 6786 mt 2070 6770 L
+2109 6786 mt 2109 6770 L
+2147 6786 mt 2147 6770 L
+2185 6786 mt 2185 6770 L
+2224 6786 mt 2224 6770 L
+2262 6786 mt 2262 6770 L
+gs 728 5214 1574 1573 MR c np
+/c14 { 0.000000 0.000000 1.000000 sr} bdef
+c14
+0 73 38 0 0 -73 767 6787 4 MP stroke
+0 84 39 0 0 -84 2185 6787 4 MP stroke
+0 90 38 0 0 -90 1879 6787 4 MP stroke
+0 119 38 0 0 -119 1572 6787 4 MP stroke
+0 123 57 0 0 -33 1898 6697 4 MP stroke
+0 128 38 0 0 -128 2109 6787 4 MP stroke
+0 149 39 0 0 -149 1725 6787 4 MP stroke
+0 155 38 0 0 -155 997 6787 4 MP stroke
+0 173 58 0 0 -100 786 6714 4 MP stroke
+0 184 39 0 0 -184 1380 6787 4 MP stroke
+0 184 67 0 0 -11 815 6614 4 MP stroke
+0 58 58 0 0 -186 2070 6787 4 MP stroke
+0 189 72 0 0 -5 848 6603 4 MP stroke
+0 190 58 0 0 -71 1591 6668 4 MP stroke
+0 190 38 0 0 -190 1189 6787 4 MP stroke
+0 191 58 0 0 -36 1016 6632 4 MP stroke
+0 193 58 0 0 -9 1399 6603 4 MP stroke
+0 215 57 0 0 -25 1208 6597 4 MP stroke
+0 23 86 0 0 -216 1342 6787 4 MP stroke
+0 138 106 0 0 -36 2099 6601 4 MP stroke
+0 33 86 0 0 -224 959 6787 4 MP stroke
+0 227 38 0 0 -227 1994 6787 4 MP stroke
+0 232 67 0 0 -42 1620 6597 4 MP stroke
+0 6 86 0 0 -110 1927 6664 4 MP stroke
+0 245 110 0 0 -23 2152 6565 4 MP stroke
+0 19 119 0 0 -251 1534 6787 4 MP stroke
+0 37 87 0 0 -252 1150 6787 4 MP stroke
+0 10 81 0 0 -262 1112 6787 4 MP stroke
+0 283 57 0 0 -134 1745 6638 4 MP stroke
+0 283 151 0 0 -21 1153 6525 4 MP stroke
+0 292 110 0 0 -76 1385 6571 4 MP stroke
+0 128 237 0 0 -140 1970 6554 4 MP stroke
+0 186 -118 0 0 -151 1002 6563 4 MP stroke
+0 426 67 0 0 -143 1773 6504 4 MP stroke
+0 156 212 0 0 -165 1228 6504 4 MP stroke
+0 60 213 0 0 -235 1594 6536 4 MP stroke
+0 622 391 0 0 -695 943 6412 4 MP stroke
+0 844 388 0 0 -731 1700 6301 4 MP stroke
+0 432 -755 0 0 -285 1894 5570 4 MP stroke
+30 w
+c11
+0 -72 767 6786 2 MP stroke
+0 -72 805 6786 2 MP stroke
+c12
+0 -83 2185 6786 2 MP stroke
+0 -83 2224 6786 2 MP stroke
+c9
+0 -89 1879 6786 2 MP stroke
+0 -89 1917 6786 2 MP stroke
+0 -118 1572 6786 2 MP stroke
+0 -118 1610 6786 2 MP stroke
+0 -122 1955 6786 2 MP stroke
+c12
+0 -127 2109 6786 2 MP stroke
+0 -127 2147 6786 2 MP stroke
+0 -148 1725 6786 2 MP stroke
+0 -148 1764 6786 2 MP stroke
+c10
+0 -154 997 6786 2 MP stroke
+0 -154 1035 6786 2 MP stroke
+c11
+0 -172 844 6786 2 MP stroke
+0 -183 1380 6786 2 MP stroke
+0 -183 1419 6786 2 MP stroke
+0 -183 882 6786 2 MP stroke
+c12
+0 -185 2070 6786 2 MP stroke
+c11
+0 -188 920 6786 2 MP stroke
+c9
+0 -189 1649 6786 2 MP stroke
+c10
+0 -189 1189 6786 2 MP stroke
+0 -189 1227 6786 2 MP stroke
+0 -190 1074 6786 2 MP stroke
+c11
+0 -192 1457 6786 2 MP stroke
+c10
+0 -214 1265 6786 2 MP stroke
+c11
+0 -215 1342 6786 2 MP stroke
+c10
+0 -223 959 6786 2 MP stroke
+c9
+0 -226 1994 6786 2 MP stroke
+0 -226 2032 6786 2 MP stroke
+0 -231 1687 6786 2 MP stroke
+c12
+0 -244 2262 6786 2 MP stroke
+c9
+0 -250 1534 6786 2 MP stroke
+c10
+0 -251 1150 6786 2 MP stroke
+0 -261 1112 6786 2 MP stroke
+c12
+0 -282 1802 6786 2 MP stroke
+c10
+0 -282 1304 6786 2 MP stroke
+c11
+0 -291 1495 6786 2 MP stroke
+c12
+0 -425 1840 6786 2 MP stroke
+gr
+
+30 w
+c12
+0 sg
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 156 FMSR
+
+1109 6989 mt 
+(Spike trains) s
+6 w
+1 sg
+0 1572 1571 0 0 -1572 2952 4714 4 MP
+PP
+-1571 0 0 1572 1571 0 0 -1572 2952 4714 5 MP stroke
+4 w
+DO
+SO
+6 w
+0 sg
+2952 4714 mt 4523 4714 L
+2952 4714 mt 2952 3142 L
+3345 4714 mt 3345 4698 L
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 120 FMSR
+
+3279 4859 mt 
+(10) s
+3738 4714 mt 3738 4698 L
+3672 4859 mt 
+(20) s
+4130 4714 mt 4130 4698 L
+4064 4859 mt 
+(30) s
+4523 4714 mt 4523 4698 L
+4457 4859 mt 
+(40) s
+2952 4340 mt 2968 4340 L
+2784 4384 mt 
+(30) s
+2952 3948 mt 2968 3948 L
+2784 3992 mt 
+(20) s
+2952 3555 mt 2968 3555 L
+2784 3599 mt 
+(10) s
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 156 FMSR
+
+3332 5028 mt 
+(Spike trains) s
+%%IncludeResource: font Helvetica-Bold
+/Helvetica-Bold /WindowsLatin1Encoding 180 FMSR
+
+3649 2953 mt 
+(S) s
+%%IncludeResource: font Helvetica-Bold
+/Helvetica-Bold /WindowsLatin1Encoding 144 FMSR
+
+3769 3043 mt 
+(r) s
+gs 2952 3143 1572 1572 MR c np
+gs np 2953 3143 mt 0 1571 rl 1571 0 rl 0 -1571 rl cp c np
+[1571 0 0 1571 2953 3143] cc
+/picstr 120 string def
+40 40 8
+[40.000000 0 0 40.000000 0 0] {currentfile picstr readhexstring pop} false 3 colorimage
+00008F003FFF9FFF5F004FFF7FFF7F4FFFAF6FFF8F5FFF9F004FFF009FFF8F0000FF5F00FF5F00BF
+0000FFBF00AF0000AF0000FF9F00FFAF00FF6F008F00009F0000FFAF00FFCF00FF8F00FF9F00FF9F
+009F00009F0000AF00002FFFCFFF9F00FFAF00FFBF00FFCF006FFF8F4FFFAFFF9F003FFFBFFFAF00
+003FFF00008F6FFF8F0000EF5FFF9F4FFFAF7FFF7F4FFFAF005FFF001FFF7F0000FFBF00FFAF00AF
+0000DFFF1FAF00009F0000FFBF00DFFF1FFFBF008F00009F0000FFDF00FFEF00FFBF00FFAF00FFFF
+008F00009F0000AF000000EFFFFFAF00FFAF00FFCF00FFAF0000DFFF00EFFFFF7F002FFFCFFF8F00
+9FFF5F6FFF8F00008F6FFF8F000FFF003FFF0000DF007FFF8FFF6F8FFF6FFFEF009F0000CF0000FF
+EF009F0000EFFF0FFFCF00BF0000AF0000CF0000FFCF00FFCF00AF0000AF0000AF0000AF0000BF00
+00FF8F00EFFF0FBFFF3FFFCF001FFFDF4FFFAF008FFF0FFFEFFFEF00FF9F000FFFEFFF5F000FFFEF
+004FFF0000EF6FFF8F00008F6FFF8F4FFFAF6FFF8F6FFF8F002FFF002FFF7F0000FFCF00FFBF00AF
+0000DFFF1FBF00008F0000FFFF00FFFF00FFDF007F00008F0000CFFF2FDFFF1FFFEF00FFDF00EFFF
+0F7F0000AF0000AF000000BFFFFF9F00FFAF00FFCF00FFBF0000CFFF00DFFFFF8F004FFFAFFF9F00
+7FFF7F5FFF9F000FFF6FFF8F00008F004FFF0000EF003FFF6FFF8F9FFF5FDFFF1F8F0000BF0000DF
+FF1F8F0000EFFF0FFFFF00AF0000AF0000BF0000EFFF0FEFFF0F9F0000BF00009F0000AF0000AF00
+00FFBF00CFFF2FDFFF1FFFCF0000DFFF0FFFEF006FFF00CFFFFFBF00FF8F0000FFFFFF8F0000AFFF
+4FFFAF4FFFAF003FFF4FFFAF004FFF00008F003FFF003FFF8FFF6F8FFF6FFFEF009F0000BF0000CF
+FF2FBF0000EFFF0FFFDF00AF0000CF0000CF0000FF9F00FFAF00AF0000BF00009F00009F0000BF00
+00FF8F00FFAF00FFCF00FFBF003FFFBF00DFFF00CFFF00FFFFFFEF00FF9F007FFF7FFF9F004FFFAF
+6FFF8F7FFF7F0000DF6FFF8F0000EF003FFF00008F006FFF7FFF7FAFFF4FEFFF0F8F0000CF0000FF
+FF008F0000EFFF0FFFEF00AF0000AF0000BF0000FFEF00FFEF00AF0000BF0000AF0000AF0000AF00
+00FFAF00EFFF0FBFFF3FFF9F001FFFDF5FFF9F00AFFF00CFFFFFCF00FF6F001FFFDFFF6F0000CFFF
+5FFF9F4FFFAF007FFF6FFF8F003FFF003FFF006FFF00008F9FFF5F8FFF6FFFFF009F0000BF0000BF
+FF3F9F0000FFEF00BFFF3F8F0000BF0000BF0000FFEF00FFEF008F00009F00007F00008F00009F00
+00EFFF0FFFEF00FF9F00FFBF0000AFFF00CFFF00EFFF0FFFEFFFBF00FF9F0000FFFFFFAF0000CFFF
+004FFF005FFF8FFF6F002FFF6FFF8F8FFF6F7FFF7F9FFF5F00008F008FFF8F0000FFCF00FFBF00AF
+0000FFCF00BF00009F0000FFFF00FFCF00FFEF009F00009F0000DFFF1FCFFF2FEFFF0FBFFF3FFFFF
+007F0000BF0000CF000000EFFFFF8F00FF8F00FFCF00FFEF000FFFEF4FFFAFFFBF005FFF9FFFCF00
+009FFF001FFF8FFF6F002FFF9FFF5F8FFF6FAFFF4F8FFF6F008FFF00008F8F0000FFEF00FFBF00BF
+0000FFEF00CF0000AF0000FFCF00CFFF2FFFEF008F00009F0000FFEF00FFDF00FFDF00FFBF00EFFF
+0F8F0000BF0000BF00000FFFEFFF8F00FFAF00FFAF00FF7F002FFFCF00BFFFFF4F006FFF8FFF5F00
+8F00007F0000FFEF007F0000DFFF1FFFEF00EFFF0FFFFF008F00008F000000008F4FFFAFBFFF3F00
+6FFFBFFF3F005FFF004FFFAFFF4FAFFF4FCFFF2F00CFFF00AFFFFFDF00FF7F00FFCF00FF9F00FF9F
+0000BFFF1FFFDF00FFFFAF0000FFEF00FFEF00EFFF0FEFFF0F9F0000AF0000FFBF00CF0000FFDF00
+FF5F00FFBF009F0000FFCF008F00009F00008F00009F0000FFCF00FFEF004FFFAF00008F008FFFCF
+FF2F008FFFBFFF3FAFFF4F007FFF005FFF007FFFFFBF00FFBF0000EFFF2FFFCF00FFFF2FFFCF1FFF
+DFFFCF00FF7F00FF9F00FFEF00CF0000DF0000BF0000DF0000FFFF00FFEF00CF0000FFDF00BF0000
+FF5F00FFAF00CF0000FFBF00BF0000BF0000CF0000BF0000FFBF00FFBF00BFFF3F008FFF00008F6F
+FF8F008FFF9FFF5F9FFF5F007FFF003FFF005FFFFFAF00FFBF000FFFEF00DFFF5FFF9F1FFFDF3FFF
+BFFFDF00FFCF00FFEF00FF8F00AF00009F00009F0000CF0000FFCF00FF9F00CF0000FFDF00CF0000
+BF0000AF0000FFEF00AF0000DFFF1FCFFF2FFFFF00BFFF3FAF0000BF0000006FFFCFFF2F6FFF8F00
+008F6FFF8F002FFF000FFF7FFF7F6FFF8F4FFFAF00CFFF00AFFFFFBF00FFEF00FFAF00FFEF00FFAF
+0000CFFF00AFFF00AFFFAF0000FFCF00FFFF00FFDF00FFDF009F0000BF0000FFAF00DF0000FFDF00
+FFBF00DFFF1F9F0000DFFF1F8F0000BF00008F00009F0000FFCF00FFEF00BFFF3F008FFF008FFF6F
+FF8F00008F6FFF8F5FFF9F001FFF001FFF006FFFFFCF00FFDF0000AFFF00EFFF00EFFF00DFFF1FFF
+DFEFFF0FFFDF00FFFF00FFEF009F0000CF00008F0000AF0000FFCF00CFFF2FBF0000FFFF00AF0000
+AF0000AF0000EFFF0FBF0000EFFF0FEFFF0FEFFF0FFFEF00BF0000CF0000005FFFBFFF3F9FFF5F00
+2FFF6FFF8F00008F001FFF4FFFAF9FFF5F4FFFAF00BFFF00AFFFFFFF00FFDF00FFEF00DFFF1FFFEF
+0000AFFF00BFFF00AFFFAF0000FFBF00FFAF00EFFF0FCFFF2FAF0000BF0000FF8F00AF0000FFAF00
+AF00009F0000FFCF008F0000FFFF00FFDF00FFEF00BFFF3F9F0000AF0000004FFFAFFF4F9FFF5F00
+0FFF5FFF9F001FFF00008F5FFF9F8FFF6F6FFF8F006FFF003FFFFFEF00FFCF00FFDF00EFFF0FFFBF
+00005FFF008FFF00AFFF8F0000FFEF00EFFF0FFFCF00FFDF007F00009F0000FFBF00DF0000FFEF00
+FF9F00FFBF00BF0000FFFF00AF0000AF0000AF00008F0000FFFF00FFCF00AFFF4F007FFF007FFF7F
+FF7F001FFF4FFFAF5FFF9F00008F008FFF002FFFFFEF00EFFF0F007FFF009FFF00CFFF008FFF00AF
+FFEFFF0FFFDF00EFFF0FFFEF009F0000AF0000AF0000AF0000FFFF00DFFF1FAF0000FFAF00AF0000
+FFAF00DFFF1FAF0000FFFF00AF0000CF0000AF0000BF0000FFCF00CFFF2FAFFF4F005FFF003FFF6F
+FF8F001FFF9FFF5F8FFF6F008FFF00008F006FFFFF8F00FF9F0000FFFF00EFFF3FFFBF2FFFCF5FFF
+9FFFCF00FFBF00FFCF00FFDF00BF0000CF00009F0000CF0000FFDF00FFFF00CF0000DFFF1FCF0000
+FF6F00FFBF00CF0000FFDF00BF0000CF0000BF0000BF0000FFEF00FFEF00CFFF2F007FFF005FFF4F
+FFAF006FFF4FFFAF6FFF8F002FFF006FFF00008FFFCF00FFCF0000FFFF00EFFF3FFFBF00CFFF00CF
+FFFFCF00CFFF2FEFFF0FFFCF00BF0000CF0000BF0000DF0000FFEF00FFCF00CF0000FFBF00CF0000
+8F00008F0000FFCF007F0000EFFF0FFF9F00FFEF00FFEF009F00008F000000CFFFFFBF00FFAF0000
+CFFFFFCF0000BFFF006FFFFFEF00FF8F00FFCF0000008F0000BFAFFF4FBFFF3F6FFF8F8FFF6F8FFF
+6F002FFF001FFF005FFFBF0000AFFF4FBFFF3FAFFF4FEFFF0FBF0000BF0000CFFF2FBF00009FFF5F
+9F00009F0000FFCF008F0000EFFF0FFFAF00FFEF00FFEF009F00009F000000AFFFFFBF00FFBF0000
+AFFFFFDF0000AFFF003FFFEFFF0FFF9F00FFCF000000BF00008F9FFF5FBFFF3F6FFF8F8FFF6F8FFF
+6F002FFF001FFF004FFFAF0000AFFF4FCFFF2F9FFF5FDFFF1FBF0000AF0000DFFF1FBF0000AFFF4F
+FFAF00FFDF00AF0000CFFF2F9F0000AF0000AF00008F0000DFFF1FFFEF00FFDF0000EFFF0FFFEFFF
+BF0000AFFFFFFF00FFEF00007FFF00FFFF00FFFFAFFF4F9FFF5F00008F001FFF003FFF002FFF003F
+FF8FFF6FBFFF3F8FFF6FFFFF009F0000BF0000CF0000CF0000AFFF4FDFFF1FAF0000FFBF00AF0000
+FFCF00FFEF00AF0000DFFF1FBF0000BF0000BF00009F0000CFFF2FFFDF00FF7F002FFFCF00DFFFFF
+EF0000EFFFFFDF00FFCF00009FFF00EFFF00EFFFBFFF3FBFFF3F001FFF00008F006FFF000FFF007F
+FFBFFF3FAFFF4F6FFF8FDFFF1FAF0000BF0000DF0000DF0000AFFF4FDFFF1FCF0000FFCF00CF0000
+FF8F00FFBF00AF0000FFEF009F00009F0000AF00007F0000EFFF0FFFDF00FFCF0000FFFF5FFF9FFF
+AF0000EFFFFFEF00FFDF0000CFFF3FFFBF3FFFBF6FFF8F6FFF8F003FFF006FFF00008F002FFF005F
+FF7FFF7FBFFF3F7FFF7FDFFF1FAF0000BF0000CF0000BF0000FFFF00FFFF00AF0000FF8F009F0000
+FF9F00FFAF00AF0000FFDF00AF00009F0000AF00008F0000BFFF3FFFBF00FF9F002FFFCF1FFFDFFF
+EF0000DFFFDFFF1FEFFF0F008FFF2FFFCF00CFFF8FFF6F8FFF6F002FFF000FFF002FFF00008F005F
+FF8FFF6F7FFF7F2FFFCFDFFF1FAF0000BF0000DF0000CF0000EFFF0FFFEF00BF0000FF9F00BF0000
+FF9F00FFFF00BF0000EFFF0FAF0000BF0000AF00009F0000FFFF00EFFF0FFF9F001FFFDF3FFFBFFF
+AF001FFFDFFFEF00FFBF0000AFFF5FFF9F00CFFF8FFF6F8FFF6F003FFF007FFF005FFF005FFF0000
+8FBFFF3FAFFF4FAFFF4FFFFF00BF0000DF0000EF0000DF00009FFF5FDFFF1FAF0000FFBF00AF0000
+9F00008F0000FF8F007F0000FFBF00FF8F00FFAF00EFFF0F7F00008F000000BFFFFFCF00FFDF0000
+CFFFEFFF0F00AFFF005FFFEFFF0FFFCF00FFCF00002FFF002FFF8FFF6FBFFF3F7FFF7F8FFF6FBFFF
+3F00008F007FFF009FFFAF00007FFF7FDFFF1FEFFF0FFFFF009F0000BF0000CFFF2FDF0000DFFF1F
+9F00009F0000EFFF0FAF0000CFFF2FFFAF00EFFF0FFFEF00BF0000BF00001FFFDFFF7F00FFCF0000
+AFFFFFDF0000BFFF008FFFFFDF00FFBF00CFFF2F001FFF001FFFBFFF3FAFFF4FBFFF3F7FFF7FAFFF
+4F007FFF00008F001FFFAF0000DFFF1FDFFF1FCFFF2FFFEF00BF0000AF0000AFFF4FBF00008FFF6F
+AF0000AF0000BFFF3FAF0000DFFF1FFFCF00BFFF3FFF9F00CF0000BF000000FFFFFF9F00FFEF0000
+AFFFFFFF0000AFFF00AFFFEFFF0FFFCF00EFFF0F005FFF004FFF8FFF6F6FFF8F7FFF7F2FFFCFAFFF
+4F009FFF001FFF00008FBF0000FFCF00FFCF00BFFF3FEFFF0FCF0000AF0000CFFF2FAF0000DFFF1F
+2FFFCF00EFFFFFCF0000BFFFFFCF00FFBF00FF9F00FFBF0000EFFF0FFFEFAF0000FFEF00FF8F00AF
+0000FFEF00AF00008F0000FFEF00FFDF00FFCF00BF0000AF0000FFFF00DFFF1FDFFF1FDFFF1FFFFF
+00AF0000AF0000BF000000008F3FFFBF5FFF9F4FFFAF6FFF8F004FFF000FFF8FFF6F009FFF9FFF5F
+FF9F00FFAF001FFFDFFF9F0000DFFF3FFFBF1FFFDF00AFFFFF8F00FF8F00FFEF00CF0000AF0000FF
+CF009F0000FFBF00FFEF009F0000BF0000BF0000AFFF4FAFFF4F9F0000AF0000AF0000AF0000BF00
+007FFF7FDFFF1FFFCF003FFFBF00008F004FFF002FFF003FFFAFFF4F7FFF7F004FFF8FFF6F003FFF
+FFAF00FFAF004FFFAFFFAF000FFFEF00DFFF5FFF9F00CFFFFF8F00FFAF00FFEF00DF00009F0000FF
+FF00CF0000FFAF00EFFF0FAF0000CF0000CF0000BFFF3FCFFF2FBF0000BF0000BF0000BF0000DF00
+00DFFF1FDFFF1FFFCF005FFF9F004FFF00008F005FFF008FFFAFFF4F6FFF8F00AFFF7FFF7F008FFF
+FFBF00FFCF00008FFFFFCF00006FFF00CFFF00AFFF00EFFFFFCF00FFAF00EFFF0FBF00009F0000FF
+DF008F0000EFFF0FFFCF00AF00009F0000BF0000AFFF4F9FFF5FCF0000DF0000CF0000DF0000EF00
+00EFFF0FCFFF2FBFFF3F4FFFAF002FFF005FFF00008F0000FF6FFF8F8FFF6F008FFFAFFF4F005FFF
+FFCF00FFAF000FFFEFFFBF0000CFFF00FFFF00CFFF0FFFEFFFEF00FF7F00EFFF0FDF0000CF0000FF
+DF00AF0000CFFF2FFFDF00AF0000CF0000DF0000EFFF0FDFFF1FCF0000DF0000BF0000CF0000DF00
+00FFFF00FFEF00EFFF0F6FFF8F003FFF008FFF0000FF00008F9FFF5F9FFF5F006FFF6FFF8F003FFF
+6FFF8F00DFFFFFEF0000CFFFFFBF00FFEF00FFCF00FFBF000FFFEF2FFFCF9F0000FFFF00FFCF009F
+0000FFCF00AF00007F0000FFFF00FFDF00FFEF00BF0000BF0000AFFF4FAFFF4FFFFF00EFFF0F9FFF
+5F9F0000BF0000CF0000004FFFAFFF4FAFFF4F6FFF8F9FFF5F00008F006FFFCFFF2F00AFFFCFFF2F
+4FFFAF00EFFFFF9F0000DFFFFF8F00FF9F00FF6F00FF9F004FFFAF00BFFFAF0000FFEF00FF9F00BF
+0000CFFF2FBF00009F0000DFFF1FFFFF00FFCF00BF0000AF0000DFFF1FDFFF1FFFFF00FFEF00DFFF
+1FBF0000AF0000AF0000000FFF7FFF7F6FFF8F8FFF6F9FFF5F006FFF00008FBFFF3F009FFFCFFF2F
+FF9F00FF7F000FFFEFFF8F0000FFFF7FFF7F1FFFDF00FFFFFFBF00FF4F00FFBF00CF0000CF0000FF
+AF00BF0000FF8F00FFBF00AF0000CF0000CF0000CFFF2FDFFF1FAF0000CF0000AF0000BF0000AF00
+00CFFF2FAFFF4FCFFF2F8FFF6F004FFF00AFFF008FFF006FFFCFFF2FBFFF3F00008F3FFFBF0000EF
+3FFFBF2FFFCFFF5F004FFFAFFF8F00FF9F00FF6F00FFAF005FFF9F6FFF8FCF0000FFDF00FFDF00DF
+0000FFFF00AF0000DF0000FFAF00DFFF1FFFBF00BF0000BF0000FFBF00FFCF00FF8F00FF9F00FFBF
+00DF0000BF0000AF0000009FFF8FFF6F7FFF7FAFFF4F6FFF8F00AFFF009FFF3FFFBF00008F4FFFAF
+FFAF00FF8F000FFFEFFF9F0000AFFF4FFFAF00CFFF00CFFFFFCF00FF5F00FFDF00BF0000CF0000FF
+DF00AF0000FFAF00FFEF00AF0000CF0000CF00009FFF5FAFFF4FAF0000CF00009F0000BF0000AF00
+00DFFF1F8FFF6FDFFF1F9FFF5F003FFF008FFF005FFF003FFFCFFF2FCFFF2F0000EF4FFFAF00008F
+gr
+DO
+12 w
+1 sg
+1571 0 2952 3535 2 MP stroke
+0 -1571 3345 4714 2 MP stroke
+1571 0 2952 3928 2 MP stroke
+0 -1571 3738 4714 2 MP stroke
+1571 0 2952 4321 2 MP stroke
+0 -1571 4130 4714 2 MP stroke
+SO
+18 w
+0 sg
+1571 0 2952 3928 2 MP stroke
+0 -1571 3738 4714 2 MP stroke
+6 w
+gr
+
+1 sg
+0 1572 1572 0 0 -1572 2952 6786 4 MP
+PP
+-1572 0 0 1572 1572 0 0 -1572 2952 6786 5 MP stroke
+4 w
+DO
+SO
+6 w
+0 sg
+2952 6786 mt 4524 6786 L
+2952 6786 mt 2952 5214 L
+2990 6786 mt 2990 6770 L
+3028 6786 mt 3028 6770 L
+3067 6786 mt 3067 6770 L
+3105 6786 mt 3105 6770 L
+3143 6786 mt 3143 6770 L
+3182 6786 mt 3182 6770 L
+3220 6786 mt 3220 6770 L
+3258 6786 mt 3258 6770 L
+3297 6786 mt 3297 6770 L
+3335 6786 mt 3335 6770 L
+3373 6786 mt 3373 6770 L
+3412 6786 mt 3412 6770 L
+3450 6786 mt 3450 6770 L
+3488 6786 mt 3488 6770 L
+3527 6786 mt 3527 6770 L
+3565 6786 mt 3565 6770 L
+3603 6786 mt 3603 6770 L
+3642 6786 mt 3642 6770 L
+3680 6786 mt 3680 6770 L
+3718 6786 mt 3718 6770 L
+3757 6786 mt 3757 6770 L
+3795 6786 mt 3795 6770 L
+3833 6786 mt 3833 6770 L
+3872 6786 mt 3872 6770 L
+3910 6786 mt 3910 6770 L
+3948 6786 mt 3948 6770 L
+3987 6786 mt 3987 6770 L
+4025 6786 mt 4025 6770 L
+4063 6786 mt 4063 6770 L
+4102 6786 mt 4102 6770 L
+4140 6786 mt 4140 6770 L
+4178 6786 mt 4178 6770 L
+4217 6786 mt 4217 6770 L
+4255 6786 mt 4255 6770 L
+4293 6786 mt 4293 6770 L
+4332 6786 mt 4332 6770 L
+4370 6786 mt 4370 6770 L
+4408 6786 mt 4408 6770 L
+4447 6786 mt 4447 6770 L
+4485 6786 mt 4485 6770 L
+gs 2952 5214 1573 1573 MR c np
+c14
+0 73 38 0 0 -73 2990 6787 4 MP stroke
+0 175 38 0 0 -175 4102 6787 4 MP stroke
+0 185 39 0 0 -185 4408 6787 4 MP stroke
+0 227 57 0 0 -52 4121 6612 4 MP stroke
+0 230 38 0 0 -230 3795 6787 4 MP stroke
+0 274 38 0 0 -274 4332 6787 4 MP stroke
+0 305 39 0 0 -305 3948 6787 4 MP stroke
+0 314 38 0 0 -314 3182 6787 4 MP stroke
+0 321 39 0 0 -321 3603 6787 4 MP stroke
+0 347 57 0 0 -33 3201 6473 4 MP stroke
+0 357 38 0 0 -357 3412 6787 4 MP stroke
+0 363 38 0 0 -363 3067 6787 4 MP stroke
+0 3 77 0 0 -293 3009 6714 4 MP stroke
+0 60 57 0 0 -381 3565 6787 4 MP stroke
+0 387 58 0 0 -157 3814 6557 4 MP stroke
+0 389 57 0 0 -32 3431 6430 4 MP stroke
+0 120 58 0 0 -394 4293 6787 4 MP stroke
+0 403 96 0 0 -37 3047 6421 4 MP stroke
+0 410 67 0 0 -21 3460 6398 4 MP stroke
+0 421 86 0 0 -40 3594 6406 4 MP stroke
+0 436 67 0 0 -49 3843 6400 4 MP stroke
+0 453 81 0 0 -32 3637 6366 4 MP stroke
+0 455 67 0 0 -228 4150 6560 4 MP stroke
+0 47 120 0 0 -457 3373 6787 4 MP stroke
+0 459 72 0 0 -4 4183 6332 4 MP stroke
+0 286 106 0 0 -77 4322 6393 4 MP stroke
+0 45 119 0 0 -481 3757 6787 4 MP stroke
+0 83 -134 0 0 -139 3229 6440 4 MP stroke
+0 18 -135 0 0 -504 3297 6787 4 MP stroke
+0 515 110 0 0 -44 4375 6316 4 MP stroke
+0 522 57 0 0 -217 3968 6482 4 MP stroke
+0 107 98 0 0 -564 3335 6787 4 MP stroke
+0 127 211 0 0 -183 4219 6328 4 MP stroke
+0 230 294 0 0 -119 3384 6223 4 MP stroke
+0 792 67 0 0 -270 3996 6265 4 MP stroke
+0 97 213 0 0 -408 3817 6306 4 MP stroke
+0 580 302 0 0 -759 3229 6283 4 MP stroke
+0 674 402 0 0 -427 3923 5898 4 MP stroke
+0 239 -744 0 0 -186 4124 5471 4 MP stroke
+30 w
+c11
+0 -72 2990 6786 2 MP stroke
+0 -72 3028 6786 2 MP stroke
+c9
+0 -174 4102 6786 2 MP stroke
+0 -174 4140 6786 2 MP stroke
+c12
+0 -184 4408 6786 2 MP stroke
+0 -184 4447 6786 2 MP stroke
+c9
+0 -226 4178 6786 2 MP stroke
+0 -229 3795 6786 2 MP stroke
+0 -229 3833 6786 2 MP stroke
+c12
+0 -273 4332 6786 2 MP stroke
+0 -273 4370 6786 2 MP stroke
+0 -304 3948 6786 2 MP stroke
+0 -304 3987 6786 2 MP stroke
+c10
+0 -313 3182 6786 2 MP stroke
+0 -313 3220 6786 2 MP stroke
+c11
+0 -320 3603 6786 2 MP stroke
+0 -320 3642 6786 2 MP stroke
+c10
+0 -346 3258 6786 2 MP stroke
+0 -356 3412 6786 2 MP stroke
+0 -356 3450 6786 2 MP stroke
+c11
+0 -362 3067 6786 2 MP stroke
+0 -362 3105 6786 2 MP stroke
+0 -380 3565 6786 2 MP stroke
+c9
+0 -386 3872 6786 2 MP stroke
+c10
+0 -388 3488 6786 2 MP stroke
+c12
+0 -393 4293 6786 2 MP stroke
+c11
+0 -402 3143 6786 2 MP stroke
+c10
+0 -409 3527 6786 2 MP stroke
+c11
+0 -420 3680 6786 2 MP stroke
+c9
+0 -435 3910 6786 2 MP stroke
+c11
+0 -452 3718 6786 2 MP stroke
+c9
+0 -454 4217 6786 2 MP stroke
+c10
+0 -456 3373 6786 2 MP stroke
+c9
+0 -458 4255 6786 2 MP stroke
+0 -480 3757 6786 2 MP stroke
+c10
+0 -503 3297 6786 2 MP stroke
+c12
+0 -514 4485 6786 2 MP stroke
+0 -521 4025 6786 2 MP stroke
+c10
+0 -563 3335 6786 2 MP stroke
+c12
+0 -791 4063 6786 2 MP stroke
+gr
+
+30 w
+c12
+0 sg
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 156 FMSR
+
+3332 6989 mt 
+(Spike trains) s
+6 w
+1 sg
+0 1572 1571 0 0 -1572 5174 4714 4 MP
+PP
+-1571 0 0 1572 1571 0 0 -1572 5174 4714 5 MP stroke
+4 w
+DO
+SO
+6 w
+0 sg
+5174 4714 mt 6745 4714 L
+5174 4714 mt 5174 3142 L
+5370 4714 mt 5370 4698 L
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 120 FMSR
+
+5290 4859 mt 
+(G1) s
+5763 4714 mt 5763 4698 L
+5683 4859 mt 
+(G2) s
+6156 4714 mt 6156 4698 L
+6076 4859 mt 
+(G3) s
+6549 4714 mt 6549 4698 L
+6469 4859 mt 
+(G4) s
+5174 4537 mt 5190 4537 L
+4979 4581 mt 
+(G4) s
+5174 4144 mt 5190 4144 L
+4979 4188 mt 
+(G3) s
+5174 3751 mt 5190 3751 L
+4979 3795 mt 
+(G2) s
+5174 3359 mt 5190 3359 L
+4979 3403 mt 
+(G1) s
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 156 FMSR
+
+5554 5028 mt 
+(Spike trains) s
+%%IncludeResource: font Helvetica-Bold
+/Helvetica-Bold /WindowsLatin1Encoding 180 FMSR
+
+5688 2953 mt 
+(< S >) s
+%%IncludeResource: font Helvetica-Bold
+/Helvetica-Bold /WindowsLatin1Encoding 144 FMSR
+
+6118 3043 mt 
+(G) s
+gs 5174 3143 1572 1572 MR c np
+gs np 5175 3143 mt 0 1571 rl 1571 0 rl 0 -1571 rl cp c np
+[1571 0 0 1571 5175 3143] cc
+/picstr 120 string def
+40 40 8
+[40.000000 0 0 40.000000 0 0] {currentfile picstr readhexstring pop} false 3 colorimage
+006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFFFFCF00FFCF00FFCF00FF
+CF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF
+00FFDF00FFDF00FFDF0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFFFFCF00FFCF00FFCF00FF
+CF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF
+00FFDF00FFDF00FFDF0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFFFFCF00FFCF00FFCF00FF
+CF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF
+00FFDF00FFDF00FFDF0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFFFFCF00FFCF00FFCF00FF
+CF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF
+00FFDF00FFDF00FFDF0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFFFFCF00FFCF00FFCF00FF
+CF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF
+00FFDF00FFDF00FFDF0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFFFFCF00FFCF00FFCF00FF
+CF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF
+00FFDF00FFDF00FFDF0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFFFFCF00FFCF00FFCF00FF
+CF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF
+00FFDF00FFDF00FFDF0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFFFFCF00FFCF00FFCF00FF
+CF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF
+00FFDF00FFDF00FFDF0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFFFFCF00FFCF00FFCF00FF
+CF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF
+00FFDF00FFDF00FFDF0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFF006FFFFFCF00FFCF00FFCF00FF
+CF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF
+00FFDF00FFDF00FFDF0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00007FFF007FFF007FFF00
+7FFF007FFF007FFF007FFF007FFF007FFF007FFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EF
+FF00EFFF00EFFF00EFFFFFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00
+FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00007FFF007FFF007FFF00
+7FFF007FFF007FFF007FFF007FFF007FFF007FFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EF
+FF00EFFF00EFFF00EFFFFFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00
+FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00007FFF007FFF007FFF00
+7FFF007FFF007FFF007FFF007FFF007FFF007FFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EF
+FF00EFFF00EFFF00EFFFFFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00
+FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00007FFF007FFF007FFF00
+7FFF007FFF007FFF007FFF007FFF007FFF007FFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EF
+FF00EFFF00EFFF00EFFFFFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00
+FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00007FFF007FFF007FFF00
+7FFF007FFF007FFF007FFF007FFF007FFF007FFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EF
+FF00EFFF00EFFF00EFFFFFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00
+FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00007FFF007FFF007FFF00
+7FFF007FFF007FFF007FFF007FFF007FFF007FFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EF
+FF00EFFF00EFFF00EFFFFFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00
+FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00007FFF007FFF007FFF00
+7FFF007FFF007FFF007FFF007FFF007FFF007FFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EF
+FF00EFFF00EFFF00EFFFFFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00
+FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00007FFF007FFF007FFF00
+7FFF007FFF007FFF007FFF007FFF007FFF007FFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EF
+FF00EFFF00EFFF00EFFFFFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00
+FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00007FFF007FFF007FFF00
+7FFF007FFF007FFF007FFF007FFF007FFF007FFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EF
+FF00EFFF00EFFF00EFFFFFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00
+FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00FFCF00007FFF007FFF007FFF00
+7FFF007FFF007FFF007FFF007FFF007FFF007FFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EF
+FF00EFFF00EFFF00EFFFFFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00
+FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF0000EFFF00EFFF00EFFF00
+EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF006FFF006FFF006FFF006FFF006FFF006FFF006F
+FF006FFF006FFF006FFFFFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00
+FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF0000EFFF00EFFF00EFFF00
+EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF006FFF006FFF006FFF006FFF006FFF006FFF006F
+FF006FFF006FFF006FFFFFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00
+FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF0000EFFF00EFFF00EFFF00
+EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF006FFF006FFF006FFF006FFF006FFF006FFF006F
+FF006FFF006FFF006FFFFFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00
+FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF0000EFFF00EFFF00EFFF00
+EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF006FFF006FFF006FFF006FFF006FFF006FFF006F
+FF006FFF006FFF006FFFFFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00
+FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF0000EFFF00EFFF00EFFF00
+EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF006FFF006FFF006FFF006FFF006FFF006FFF006F
+FF006FFF006FFF006FFFFFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00
+FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF0000EFFF00EFFF00EFFF00
+EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF006FFF006FFF006FFF006FFF006FFF006FFF006F
+FF006FFF006FFF006FFFFFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00
+FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF0000EFFF00EFFF00EFFF00
+EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF006FFF006FFF006FFF006FFF006FFF006FFF006F
+FF006FFF006FFF006FFFFFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00
+FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF0000EFFF00EFFF00EFFF00
+EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF006FFF006FFF006FFF006FFF006FFF006FFF006F
+FF006FFF006FFF006FFFFFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00
+FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF0000EFFF00EFFF00EFFF00
+EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF006FFF006FFF006FFF006FFF006FFF006FFF006F
+FF006FFF006FFF006FFFFFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00
+FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF00FFDF0000EFFF00EFFF00EFFF00
+EFFF00EFFF00EFFF00EFFF00EFFF00EFFF00EFFF006FFF006FFF006FFF006FFF006FFF006FFF006F
+FF006FFF006FFF006FFFFFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00
+00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFFFFBF00FFBF00FFBF00FF
+BF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF
+00FFAF00FFAF00FFAF00007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF
+00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFFFFBF00FFBF00FFBF00FF
+BF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF
+00FFAF00FFAF00FFAF00007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF
+00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFFFFBF00FFBF00FFBF00FF
+BF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF
+00FFAF00FFAF00FFAF00007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF
+00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFFFFBF00FFBF00FFBF00FF
+BF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF
+00FFAF00FFAF00FFAF00007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF
+00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFFFFBF00FFBF00FFBF00FF
+BF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF
+00FFAF00FFAF00FFAF00007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF
+00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFFFFBF00FFBF00FFBF00FF
+BF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF
+00FFAF00FFAF00FFAF00007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF
+00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFFFFBF00FFBF00FFBF00FF
+BF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF
+00FFAF00FFAF00FFAF00007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF
+00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFFFFBF00FFBF00FFBF00FF
+BF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF
+00FFAF00FFAF00FFAF00007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF
+00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFFFFBF00FFBF00FFBF00FF
+BF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF
+00FFAF00FFAF00FFAF00007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF
+00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFFFFBF00FFBF00FFBF00FF
+BF00FFBF00FFBF00FFBF00FFBF00FFBF00FFBF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF00FFAF
+00FFAF00FFAF00FFAF00007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF007FFF
+gr
+DO
+12 w
+1 sg
+1571 0 5174 3535 2 MP stroke
+0 -1571 5567 4714 2 MP stroke
+1571 0 5174 3928 2 MP stroke
+0 -1571 5960 4714 2 MP stroke
+1571 0 5174 4321 2 MP stroke
+0 -1571 6352 4714 2 MP stroke
+SO
+18 w
+0 sg
+1571 0 5174 3928 2 MP stroke
+0 -1571 5960 4714 2 MP stroke
+6 w
+gr
+
+1 sg
+0 1572 1572 0 0 -1572 5174 6786 4 MP
+PP
+-1572 0 0 1572 1572 0 0 -1572 5174 6786 5 MP stroke
+4 w
+DO
+SO
+6 w
+0 sg
+5174 6786 mt 6746 6786 L
+5174 6786 mt 5174 5214 L
+5488 6786 mt 5488 6770 L
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 120 FMSR
+
+5455 6931 mt 
+(1) s
+5802 6786 mt 5802 6770 L
+5769 6931 mt 
+(4) s
+6117 6786 mt 6117 6770 L
+6084 6931 mt 
+(2) s
+6431 6786 mt 6431 6770 L
+6398 6931 mt 
+(3) s
+gs 5174 5214 1573 1573 MR c np
+c14
+0 73 314 0 0 -73 5488 6787 4 MP stroke
+0 121 314 0 0 -121 6117 6787 4 MP stroke
+0 1381 629 0 0 -1429 5645 6714 4 MP stroke
+30 w
+c9
+0 -72 5488 6786 2 MP stroke
+c12
+0 -72 5802 6786 2 MP stroke
+c10
+0 -120 6117 6786 2 MP stroke
+c11
+0 -120 6431 6786 2 MP stroke
+gr
+
+30 w
+c11
+0 sg
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 156 FMSR
+
+5378 7108 mt 
+(Spike train groups) s
+6 w
+1 sg
+0 1572 1571 0 0 -1572 7435 4714 4 MP
+PP
+-1571 0 0 1572 1571 0 0 -1572 7435 4714 5 MP stroke
+4 w
+DO
+SO
+6 w
+0 sg
+7435 4714 mt 9006 4714 L
+7435 4714 mt 7435 3142 L
+7631 4714 mt 7631 4698 L
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 120 FMSR
+
+7551 4859 mt 
+(G1) s
+8024 4714 mt 8024 4698 L
+7944 4859 mt 
+(G2) s
+8416 4714 mt 8416 4698 L
+8336 4859 mt 
+(G3) s
+8809 4714 mt 8809 4698 L
+8729 4859 mt 
+(G4) s
+7435 4537 mt 7450 4537 L
+7240 4581 mt 
+(G4) s
+7435 4144 mt 7450 4144 L
+7240 4188 mt 
+(G3) s
+7435 3751 mt 7450 3751 L
+7240 3795 mt 
+(G2) s
+7435 3359 mt 7450 3359 L
+7240 3403 mt 
+(G1) s
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 156 FMSR
+
+7814 5028 mt 
+(Spike trains) s
+%%IncludeResource: font Helvetica-Bold
+/Helvetica-Bold /WindowsLatin1Encoding 180 FMSR
+
+7921 2953 mt 
+(< S) s
+%%IncludeResource: font Helvetica-Bold
+/Helvetica-Bold /WindowsLatin1Encoding 144 FMSR
+
+8196 3043 mt 
+(r) s
+%%IncludeResource: font Helvetica-Bold
+/Helvetica-Bold /WindowsLatin1Encoding 180 FMSR
+
+8252 2953 mt 
+( >) s
+%%IncludeResource: font Helvetica-Bold
+/Helvetica-Bold /WindowsLatin1Encoding 144 FMSR
+
+8407 3043 mt 
+(G) s
+gs 7435 3143 1572 1572 MR c np
+gs np 7435 3143 mt 0 1571 rl 1571 0 rl 0 -1571 rl cp c np
+[1571 0 0 1571 7435 3143] cc
+/picstr 120 string def
+40 40 8
+[40.000000 0 0 40.000000 0 0] {currentfile picstr readhexstring pop} false 3 colorimage
+00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFFFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F
+00FF3F00FF3F00FF3F00AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4F
+00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFFFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F
+00FF3F00FF3F00FF3F00AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4F
+00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFFFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F
+00FF3F00FF3F00FF3F00AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4F
+00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFFFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F
+00FF3F00FF3F00FF3F00AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4F
+00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFFFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F
+00FF3F00FF3F00FF3F00AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4F
+00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFFFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F
+00FF3F00FF3F00FF3F00AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4F
+00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFFFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F
+00FF3F00FF3F00FF3F00AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4F
+00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFFFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F
+00FF3F00FF3F00FF3F00AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4F
+00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFFFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F
+00FF3F00FF3F00FF3F00AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4F
+00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFFFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F
+00FF3F00FF3F00FF3F00AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4F
+FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F0000CFFF00CFFF00CFFF00
+CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF
+7F7FFF7F7FFF7F7FFF7FFF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00
+FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F0000CFFF00CFFF00CFFF00
+CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF
+7F7FFF7F7FFF7F7FFF7FFF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00
+FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F0000CFFF00CFFF00CFFF00
+CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF
+7F7FFF7F7FFF7F7FFF7FFF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00
+FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F0000CFFF00CFFF00CFFF00
+CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF
+7F7FFF7F7FFF7F7FFF7FFF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00
+FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F0000CFFF00CFFF00CFFF00
+CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF
+7F7FFF7F7FFF7F7FFF7FFF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00
+FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F0000CFFF00CFFF00CFFF00
+CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF
+7F7FFF7F7FFF7F7FFF7FFF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00
+FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F0000CFFF00CFFF00CFFF00
+CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF
+7F7FFF7F7FFF7F7FFF7FFF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00
+FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F0000CFFF00CFFF00CFFF00
+CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF
+7F7FFF7F7FFF7F7FFF7FFF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00
+FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F0000CFFF00CFFF00CFFF00
+CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF
+7F7FFF7F7FFF7F7FFF7FFF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00
+FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F0000CFFF00CFFF00CFFF00
+CFFF00CFFF00CFFF00CFFF00CFFF00CFFF00CFFF7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF
+7F7FFF7F7FFF7F7FFF7FFF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00
+FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F007FFF7F7FFF7F7FFF7F7F
+FF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DF
+FF00DFFF00DFFF00DFFFFF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00
+FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F007FFF7F7FFF7F7FFF7F7F
+FF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DF
+FF00DFFF00DFFF00DFFFFF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00
+FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F007FFF7F7FFF7F7FFF7F7F
+FF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DF
+FF00DFFF00DFFF00DFFFFF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00
+FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F007FFF7F7FFF7F7FFF7F7F
+FF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DF
+FF00DFFF00DFFF00DFFFFF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00
+FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F007FFF7F7FFF7F7FFF7F7F
+FF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DF
+FF00DFFF00DFFF00DFFFFF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00
+FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F007FFF7F7FFF7F7FFF7F7F
+FF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DF
+FF00DFFF00DFFF00DFFFFF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00
+FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F007FFF7F7FFF7F7FFF7F7F
+FF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DF
+FF00DFFF00DFFF00DFFFFF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00
+FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F007FFF7F7FFF7F7FFF7F7F
+FF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DF
+FF00DFFF00DFFF00DFFFFF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00
+FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F007FFF7F7FFF7F7FFF7F7F
+FF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DF
+FF00DFFF00DFFF00DFFFFF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00
+FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F00FF3F007FFF7F7FFF7F7FFF7F7F
+FF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F7FFF7F00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DF
+FF00DFFF00DFFF00DFFFFF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00
+AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F
+00FF6F00FF6F00FF6F0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F
+00FF6F00FF6F00FF6F0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F
+00FF6F00FF6F00FF6F0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F
+00FF6F00FF6F00FF6F0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F
+00FF6F00FF6F00FF6F0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F
+00FF6F00FF6F00FF6F0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F
+00FF6F00FF6F00FF6F0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F
+00FF6F00FF6F00FF6F0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F
+00FF6F00FF6F00FF6F0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+AFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FAFFF4FFF4F00FF4F00FF4F00FF
+4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF4F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F00FF6F
+00FF6F00FF6F00FF6F0000DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF00DFFF
+gr
+DO
+12 w
+1 sg
+1571 0 7435 3535 2 MP stroke
+0 -1571 7827 4714 2 MP stroke
+1571 0 7435 3928 2 MP stroke
+0 -1571 8220 4714 2 MP stroke
+1571 0 7435 4321 2 MP stroke
+0 -1571 8613 4714 2 MP stroke
+SO
+18 w
+0 sg
+1571 0 7435 3928 2 MP stroke
+0 -1571 8220 4714 2 MP stroke
+gr
+
+18 w
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 120 FMSR
+
+7418 4757 mt 
+( ) s
+8990 3185 mt 
+( ) s
+6 w
+1 sg
+0 1572 235 0 0 -1572 9187 4715 4 MP
+PP
+-235 0 0 1572 235 0 0 -1572 9187 4715 5 MP stroke
+gs 9187 3143 236 1573 MR c np
+gs np 9187 3143 mt 0 1572 rl 235 0 rl 0 -1572 rl cp c np
+[235 0 0 1572 9187 3143] cc
+/picstr 3 string def
+1 64 8
+[1.000000 0 0 64.000000 0 0] {currentfile picstr readhexstring pop} false 3 colorimage
+7F00008F00009F0000AF0000BF0000CF0000DF0000EF0000FF0000FF0F00FF1F00FF2F00FF3F00FF
+4F00FF5F00FF6F00FF7F00FF8F00FF9F00FFAF00FFBF00FFCF00FFDF00FFEF00FFFF00EFFF0FDFFF
+1FCFFF2FBFFF3FAFFF4F9FFF5F8FFF6F7FFF7F6FFF8F5FFF9F4FFFAF3FFFBF2FFFCF1FFFDF0FFFEF
+00FFFF00EFFF00DFFF00CFFF00BFFF00AFFF009FFF008FFF007FFF006FFF005FFF004FFF003FFF00
+2FFF001FFF000FFF0000FF0000EF0000DF0000CF0000BF0000AF00009F00008F
+gr
+gr
+
+4 w
+DO
+SO
+6 w
+0 sg
+9187 3143 mt 9422 3143 L
+9187 4715 mt 9422 4715 L
+9422 4715 mt 9422 3143 L
+9187 4715 mt 9187 3143 L
+9187 4715 mt 9422 4715 L
+9422 4715 mt 9422 3143 L
+9422 4715 mt 9406 4715 L
+9187 4715 mt 9202 4715 L
+9456 4759 mt 
+(0) s
+9422 4406 mt 9406 4406 L
+9187 4406 mt 9202 4406 L
+9456 4450 mt 
+(0.1) s
+9422 4098 mt 9406 4098 L
+9187 4098 mt 9202 4098 L
+9456 4142 mt 
+(0.2) s
+9422 3789 mt 9406 3789 L
+9187 3789 mt 9202 3789 L
+9456 3833 mt 
+(0.3) s
+9422 3481 mt 9406 3481 L
+9187 3481 mt 9202 3481 L
+9456 3525 mt 
+(0.4) s
+9422 3172 mt 9406 3172 L
+9187 3172 mt 9202 3172 L
+9456 3216 mt 
+(0.5) s
+9187 3143 mt 9422 3143 L
+9187 4715 mt 9422 4715 L
+9422 4715 mt 9422 3143 L
+9187 4715 mt 9187 3143 L
+1 sg
+0 1572 1572 0 0 -1572 7396 6786 4 MP
+PP
+-1572 0 0 1572 1572 0 0 -1572 7396 6786 5 MP stroke
+4 w
+DO
+SO
+6 w
+0 sg
+7396 6786 mt 8968 6786 L
+7396 6786 mt 7396 5214 L
+7710 6786 mt 7710 6770 L
+7677 6931 mt 
+(2) s
+8025 6786 mt 8025 6770 L
+7992 6931 mt 
+(3) s
+8339 6786 mt 8339 6770 L
+8306 6931 mt 
+(1) s
+8654 6786 mt 8654 6770 L
+8621 6931 mt 
+(4) s
+gs 7396 5214 1573 1573 MR c np
+c14
+0 73 315 0 0 -73 7710 6787 4 MP stroke
+0 298 315 0 0 -298 8339 6787 4 MP stroke
+0 1429 -628 0 0 -1204 8496 6489 4 MP stroke
+30 w
+c10
+0 -72 7710 6786 2 MP stroke
+c11
+0 -72 8025 6786 2 MP stroke
+c9
+0 -297 8339 6786 2 MP stroke
+c12
+0 -297 8654 6786 2 MP stroke
+gr
+
+30 w
+c12
+0 sg
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 156 FMSR
+
+7600 7108 mt 
+(Spike train groups) s
+6 w
+24 w
+c14
+0 -315 343 2607 2 MP stroke
+0 78 45 -120 298 2334 3 MP
+PP
+-45 42 0 78 45 -120 298 2334 4 MP stroke
+-45 -42 45 120 343 2214 3 MP
+PP
+0 -78 -45 -42 45 120 343 2214 4 MP stroke
+%%IncludeResource: font Helvetica-Bold
+/Helvetica-Bold /WindowsLatin1Encoding 156 FMSR
+
+-143 2757 mt 
+(    Spike train) s
+  15 2942 mt 
+(   groups) s
+0 j
+ 186  818  343 1396 FO
+1 j
+0 72 9243 357 2 MP stroke
+0 -78 -45 120 9288 387 3 MP
+PP
+45 -42 0 -78 -45 120 9288 387 4 MP stroke
+45 42 -45 -120 9243 507 3 MP
+PP
+0 78 45 42 -45 -120 9243 507 4 MP stroke
+8764  137 mt 
+(Color-coded) s
+8568  322 mt 
+(spike train groups) s
+0 j
+ 187  889 9228 1396 FO
+1 j
+0 1008 1212 285 2 MP stroke
+0 -78 -45 120 1257 1251 3 MP
+PP
+45 -42 0 -78 -45 120 1257 1251 4 MP stroke
+45 42 -45 -120 1212 1371 3 MP
+PP
+0 78 45 42 -45 -120 1212 1371 4 MP stroke
+%%IncludeResource: font Helvetica-Bold
+/Helvetica-Bold /WindowsLatin1Encoding 168 FMSR
+
+ 728  247 mt 
+(Separators2) s
+0 815 2424 285 2 MP stroke
+0 -78 -45 120 2469 1058 3 MP
+PP
+45 -42 0 -78 -45 120 2469 1058 4 MP stroke
+45 42 -45 -120 2424 1178 3 MP
+PP
+0 78 45 42 -45 -120 2424 1178 4 MP stroke
+1940  247 mt 
+(Separators1) s
+-173 428 2424 285 2 MP stroke
+29 -72 -87 94 2309 691 3 MP
+PP
+58 -22 29 -72 -87 94 2309 691 4 MP stroke
+26 56 3 -128 2222 785 3 MP
+PP
+-29 72 26 56 3 -128 2222 785 4 MP stroke
+190 1209 2424 285 2 MP stroke
+-12 -77 -26 126 2652 1445 3 MP
+PP
+38 -49 -12 -77 -26 126 2652 1445 4 MP stroke
+51 35 -63 -112 2626 1571 3 MP
+PP
+12 77 51 35 -63 -112 2626 1571 4 MP stroke
+386 1603 2424 285 2 MP stroke
+-18 -76 -16 127 2844 1837 3 MP
+PP
+34 -51 -18 -76 -16 127 2844 1837 4 MP stroke
+54 30 -72 -106 2828 1964 3 MP
+PP
+18 76 54 30 -72 -106 2828 1964 4 MP stroke
+-180 622 4444 285 2 MP stroke
+22 -75 -77 103 4319 879 3 MP
+PP
+55 -28 22 -75 -77 103 4319 879 4 MP stroke
+31 53 -9 -128 4242 982 3 MP
+PP
+-22 75 31 53 -9 -128 4242 982 4 MP stroke
+3303  247 mt 
+(Spike train group separators) s
+0 1012 4444 285 2 MP stroke
+0 -78 -45 120 4489 1255 3 MP
+PP
+45 -42 0 -78 -45 120 4489 1255 4 MP stroke
+45 42 -45 -120 4444 1375 3 MP
+PP
+0 78 45 42 -45 -120 4444 1375 4 MP stroke
+192 1405 4444 285 2 MP stroke
+-10 -77 -29 125 4675 1642 3 MP
+PP
+39 -48 -10 -77 -29 125 4675 1642 4 MP stroke
+50 35 -60 -112 4646 1767 3 MP
+PP
+10 77 50 35 -60 -112 4646 1767 4 MP stroke
+-532 551 6162 285 2 MP stroke
+54 -56 -116 55 5692 837 3 MP
+PP
+62 1 54 -56 -116 55 5692 837 4 MP stroke
+3 61 51 -117 5576 892 3 MP
+PP
+-54 56 3 61 51 -117 5576 892 4 MP stroke
+6162  247 mt 
+(Markers2) s
+-456 547 7627 285 2 MP stroke
+50 -60 -112 63 7233 829 3 MP
+PP
+62 -3 50 -60 -112 63 7233 829 4 MP stroke
+7 61 43 -121 7121 892 3 MP
+PP
+-50 60 7 61 43 -121 7121 892 4 MP stroke
+7627  247 mt 
+(Markers1) s
+455 547 7627 285 2 MP stroke
+-50 -60 43 121 8089 771 3 MP
+PP
+7 -61 -50 -60 43 121 8089 771 4 MP stroke
+62 3 -112 -63 8132 892 3 MP
+PP
+50 60 62 3 -112 -63 8132 892 4 MP stroke
+6 w
+
+end %%Color Dict
+
+eplot
+%%EndObject
+
+epage
+end
+
+showpage
+
+%%Trailer
+%%BoundingBox:    -4     0   595   832
+%%Pages: 001
+%%EOF
