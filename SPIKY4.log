@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.8)  27 MAY 2014 18:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.8)  27 MAY 2014 22:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -225,18 +225,18 @@ LaTeX Info: Redefining \cite on input line 541.
 (./SPIKY4.aux)
 \openout1 = `SPIKY4.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
 
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -299,25 +299,25 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 42.
+LaTeX Font Info:    Try loading font information for U+msa on input line 45.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 42.
+LaTeX Font Info:    Try loading font information for U+msb on input line 45.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 48.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 51.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 48.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 51.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 48.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 51.
 \c@sv@footnote=\count127
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 69.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 72.
 Missing character: There is no ’ in font cmr10!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -331,7 +331,7 @@ df>
 (epstopdf)                    size: 9241 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig1_SPIKE_Illustration-ep
 s-converted-to.pdf Fig1_SPIKE_Illustration.eps>
-(epstopdf)             \includegraphics on input line 107.
+(epstopdf)             \includegraphics on input line 110.
 Package epstopdf Info: Output file is already uptodate.
 
 <Fig1_SPIKE_Illustration-eps-converted-to.pdf, id=1, 534.99875pt x 315.1775pt>
@@ -339,7 +339,7 @@ File: Fig1_SPIKE_Illustration-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig1_SPIKE_Illustration-eps-converted-to.pdf>
 Package pdftex.def Info: Fig1_SPIKE_Illustration-eps-converted-to.pdf used on i
-nput line 107.
+nput line 110.
 (pdftex.def)             Requested size: 241.84842pt x 142.4778pt.
 Missing character: There is no ‘ in font cmr10!
 Missing character: There is no ’ in font cmr10!
@@ -361,7 +361,7 @@ Package epstopdf Info: Source file: <Fig2-Movie-Screenshot.eps>
 (epstopdf)                    size: 27510 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig2-Movie-Screenshot-eps-
 converted-to.pdf Fig2-Movie-Screenshot.eps>
-(epstopdf)             \includegraphics on input line 245.
+(epstopdf)             \includegraphics on input line 248.
 Package epstopdf Info: Output file is already uptodate.
 
 <Fig2-Movie-Screenshot-eps-converted-to.pdf, id=45, 572.1375pt x 422.57875pt>
@@ -369,7 +369,7 @@ File: Fig2-Movie-Screenshot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig2-Movie-Screenshot-eps-converted-to.pdf>
 Package pdftex.def Info: Fig2-Movie-Screenshot-eps-converted-to.pdf used on inp
-ut line 245.
+ut line 248.
 (pdftex.def)             Requested size: 241.84842pt x 178.62961pt.
 Missing character: There is no • in font cmr8!
 Package epstopdf Info: Source file: <Fig3-SPIKY-Flowchart.eps>
@@ -381,7 +381,7 @@ Package epstopdf Info: Source file: <Fig3-SPIKY-Flowchart.eps>
 (epstopdf)                    size: 15165 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig3-SPIKY-Flowchart-eps-c
 onverted-to.pdf Fig3-SPIKY-Flowchart.eps>
-(epstopdf)             \includegraphics on input line 261.
+(epstopdf)             \includegraphics on input line 264.
 Package epstopdf Info: Output file is already uptodate.
 
 <Fig3-SPIKY-Flowchart-eps-converted-to.pdf, id=46, 543.02875pt x 723.70375pt>
@@ -389,7 +389,7 @@ File: Fig3-SPIKY-Flowchart-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig3-SPIKY-Flowchart-eps-converted-to.pdf>
 Package pdftex.def Info: Fig3-SPIKY-Flowchart-eps-converted-to.pdf used on inpu
-t line 261.
+t line 264.
 (pdftex.def)             Requested size: 241.84842pt x 322.3177pt.
 Missing character: There is no • in font cmr8!
 Missing character: There is no ’ in font cmr10!
@@ -399,7 +399,7 @@ Missing character: There is no ’ in font cmr10!
 Missing character: There is no ’ in font cmr10!
  [4 <./Fig2-Movie-Screenshot-eps-converted-to.pdf> <./Fig3-SPIKY-Flowchart-eps-
 converted-to.pdf>]
-Overfull \hbox (23.10072pt too wide) in paragraph at lines 289--290
+Overfull \hbox (23.10072pt too wide) in paragraph at lines 292--293
 \OT1/cmr/m/n/10 found at www.fi.isc.cnr.it/users/thomas.kreuz/sourcecode.html. 
 
  []

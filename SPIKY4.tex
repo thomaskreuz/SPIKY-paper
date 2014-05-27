@@ -76,9 +76,9 @@ A wide variety of approaches to quantify the dissimilarity, or distance, between
 XXXXX Computational aspects XXXXX
 
 %
-% ********************************************************************************************** Methods **************
+% **************************************************************** Methods **************
 %
-\section{\label{s:Methods} Methods}
+\section{\label{s:Measures} Measures}
 
 % XXXXX maybe shift definition of distances to the appendix XXXXX
 
@@ -200,8 +200,9 @@ and accordingly for the following spike of the second spike train. And, similar 
 
 \subsection{\label{sss:Edge-effect} Edge effect}
 
-suggested by Conor Houghton
+My instinct is to count the edge spikes as normal spikes, that is work out their gaps in the normal way but in the time before the first spike use the first spike as both the previous and next gap, similarly for the time after the last spike. This is different to having the extra spikes, that means taking the first and last real gap at half weight. The difficulty is with the ISI. We know two things about the ISI. Taking the example of the first spike, say it is at $t_1$ and the interval starts at $t=0$. Firstly the ISI shouldn't be smaller than $t_1$ and secondly, we know the ISI $t_2-t_1$ where $t_2$ is the time of the second spike. The thing is that if $t_1 < t_2-t_1$ it could be because $t_1 < "the true ISI"$, so one possibility is to take $max(t_1,t_2-t_1)$.
 
+(Conor Houghton, personal communication)
 
 
 \subsection{\label{ss:Bivariate-ISI-Distance} The ISI-distance}

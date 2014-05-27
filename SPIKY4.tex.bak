@@ -7,6 +7,36 @@
 \usepackage{bm}
 \usepackage{natbib}
 
+% 
+%
+% Introduction
+% ============
+%
+% Measures
+% ========
+% ISI
+% SPIKE (regular, realtime, future)
+% Edge effect
+% Spike train surrogates (Significance), Comparison with Poisson
+% Computational Cost (Memory, Speed)
+%
+% SPIKY
+% =====
+% Input (data format), Spike Train Generator (Patterns, by hand) 
+% Output
+% Figure Layout
+% GUI vs Loop
+%
+% Discussion
+% ==========
+% Comparison with other measures/implementations
+% Limitations
+% Outlook
+%
+%
+%
+
+
 
 \begin{document}
 
@@ -16,17 +46,9 @@
 
 \author{Thomas Kreuz},
 \ead{thomas.kreuz@cnr.it}
-\author{Nebojsa Bozanik}
-%\author[ITT]{Daniel Chicharro},
-%\author[UBE]{Conor Houghton},
-%\author[UPF]{Ralph G. Andrzejak},
-%\author[UBG]{Florian Mormann}
+\author{Nebojsa Bozanic}
 
 \address{Institute for complex systems, CNR, Sesto Fiorentino, Italy}
-%\address[ITT]{Center for Neuroscience and Cognitive Systems@UniTn, Italian Institute of Technology, Rovereto (TN), Italy}
-%\address[UBE]{Department of Computer Science, University of Bristol, Bristol, England}
-%\address[UPF]{Department of Information and Communication Technologies, Universitat Pompeu Fabra, Barcelona, Spain}
-%\address[UBG]{Department of Epileptology, University of Bonn, Bonn, Germany}
 
 
 \date{\today}
@@ -49,16 +71,14 @@
 %
 \section{\label{s:Intro} Introduction}
 
-XXXXX Note: Work in progress. This is a very preliminary and incomplete draft that hopefully soon will become a full paper.  XXXXX
-
 A wide variety of approaches to quantify the dissimilarity, or distance, between two spike trains has been suggested. Among these is the metric introduced in \citet{Victor96}, which evaluates the cost needed to transform one spike train into the other, using only certain elementary steps. Another metric proposed in \citet{VanRossum01}, measures the Euclidean distance between the two spike trains after convolution of the spikes with an exponential function. Both methods involve one parameter that sets the time scale. In contrast, two more recent bivariate approaches, the ISI- and the SPIKE-distance are time scale independent and self-adaptive \citep{Kreuz07c, Kreuz13}. These two measures are complementary: The ISI-distance relies on the relative length of simultaneous interspike intervals and is thus well-designed to quantify similarities in the neurons’ firing-rate profiles \citep{Kreuz07c, Kreuz09}. The SPIKE-distance is based on differences between the spike times of the two spike trains and is therefore ideally suited to track synchrony that is mediated by spike timing \citep{Kreuz11, Kreuz13}.
 
 XXXXX Computational aspects XXXXX
 
 %
-% ********************************************************************************************** Methods **************
+% **************************************************************** Methods **************
 %
-\section{\label{s:Methods} Methods}
+\section{\label{s:Measures} Measures}
 
 % XXXXX maybe shift definition of distances to the appendix XXXXX
 
@@ -178,6 +198,13 @@ and accordingly for the following spike of the second spike train. And, similar 
 \end{equation}
 
 
+\subsection{\label{sss:Edge-effect} Edge effect}
+
+My instinct is to count the edge spikes as normal spikes, that is work out their gaps in the normal way but in the time before the first spike use the first spike as both the previous and next gap, similarly for the time after the last spike. This is different to having the extra spikes, that means taking the first and last real gap at half weight. The difficulty is with the ISI. We know two things about the ISI. Taking the example of the first spike, say it is at $t_1$ and the interval starts at $t=0$. Firstly the ISI shouldn't be smaller than $t_1$ and secondly, we know the ISI $t_2-t_1$ where $t_2$ is the time of the second spike. The thing is that if $t_1 < t_2-t_1$ it could be because $t_1 < "the true ISI"$, so one possibility is to take $max(t_1,t_2-t_1)$.
+
+(Conor Houghton, personal communication)
+
+
 \subsection{\label{ss:Bivariate-ISI-Distance} The ISI-distance}
 
 While the dissimilarity profile of the SPIKE-distance is extracted from differences between the spike times of the two spike trains, the dissimilarity profile of the ISI-distance \citep{Kreuz07c, Kreuz09} is calculated as the instantaneous ratio between the interspike intervals $x_{\mathrm {ISI}}^{(1)}$ and $x_{\mathrm {ISI}}^{(2)}$ (Eq. \ref{eq:ISI}) according to:
@@ -189,7 +216,9 @@ While the dissimilarity profile of the SPIKE-distance is extracted from differen
                   \end{cases}
 \end{equation}
 %
-This ISI-ratio equals $0$ for identical ISI in the two spike trains, and approaches $-1$ and $1$, respectively, if the first or the second spike train is much faster than the other. For the ISI-distance the temporal averaging analogous to Eq. \ref{eq:Temporal-Average} is performed on the absolute value of the ISI-ratio, thus both kinds of deviations are treated equally. Since the ISI-distance relies on the instantaneous ISI-values and thus requires knowledge about the following spikes, no causal Realtime extension is possible.
+This ISI-ratio equals $0$ for identical ISI in the two spike trains, and approaches $-1$ and $1$, respectively, if the first or the second spike train is much faster than the other. For the ISI-distance the temporal averaging analogous to Eq. 
+%\ref{eq:Temporal-Average} 
+is performed on the absolute value of the ISI-ratio, thus both kinds of deviations are treated equally. Since the ISI-distance relies on the instantaneous ISI-values and thus requires knowledge about the following spikes, no causal Realtime extension is possible.
 
 
 \subsection{\label{ss:Representations} Representations}
@@ -268,7 +297,37 @@ The computational load scales with the number of spike trains $N$ as $N^2$. More
 
 \subsection{\label{ss:SPIKY} SPIKY}
 
+\subsection{\label{ss:Spike-train-surrogates} Spike train surrogates}
+
+Daniel's Email 13.07.2011:
+
+Regarding the use of Poisson processes to have a benchmark it will have different implications depending on the structure of your data. If the rate is almost constant then comparing to processes with the same estimated average rate is the best option. If the rate is time-dependent you may want to compare with processes which are Poissonian but mimic the same time-dependent profile of the rate. These are just alternatives that give you complementary information on the structure of the reliability.
+
+Surrogate data with the same time dependent rate can be obtained by randomly reassigning each spike to any of the spike trains.
+
+\subsection{\label{ss:Other-Implementations} Comparison with other implementations}
+
+
 XXXXXXXXXX
+
+
+Python-Implementation of SPIKE-distance courtesy of Jeremy Fix:
+
+%https://groups.google.com/forum/?hl=fr&fromgroups=#!searchin/briansupport/SPIKE\$20distance/briansupport/ctudp9JCeb8/Y5AGiIovh5wJ
+
+Python-Implementation of the pairwise ISI-distance courtesy of Michael Chary:
+
+%https://pypi.python.org/pypi/ISIpy/1.0.1
+
+
+
+R{\v a}zvan Florian:
+
+%https://github.com/modulus-metric/spike-train-metrics
+
+\citep{Rusu14}
+
+Neboj{\v s}a Bo{\v z}ani{\' c}
 
 
 \section{\label{s:Discussion} Discussion}
@@ -285,11 +344,15 @@ XXXXXXXXXX
 
 \begin{thanks}
 \section{\label{s:Acknowledgement} \textbf{Acknowledgements}}
-     TK acknowledges funding support from the European Commission through the Marie Curie Initial Training Network 'Neural Engineering Transformative Technologies (NETT)', project 289146 as well as from the Italian Ministry of Foreign Affairs regarding the activity of the Joint Italian-Israeli Laboratory on Neuroscience.
-\end{thanks}
+     TK acknowledges funding support from the European Commission through the Marie Curie Initial Training Network 'Neural Engineering Transformative Technologies (NETT)', project 289146 as well as from the Italian Ministry of Foreign Affairs regarding the activity of the Joint Italian-Israeli Laboratory on Neuroscience. 
+     
+We thank Emily Caporello, Daniel Chicharro, Tim Gentner, Conor Houghton, Jutta Kretzberg, Stefano Luccioli, Florian Mormann, Leon Paz, Friederice Pirschel, Alessandro Torcini, Jonathan Victor for useful discussions.
+We also thank Thomas Alderson, Mayte Bonilla Quintana, Hamid Charkhkar, Didier Desaintjan, Mario DiPoppa, Mahboubeh Etemadi, Marion Najac, Matthew Phillips, Eugenio Piasini, Robert Rein, Michael Schaub, Eitan Schechtman, Matthew Williams, Yunguo Yu for advice and user feedback.
+     
+     \end{thanks}
 
 
-\bibliography{Literaturliste}
+\bibliography{Kreuz_Bibliography}
 
 %\bibliographystyle{plainnat}
 \bibliographystyle{elsart-harv}
