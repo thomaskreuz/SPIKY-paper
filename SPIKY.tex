@@ -16,7 +16,7 @@
 
 \author{Thomas Kreuz},
 \ead{thomas.kreuz@cnr.it}
-\author{Nebojsa Bozanik}
+\author{Nebojsa Bozanic}
 %\author[ITT]{Daniel Chicharro},
 %\author[UBE]{Conor Houghton},
 %\author[UPF]{Ralph G. Andrzejak},
@@ -51,7 +51,7 @@
 
 XXXXX Note: Work in progress. This is a very preliminary and incomplete draft that hopefully soon will become a full paper.  XXXXX
 
-A wide variety of approaches to quantify the dissimilarity, or distance, between two spike trains has been suggested. Among these is the metric introduced in \citet{Victor96}, which evaluates the cost needed to transform one spike train into the other, using only certain elementary steps. Another metric proposed in \citet{VanRossum01}, measures the Euclidean distance between the two spike trains after convolution of the spikes with an exponential function. Both methods involve one parameter that sets the time scale. In contrast, two more recent bivariate approaches, the ISI- and the SPIKE-distance are time scale independent and self-adaptive \citep{Kreuz07c, Kreuz13}. These two measures are complementary: The ISI-distance relies on the relative length of simultaneous interspike intervals and is thus well-designed to quantify similarities in the neurons’ firing-rate profiles \citep{Kreuz07c, Kreuz09}. The SPIKE-distance is based on differences between the spike times of the two spike trains and is therefore ideally suited to track synchrony that is mediated by spike timing \citep{Kreuz11, Kreuz13}.
+A wide variety of approaches to quantify the dissimilarity, or distance, between two spike trains has been suggested. Among these is the metric introduced in \citet{Victor96}, which evaluates the cost needed to transform one spike train into the other, using only certain elementary steps. Another metric proposed in \citet{VanRossum01}, measures the Euclidean distance between the two spike trains after convolution of the spikes with an exponential function. Both methods involve one parameter that sets the time scale. In contrast, two more recent bivariate approaches, the ISI- and the SPIKE-distance are time scale independent and self-adaptive \citep{Kreuz07c, Kreuz13}. These two measures are complementary: The ISI-distance relies on the relative length of simultaneous interspike intervals and is thus well-designed to quantify similarities in the neuronsï¿½ firing-rate profiles \citep{Kreuz07c, Kreuz09}. The SPIKE-distance is based on differences between the spike times of the two spike trains and is therefore ideally suited to track synchrony that is mediated by spike timing \citep{Kreuz11, Kreuz13}.
 
 XXXXX Computational aspects XXXXX
 
@@ -91,7 +91,7 @@ The ambiguity regarding the definition of the very first and the very last inter
     \caption{\abb\label{fig:Fig1-SPIKE-Illustration} SPIKE-distance. Illustration of the local quantities needed to define the dissimilarity profile $S (t)$ for an arbitrary time instant $t$.}
 \end{figure}
 %
-From these three quantities the dissimilarity profile is calculated in two steps: First for each spike the distance to the nearest spike in the other spike train is calculated, then for each time instant the relevant spike time differences are selected, weighted, and normalized. Here ‘relevant’ means local; each time instant is uniquely surrounded by four corner spikes: the preceding spike from the first spike train $t_{\mathrm {P}}^{(1)}$, the following spike from the first spike train $t_{\mathrm {F}}^{(1)}$, the preceding spike from the second spike train $t_{\mathrm {P}}^{(2)}$, and, finally, the following spike from the second spike train $t_{\mathrm {F}}^{(2)}$. Each of these corner spikes can be identified with a spike time difference, for example, for the previous spike of the first spike train
+From these three quantities the dissimilarity profile is calculated in two steps: First for each spike the distance to the nearest spike in the other spike train is calculated, then for each time instant the relevant spike time differences are selected, weighted, and normalized. Here ï¿½relevantï¿½ means local; each time instant is uniquely surrounded by four corner spikes: the preceding spike from the first spike train $t_{\mathrm {P}}^{(1)}$, the following spike from the first spike train $t_{\mathrm {F}}^{(1)}$, the preceding spike from the second spike train $t_{\mathrm {P}}^{(2)}$, and, finally, the following spike from the second spike train $t_{\mathrm {F}}^{(2)}$. Each of these corner spikes can be identified with a spike time difference, for example, for the previous spike of the first spike train
 %
 \begin{equation} \label{eq:Delta-Corner-Spike}
      \Delta t_{\mathrm {P}}^{(1)} = \min_i (| t_{\mathrm {P}}^{(1)} - t_i^{(2)} |)
@@ -197,7 +197,7 @@ Moreover, the sensitivity to spike timing and the instantaneous reliability achi
 
 \subsubsection{\label{sss:Full-matrix-and-cross-sections} Full matrix and cross sections}
 
-The starting point is the most detailed representation in which one instantaneous value is obtained for each pair of spike trains (see Eq. \ref{eq:Bi-Spike-Diss-Improved}). For multineuron data, this results in a matrix of size “number of sampled time instants s” × “squared number of spike trains” (i.e., $\# (t_s) N^2$).
+The starting point is the most detailed representation in which one instantaneous value is obtained for each pair of spike trains (see Eq. \ref{eq:Bi-Spike-Diss-Improved}). For multineuron data, this results in a matrix of size ï¿½number of sampled time instants sï¿½ ï¿½ ï¿½squared number of spike trainsï¿½ (i.e., $\# (t_s) N^2$).
 
 From this matrix, it is possible to extract any desired information. By selecting a pair of spike trains, one obtains the bivariate dissimilarity profile S(t) for this pair of spike trains. Selecting a time instant $t_s$ instead yields an instantaneous matrix of pairwise spike train dissimilarities $S_{mn}(t_s)$. This matrix can be used to divide the spike trains into instantaneous clusters, that is, groups of spike trains with low intragroup and high intergroup dissimilarity.
 
@@ -215,7 +215,7 @@ A last possibility is spatial averaging such that the spike trains are manually 
 %
 \begin{figure}
     \includegraphics[width=85mm]{Fig2-Movie-Screenshot.eps}
-    \caption{\abb\label{fig:Fig2-Movie-Screenshot} Annotated screenshot from a movie.   A. Artificially generated spike trains.   B. Dissimilarity matrices obtained by averaging over two separate time intervals for both the regular and the real-time SPIKE-distance as well as their averages over subgroups of spike trains (denoted by $<•>_G$).   C. Corresponding dendrograms.}
+    \caption{\abb\label{fig:Fig2-Movie-Screenshot} Annotated screenshot from a movie.   A. Artificially generated spike trains.   B. Dissimilarity matrices obtained by averaging over two separate time intervals for both the regular and the real-time SPIKE-distance as well as their averages over subgroups of spike trains (denoted by $<ï¿½>_G$).   C. Corresponding dendrograms.}
 \end{figure}
 
 
@@ -231,7 +231,7 @@ A last possibility is spatial averaging such that the spike trains are manually 
 %
 \begin{figure}
     \includegraphics[width=85mm]{Fig3-SPIKY-Flowchart.eps}
-    \caption{\abb\label{fig:Fig3-SPIKY-Flowchart} Annotated screenshot from a movie.   A. Artificially generated spike trains.   B. Dissimilarity matrices obtained by averaging over two separate time intervals for both the regular and the real-time SPIKE-distance as well as their averages over subgroups of spike trains (denoted by $<•>_G$).   C. Corresponding dendrograms.}
+    \caption{\abb\label{fig:Fig3-SPIKY-Flowchart} Annotated screenshot from a movie.   A. Artificially generated spike trains.   B. Dissimilarity matrices obtained by averaging over two separate time intervals for both the regular and the real-time SPIKE-distance as well as their averages over subgroups of spike trains (denoted by $<ï¿½>_G$).   C. Corresponding dendrograms.}
 \end{figure}
 
 XXXXX Rewrite and extend, add part on MEX-files XXXXX
@@ -252,7 +252,7 @@ XXXXX Add figure on Pico vs. sampled XXXXX
 The calculation of the SPIKE-distance consists of three steps: In a precalculation step, for each spike the distance to
 the nearest spike in all the other spike trains is calculated. Successively, for each time instant and each pair of spike
 trains, the distances of the four corner spikes are first locally weighted and then normalized. These latter steps involve
-matrices of the order ’number of time instants’ × ’number of spike train pairs’, which for very long datasets with many
+matrices of the order ï¿½number of time instantsï¿½ ï¿½ ï¿½number of spike train pairsï¿½, which for very long datasets with many
 spike trains can lead to memory problems. The solution to these problems is to make the calculation sequential, i.e.,
 to cut the recording interval into smaller segments, and to perform the averaging over all pairs of spike trains for
 each segment separately (no additional auxiliary spikes are needed except for very huge datasets for which even the calculation
