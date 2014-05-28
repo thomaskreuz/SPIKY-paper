@@ -289,7 +289,7 @@ You can download a zip-package containing all the necessary files for free on ht
 
 First extract the zip-package (all files should be in one directory named SPIKY), then within Matlab go to this directory or add it to the path (addpath). Compile the MEX-files using SPIKY_compile_MEX, finally run SPIKY. 
 
-Typically the suggested element for the next user action is marked by a bold font. The most complete initial example is entry number 5 (Clustering All) in the Data listbox. We suggest to follow this example through till the end advancing from panel to panel by pressing the highlighted button. With the same example in a second step you can start to change some parameters and see the consequences. Later, if you do not want to set all the parameters each time when you start SPIKY with a new dataset have a look at the file SPIKY_f_user_interface and try to understand how for this example number 5 the spike train and the parameter values have been created. Hopefully you should then be able to do similar things with your own datasets. For quick information about the individual elements of the GUI activate the Hints-checkbox in the Options-Menu and then hover with the mouse cursor above the elements of interest and you will see short hints. An overview of all this information can be found in the file SPIKY-Elements.doc.
+Typically the suggested element for the next user action is marked by a bold font. The most complete initial example is entry number 5 (Clustering All) in the Data listbox. We suggest to follow this example through till the end advancing from panel to panel by pressing the highlighted button. With the same example in a second step you can start to change some parameters and see the consequences. Later, if you do not want to set all the parameters each time when you start SPIKY with a new dataset have a look at the file SPIKY_f_user_interface and try to understand how for this example #5 the spike train and the parameter values have been created. Hopefully you should then be able to do similar things with your own datasets. For quick information about the individual elements of the GUI activate the ?Hints?-checkbox in the Options-Menu and then hover with the mouse cursor above the elements of interest and you will see short hints. An overview of all this information can be found in the file SPIKY-Elements.doc.
 
 \subsection{\label{ss:Input} Input}
 
@@ -299,7 +299,7 @@ There are three possibilities:
 - cell arrays (ca) with just the spike times (this is the preferred format used by SPIKY since it is most memory efficient. The two other formats will internally be converted into this format)
 - regular matrices with each row being a spike train and zero padding (zp) in case the spike numbers are different.
 - matrices representing time bins where each zero/one (01) indicates the absence/presence of a spike
-If the spikes are stored in a Mat-file SPIKY looks for a variable called spikes, if it cannot find it you have the chance to select the variable name (or field name) which contains the spikes via some input mask which provides a hierarchical structure tree.
+If the spikes are stored in a Mat-file SPIKY looks for a variable called ?spikes?, if it cannot find it you have the chance to select the variable name (or field name) which contains the spikes via some input mask which provides a hierarchical structure tree.
 In the text format spike times should be written as a matrix with each row being one spike train. The package contains one example file for each format (testdata_ca.mat, testdata_zp.mat, testdata_01.mat as well as testdata.txt). 
 3.	You can generate your own spike trains via the Spike Train Generator. After setting some defining variables (number of spike trains, start and end time, sampling rate) you can build your spike trains by using predefined spike train patterns (such as periodic, Splay, uniform or Poisson) and/or by manually adding, shifting and deleting individual spikes or groups of spikes. For an overview of the general structure of the spike train generator please have a look at the file STG-flowchart.pdf, more detailed information can be found in the file STG-Elements.doc.
 
@@ -315,7 +315,7 @@ select_measures: Vector with order of measures
 
 \subsection{\label{ss:Output} Output}
 
-How can I extract the spike trains and the results of the analysis (measure profiles, matrices) to the workspace
+How can I extract the spike trains and the results of the analysis (measure profiles, matrices) to the workspace?
 A8.  By clicking (left mouse button) on the element whose data you wish to extract. Results will be stored in variables such as SPIKY_spikes, SPIKY_profile_X_1, SPIKY_profile_Y_1, SPIKY_profile_name_1 as well as SPIKY_matrix_1 and SPIKY_matrix_name_1. In addition, the results obtained during an analysis will automatically be stored in the structure SPIKY_results which will have one field for each measure selected. 
 
 How do I save/print figures?
@@ -331,12 +331,12 @@ SPIKY_results.<Measure>.y:        Overall dissimilarity profile obtained by aver
 
 Note: For the ISI-distance the function SPIKY_f_pico can be used to obtain the average value as well as
 x- and y-vectors for plotting (see example below):
-$[overall_dissimilarity,plot_x_values,plot_y_values] = SPIKY_f_pico(SPIKY_results.isi,SPIKY_results.dissimilarity_profiles{1},para.dts,para.tmin);$
+[overall_dissimilarity,plot_x_values,plot_y_values] = SPIKY_f_pico(SPIKY_results.isi,SPIKY_results.dissimilarity_profiles{1},para.dts,para.tmin);
 
 
 \subsection{\label{ss:Figure-Layout} Figure-Layout}
 
-To change elements (fonts, lines, etc.) in the figure simply click the right mouse button on the element you wish to change. Please use the file SPIKY_f_user_interface to set the standard values for all the parameters that describe the layout of the figure (mainly the parameter structure p_para).
+To change elements (fonts, lines, etc.) in the figure simply click the right mouse button on the element you wish to change. Please use the file SPIKY_f_user_interface to set the standard values for all the parameters that describe the layout of the figure (mainly the parameter structure ?p_para?).
 
 How can I move subplots (spikes and profiles subplot, matrices) in the figure? How can I change their size?
 Move the cursor to the respective axis (either just left or just below the subplot) and click the right mouse button. Now you can either edit all position variables by hand or change the x-position, the y-position, the width and the height individually. In case there are several matrices/dendrograms you can do this either for an individual matrix/dendrogram or for all of them at the same time.
@@ -350,7 +350,7 @@ A14. For this purpose you can use the program SPIKY_loop which is complementary 
 
 \subsection{\label{ss:Documentation} Documentation}
 
-SPIKY-Documentation (in extra folder SPIKY-Documentation)
+SPIKY-Documentation (in extra folder SPIKY-Documentation?)
 SPIKY-FAQ.doc:   This file answers all the frequently asked questions regarding the graphical user interface SPIKY. 
 SPIKY-Elements.doc:   This file describes all the individual elements of the graphical user interface SPIKY.
 SPIKY-Files.doc:   This file containing a short description of all files contained in the SPIKY-package.

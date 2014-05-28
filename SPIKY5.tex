@@ -264,13 +264,112 @@ Regarding the use of Poisson processes to have a benchmark it will have differen
 
 Surrogate data with the same time dependent rate can be obtained by randomly reassigning each spike to any of the spike trains.
 
+How can I estimate the significance of my results?
+Please have a look at the program 'Spiky\_loop\_surro.m'. This is similar to 'SPIKY\_loop.m' only that you do not look at different datasets, rather you can compare the results obtained for one dataset against the results obtained for spike train surrogates generated from that dataset.
 
 \section{\label{s:SPIKY} SPIKY}
 
-\subsection{\label{ss:MEX-files} MEX-files}
+SPIKY is a graphical user interface (GUI) for monitoring synchrony between artificially simulated or experimentally recorded neuronal spike trains. It is based on two recently proposed methods to measure spike train (dis)similarity, the ISI- and the SPIKE-distance. SPIKY is a free software package programmed by Thomas Kreuz and Nebojsa Bozanic. All source codes are written in Matlab (MathWorks Inc, MA) with the most time-consuming loops coded in MEX-files. It is not stand-alone but requires Matlab to run.
+
+BSD licence:
+Copyright (c) 2013, Thomas Kreuz, Nebojsa Bozanic
+All rights reserved.
+
+In order to get the latest information about new features and updates please like the SPIKY Facebook-Page
+
+https://www.facebook.com/pages/SPIKY/504834062913777
+
+This is also an opportunity to provide feedback and ask any questions you might have.
+
+You can download a zip-package containing all the necessary files for free on http://www.fi.isc.cnr.it/users/thomas.kreuz/Source-Code/SPIKY.html.
+
+
+
+\subsection{\label{ss:Structure} Structure of SPIKY}
+
+First extract the zip-package (all files should be in one directory named SPIKY), then within Matlab go to this directory or add it to the path (addpath). Compile the MEX-files using SPIKY\_compile\_MEX, finally run SPIKY. 
+
+Typically the suggested element for the next user action is marked by a bold font. The most complete initial example is entry number 5 (Clustering All) in the Data listbox. We suggest to follow this example through till the end advancing from panel to panel by pressing the highlighted button. With the same example in a second step you can start to change some parameters and see the consequences. Later, if you do not want to set all the parameters each time when you start SPIKY with a new dataset have a look at the file SPIKY\_f\_user\_interface and try to understand how for this example number 5 the spike train and the parameter values have been created. Hopefully you should then be able to do similar things with your own datasets. For quick information about the individual elements of the GUI activate the Hints-checkbox in the Options-Menu and then hover with the mouse cursor above the elements of interest and you will see short hints. An overview of all this information can be found in the file SPIKY-Elements.doc.
+
+\subsection{\label{ss:Input} Input}
+
+There are three possibilities:
+1.	In the Selection: Data panel there is a listbox containing predefined examples. Initially these are the examples used in the paper Kreuz et al., JNeurophysiol 109, 1457 (2013) (for the complete reference see A13) but you can delete them and/or add your own data via the Matlab file 'PIKY\_f\_user\_interface'. Just make sure that the listbox entries defined in the variable listbox\_str match the examples detailed below that.
+2.	You can load your own data via the Load button in the toolbar (left upper corner) or in the menu. Currently two different file formats are allowed, .mat and .txt (ASCII) files. For the mat-files SPIKY allows three different kinds of input formats:
+- cell arrays (ca) with just the spike times (this is the preferred format used by SPIKY since it is most memory efficient. The two other formats will internally be converted into this format)
+- regular matrices with each row being a spike train and zero padding (zp) in case the spike numbers are different.
+- matrices representing time bins where each zero/one (01) indicates the absence/presence of a spike
+If the spikes are stored in a Mat-file SPIKY looks for a variable called spikes, if it cannot find it you have the chance to select the variable name (or field name) which contains the spikes via some input mask which provides a hierarchical structure tree.
+In the text format spike times should be written as a matrix with each row being one spike train. The package contains one example file for each format (testdata\_ca.mat, testdata\_zp.mat, testdata\_01.mat as well as testdata.txt). 
+3.	You can generate your own spike trains via the Spike Train Generator. After setting some defining variables (number of spike trains, start and end time, sampling rate) you can build your spike trains by using predefined spike train patterns (such as periodic, Splay, uniform or Poisson) and/or by manually adding, shifting and deleting individual spikes or groups of spikes. For an overview of the general structure of the spike train generator please have a look at the file STG-flowchart.pdf, more detailed information can be found in the file STG-Elements.doc.
+
+
+Input:
+Matrix 'spikes' with two or more spike trains (if trains have different numbers of spikes, fill with zeros)
+Parameter structure 'para' that describe the data (see below)
+tmin:  Beginning of recording
+tmax:  End of recording
+dts:  Sampling interval, precision of spike times [!!! Please take care that this value is not larger than the actual sampling size, otherwise two spikes can occur at the same time instant and this can lead to problems in the algorithm !!!]
+select\_measures: Vector with order of measures
+
+
+\subsection{\label{ss:Output} Output}
+
+How can I extract the spike trains and the results of the analysis (measure profiles, matrices) to the workspace
+A8.  By clicking (left mouse button) on the element whose data you wish to extract. Results will be stored in variables such as SPIKY\_spikes, SPIKY\_profile\_X\_1, SPIKY\_profile\_Y\_1, SPIKY\_profile\_name\_1 as well as SPIKY\_matrix\_1 and SPIKY\_matrix\_name\_1. In addition, the results obtained during an analysis will automatically be stored in the structure SPIKY\_results which will have one field for each measure selected. 
+
+How do I save/print figures?
+A9. Press the Print to postscript button in the toolbar (left upper corner).
+
+Output (Structure SPIKY\_results'):
+SPIKY\_results.<Measure>.name:     Name of selected measures (helps to identify the order within all other variables)
+SPIKY\_results.<Measure>.distance: Level of dissimilarity over all spike trains and the whole interval
+                            just one value, obtained by averaging over both spike trains and time
+SPIKY\_results.<Measure>.matrix:   Pairwise distance matrices, obtained by averaging over time
+SPIKY\_results.<Measure>.x:        Time-values of overall dissimilarity profile
+SPIKY\_results.<Measure>.y:        Overall dissimilarity profile obtained by averaging over spike train pairs
+
+Note: For the ISI-distance the function SPIKY\_f\_pico can be used to obtain the average value as well as
+x- and y-vectors for plotting (see example below):
+%[overall_dissimilarity,plot_x_values,plot_y_values] = SPIKY_f_pico(SPIKY_results.isi,SPIKY_results.dissimilarity_profiles{1},para.dts,para.tmin);
+
+
+\subsection{\label{ss:Figure-Layout} Figure-Layout}
+
+To change elements (fonts, lines, etc.) in the figure simply click the right mouse button on the element you wish to change. Please use the file SPIKY\_f\_user\_interface to set the standard values for all the parameters that describe the layout of the figure (mainly the parameter structure p\_para).
+
+How can I move subplots (spikes and profiles subplot, matrices) in the figure? How can I change their size?
+Move the cursor to the respective axis (either just left or just below the subplot) and click the right mouse button. Now you can either edit all position variables by hand or change the x-position, the y-position, the width and the height individually. In case there are several matrices/dendrograms you can do this either for an individual matrix/dendrogram or for all of them at the same time.
+
+
+\subsection{\label{ss:GUI-vs-loop} GUI vs. loop} 
+
+How can I get the statistics of a certain quantity over a large number of datasets?
+A14. For this purpose you can use the program SPIKY\_loop which is complementary to the graphical user interface SPIKY'. Both programs can be used to calculate time-resolved spike train distances (ISI and SPIKE) between two (or more) spike trains. However, whereas SPIKY was mainly designed to facilitate the detailed analysis of one dataset, SPIKY\_loop is meant to be used in order to compare the SPIKY\_results for many different datasets (e.g. in some kind of loop). [Note that the new program SPIKY\_loop replaces the old SPIKY\_no\_plot. The scope is the same but it adds the full functionality of SPIKY (access to time instants, selective and triggered averages as well as averages over spike train groups).]
+
+
+\subsection{\label{ss:Documentation} Documentation}
+
+SPIKY-Documentation (in extra folder SPIKY-Documentation)
+SPIKY-FAQ.doc:   This file answers all the frequently asked questions regarding the graphical user interface SPIKY. 
+SPIKY-Elements.doc:   This file describes all the individual elements of the graphical user interface SPIKY.
+SPIKY-Files.doc:   This file containing a short description of all files contained in the SPIKY-package.
+SPIKY-Flowchart.pdf:   This flowchart gives an overview of the general structure of the spike train generator.
+STG-Elements.doc:   This file describes all the individual elements of the Spike Train Generator (STG).
+STG-Flowchart.pdf:   This flowchart gives an overview of the general structure of the Spike Train Generator (STG).
+SPIKY-Readme.doc:   This file contains a disclaimer and the BSD license.
+SPIKY-no-plot.doc:   This file contains a short description of the program SPIKY\_loop which is complementary to the graphical user interface SPIKY' and meant to be used in order to compare the results for many different datasets (e.g. in some kind of loop).
+Kreuz\_and\_Bozanic\_SPIKY\_Preliminary\_Draft.pdf:   This is a very preliminary draft of an upcoming article on the graphical user interface SPIKY.
+SPIKY-Annotated\_Screenshot.eps:   This is an example figure taken from the 2013 paper (Fig. 8 and the supplemental movie) with some annotations detailing the various elements of a typical figure containing spike trains divided into spike train groups, dissimilarity matrices, and hierarchical cluster trees (dendrograms).
+SPIKY-Screenshot.png:   Exemplary screenshot of the graphical user interface SPIKY including the use of a context menu.
+STG-Screenshot.png:   Exemplary screenshot of the spike train generator (STG) including the use of a context menu.
 
 
 \subsection{\label{ss:Computational-aspects} Computational aspects}
+
+\subsection{\label{sss:Sampling} Sampling}
+
+\subsection{\label{sss:MEX-files} MEX-files}
 
 
 %
@@ -283,8 +382,6 @@ XXXXX Rewrite and extend, add part on MEX-files XXXXX
 
 The improved dissimilarity profile $S (t)$ of the SPIKE-distance is piecewise linear (with each linear interval running from one spike of the pooled spike train to the next) rather than piecewise constant as is the case for the ISI-distance.
 Therefore, when the localized visualization is desired, a new value has to be calculated for each sampling point and not just once per each interval in the pooled spike train. In cases where the distance value itself is sufficient, the short computation time can be even further decreased by representing each interval by the value of its center and weighting it by its length. This is not only faster, but it actually gives the exact result, whereas the time-resolved calculation is a very good approximation only for sufficiently small sampling intervals dt (imagine the example of a rectangular function, at some point any sampled representation has to cut the right angle). The dissimilarity profiles $S_r(t)$ and $S_f (t)$ of the real-time and the future SPIKE-distances are hyperbolic and not linear but here also the exact result can be obtained by piecewise integration over all intervals of the pooled spike train.
-
-XXXXX Add figure on Pico vs. sampled XXXXX
 
 The calculation of the SPIKE-distance consists of three steps: In a precalculation step, for each spike the distance to the nearest spike in all the other spike trains is calculated. Successively, for each time instant and each pair of spike trains, the distances of the four corner spikes are first locally weighted and then normalized. These latter steps involve
 matrices of the order ’number of time instants’ × ’number of spike train pairs’, which for very long datasets with many spike trains can lead to memory problems. The solution to these problems is to make the calculation sequential, i.e., to cut the recording interval into smaller segments, and to perform the averaging over all pairs of spike trains for
@@ -320,6 +417,9 @@ https://github.com/modulus-metric/spike-train-metrics
 \citep{Rusu14}
 
 The Matlab source code for calculating and visualizing the SPIKE-distance can be found under http://www.fi.isc. cnr.it/users/thomas.kreuz/sourcecode.html.
+
+
+HRLAnalysis$^{TM}$ \citep{Thibeault14}
 
 
 

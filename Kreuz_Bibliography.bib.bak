@@ -4459,7 +4459,7 @@
 @Article{Thibeault14,
   author =       "C. M. Thibeault and M. J. O'Brien and N. Srinivasa",
   title =        "Analyzing large-scale spiking neural data with HRLAnalysis?",
-  journal =      "Front. Neuroinform",
+  journal =      "Front. Neuroinform.",
   volume =       "8",
   pages =        "17",
   year =         "2014",

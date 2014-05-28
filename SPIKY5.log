@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.8)  28 MAY 2014 02:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.8)  28 MAY 2014 18:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**SPIKY4.tex
-(./SPIKY4.tex
+**SPIKY5.tex
+(./SPIKY5.tex
 LaTeX2e <2011/06/27>
 Babel <3.9f> and hyphenation patterns for 78 languages loaded.
 (./elsart5p.cls
@@ -222,8 +222,8 @@ Package: natbib 2006/09/06 7.4a (PWD)
 LaTeX Info: Redefining \cite on input line 541.
 \c@NAT@ctr=\count120
 )
-(./SPIKY4.aux)
-\openout1 = `SPIKY4.aux'.
+(./SPIKY5.aux)
+\openout1 = `SPIKY5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
@@ -372,6 +372,37 @@ Package pdftex.def Info: Fig2-Movie-Screenshot-eps-converted-to.pdf used on inp
 ut line 254.
 (pdftex.def)             Requested size: 241.84842pt x 178.62961pt.
 Missing character: There is no • in font cmr8!
+
+Overfull \hbox (21.8618pt too wide) in paragraph at lines 280--281
+[]\OT1/cmr/m/n/10 https://www.facebook.com/pages/SPIKY/504834062913777 
+ []
+
+
+Overfull \hbox (58.91766pt too wide) in paragraph at lines 284--285
+\OT1/cmr/m/n/10 sary files for free on http://www.fi.isc.cnr.it/users/thomas.kr
+euz/Source-
+ []
+
+[4 <./Fig2-Movie-Screenshot-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (52.40642pt too wide) in paragraph at lines 324--331
+[]\OT1/cmr/m/n/10 Output (Struc-ture SPIKY[]results'): SPIKY[]results.<Measure>
+.name:
+ []
+
+
+Overfull \hbox (9.6064pt too wide) in paragraph at lines 324--331
+\OT1/cmr/m/n/10 within all other vari-ables) SPIKY[]results.<Measure>.distance:
+
+ []
+
+[5]
+Overfull \hbox (31.92319pt too wide) in paragraph at lines 353--366
+[]\OT1/cmr/m/n/10 SPIKY-Documentation (in ex-tra folder SPIKY-Documentation)
+ []
+
 Package epstopdf Info: Source file: <Fig3-SPIKY-Flowchart.eps>
 (epstopdf)                    date: 2013-03-19 17:38:52
 (epstopdf)                    size: 21280 bytes
@@ -381,49 +412,43 @@ Package epstopdf Info: Source file: <Fig3-SPIKY-Flowchart.eps>
 (epstopdf)                    size: 15165 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig3-SPIKY-Flowchart-eps-c
 onverted-to.pdf Fig3-SPIKY-Flowchart.eps>
-(epstopdf)             \includegraphics on input line 278.
+(epstopdf)             \includegraphics on input line 377.
 Package epstopdf Info: Output file is already uptodate.
-
-<Fig3-SPIKY-Flowchart-eps-converted-to.pdf, id=46, 543.02875pt x 723.70375pt>
+<Fig3-SPIKY-Flowchart-eps-converted-to.pdf, id=66, 543.02875pt x 723.70375pt>
 File: Fig3-SPIKY-Flowchart-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig3-SPIKY-Flowchart-eps-converted-to.pdf>
 Package pdftex.def Info: Fig3-SPIKY-Flowchart-eps-converted-to.pdf used on inpu
-t line 278.
+t line 377.
 (pdftex.def)             Requested size: 241.84842pt x 322.3177pt.
 Missing character: There is no • in font cmr8!
- [4 <./Fig2-Movie-Screenshot-eps-converted-to.pdf> <./Fig3-SPIKY-Flowchart-eps-
-converted-to.pdf>]
 Missing character: There is no ’ in font cmr10!
 Missing character: There is no ’ in font cmr10!
 Missing character: There is no × in font cmr10!
 Missing character: There is no ’ in font cmr10!
 Missing character: There is no ’ in font cmr10!
-
-Overfull \hbox (23.10072pt too wide) in paragraph at lines 293--294
+ [6 <./Fig3-SPIKY-Flowchart-eps-converted-to.pdf>]
+Overfull \hbox (23.10072pt too wide) in paragraph at lines 390--391
 \OT1/cmr/m/n/10 found at www.fi.isc.cnr.it/users/thomas.kreuz/sourcecode.html. 
 
  []
 
 
-Overfull \hbox (1.36165pt too wide) in paragraph at lines 318--319
+Overfull \hbox (1.36165pt too wide) in paragraph at lines 415--416
 []\OT1/cmr/m/n/10 https://github.com/modulus-metric/spike-train-metrics 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 3417) in paragraph at lines 352--353
+Underfull \hbox (badness 3417) in paragraph at lines 449--450
 []\OT1/cmr/m/n/10 We also thank Thomas Alder-son, Mayte Bonilla
  []
 
-(./SPIKY4.bbl) [5] (./SPIKY4.aux) ) 
+(./SPIKY5.bbl) [7] (./SPIKY5.aux) ) 
 Here is how much of TeX's memory you used:
- 3406 strings out of 493315
- 43381 string characters out of 6137905
- 112879 words of memory out of 5000000
- 6782 multiletter control sequences out of 15000+600000
+ 3414 strings out of 493315
+ 43501 string characters out of 6137905
+ 112950 words of memory out of 5000000
+ 6790 multiletter control sequences out of 15000+600000
  21279 words of font info for 84 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,8n,26p,1316b,229s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -448,10 +473,10 @@ b></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><
 /usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></u
 sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on SPIKY4.pdf (5 pages, 297109 bytes).
+Output written on SPIKY5.pdf (7 pages, 309670 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
+ 142 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
