@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{8}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -28,6 +28,11 @@ Kreuz, T., Haas, J.~S., Morelli, A., Abarbanel, H. D.~I., Politi, A., 2007.
 \bibitem[{Rusu and Florian(2014)}]{Rusu14}
 Rusu, C.~V., Florian, R.~V., 2014. A new class of metrics for spike trains.
   Neural Computation 26~(2), 306--348.
+
+\bibitem[{Thibeault et~al.(2014)Thibeault, O'Brien, and
+  Srinivasa}]{Thibeault14}
+Thibeault, C.~M., O'Brien, M.~J., Srinivasa, N., 2014. Analyzing large-scale
+  spiking neural data with hrlanalysis. Front. Neuroinform. 8, 17.
 
 \bibitem[{{van Rossum}(2001)}]{VanRossum01}
 {van Rossum}, M. C.~W., 2001. A novel spike distance. Neural Computation 13,

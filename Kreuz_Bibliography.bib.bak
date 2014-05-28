@@ -4456,6 +4456,15 @@
   year =         "1995",
 }
 
+@Article{Thibeault14,
+  author =       "C. M. Thibeault and M. J. O'Brien and N. Srinivasa",
+  title =        "Analyzing large-scale spiking neural data with HRLAnalysis?",
+  journal =      "Front. Neuroinform",
+  volume =       "8",
+  pages =        "17",
+  year =         "2014",
+}
+
 @Article{Tiesinga00,
   author =       "P. H. E. Tiesinga and J. V. José and T. J. Sejnowski",
   title =        "Comparison of current-driven and conductance-driven neocortical model neurons with Hodgkin-Huxley voltage-gated channels",

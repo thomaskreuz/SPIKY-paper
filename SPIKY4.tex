@@ -15,8 +15,11 @@
 % Measures
 % ========
 % ISI
-% SPIKE (regular, realtime, future)
+% SPIKE
 % Edge effect
+% SPIKE-realtime
+% SPIKE-future
+% Representations
 % Spike train surrogates (Significance), Comparison with Poisson
 % Computational Cost (Memory, Speed)
 %
@@ -26,10 +29,10 @@
 % Output
 % Figure Layout
 % GUI vs Loop
+% Comparison with other measures/implementations
 %
 % Discussion
 % ==========
-% Comparison with other measures/implementations
 % Limitations
 % Outlook
 %
@@ -149,7 +152,7 @@ This quantity weights the spike time differences for each spike train according 
 
 The SPIKE-distance is defined as the temporal average of this dissimilarity profile
 %
-\begin{equation} \label{eq:Bi-Spike-Distances}
+\begin{equation} \label{eq:Temporal-Average}
     D_S = \frac{1}{T} \int_{t=0}^T dt S (t).
 \end{equation}
 %
@@ -161,16 +164,24 @@ There exists a straightforward extension to the case of more than two spike trai
     S^{\mathrm {a}} (t) = \frac{1}{N(N-1)/2}\sum_{n=1}^{N-1} \sum_{m=n+1}^N S^{mn} (t)
 \end{equation}
 
-The Matlab source code for calculating and visualizing the SPIKE-distance can be found under http://www.fi.isc. cnr.it/users/thomas.kreuz/sourcecode.html.
 
 
-xxx We define the ISI as going from right after the last spike to the exact time of the next spike. So the previous spike is not part of the ISI while the following is. So when you are on a spike this is the following spike and the one before is the previous spike.
+
+xxx We define the ISI as going from right after the last spike to the exact time of the next spike. So the previous spike is not part of the ISI while the following is. So when you are on a spike this is the following spike and the one before is the previous spike. xxx not needed anymore xxx
 
 
-\subsection{\label{ss:Real-time-Spike-Distance} Realtime SPIKE-distance}
+\subsubsection{\label{sss:Edge-effect} Edge effect}
 
-The Realtime SPIKE-distance $D_{S_r}$ is a modification of the SPIKE-distance with the key difference that the corresponding
-time profile $S_r(t)$ can be calculated online because it relies on past information only. From the perspective of an online measure, the information provided by the following spikes, both their position and the length of the interspike interval, is not yet available. Like the regular (improved) SPIKE-distance $D_S$, this causal variant is also based on local spike time differences but now only two corner spikes are available, and the spikes of comparison are restricted to past spikes, e.g., for the preceding spike of the first spike train
+Conor's Email:
+
+My instinct is to count the edge spikes as normal spikes, that is work out their gaps in the normal way but in the time before the first spike use the first spike as both the previous and next gap, similarly for the time after the last spike. This is different to having the extra spikes, that means taking the first and last real gap at half weight. The difficulty is with the ISI. We know two things about the ISI. Taking the example of the first spike, say it is at $t_1$ and the interval starts at $t=0$. Firstly the ISI shouldn't be smaller than $t_1$ and secondly, we know the ISI $t_2-t_1$ where $t_2$ is the time of the second spike. The thing is that if $t_1 < t_2-t_1$ it could be because $t_1 < "the true ISI"$, so one possibility is to take $max(t_1,t_2-t_1)$.
+
+(Conor Houghton, personal communication)
+
+
+\subsection{\label{ss:Realtime-Spike-Distance} Realtime SPIKE-distance}
+
+The realtime SPIKE-distance $D_{S_r}$ is a modification of the SPIKE-distance with the key difference that the corresponding time profile $S_r(t)$ can be calculated online because it relies on past information only. From the perspective of an online measure, the information provided by the following spikes, both their position and the length of the interspike interval, is not yet available. Like the regular (improved) SPIKE-distance $D_S$, this causal variant is also based on local spike time differences but now only two corner spikes are available, and the spikes of comparison are restricted to past spikes, e.g., for the preceding spike of the first spike train
 %
 \begin{equation} \label{eq:Delta-Corner-Spike-Realtime}
      \Delta t_{\mathrm {P}}^{(1)} = \min_i (| t_{\mathrm {P}}^{(1)} - t_i^{(2)} |), t_i < t.
@@ -198,14 +209,9 @@ and accordingly for the following spike of the second spike train. And, similar 
 \end{equation}
 
 
-\subsection{\label{sss:Edge-effect} Edge effect}
-
-My instinct is to count the edge spikes as normal spikes, that is work out their gaps in the normal way but in the time before the first spike use the first spike as both the previous and next gap, similarly for the time after the last spike. This is different to having the extra spikes, that means taking the first and last real gap at half weight. The difficulty is with the ISI. We know two things about the ISI. Taking the example of the first spike, say it is at $t_1$ and the interval starts at $t=0$. Firstly the ISI shouldn't be smaller than $t_1$ and secondly, we know the ISI $t_2-t_1$ where $t_2$ is the time of the second spike. The thing is that if $t_1 < t_2-t_1$ it could be because $t_1 < "the true ISI"$, so one possibility is to take $max(t_1,t_2-t_1)$.
-
-(Conor Houghton, personal communication)
 
 
-\subsection{\label{ss:Bivariate-ISI-Distance} The ISI-distance}
+\subsection{\label{ss:ISI-Distance} The ISI-distance}
 
 While the dissimilarity profile of the SPIKE-distance is extracted from differences between the spike times of the two spike trains, the dissimilarity profile of the ISI-distance \citep{Kreuz07c, Kreuz09} is calculated as the instantaneous ratio between the interspike intervals $x_{\mathrm {ISI}}^{(1)}$ and $x_{\mathrm {ISI}}^{(2)}$ (Eq. \ref{eq:ISI}) according to:
 %
@@ -216,8 +222,7 @@ While the dissimilarity profile of the SPIKE-distance is extracted from differen
                   \end{cases}
 \end{equation}
 %
-This ISI-ratio equals $0$ for identical ISI in the two spike trains, and approaches $-1$ and $1$, respectively, if the first or the second spike train is much faster than the other. For the ISI-distance the temporal averaging analogous to Eq. 
-%\ref{eq:Temporal-Average} 
+This ISI-ratio equals $0$ for identical ISI in the two spike trains, and approaches $-1$ and $1$, respectively, if the first or the second spike train is much faster than the other. For the ISI-distance the temporal averaging analogous to Eq. \ref{eq:Temporal-Average} 
 is performed on the absolute value of the ISI-ratio, thus both kinds of deviations are treated equally. Since the ISI-distance relies on the instantaneous ISI-values and thus requires knowledge about the following spikes, no causal Realtime extension is possible.
 
 
@@ -251,11 +256,19 @@ A last possibility is spatial averaging such that the spike trains are manually 
 \end{figure}
 
 
+\subsection{\label{ss:Spike-train-surrogates} Spike train surrogates and significance}
+
+Daniel's Email 13.07.2011:
+
+Regarding the use of Poisson processes to have a benchmark it will have different implications depending on the structure of your data. If the rate is almost constant then comparing to processes with the same estimated average rate is the best option. If the rate is time-dependent you may want to compare with processes which are Poissonian but mimic the same time-dependent profile of the rate. These are just alternatives that give you complementary information on the structure of the reliability.
+
+Surrogate data with the same time dependent rate can be obtained by randomly reassigning each spike to any of the spike trains.
 
 
+\section{\label{s:SPIKY} SPIKY}
 
+\subsection{\label{ss:MEX-files} MEX-files}
 
-\section{\label{s:Results} Results}
 
 \subsection{\label{ss:Computational-aspects} Computational aspects}
 
@@ -268,42 +281,23 @@ A last possibility is spatial averaging such that the spike trains are manually 
 
 XXXXX Rewrite and extend, add part on MEX-files XXXXX
 
-The improved dissimilarity profile $S (t)$ of the SPIKE-distance is piecewise linear (with each linear interval running
-from one spike of the pooled spike train to the next) rather than piecewise constant as is the case for the ISI-distance.
-Therefore, when the localized visualization is desired, a new value has to be calculated for each sampling
-
-point and not just once per each interval in the pooled spike train. In cases where the distance value itself is sufficient,
-the short computation time can be even further decreased by representing each interval by the value of its center and
-weighting it by its length. This is not only faster, but it actually gives the exact result, whereas the time-resolved calculation is a very good approximation only for sufficiently small sampling intervals dt (imagine the example of a rectangular
-function, at some point any sampled representation has to cut the right angle). The dissimilarity profiles $S_r(t)$
-and $S_f (t)$ of the real-time and the future SPIKE-distances are hyperbolic and not linear but here also the exact result
-can be obtained by piecewise integration over all intervals of the pooled spike train.
+The improved dissimilarity profile $S (t)$ of the SPIKE-distance is piecewise linear (with each linear interval running from one spike of the pooled spike train to the next) rather than piecewise constant as is the case for the ISI-distance.
+Therefore, when the localized visualization is desired, a new value has to be calculated for each sampling point and not just once per each interval in the pooled spike train. In cases where the distance value itself is sufficient, the short computation time can be even further decreased by representing each interval by the value of its center and weighting it by its length. This is not only faster, but it actually gives the exact result, whereas the time-resolved calculation is a very good approximation only for sufficiently small sampling intervals dt (imagine the example of a rectangular function, at some point any sampled representation has to cut the right angle). The dissimilarity profiles $S_r(t)$ and $S_f (t)$ of the real-time and the future SPIKE-distances are hyperbolic and not linear but here also the exact result can be obtained by piecewise integration over all intervals of the pooled spike train.
 
 XXXXX Add figure on Pico vs. sampled XXXXX
 
-The calculation of the SPIKE-distance consists of three steps: In a precalculation step, for each spike the distance to
-the nearest spike in all the other spike trains is calculated. Successively, for each time instant and each pair of spike
-trains, the distances of the four corner spikes are first locally weighted and then normalized. These latter steps involve
-matrices of the order ’number of time instants’ × ’number of spike train pairs’, which for very long datasets with many
-spike trains can lead to memory problems. The solution to these problems is to make the calculation sequential, i.e.,
-to cut the recording interval into smaller segments, and to perform the averaging over all pairs of spike trains for
-each segment separately (no additional auxiliary spikes are needed except for very huge datasets for which even the calculation
-of the first matrix is too memory-demanding). In the end the dissimilarity profiles for the different segments (already averaged over pairs of spike trains) are concatenated, and its temporal average yields the distance value for the whole recording interval.
+The calculation of the SPIKE-distance consists of three steps: In a precalculation step, for each spike the distance to the nearest spike in all the other spike trains is calculated. Successively, for each time instant and each pair of spike trains, the distances of the four corner spikes are first locally weighted and then normalized. These latter steps involve
+matrices of the order ’number of time instants’ × ’number of spike train pairs’, which for very long datasets with many spike trains can lead to memory problems. The solution to these problems is to make the calculation sequential, i.e., to cut the recording interval into smaller segments, and to perform the averaging over all pairs of spike trains for
+each segment separately (no additional auxiliary spikes are needed except for very huge datasets for which even the calculation of the first matrix is too memory-demanding). In the end the dissimilarity profiles for the different segments (already averaged over pairs of spike trains) are concatenated, and its temporal average yields the distance value for the whole recording interval.
 
 The computational load scales with the number of spike trains $N$ as $N^2$. More information on the implementation as well as the Matlab source code for both the ISI- and the SPIKE-distance (including its real-time variant) can be found at www.fi.isc.cnr.it/users/thomas.kreuz/sourcecode.html.
 
 
 
 
-\subsection{\label{ss:SPIKY} SPIKY}
 
-\subsection{\label{ss:Spike-train-surrogates} Spike train surrogates}
 
-Daniel's Email 13.07.2011:
 
-Regarding the use of Poisson processes to have a benchmark it will have different implications depending on the structure of your data. If the rate is almost constant then comparing to processes with the same estimated average rate is the best option. If the rate is time-dependent you may want to compare with processes which are Poissonian but mimic the same time-dependent profile of the rate. These are just alternatives that give you complementary information on the structure of the reliability.
-
-Surrogate data with the same time dependent rate can be obtained by randomly reassigning each spike to any of the spike trains.
 
 \subsection{\label{ss:Other-Implementations} Comparison with other implementations}
 
@@ -313,26 +307,33 @@ XXXXXXXXXX
 
 Python-Implementation of SPIKE-distance courtesy of Jeremy Fix:
 
-%https://groups.google.com/forum/?hl=fr&fromgroups=#!searchin/briansupport/SPIKE\$20distance/briansupport/ctudp9JCeb8/Y5AGiIovh5wJ
+http://jeremy.fix.free.fr/Softwares/spike.html
 
 Python-Implementation of the pairwise ISI-distance courtesy of Michael Chary:
 
-%https://pypi.python.org/pypi/ISIpy/1.0.1
-
-
+https://pypi.python.org/pypi/ISIpy/1.0.1
 
 R{\v a}zvan Florian:
 
-%https://github.com/modulus-metric/spike-train-metrics
+https://github.com/modulus-metric/spike-train-metrics
 
 \citep{Rusu14}
 
-Neboj{\v s}a Bo{\v z}ani{\' c}
+The Matlab source code for calculating and visualizing the SPIKE-distance can be found under http://www.fi.isc. cnr.it/users/thomas.kreuz/sourcecode.html.
+
+
+HRLAnalysis$^{TM}$ \citep{Thibeault14}
+
+
 
 
 \section{\label{s:Discussion} Discussion}
 
+\subsection{\label{ss:Summary} Summary}
 
+\subsection{\label{ss:Limits} Limits}
+
+\subsection{\label{ss:Outlook} Outlook}
 
 
 \begin{appendix} \label{Appendix}
@@ -344,12 +345,13 @@ Neboj{\v s}a Bo{\v z}ani{\' c}
 
 \begin{thanks}
 \section{\label{s:Acknowledgement} \textbf{Acknowledgements}}
-     TK acknowledges funding support from the European Commission through the Marie Curie Initial Training Network 'Neural Engineering Transformative Technologies (NETT)', project 289146 as well as from the Italian Ministry of Foreign Affairs regarding the activity of the Joint Italian-Israeli Laboratory on Neuroscience. 
+NB and TK acknowledge funding support from the European Commission through the Marie Curie Initial Training Network 'Neural Engineering Transformative Technologies (NETT)', project 289146. TK also acknowledges the Italian Ministry of Foreign Affairs regarding the activity of the Joint Italian-Israeli Laboratory on Neuroscience. 
      
 We thank Emily Caporello, Daniel Chicharro, Tim Gentner, Conor Houghton, Jutta Kretzberg, Stefano Luccioli, Florian Mormann, Leon Paz, Friederice Pirschel, Alessandro Torcini, Jonathan Victor for useful discussions.
-We also thank Thomas Alderson, Mayte Bonilla Quintana, Hamid Charkhkar, Didier Desaintjan, Mario DiPoppa, Mahboubeh Etemadi, Marion Najac, Matthew Phillips, Eugenio Piasini, Robert Rein, Michael Schaub, Eitan Schechtman, Matthew Williams, Yunguo Yu for advice and user feedback.
+
+We also thank Thomas Alderson, Mayte Bonilla Quintana, Hamid Charkhkar, Didier Desaintjan, Mario DiPoppa, Mahboubeh Etemadi, Marion Najac, Matthew Phillips, Eugenio Piasini, Robert Rein, Rodrigo Salazar, Michael Schaub, Eitan Schechtman, Matthew Williams, Yunguo Yu for advice and user feedback.
      
-     \end{thanks}
+\end{thanks}
 
 
 \bibliography{Kreuz_Bibliography}
