@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.8)  28 MAY 2014 18:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.8)  28 MAY 2014 19:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -310,14 +310,14 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 48.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 54.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 56.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 54.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 56.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 54.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 56.
 \c@sv@footnote=\count127
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 75.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 77.
 Missing character: There is no ’ in font cmr10!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -331,7 +331,7 @@ df>
 (epstopdf)                    size: 9241 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig1_SPIKE_Illustration-ep
 s-converted-to.pdf Fig1_SPIKE_Illustration.eps>
-(epstopdf)             \includegraphics on input line 113.
+(epstopdf)             \includegraphics on input line 115.
 Package epstopdf Info: Output file is already uptodate.
 
 <Fig1_SPIKE_Illustration-eps-converted-to.pdf, id=1, 534.99875pt x 315.1775pt>
@@ -339,7 +339,7 @@ File: Fig1_SPIKE_Illustration-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig1_SPIKE_Illustration-eps-converted-to.pdf>
 Package pdftex.def Info: Fig1_SPIKE_Illustration-eps-converted-to.pdf used on i
-nput line 113.
+nput line 115.
 (pdftex.def)             Requested size: 241.84842pt x 142.4778pt.
 Missing character: There is no ‘ in font cmr10!
 Missing character: There is no ’ in font cmr10!
@@ -361,7 +361,7 @@ Package epstopdf Info: Source file: <Fig2-Movie-Screenshot.eps>
 (epstopdf)                    size: 27510 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig2-Movie-Screenshot-eps-
 converted-to.pdf Fig2-Movie-Screenshot.eps>
-(epstopdf)             \includegraphics on input line 254.
+(epstopdf)             \includegraphics on input line 256.
 Package epstopdf Info: Output file is already uptodate.
 
 <Fig2-Movie-Screenshot-eps-converted-to.pdf, id=45, 572.1375pt x 422.57875pt>
@@ -369,16 +369,16 @@ File: Fig2-Movie-Screenshot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig2-Movie-Screenshot-eps-converted-to.pdf>
 Package pdftex.def Info: Fig2-Movie-Screenshot-eps-converted-to.pdf used on inp
-ut line 254.
+ut line 256.
 (pdftex.def)             Requested size: 241.84842pt x 178.62961pt.
 Missing character: There is no • in font cmr8!
 
-Overfull \hbox (21.8618pt too wide) in paragraph at lines 280--281
+Overfull \hbox (21.8618pt too wide) in paragraph at lines 282--283
 []\OT1/cmr/m/n/10 https://www.facebook.com/pages/SPIKY/504834062913777 
  []
 
 
-Overfull \hbox (58.91766pt too wide) in paragraph at lines 284--285
+Overfull \hbox (58.91766pt too wide) in paragraph at lines 286--287
 \OT1/cmr/m/n/10 sary files for free on http://www.fi.isc.cnr.it/users/thomas.kr
 euz/Source-
  []
@@ -387,19 +387,19 @@ euz/Source-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (52.40642pt too wide) in paragraph at lines 324--331
+Overfull \hbox (52.40642pt too wide) in paragraph at lines 326--333
 []\OT1/cmr/m/n/10 Output (Struc-ture SPIKY[]results'): SPIKY[]results.<Measure>
 .name:
  []
 
 
-Overfull \hbox (9.6064pt too wide) in paragraph at lines 324--331
+Overfull \hbox (9.6064pt too wide) in paragraph at lines 326--333
 \OT1/cmr/m/n/10 within all other vari-ables) SPIKY[]results.<Measure>.distance:
 
  []
 
 [5]
-Overfull \hbox (31.92319pt too wide) in paragraph at lines 353--366
+Overfull \hbox (31.92319pt too wide) in paragraph at lines 355--368
 []\OT1/cmr/m/n/10 SPIKY-Documentation (in ex-tra folder SPIKY-Documentation)
  []
 
@@ -412,14 +412,14 @@ Package epstopdf Info: Source file: <Fig3-SPIKY-Flowchart.eps>
 (epstopdf)                    size: 15165 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig3-SPIKY-Flowchart-eps-c
 onverted-to.pdf Fig3-SPIKY-Flowchart.eps>
-(epstopdf)             \includegraphics on input line 377.
+(epstopdf)             \includegraphics on input line 379.
 Package epstopdf Info: Output file is already uptodate.
 <Fig3-SPIKY-Flowchart-eps-converted-to.pdf, id=66, 543.02875pt x 723.70375pt>
 File: Fig3-SPIKY-Flowchart-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig3-SPIKY-Flowchart-eps-converted-to.pdf>
 Package pdftex.def Info: Fig3-SPIKY-Flowchart-eps-converted-to.pdf used on inpu
-t line 377.
+t line 379.
 (pdftex.def)             Requested size: 241.84842pt x 322.3177pt.
 Missing character: There is no • in font cmr8!
 Missing character: There is no ’ in font cmr10!
@@ -428,18 +428,18 @@ Missing character: There is no × in font cmr10!
 Missing character: There is no ’ in font cmr10!
 Missing character: There is no ’ in font cmr10!
  [6 <./Fig3-SPIKY-Flowchart-eps-converted-to.pdf>]
-Overfull \hbox (23.10072pt too wide) in paragraph at lines 390--391
+Overfull \hbox (23.10072pt too wide) in paragraph at lines 392--393
 \OT1/cmr/m/n/10 found at www.fi.isc.cnr.it/users/thomas.kreuz/sourcecode.html. 
 
  []
 
 
-Overfull \hbox (1.36165pt too wide) in paragraph at lines 415--416
+Overfull \hbox (1.36165pt too wide) in paragraph at lines 417--418
 []\OT1/cmr/m/n/10 https://github.com/modulus-metric/spike-train-metrics 
  []
 
 
-Underfull \hbox (badness 3417) in paragraph at lines 449--450
+Underfull \hbox (badness 3417) in paragraph at lines 451--452
 []\OT1/cmr/m/n/10 We also thank Thomas Alder-son, Mayte Bonilla
  []
 
@@ -473,7 +473,7 @@ b></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><
 /usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></u
 sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on SPIKY5.pdf (7 pages, 309670 bytes).
+Output written on SPIKY5.pdf (7 pages, 311185 bytes).
 PDF statistics:
  142 PDF objects out of 1000 (max. 8388607)
  99 compressed objects within 1 object stream
