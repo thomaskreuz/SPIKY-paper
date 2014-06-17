@@ -14,12 +14,12 @@
 %
 % Measures
 % ========
-% ISI
-% SPIKE
+% ISI        																	Done
+% SPIKE      																	Done
 % Edge effect
-% SPIKE-realtime
-% SPIKE-future
-% Representations
+% SPIKE-realtime      															Done
+% SPIKE-future      																Done
+% Representations      															Done
 % Spike train surrogates (Significance), Comparison with Poisson
 % Computational Cost (Memory, Speed)
 %
@@ -84,10 +84,6 @@ XXXXX Computational aspects XXXXX
 % **************************************************************** Methods **************
 %
 \section{\label{s:Measures} Measures}
-
-% XXXXX maybe shift definition of distances to the appendix XXXXX
-
-
 
 \subsection{\label{ss:SPIKE-Distance} The SPIKE-distance}
 
@@ -169,12 +165,28 @@ There exists a straightforward extension to the case of more than two spike trai
 
 \subsubsection{\label{sss:Edge-effect} Edge effect}
 
+In previous versions of the SPIKE-distance the ambiguity regarding the definition of the initial (final) distance to the preceding (following) spike as well as the very first and the very last interspike intervals was resolved by adding to each spike train an auxiliary leading spike at time $t = 0$ and an auxiliary trailing spike at time $t = T$. This lead to spurious synchrony at the edges where by construction the dissimilarity profile reached the zero value. Here we follow a suggestion by Conor Houghton (personal communication) and at least partly correct this edge effect. We describe the correction for the beginning of the recording, it is a mirror image at the end of the recording.
+
+This is achieved by counting the auxiliary spikes as normal spikes which can be nearest neighbor to other spikes. But instead of calculating their spike time distance (which is always zero) we use the spike time difference of the first real spike. For the first interspike interval we know that it is at least the distance to the first spike $t_1$ but it could be longer. So to take the local firing rate (or its inverse) into consideration we set
+%
+\begin{equation} \label{eq:Corrected-First-ISI}
+    x_{\mathrm {ISI}} (0) = \max ( t_1, t_2 - t_1 ).
+\end{equation}
+
+
+For the interspike interval
+
+, that is work out their gaps in the normal way but in the time before the first spike use the first spike as both the previous and next gap, similarly for the time after the last spike. This is different to having the extra spikes, that means taking the first and last real gap at half weight. The difficulty is with the ISI. We know two things about the ISI. Taking the example of the first spike, say it is at $t_1$ and the interval starts at $t=0$. Firstly the ISI shouldn't be smaller than $t_1$ and secondly, we know the ISI $t_2-t_1$ where $t_2$ is the time of the second spike. The thing is that if $t_1 < t_2-t_1$ it could be because $t_1 < "the true ISI"$, so one possibility is to take $max(t_1,t_2-t_1)$.
+
+
 Conor's Email:
 
 My instinct is to count the edge spikes as normal spikes, that is work out their gaps in the normal way but in the time before the first spike use the first spike as both the previous and next gap, similarly for the time after the last spike. This is different to having the extra spikes, that means taking the first and last real gap at half weight. The difficulty is with the ISI. We know two things about the ISI. Taking the example of the first spike, say it is at $t_1$ and the interval starts at $t=0$. Firstly the ISI shouldn't be smaller than $t_1$ and secondly, we know the ISI $t_2-t_1$ where $t_2$ is the time of the second spike. The thing is that if $t_1 < t_2-t_1$ it could be because $t_1 < "the true ISI"$, so one possibility is to take $max(t_1,t_2-t_1)$.
 
-(Conor Houghton, personal communication)
 
+\subsection{\label{sss:Sampling} Sampling}
+
+Earlier versions of the codes for calculating the ISI- and the SPIKE-distance relied on sampled dissimilarity profiles. Typically the precision was set to the sampling interval of the neuronal recording. Since the dissimilarity profile has to be calculated and stored for each pair of spike trains, this resulted, for each measure, in a matrix of order 'number of sampled time instants s' × 'squared number of spike trains' (i.e., $\# (t_s) N^2$). For small sampling intervals and a large number of recorded spike trains this lead to memory problems. In SPIKY we use an optimized and more memory-efficient way of storing the data where we make use of the fact that the ISI-distance is piecewise constant and the SPIKE-distance is piecewise linear. For each interval in the pooled spike train (and each pair of spike trains) we have to store only one value for the ISI-distance and two values for the SPIKE-distance, one at the beginning and one at the end of the interval. For both dissimilarity profiles there are instantaneous jumps at the times of the spikes since this is where the lengths of the interspike intervals and the identity of the previous and the following spikes change abruptly. In contrast to the calculation based on sampling we get the exact result since each spike is both the previous and the next spike and there is no need anymore to cut the corners of the dissimilarity profiles.
 
 \subsection{\label{ss:Realtime-Spike-Distance} Realtime SPIKE-distance}
 
@@ -193,13 +205,13 @@ Since there are no following spikes available, there is no local weighting, and 
 
 \subsection{\label{ss:Future-Spike-Distance} Future SPIKE-distance}
 
-The future SPIKE-distance $D_{S_f}$ can be used in triggered temporal averaging in order to evaluate the effect of certain spikes or of certain stimuli features on future spiking. It is the inverse measure to the realtime SPIKE-distance but instead of relying on past information only it relies on future information only. Also in this case for each time instant just two corner spikes are available, since the spikes of comparison are restricted to future spikes only. Thus the spike time difference for the following spike of the first spike train reads
+The future SPIKE-distance $D_{S_f}$ can be used in triggered temporal averaging in order to evaluate the effect of certain spikes or of certain stimuli features on future spiking. It is the inverse measure to the realtime SPIKE-distance but instead of relying on past information only it relies on future information only. Again for each time instant there are just two corner spikes and the potential nearest spikes in the other spike train are future spikes only. Thus the spike time difference for the following spike of the first spike train reads
 %
 \begin{equation} \label{eq:Delta-Corner-Spike-Future}
      \Delta t_{\mathrm {F}}^{(1)} = \min_i (| t_{\mathrm {F}}^{(1)} - t_i^{(2)} |), t_i > t,
 \end{equation}
 %
-and accordingly for the following spike of the second spike train. And, similar to Eq. \ref{eq:Bi-Spike-Diss-RT}, an indicator of local spike train dissimilarity is obtained as follows:
+and accordingly for the following spike of the second spike train. In analogy to Eq. \ref{eq:Bi-Spike-Diss-RT}, an indicator of local spike train dissimilarity is obtained as follows:
 %
 \begin{equation} \label{eq:Bi-Spike-Diss-FT}
     S_f (t) = \frac{ \Delta t_{\mathrm {F}}^{(1)} + \Delta t_{\mathrm {F}}^{(2)}} {4 \langle x_{\mathrm {F}}^{(n)} \rangle_n}.
@@ -336,10 +348,6 @@ For this purpose you can use the program SPIKY\_loop which is complementary to t
 
 \subsection{\label{ss:Computational-aspects} Computational aspects}
 
-\subsection{\label{sss:Sampling} Sampling}
-
-Earlier versions of the codes for calculating the ISI- and the SPIKE-distance relied on sampled dissimilarity profiles. Typically the precision was set to the sampling interval of the neuronal recording. Since the dissimilarity profile has to be calculated and stored for each pair of spike trains, this resulted, for each measure, in a matrix of order 'number of sampled time instants s' × 'squared number of spike trains' (i.e., $\# (t_s) N^2$). For small sampling intervals and a large number of recorded spike trains this lead to memory problems. In SPIKY we use an optimized and more memory-efficient way of storing the data where we make use of the fact that the ISI-distance is piecewise constant and the SPIKE-distance is piecewise linear. For each interval in the pooled spike train (and each pair of spike trains) we have to store only one value for the ISI-distance and two values for the SPIKE-distance, one at the beginning and one at the end of the interval. 
-
 \subsection{\label{sss:MEX-files} MEX-files}
 
 
@@ -369,8 +377,6 @@ The computational load scales with the number of spike trains $N$ as $N^2$.
 \subsection{\label{ss:Other-Implementations} Comparison with other implementations}
 
 
-XXXXXXXXXX
-
 
 Python-Implementation of SPIKE-distance courtesy of Jeremy Fix:
 
@@ -389,6 +395,13 @@ R{\v a}zvan Florian:
 
 HRLAnalysis$^{TM}$ \citep{Thibeault14}
 
+XXX Nebojsa figure (Performance comparison) XXX
+%
+%\begin{figure}
+%    \includegraphics[width=85mm]{FigXX_Performance_Comparison.eps}
+%    \caption{\abb\label{fig:FigXX-Performance-Comparison} XXX Add correct figure XXX Performance comparison: Time %needed for computing various distances, as a function of the number of spikes in the spike trains. For the ISI- and %the SPIKE-distance we show the curves for both the old (sampling-based) and the new algorithm.}
+%\end{figure}
+
 
 \subsection{\label{ss:Access} Access to SPIKY}
 
@@ -405,9 +418,10 @@ SPIKY is distributed under a BSD licence (Copyright (c) 2014, Thomas Kreuz, Nebo
 \subsection{\label{ss:Outlook} Outlook}
 
 
-\begin{appendix} \label{Appendix}
 
-\end{appendix}
+%\begin{appendix} \label{Appendix}
+%
+%\end{appendix}
 
 
 \vspace{1cm}
