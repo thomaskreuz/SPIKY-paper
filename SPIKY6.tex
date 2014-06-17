@@ -132,13 +132,13 @@ and
 %
 the intervals to the previous and the following spikes for each neuron $n = 1, 2$. The local weighting for the spike time differences of the first spike train reads
 %
-\begin{equation} \label{eq:Bi-Spike-Diss-Improved-First}
+\begin{equation} \label{eq:Bi-Spike-Diss-First}
      S_1 (t) = \frac{\Delta t_{\mathrm {P}}^{(1)} x_{\mathrm {F}}^{(1)} + \Delta t_{\mathrm {F}}^{(1)} x_{\mathrm {P}}^{(1)}}{x_{\mathrm {ISI}}^{(1)}}
 \end{equation}
 %
 and analogously $S_2 (t)$ is obtained for the second spike train. Averaging over the two spike train contributions and normalizing by the mean interspike interval yields
 %
-\begin{equation} \label{eq:Bi-Spike-Diss-Improved-Intermediate}
+\begin{equation} \label{eq:Bi-Spike-Diss-Intermediate}
      S'' (t) = \frac{S_1 (t) + S_2 (t)}{2 \langle x_{\mathrm {ISI}}^{(n)} \rangle_n}.
 \end{equation}
 
@@ -257,6 +257,10 @@ A last possibility is spatial averaging such that the spike trains are manually 
 
 \subsection{\label{ss:Spike-train-surrogates} Spike train surrogates and significance}
 
+One important question that has not yet been addressed is the one of statistical significance.
+
+
+
 Daniel's Email 13.07.2011:
 
 Regarding the use of Poisson processes to have a benchmark it will have different implications depending on the structure of your data. If the rate is almost constant then comparing to processes with the same estimated average rate is the best option. If the rate is time-dependent you may want to compare with processes which are Poisson but mimic the same time-dependent profile of the rate. These are just alternatives that give you complementary information on the structure of the reliability.
@@ -265,6 +269,8 @@ Surrogate data with the same time dependent rate can be obtained by randomly rea
 
 How can I estimate the significance of my results?
 Please have a look at the program 'Spiky\_loop\_surro.m'. This is similar to 'SPIKY\_loop.m' only that you do not look at different datasets, rather you can compare the results obtained for one dataset against the results obtained for spike train surrogates generated from that dataset.
+
+\citep{Kass05, Gruen09, Louis10}
 
 \section{\label{s:SPIKY} SPIKY}
 
@@ -342,16 +348,15 @@ For this purpose you can use the program SPIKY\_loop which is complementary to t
 
 \subsection{\label{sss:MEX-files} MEX-files}
 
-
 %
 \begin{figure}
-    \includegraphics[width=85mm]{Fig3-SPIKY-Flowchart.eps}
+    \includegraphics[width=85mm]{SPIKY_Flowchart_Neb.eps}
     \caption{\abb\label{fig:Fig3-SPIKY-Flowchart} SPIKY-Flowchart}
 \end{figure}
 
 XXXXX Rewrite and extend, add part on MEX-files XXXXX
 
-The improved dissimilarity profile $S (t)$ of the SPIKE-distance is piecewise linear (with each linear interval running from one spike of the pooled spike train to the next) rather than piecewise constant as is the case for the ISI-distance.
+The dissimilarity profile $S (t)$ of the SPIKE-distance is piecewise linear (with each linear interval running from one spike of the pooled spike train to the next) rather than piecewise constant as is the case for the ISI-distance.
 Therefore, when the localized visualization is desired, a new value has to be calculated for each sampling point and not just once per each interval in the pooled spike train. In cases where the distance value itself is sufficient, the short computation time can be even further decreased by representing each interval by the value of its center and weighting it by its length. This is not only faster, but it actually gives the exact result, whereas the time-resolved calculation is a very good approximation only for sufficiently small sampling intervals $dt$ (imagine the example of a rectangular function, at some point any sampled representation has to cut the right angle). The dissimilarity profiles $S_r(t)$ and $S_f (t)$ of the real-time and the future SPIKE-distances are hyperbolic and not linear but here also the exact result can be obtained by piecewise integration over all intervals of the pooled spike train.
 
 The calculation of the SPIKE-distance consists of three steps: In a precalculation step, for each spike the distance to the nearest spike in all the other spike trains is calculated. Successively, for each time instant and each pair of spike trains, the distances of the four corner spikes are first locally weighted and then normalized. These latter steps involve

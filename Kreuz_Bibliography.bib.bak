@@ -1,0 +1,5033 @@
+@Book{Abramson63,
+  author =       "N. Abramson",
+  title =        "Information theory and coding",
+  publisher =    "McGraw-Hill",
+  address =      "New York",
+  year =         "1963",
+}
+
+@Article{Abarbanel96,
+  author =   {H. D. I. Abarbanel and N. F. Rulkov and M. M. Sushchik},
+  title =    {Generalized synchronization of chaos: \textsc{T}he auxiliary system approach},
+  journal =  {Phys. Rev. E},
+  year =     1996,
+  volume =   53,
+  pages =    {4528}
+}
+
+@Article{Abeles88,
+  author =   {M. Abeles and G. L. Gerstein},
+  title =    {Detecting spatiotemporal firing patterns among simultaneously recorded single neurons},
+  journal =  {J Neurophysiol},
+  year =     1988,
+  volume =   60,
+  pages =    {909}
+}
+
+@Article{Achermann94,
+  author =       "P. Achermann and R. Hartmann and A. Gunzinger and W. Guggenbuhl and A. A. Borbely",
+  title =        "All-night sleep \textsc{EEG} and artificial stochastic control signals have similar correlation
+                  dimensions",
+  journal =      "Electroenceph. Clin. Neurophys.",
+  volume =       "90",
+  pages =        "38",
+  year =         "1994",
+}
+
+@Article{Afraimovich86,
+  author =       "V. S. Afraimovich and N. N. Verichev and M. I. Rabinovich",
+  title =        "Stochastic synchronization of oscillation in dissipative systems",
+  journal =      "Radiophys. Quantum Electron.",
+  volume =       "29",
+  pages =        "795",
+  year =         "1986",
+}
+
+@Article{Aguera03,
+  author =       "B. {Agüera y Arcas} and A. L. Fairhall and W. Bialek",
+  title =        "Computation in a Single Neuron: Hodgkin and Huxley Revisited",
+  journal =      "Neural Computation",
+  volume =       "15",
+  pages =        "1715",
+  year =         "2003",
+}
+
+@Article{Aird83,
+  author =       "R. B. Aird",
+  title =        "The importance of seizure-inducing factors in the control of refractory forms of epilepsy",
+  journal =      "Epilepsia",
+  volume =       "24",
+  pages =        "567",
+  year =         "1983",
+}
+
+@Article{Alonso893,
+  author =       "A. Alonso and R. R. Llinas",
+  title =        "Subthreshold Na/-dependent theta-like rhythmicity in stellate cells of entorhinal cortex layer II.",
+  journal =      "Nature",
+  volume =       "342",
+  pages =        "175",
+  year =         "1989",
+}
+
+@Article{Alonso93,
+  author =       "A. Alonso and R. Klink",
+  title =        "Differential electroresponsiveness of stellate and pyramidal-like cells of medial entorhinal cortex layer II.",
+  journal =      "J. Neurophysiol.",
+  volume =       "70",
+  pages =        "128",
+  year =         "1993",
+}
+
+@Article{Alonso96,
+  author =       "J. Alonso and W. Usrey and R. Reid",
+  title =        "Precisely correlated firing in cells of the lateral geniculate nucleus",
+  journal =      "J. Neurophysiol.",
+  volume =       "383",
+  pages =        "815",
+  year =         "1996",
+}
+
+@Article{Amthor05,
+  author =       "F. R. Amthor and J. S. Tootle and T. J. Gawne",
+  title =        "Retinal ganglion cell coding in simulated active vision.",
+  journal =      "Vis. Neurosci.",
+  volume =       "22",
+  pages =        "789",
+  year =         "2005",
+}
+
+@MastersThesis{Andrzejak97,
+  author =       "R. G. Andrzejak",
+  title =        "Anteile nichtlinearer \textsc{D}eterminismen in \textsc{Z}eitreihen: \textsc{T}heorie und
+                  \textsc{S}imulation sowie \textsc{A}nwendung auf hirnelektrische \textsc{A}ktivit{\"a}t
+                  von \textsc{P}atienten der pr{\"a}chirurgischen \textsc{E}pilepsiediagnostik",
+  school =       "Department of Physics, University of Bonn, Germany",
+  year =         "1997",
+}
+
+@Article{Andrzejak00,
+  author =       "R. G. Andrzejak and K. Lehnertz and F. Mormann and P. David and C. E. Elger",
+  title =        "Does the measure $\xi$ increase prior to seizures?" ,
+  journal =      "Epilepsia",
+  volume =       "41",
+  number =       "7",
+  pages =        "202",
+  year =         "2000",
+}
+
+@PhDThesis{Andrzejak01,
+  author =       "R. G. Andrzejak",
+  title =        "Epilepsie als eine nichtlinear deterministische \textsc{\it{D}}ynamik: Eine \textsc{\it{U}}ntersuchung
+                  hirnelektrischer \textsc{\it{A}}ktivit{\"a}t mit \textsc{\it{M}}ethoden der linearen und nichtlinearen
+                  \textsc{\it{Z}}eitreihenanalyse",
+  school =       "Department of Physics, University of Bonn, Germany",
+  year =         "2001",
+}
+
+@Article{Andrzejak01a,
+  author =       "R. G. Andrzejak and G. Widman and K. Lehnertz and P. David and C. E. Elger",
+  title =        "The epileptic process as nonlinear deterministic dynamics in a stochastic environment:
+                  An evaluation on mesial temporal lobe epilepsy.",
+  journal =      "Epilepsy Res.",
+  volume =       "44",
+  pages =        "129",
+  year =         "2001",
+}
+
+@Article{Andrzejak01b,
+  author =       "R. G. Andrzejak and K. Lehnertz and C. Rieke and F. Mormann and P. David and C. E. Elger",
+  title =        "Indications of nonlinear deterministic and finite dimensional structures in time series of
+                  brain electrical activity: Dependence on recording region and brain state",
+  journal =      "Phys. Rev. E",
+  volume =       "64",
+  pages =        "061907",
+  year =         "2001",
+}
+
+@Article{Andrzejak03,
+  author =       "R. G. Andrzejak and F. Mormann and T. Kreuz and C. Rieke and A. Kraskov and C. E. Elger
+  and K. Lehnertz",
+  title =        "Testing the null hypothesis of the nonexistence of a preseizure state",
+  journal =      "Phys. Rev. E",
+  volume =       "67",
+  pages =        "010901",
+  year =         "2003",
+}
+
+@Article{Andrzejak03a,
+  author =       "R. G. Andrzejak and A. Kraskov and H. St{\"o}gbauer and F. Mormann and T. Kreuz",
+  title =        "Bivariate surrogate techniques: Necessity, strengths, and caveats.",
+  journal =      "Phys. Rev. E",
+  volume =       "68",
+  pages =        "066202",
+  year =         "2003",
+}
+
+@Article{Andrzejak06,
+  author =       "R. G. Andrzejak and F. Mormann and G. Widmann and T. Kreuz and C. E. Elger and K. Lehnertz",
+  title =        "Improved characterization of neuronal dynamics by focusing on nonlinearity",
+  journal =      "Epilepsy Research",
+  volume =       "69",
+  pages =        "30",
+  year =         "2006",
+}
+
+@Article{Andrzejak11,
+  author =       "R. G. Andrzejak and T. Kreuz",
+  title =        "Characterizing unidirectional couplings between point processes and flows",
+  journal =      "Europhysics Letters",
+  volume =       "96",
+  pages =        "50012",
+  year =         "2011",
+}
+
+@InCollection{Annegers96,
+  author =       "J. F. Annegers",
+  editor =       "E. Wyllie",
+  title =        "The epidemiology of epilepsy",
+  booktitle =    "The treatment of epilepsy: Principles and practice",
+  publisher =    "Williams and Wilkins",
+  address =      "Baltimore",
+  pages=         "165",
+  year =         "1996",
+}
+
+@Article{Appleton22,
+  author =       "E. V. Appleton",
+  title =        "The automatic synchronization of triode oscillator.",
+  journal =      "Proc. Cambridge Phil. Soc. (Math. and Phys. Sci.)",
+  volume =       "21",
+  pages =        "231",
+  year =         "1922",
+}
+
+@Article{Arnhold99,
+  author =       "J. Arnhold and K. Lehnertz and P. Grassberger and C. E. Elger",
+  title =        "A robust method for detecting interdependences: \textsc{A}pplication to intracranially recorded
+                  \textsc{EEG}",
+  journal =      "Physica D",
+  volume =       "134",
+  pages =        "419",
+  year =         "1999",
+}
+
+@PhDThesis{Arnhold00,
+  author =       "J. Arnhold",
+  title =        "Nichtlineare \textsc{\it{A}}nalyse raum-zeitlicher \textsc{\it{A}}spekte der hirnelektrischen
+                  \textsc{\it{A}}ktivit{\"a}t von \textsc{\it{E}}pilepsiepatienten",
+  school =       "Department of Physics, University of Wuppertal, Germany",
+  year =         "2000",
+}
+
+@Article{Aronov03,
+  author =       "D. Aronov and D. S. Reich and F. Mechler and J. D. Victor",
+  title =        "Neural coding of spatial phase in V1 of the macaque monkey",
+  journal =      "J Neurophysiol",
+  volume =       "89",
+  pages =        "3304",
+  year =         "2003",
+}
+
+@Article{Aronov03b,
+  author =       "D. Aronov",
+  title =        "Fast algorithm for the metric-space analysis of simultaneous responses of multiple single neurons",
+  journal =      "J Neurosci Methods",
+  volume =       "124",
+  pages =        "175",
+  year =         "2003",
+}
+
+@Article{Aschenbrenner03,
+  author =       "R. Aschenbrenner-Scheibe and T. Maiwald and M. Winterhalder and H. U. Voss and J. Timmer and
+                  A. Schulze-Bonhage",
+  title =        "How well can epileptic seizures be predicted? \textsc{A}n evaluation of a nonlinear method",
+  journal =      "Brain",
+  volume =       "126",
+  pages =        "2616",
+  year =         "2003",
+}
+
+@Article{Axmacher06,
+  author =       "N. Axmacher and F. Mormann and G. Fernández and C.E. Elger and J. Fell",
+  title =        "Memory formation by neuronal synchronization",
+  journal =      "Brain Res Rev",
+  volume =       "52",
+  pages =        "170-182",
+  year =         "2006",
+}
+
+@Article{Babloyantz85a,
+  author =       "A Babloyantz and J. M. Salazar and G. Nicolis",
+  title =        "Evidence of Chaotic Dynamics of Brain Activity During the Sleep Cycle",
+  journal =      "Phys. Lett. A",
+  volume =       "111",
+  pages =        "152",
+  year =         "1985",
+}
+
+@Article{Babloyantz86,
+  author =       "A. Babloyantz and A. Destexhe",
+  title =        "Low-dimensional chaos in an instance of epilepsy",
+  journal =      "Proc. Natl. Acad. Sci. USA",
+  volume =       "83",
+  pages =        "3513",
+  year =         "1986",
+}
+
+@Article{Baddeley92,
+  author =       "A. D. Baddeley",
+  title =        "Working memory",
+  journal =      "Science",
+  volume =       "255",
+  pages =        "556",
+  year =         "1992",
+}
+
+@Article{Baltanas02,
+  author =       "J. P. Baltanas and J. M. Casado",
+  title =        "Noise-induced resonances in the Hindemarsh-Rose neuronal model",
+  journal =      "Phys. Rev. E",
+  volume =       "65",
+  pages =        "041915",
+  year =         "2002",
+}
+
+@Article{Barlow72,
+  author =       "H. B. Barlow",
+  title =        "Single units and sensation: A neuron doctrine for perceptual psychology?",
+  journal =      "Perception",
+  volume =       "1",
+  pages =        "371-394",
+  year =         "1972",
+}
+
+@Article{Barlow85,
+  author =       "J. S. Barlow",
+  title =        "Methods of analysis of nonstationary \textsc{EEG}s with emphasis on segmentation techniques: A comparative review",
+  journal =      "J. Clin. Neurophysiol.",
+  volume =       "2",
+  pages =        "267",
+  year =         "1985",
+}
+
+@Article{Bartlett46,
+  author =       "N. N. Bartlett",
+  title =        "On the theoretical specification and sampling properties of autocorrelated time-series.",
+  journal =      "J. R. Stat. Soc.",
+  volume =       "B8",
+  pages =        "27",
+  year =         "1946",
+}
+
+@Article{Beato05,
+  author =       "V. Beato and I. Sendina-Nadal and I. Gerdes and H. Engel",
+  title =        "Noise-induced wave nucleations in an excitable chemical reaction",
+  journal =      "Phys Rev E",
+  volume =       "71",
+  pages =        "035204",
+  year =         "2005",
+}
+
+@Article{Beierholm01,
+  author =       "U. Beierholm and C. D. Nielsen and J. Ryge and P. Alstrom and O. Kiehn",
+  title =        "Characterization of reliability of spike timing in spinal
+                  interneurons during oscillating inputs",
+  journal =      "J Neurophysiol",
+  volume =       "86",
+  pages =        "1858",
+  year =         "2001",
+}
+
+@Article{Benzi81,
+  author =       "R. Benzi and A. Sutera and A. Vulpiani",
+  title =        "The mechanism of statistic resonance",
+  journal =      "J Phys A",
+  volume =       "14",
+  pages =        "453",
+  year =         "1981",
+}
+
+@Article{Berger29,
+  author =       "H. Berger",
+  title =        "{\"U}ber das {E}lektroenkephalogramm des {M}enschen",
+  journal =      "Arch Psychiat Nervenkrankh",
+  volume =       "87",
+  pages =        "527",
+  year =         "1929",
+}
+
+@Article{Berger38,
+  author =       "H. Berger",
+  title =        "Das {E}lektroenkephalogramm des {M}enschen",
+  journal =      "Nova Acta Leopoldina (Halle)",
+  volume =       "6",
+  pages =        "173",
+  year =         "1938",
+}
+
+@Article{Berry97,
+  author =       "M. J. Berry and D. K. Warland and M. Meister",
+  title =        "The structure and precision of retinal spike trains",
+  journal =      "Proc. Natl. Acad. Sci. USA",
+  volume =       "94",
+  pages =        "5411",
+  year =         "1997",
+}
+
+@Article{Best01,
+  author =       "P. J. Best and A. M. White and A. Minai",
+  title =        "Spatial processing in the brain: the activity of hippocampal place cells.",
+  journal =      "Annu Rev Neurosci",
+  volume =       "24",
+  pages =        "459",
+  year =         "2001",
+}
+
+@Article{Blanco95,
+  author =       "S. Blanco and H. Garcia and R. {Quian Quiroga} and L. Romanelli and O. A. Rosso",
+  title =        "Stationarity of the \textsc{EEG} series",
+  journal =      "IEEE Eng. Med. Biol.",
+  volume =       "4",
+  pages =        "395",
+  year =         "1995",
+}
+
+@Article{Blanco98,
+  author =   {S. Blanco and A. Figliola and R. {Quian Quiroga} and O. A. Rosso and E. Serano},
+  title =    {Time-frequency analysis of electroencephaloram series. Wavelet packets and information cost function},
+  journal =  {Physical Review E},
+  year =     1998,
+  volume =   57,
+  pages =    {932}
+}
+
+@Article{Bower12,
+  author =   {M. R. Bower and M. Stead and F. B. Meyer and W. R. Marsh and G. A. Worrell},
+  title =    {Spatiotemporal neuronal correlates of seizure generation in focal epilepsy},
+  journal =  {Epilepsia},
+  year =     2012,
+  volume =   53,
+  pages =    {807}
+}
+
+@Book{Box76,
+  author =       "G. E. P. Box and G. M. Jenkins",
+  title =        "Time series analysis: Forecasting and control. Revised Ed.",
+  publisher =    "Holden-Day",
+  address =      "San Francisco",
+  year =         "1993",
+}
+
+@Article{Brazier72,
+  author =   {Mary A. B. Brazier},
+  title =    {Spread of seizure discharges in epilepsy: \textsc{A}natomical and electrophysiological considerations.},
+  journal =  {Exp. Neurology},
+  year =     1972,
+  volume =   36,
+  pages =    {263}
+}
+
+@Article{Breakspear02,
+  author =       "M. Breakspear and J. R. Terry",
+  title =        "Topographic Organization of Nonlinear Interdependence in Multichannel Human \textsc{EEG}.",
+  journal =      "NeuroImage",
+  volume =       "16",
+  pages =        "822",
+  year =         "2002",
+}
+
+@Article{Brenner00,
+  author =       "N. Brenner and S. P. Strong and R. Koberle and W. Bialek and R. R. {de Ruyter van Steveninck}",
+  title =        "Synergy in a Neural Code",
+  journal =      "Neural Comput",
+  volume =       "12",
+  pages =        "1531",
+  year =         "2000",
+}
+
+@Article{Brody99,
+  author =       "C. D. Brody",
+  title =        "Correlations without synchrony",
+  journal =      "Neural Comput",
+  volume =       "11",
+  pages =        "1537",
+  year =         "1999",
+}
+
+@Article{Broomhead86,
+  author =       "D. S. Broomhead and G. P. King",
+  title =        "Extracting qualitative dynamics from experimental data",
+  journal =      "Physica D",
+  volume =       "20",
+  pages =        "217",
+  year =         "1986",
+}
+
+@Article{Brown04,
+  author =       "E. N. Brown and R. E. Kass and P. P. Mitra",
+  title =        "Multiple neural spike train data analysis: state-of-the-art and future challenges",
+  journal =      "Nature Neuroscience",
+  volume =       "7",
+  pages =        "456",
+  year =         "2004",
+}
+
+@Article{Brugioni05,
+  author =       "S. Brugioni and D.-U. Hwang and R. Meucci and S. Boccaletti",
+  title =        "Coherence resonance in excitable electronic circuits in the presence of colored noise",
+  journal =      "Phys. Rev. E",
+  volume =       "71",
+  pages =        "062101",
+  year =         "2005",
+}
+
+@Article{Brunel01,
+  author =       "N. Brunel and F. S. Chance and N. Fourcaud and L. F. Abbott",
+  title =        "Effects of synaptic noise and filtering on the frequency response of spiking neurons",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "86",
+  pages =        "2186",
+  year =         "2001",
+}
+
+@Article{Bruns04,
+  author =       "A. Bruns",
+  title =        "Fourier-, Hilbert- and wavelet-based signal analysis: Are they
+                  really different approaches?",
+  journal =      "J Neurosci Methods",
+  volume =       "137",
+  pages =        "321",
+  year =         "2004",
+}
+
+@Article{Buldu01,
+  author =       "J. M. Buld{ú} and J. Garc{í}a-Ojalvo and C. R. Mirasso and M. C. Torrent and J. M. Sancho",
+  title =        "Effect of external noise correlation in optical coherence resonance",
+  journal =      "Phys. Rev. E",
+  volume =       "64",
+  pages =        "051109",
+  year =         "2001",
+}
+
+@Article{Bullock95,
+  author =   {T. H. Bullock and M. C. McClune and J. Z. Achimowicz and V. J. Iragui-Madoz and R. B. Duckrow and
+              S. S. Spencer},
+  title =    {\textsc{EEG} coherence has structure in the millimeter domain: \textsc{S}ubdural and hippocampal
+              recordings from epileptic patients},
+  journal =  {Electr. Clin. Neurophysiol.},
+  volume =   {95},
+  pages =    {161},
+  year =     {1995}
+}
+
+@Article{Buzsaki04,
+  author =   {G. Buzsaki and A. Draghun},
+  title =    {Neuronal Oscillations in Cortical Networks},
+  journal =  {Science},
+  volume =   {304},
+  pages =    {1926},
+  year =     {2004}
+}
+
+@Article{Callenbach02,
+  author =   {L. Callenbach and P. H{\"a}nggi and S. J. Linz and J. A. Freund and L. Schimansky-Geier},
+  title =    {Oscillatory systems driven by noise: frequency and phase synchronization.},
+  journal =  {Phys. Rev. E},
+  volume =   65,
+  pages =    {051110},
+  year =     2002
+}
+
+@Article{Calvo01,
+  author =   {O. Calvo and C. R. Mirasso and R. Toral},
+  title =    {Coherence resonance in chaotic electronic circuits},
+  journal =  {Electronics Letters},
+  volume =   37,
+  pages =    {1062},
+  year =     2001
+}
+
+@Article{Carroll93,
+  author =   {T. L. Carroll and L. M. Pecora},
+  title =    {Cascading synchronized chaotic systems},
+  journal =  {Physica D},
+  volume =   67,
+  pages =    {126},
+  year =     1993
+}
+
+@Article{Carroll94,
+  author =   {T. L. Carroll and J. Heagy and L. M. Pecora},
+  title =    {Synchronization and desynchronization in pulse coupled relaxation oscillators},
+  journal =  {Physics Letters A},
+  volume =   186,
+  pages =    {225},
+  year =     1994
+}
+
+@Article{Casado97,
+  author =   {J. M. Casado},
+  title =    {Noise-induced coherence in an excitable system.},
+  journal =  {Physics Letters A},
+  volume =   235,
+  pages =    {489},
+  year =     1997
+}
+
+@Article{Casdagli97b,
+  author =       "M. C. Casdagli and L. D. Iasemidis and R. S. Savit and R. L. Gilmore and S. Roper and
+                  J. C. Sackellares",
+  title =        "Non-linearity in invasive \textsc{EEG} recordings from patients with temporal lobe epilepsy",
+  journal =      "Electroencenphalogr. Clin. Neurophysiol.",
+  volume =       "102",
+  pages =        "98",
+  year =         "1997",
+}
+
+@Book{Castleman96,
+  author =       "K. R. Castleman",
+  title =        "Digital image processing.",
+  publisher =    "Prentice Hall",
+  address =      "Englewood Cliffs, NJ",
+  year =         "1996",
+}
+
+@Article{Censi01,
+  author =       "F. Censi and V. Barbaro and P. Bartolini and G. Galcagnini and A. Michelucci and S. Cerutti",
+  title =        "Non-linear coupling of atrial activation processes during atrial fibrillation in humans",
+  journal =      "Biol. Cybern.",
+  volume =       "85",
+  pages =        "195",
+  year =         "2001",
+}
+
+@Article{Centurelli05,
+  author =       "R. Centurelli and S. Musacchio and R. A. Pasmanter and A. Vulpiani",
+  title =        "Resemblances and differences in mechanisms of noise-induced resonance",
+  journal =      "Arxiv preprint nlin.CD/0503051",
+  year =         "2005",
+}
+
+@Article{Chacron04,
+  author =       "M. J. Chacron and B. Lindner and A. Longtin",
+  title =        "Noise Shaping by interval correlations increases information transfer",
+  journal =      "Phys. Rev. Lett",
+  volume =       "92",
+  pages =        "080601",
+  year =         "2004",
+}
+
+@Book{Cherkassky98,
+  author =       "V. S. Cherkassky and F. M. Mulier",
+  title =        "Learning from data: {C}oncepts, theory, and methods",
+  publisher =    "John Wiley and Sons",
+  address =      "New York",
+  year =         "1998",
+}
+
+@Article{Chicharro09,
+  author =       "D. Chicharro and T. Kreuz and R. G. Andrzejak",
+  title =        "Limitations in the study of precision and reliability with spike train distances analysis",
+  journal =      "",
+  volume =       "(in preparation)",
+  pages =        "",
+  year =         "2009",
+}
+
+@Article{Chicharro11,
+  author =       "D. Chicharro and T. Kreuz and R. G. Andrzejak",
+  title =        "What can spike train distances tell us about the neural code?",
+  journal =      "J Neurosci Methods",
+  volume =       "199",
+  pages =        "146-165",
+  year =         "2011",
+}
+
+@Article{Chicharro12,
+  author =       "D. Chicharro and E. Caporello and T. Q. Gentner and T. Kreuz",
+  title =        "Disambiguating natural stimulus encoding and discrimination of spike trains",
+  journal =      "(submitted)",
+  volume =       "",
+  pages =        "",
+  year =         "2012",
+}
+
+@Article{Chichilnisky01,
+  author =       "E. J. Chichilnisky",
+  title =        "A simple white noise analysis of neuronal light responses",
+  journal =      "Network: Comput. Neural Syst.",
+  volume =       "12",
+  pages =        "199",
+  year =         "2001",
+}
+
+@Article{Chichilnisky02,
+  author =       "E. J. Chichilnisky and R. S. Kalmar",
+  title =        "Functional asymmetries in ON and OFF ganglion cells of primate retina",
+  journal =      "J Neurosci",
+  volume =       "22",
+  pages =        "2737",
+  year =         "2002",
+}
+
+@Article{Chichilnisky03,
+  author =       "E. J. Chichilnisky and R. S. Kalmar",
+  title =        "Temporal resolution of ensemble visual motion signals in primate retina",
+  journal =      "J Neurosci",
+  volume =       "23",
+  pages =        "6681",
+  year =         "2003",
+}
+
+@Article{Christen06,
+  author =       "M Christen and A. Kohn and T. Ott and R. Stoop",
+  title =        "Measuring spike pattern reliability with the Lempel–Ziv-distance.",
+  journal =      "J Neurosci Methods",
+  volume =       "156",
+  pages =        "342",
+  year =         "2006",
+}
+
+@Article{Colder96,
+  author =       "B. W. Colder and C. L. Wilson and R. C. Frysinger and L. C. Chao and R. M. Harper
+                  and J. Engel",
+  title =        "Neuronal synchrony in relation to burst discharge in epileptic human temporal lobes.",
+  journal =      "J. Neurophysiol.",
+  volume =       "65",
+  pages =        "2496",
+  year =         "1996",
+}
+
+@Book{Cover91,
+  author =       "T. M. Cover and J. A. Thomas",
+  title =        "Elements of Information Theory",
+  publisher =    "John Wiley and Sons",
+  address =      "New York",
+  year =         "1991",
+}
+
+@Article{Dacey92,
+  author =       "D. M. Dacey and S. Brace",
+  title =        "A coupled network for parasol but not midget ganglion cells in the primate retina.",
+  journal =      "Vis Neurosci",
+  volume =       "9",
+  pages =        "279",
+  year =         "1992",
+}
+
+@Article{Dacey93,
+  author =       "D. M. Dacey",
+  title =        "The mosaic of midget ganglion cells in the human retina.",
+  journal =      "J Neurosci",
+  volume =       "13",
+  pages =        "5334",
+  year =         "1993",
+}
+
+@Article{Daniels47,
+  author =       "H. E. Daniels and M. G. Kendall",
+  title =        "The significance of rank correlation where parental correlation exists.",
+  journal =      "Biometrika",
+  volume =       "34",
+  pages =        "197",
+  year =         "1947",
+}
+
+@Article{Darbellay99,
+  author =       "G. A. Darbellay and I. Vajda",
+  title =        "Estimation of the information by an adaptive partitioning of the observation space",
+  journal =      "IEEE Trans. Inform. Th.",
+  volume =       "45",
+  pages =        "1315",
+  year =         "1999",
+}
+
+@Article{DeBoer68,
+  author =       "E. {de Boer} and P. Kuyper",
+  title =        "Triggered correlation",
+  journal =      "IEEE Trans. Biomed. Eng.",
+  volume =       "15",
+  pages =        "169",
+  year =         "1968",
+}
+
+@Article{DeClerq03,
+  author =       "W. {de Clerq} and P. Lemmerling and S. {van Huffel} and W. {van Paesschen}",
+  title =        "Anticipation of epileptic seizures from standard \textsc{EEG} recordings",
+  journal =      "Lancet",
+  volume =       "361",
+  pages =        "970",
+  year =         "2003",
+}
+
+@Article{Destexhe03,
+  author =       "A. Destexhe and M. Rudolph and D. Par{e'}",
+  title =        "The high-conductance state of neocortical neurons in vivo",
+  journal =      "Nature Reviews",
+  volume =       "4",
+  pages =        "739",
+  year =         "2003",
+}
+
+@Book{Devore05,
+  author =       "J. Devore and R. Peck",
+  title =        "Statistics: The exploration and analysis of data.",
+  publisher =    "Duxbury Press",
+  address =      "Belmont, CA",
+  year =         "2005",
+}
+
+@Article{DeVries97,
+  author =       "S. H. {De Vries} and D. A. Baylor",
+  title =        "Mosaic arrangement of ganglion cell receptive fields in rabbit retina.",
+  journal =      "J Neurophysiol",
+  volume =       "78",
+  pages =        "2048",
+  year =         "1997",
+}
+
+@Article{DeVries99,
+  author =       "S. H. Devries",
+  title =        "Correlated firing in rabbit retinal ganglion cells.",
+  journal =      "J Neurophysiol",
+  volume =       "81",
+  pages =        "908",
+  year =         "1999",
+}
+
+@Article{DiLorenzo03,
+  author =       "P. M. {Di Lorenzo} and J. D. Victor",
+  title =        "Taste response variability and temporal coding in the nucleus of the solitary tract of the rat",
+  journal =      "J Neurophysiol",
+  volume =       "90",
+  pages =        "1418",
+  year =         "2003",
+}
+
+@Article{Dolan02,
+  author =       "K. T. Dolan and A. Neiman",
+  title =        "Surrogate analysis of coherent multichannel data",
+  journal =      "Phys. Rev. E",
+  volume =       "65",
+  pages =        "026108",
+  year =         "2002",
+}
+
+@Article{Dorval01,
+  author =       "A. D. Dorval and D. J. Christini and J. A. White",
+  title =        "Real-Time Linux Dynamic Clamp: A Fast and Flexible Way to Construct Virtual Ion Channels in Living Cells",
+  journal =      "Annals of Biomedical Engineering",
+  volume =       "29",
+  pages =        "897",
+  year =         "2001",
+}
+
+@Article{Dubbeldam99,
+  author =       "J. L. A. Dubbeldam and B. Krauskopf and D. Lenstra",
+  title =        "Excitability and coherence resonance in lasers with saturable absorber",
+  journal =      "Phys. Rev. E",
+  volume =       "60",
+  pages =        "6580",
+  year =         "1999",
+}
+
+@Article{Duckrow92,
+  author =       "R. B. Duckrow and S. S. Spencer",
+  title =        "Regional coherence and the transfer of ictal activity during seizure onset in the medial temporal lobe",
+  journal =      "Electroencephalogr. Clin. Neurophysiol.",
+  volume =       "82",
+  pages =        "415",
+  year =         "1992",
+}
+
+@Book{Duda01,
+  author =       "R. Duda and P. Hart and D. Stork",
+  title =        "Pattern classification.",
+  publisher =    "Wiley",
+  address =      "New York",
+  year =         "2001",
+}
+
+@Article{Dzakpasu05,
+  author =       "R. Dzakpasu and M. Zochowski",
+  title =        "Discriminating differing types of synchrony in neural systems",
+  journal =      "Physica D",
+  volume =       "208",
+  pages =        "115",
+  year =         "2005",
+}
+
+@Article{Du10,
+  author =       "Y. Du and Q. Lu and R. Wang",
+  title =        "Using interspike intervals to quantify noise effects on spike trains in temperature encoding neurons.",
+  journal =      "Cognitive Neurodyn",
+  volume =       "4",
+  pages =        "199",
+  year =         "2010",
+}
+
+@Article{Eckmann85,
+  author =       "J.-P. Eckmann and D. Ruelle",
+  title =        "Ergodic theory of chaos and strange attractors",
+  journal =      "Rev. Mod. Phys.",
+  volume =       "57",
+  pages =        "617",
+  year =         "1985",
+}
+
+@Article{Eckmann92,
+  author =       "J.-P. Eckmann and D. Ruelle",
+  title =        "Fundamental limitations for estimating dimensions and Lyapunov exponents in dynamical systems",
+  journal =      "Physica D",
+  volume =       "56",
+  pages =        "185",
+  year =         "1992",
+}
+
+@Article{Eder97,
+  author =       "H. G. Eder and D. B. Jones and R. S. Fisher",
+  title =        "Local perfusion of diazepam attenuates interictal and ictal events in the bicuculline model
+  of epilepsy in rats",
+  journal =      "Epilepsia ",
+  volume =       "38",
+  pages =        "516",
+  year =         "1997",
+}
+
+@Article{Ehlers98,
+  author =       "C. L. Ehlers and J. Havstad and D. Prichard and J. Theiler",
+  title =        "Low doses of ethanol reduce evidence for nonlinear structure in brain activity",
+  journal =      "J. Neurosci",
+  volume =       "18",
+  pages =        "7474",
+  year =         "1998",
+}
+
+@InCollection{Elger94,
+  author =       "C. E. Elger and K. Lehnertz",
+  editor =       "P. Wolf",
+  title =        "Ictogenesis and chaos",
+  booktitle =    "Epileptic seizures and syndroms",
+  publisher =    "J. Libbey and Co, London",
+  address =      "London",
+  pages=         "547",
+  year =         "1994",
+}
+
+@Article{Elger98,
+  author =       "C. E. Elger and K. Lehnertz",
+  title =        "Seizure prediction by nonlinear time series analysis of brain electrical activity",
+  journal =      "Eur. J. Neurosci.",
+  volume =       "10",
+  pages =        "786",
+  year =         "1998",
+}
+
+@Article{Elger01,
+  author =       "C. E. Elger",
+  title =        "Future trends in epileptology",
+  journal =      "Curr. Opin. Neurol.",
+  volume =       "14",
+  pages =        "185",
+  year =         "2001",
+}
+
+@Book{Engel89,
+  editor =       "J. Engel",
+  title =        "Seizures and Epilepsy",
+  publisher =    "F.A. Davis",
+  address =      "Philadelphia",
+  year =         "1989",
+}
+
+@Book{Engel93,
+  editor =       "J. Engel",
+  title =        "Surgical Treatment of the Epilepsies",
+  publisher =    "Raven Press",
+  address =      "New York",
+  year =         "1993",
+}
+
+@InCollection{Engel93b,
+  author =       "J. Engel and P. C. {van Ness} and T. B. Rasmussen and L. M. Ojemann",
+  editor =       "J. Engel",
+  title =        "Outcome with respect to epileptic seizures.",
+  booktitle =    "Surgical Treatment of the Epilepsies",
+  pages =        "609",
+  publisher =    "Raven Press",
+  address =      "New York",
+  year =         "1993",
+}
+
+@Book{Engel08,
+  editor =       "J. Engel and T. A. Pedley",
+  title =        "Epilepsy: \textsc{A} Comprehensive Textbook",
+  publisher =    "2nd Ed., Lippincott-Raven",
+  address =      "Philadelphia",
+  year =         "2008",
+}
+
+@Article{Fabiny93,
+  author =       "L. Fabiny and P. Colet and R. Roy",
+  title =        "Coherence and phase dynamics of spatially coupled solid-state lasers",
+  journal =      "Phys. Rev. A",
+  volume =       "47",
+  pages =        "4287",
+  year =         "1993",
+}
+
+@InCollection{Farmer88,
+  author =       "J. D. Farmer and J. J. Sidorowich",
+  editor =       "Y.-C. Lee",
+  title =        "Exploiting chaos to predict the future and reduce noise",
+  booktitle =    "Evolution, Learning and Cognition",
+  pages =        "277",
+  publisher =    "World Scientific",
+  address =      "Singapore",
+  year =         "1988",
+}
+
+@Article{Feldmann04,
+  author =       "U. Feldmann and J. Bhattacharya",
+  title =        "Predictability improvement as an asymmetrical measure of interdependence in bivariate time series",
+  journal =      "Int. J. Bifurcation and Chaos",
+  volume =       "14 (2)",
+  pages =        "505",
+  year =         "2004",
+}
+
+@Article{Fell96a,
+  author =       "J. Fell and J. R{\"o}schke and K. Mann and C. Sch{\"a}ffner",
+  title =        "Discrimination of sleep stages: \textsc{A} comparison between spectral and nonlinear \textsc{EEG}
+                  measures",
+  journal =      "Electroencephalogr. Clin. Neurophysiol.",
+  volume =       "98",
+  pages =        "401",
+  year =         "1996",
+}
+
+@Article{Fell96b,
+  author =       "J. Fell and J. R{\"o}schke and C. Sch{\"a}ffner",
+  title =        "Surrogate data analysis of sleep electroencephalograms reveals evidence for nonlinearity",
+  journal =      "Biol. Cybern.",
+  volume =       "75",
+  pages =        "85",
+  year =         "1996",
+}
+
+@Article{Fell01,
+  author =       "J. Fell and P. Klaver and K. Lehnertz and T. Grunwald and C. Schaller and C. E. Elger and
+  G. Fern\'{a}ndez",
+  title =        "Human memory formation is accompanied by rhinal-hippocampal coupling and decoupling",
+  journal =      "Nature Neurosci.",
+  volume =       "4",
+  pages =        "1259",
+  year =         "2001",
+}
+
+@Article{Felleman91,
+  author =       "D. J. Felleman and D. C. V. {van Essen}",
+  title =        "Distributed hierarchical processing in the primate visual cortex",
+  journal =      "Cereb. Cortex",
+  volume =       "1",
+  pages =        "1",
+  year =         "1991",
+}
+
+@Article{Fellous01,
+  author =       "J. M. Fellous and A. R. Houweling and R. H. Modi and R. P. Rao and P. H. E. Tiesinga and T. J. Sejnowski",
+  title =        "Frequency dependence of spike timing reliability in cortical pyramidal cells and interneurons",
+  journal =      "J Neurophysiol",
+  volume =       "85",
+  pages =        "1782",
+  year =         "2001",
+}
+
+@Article{Fellous04,
+  author =       "J. M. Fellous and and P. H. E. Tiesinga and P. J. Thomas and T. J. Sejnowski",
+  title =        "Discovering Spike Patterns in Neuronal Responses",
+  journal =      "J Neurosci",
+  volume =       "24",
+  pages =        "2989",
+  year =         "2004",
+}
+
+@Article{Feng01,
+  author =       "J. Feng and P. Zhang",
+  title =        "Behavior of integrate-and-fire and Hodgkin-Huxley models with correlated inputs",
+  journal =      "Phys. Rev. E",
+  volume =       "63",
+  pages =        "051902",
+  year =         "2001",
+}
+
+@Article{Fernandez99,
+  author =       "Fern\'{a}ndez G and A. Effern and T. Grunwald and N. Pezer and K. Lehnertz and M. Dümpelmann
+  and D. {van Roost} and C. E. Elger",
+  title =        "Real-time tracking of memory formation in the human rhinal cortex and hippocampus",
+  journal =      "Science",
+  volume =       "285",
+  pages =        "1582",
+  year =         "1999",
+}
+
+@Article{Field07,
+  author =       "G. D. Field and E. J. Chichilnisky",
+  title =        "Information processing in the primate retina: circuitry and coding",
+  journal =      "Annu. Rev. Neurosci.",
+  volume =       "30",
+  pages =        "1",
+  year =         "2007",
+}
+
+@Article{Field07b,
+  author =       "G. D. Field and A. Sher and J. L. Gauthier and M. Greschner and J. Shlens and A. M. Litke and E. J. Chichilnisky",
+  title =        "Spatial properties and functional organization of small bistratified ganglion cells in primate retina",
+  journal =      "J. Neurosci.",
+  volume =       "27",
+  pages =        "13261",
+  year =         "2007",
+}
+
+@Article{Fisher05,
+  author =       "R. Fisher and W. {van Emde Boas} and W. Blume and C. Elger and P. Genton and P. Lee and J. Engel",
+  title =        "Epileptic seizures and epilepsy: definitions proposed by the International League Against Epilepsy (ILAE) and the International Bureau for Epilepsy (IBE)",
+  journal =      "Epilepsia",
+  volume =       "46",
+  pages =        "470-472",
+  year =         "2005",
+}
+
+@Article{FitzHugh61,
+  author =       "R. FitzHugh",
+  title =        "Impulses and physiological states in theoretical models of nerve membrane",
+  journal =      "Biophys. J.",
+  volume =       "1",
+  pages =        "445",
+  year =         "1961",
+}
+
+@Article{Frank90,
+  author =       "G. W. Frank and T. Lookman and M. A. H. Nerenberg and C. Essex and J. Lemieux and W. Blume",
+  title =        "Chaotic time series analyses of epileptic seizures",
+  journal =      "Physica D",
+  volume =       "46",
+  pages =        "427",
+  year =         "1990",
+}
+
+@Article{Fraser86,
+  author =       "A. M. Fraser and H. L. Swinney",
+  title =        "Independent coordinates for strange attractors from mutual information",
+  journal =      "Phys. Rev. A",
+  volume =       "33",
+  pages =        "1134",
+  year =         "1986",
+}
+
+@Article{Frechette05,
+  author =       "E. S. Frechette and A. Sher and M. I. Grivich and D. Petrusca and A. M. Litke and E. J. Chichilnisky",
+  title =        "Fidelity of the ensemble code for visual motion in primate retina",
+  journal =      "J Neurophysiol",
+  volume =       "94",
+  pages =        "119",
+  year =         "2005",
+}
+
+@Article{Freund03,
+  author =       "J. A. Freund and L. Schimansky-Geier and P. Hänggi",
+  title =        "Frequency and phase synchronization in stochastic systems",
+  journal =      "Chaos",
+  volume =       "13",
+  pages =        "225",
+  year =         "2003",
+}
+
+@Article{Fries05,
+  author =       "P. Fries",
+  title =        "A mechanism for cognitive dynamics: neuronal communication through neuronal coherence",
+  journal =      "Trends in Cognitive Sciences",
+  volume =       "9",
+  pages =        "474",
+  year =         "2005",
+}
+
+
+@Article{Fujisaka83,
+  author =       "H. Fujisaka and T. Yamada",
+  title =        "Stability theory of synchronized motion in coupled dynamical systems.",
+  journal =      "Prog. Theor. Phys.",
+  volume =       "69",
+  pages =        "32",
+  year =         "1983",
+}
+
+@Article{Gabor46,
+  author =       "D. Gabor",
+  title =        "Theory of communication",
+  journal =      "Proc. IEEE London ",
+  volume =       "93",
+  pages =        "429",
+  year =         "1946",
+}
+
+@Article{Gammaitoni98,
+  author =       "L. Gammaitoni and P. Haenggi and P. Jung and F. Marchesoni",
+  title =        "Stochastic resonance",
+  journal =      "Rev. Mod. Phys.",
+  volume =       "70",
+  pages =        "223",
+  year =         "1998",
+}
+
+@Article{Gang93,
+  author =       "H. Gang and T. Ditzinger and C. Z. Ning and H. Haken",
+  title =        "Stochastic resonance without external periodic force",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "71",
+  pages =        "807",
+  year =         "1993",
+}
+
+@Article{Ganopolski02,
+  author =       "A. Ganopolski and S. Rahmstorf",
+  title =        "Abrupt glacial climate changes due to infectious noise",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "88",
+  pages =        "038501",
+  year =         "2002",
+}
+
+@Article{Gardner04,
+  author =       "D. Gardner",
+  title =        "Neurodatabase.org: networking the microelectrode",
+  journal =      "Nature Neuroscience",
+  volume =       "7",
+  pages =        "486",
+  year =         "2004",
+}
+
+@Article{Gerstein01,
+  author =       "G. L. Gerstein and K. L. Kirkland",
+  title =        "Neural assemblies: technical issues, analysis and modeling",
+  journal =      "Neural Networks",
+  volume =       "14",
+  pages =        "589",
+  year =         "2001",
+}
+
+@Book{Gerstner02,
+  author =       "W. Gerstner and W. M. Kistler",
+  title =        "Spiking neuron models",
+  publisher =    "Cambridge Univ. Press",
+  address =      "Cambridge, UK",
+  year =         "2002",
+}
+
+@Article{Gevins87,
+  author =      {A. S. Gevins},
+  title =       {Methods of analysis of brain electrical and magnetic signals},
+  chapter =     {6,Correlation analysis},
+  publisher =   {Elesevier},
+  editor =      {A. S.Gevins and A. Remond},
+  pages =       {171},
+  year =        {1987},
+}
+
+@Article{Gluckman01,
+  author =       "B. J. Gluckman and H. Nguyen and S. L. Weinstein and S. J. Schiff",
+  title =        "Adaptive electric field control of epileptic seizures",
+  journal =      "J. Neurosci.",
+  volume =       "21",
+  pages =        "590",
+  year =         "2001",
+}
+
+@Article{Goldensohn63,
+  author =       "E. S. Goldensohn and D. P. Purpura",
+  title =        "Intracellular potentials of cortical neurons during focal epileptogenic discharges.",
+  journal =      "Science",
+  volume =       "139",
+  pages =        "840",
+  year =         "1963",
+}
+
+@Article{Gong02,
+  author =       "P. L. Gong and J. X. Xu and S. J. Hu",
+  title =        "Resonance in a noise-driven excitable neuron model",
+  journal =      "Chaos, Solitons and Fractals",
+  volume =       "13",
+  pages =        "885",
+  year =         "2002",
+}
+
+@Article{Goodridge01,
+  author =       "C. L. Goodridge and L. M. Pecora and T. L. Caroll and F. J. Rachford",
+  title =        "Detecting functional relationships between simultaneous time series.",
+  journal =      "Phys. Rev. E",
+  volume =       "64",
+  pages =        "026221",
+  year =         "2001",
+}
+
+@Article{Gotman82,
+  author =       "J. Gotman and J. Ives and P. Gloor and A. Olivier and L. Quesney",
+  title =        "Changes in inter-ictal \textsc{EEG} spiking and seizure occurrence in humans.",
+  journal =      "Epilepsia",
+  volume =       "23",
+  pages =        "432",
+  year =         "1982",
+}
+
+@Article{Gotman87,
+  author =   "J. Gotman",
+  title =    "Interhemispheric interactions in seizures of focal onset: \textsc{D}ata from human intracranial recordings.",
+  journal =  "Electr. Clin. Neurophysiol.",
+  volume =   "67",
+  pages =    "120",
+  year =     "1987"
+}
+
+@Article{Gower68,
+  author =   "J. C. Gower and G. J. S. Ross",
+  title =    "Minimum spanning trees and single-linkage cluster analysis.",
+  journal =  "Appl. Stat.",
+  volume =   "18",
+  pages =    "58",
+  year =     "1968",
+  }
+
+@Article{Grassberger83a,
+  author =       "P. Grassberger and I. Procaccia",
+  title =        "On the characterization of strange attractors",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "50",
+  pages =        "346",
+  year =         "1983",
+}
+
+@Article{Grassberger83b,
+  author =       "P. Grassberger",
+  title =        "Generalized dimensions of strange attractors",
+  journal =      "Phys. Lett. A",
+  volume =       "97",
+  pages =        "227",
+  year =         "1983",
+}
+
+@Article{Grassberger88,
+  author =       "P. Grassberger",
+  title =        "Finite sample corrections to entropy and dimension estimates",
+  journal =      "Phys. Lett. A",
+  volume =       "128",
+  pages =        "369",
+  year =         "1988",
+}
+
+@Article{Grassberger91a,
+  author =       "P. Grassberger and T. Schreiber and C. Schaffrath",
+  title =        "Nonlinear time sequence analysis",
+  journal =      "Int. J. of Bifurcation and Chaos",
+  volume =       "1",
+  pages =        "521",
+  year =         "1991",
+}
+
+@Article{Grassberger03,
+  author =       "P. Grassberger",
+  title =        "Entropy estimates from insufficient samplings",
+  journal =      "arXiv:physics/0307138",
+  year =         "2003",
+}
+
+@Book{Gray90,
+  author =       "R. Gray",
+  title =        "Entropy and Information Theory",
+  publisher =    "Springer Verlag",
+  address =      "New York",
+  year =         "1990",
+}
+
+@Article{Greschner11,
+  author =       "M. Greschner and J. Shlens and C. Bakolitsa and G. D. Field and J. L. Gauthier and L. H. Jepson and A. Sher and A. M. Litke and E. J. Chichilnisky",
+  title =        "Correlated firing among major ganglion cell types in primate retina.",
+  journal =      "J. Physiol.",
+  volume =       "589",
+  pages =        "75-86",
+  year =         "2011",
+}
+
+@Article{Gruen99,
+  author =       "S. Gr{\"u}en and M. Diesmann and F. Grammont and A. Riehle and A. Aertsen",
+  title =        "Detecting unitary events without discretization of time",
+  journal =      "J Neurosci Methods",
+  volume =       "93",
+  pages =        "67-79",
+  year =         "1999",
+}
+
+@Article{Gruen01,
+  author =       "S. Gr{\"u}en and M. Diesmann and A. Aertsen",
+  title =        "Unitary Events in Multiple Single-Neuron Spiking Activity: I. Detection and Significance",
+  journal =      "Neural Computation",
+  volume =       "14",
+  pages =        "43-80",
+  year =         "2001",
+}
+
+@Article{Gruen09,
+  author =       "S. Gr{\"u}en",
+  title =        "Data-Driven Significance Estimation for Precise Spike Correlation",
+  journal =      "J Neurophysiol",
+  volume =       "101",
+  pages =        "1126-1140",
+  year =         "2009",
+}
+
+@Article{Haas02,
+  author =       "J. Haas and J. White",
+  title =        "Frequency Selectivity of Layer II Stellate Cells in the Medial Entorhinal Cortex",
+  journal =      "J. Neurophysiol.",
+  volume =       "88",
+  pages =        "2422",
+  year =         "2002",
+}
+
+@Article{Haas10,
+  author =       "J. S. Haas and T. Kreuz and A. Torcini and A. Politi and H. D. I. Abarbanel",
+  title =        "Rate maintenance and resonance in the entorhinal cortex.",
+  journal =      "Eur J Neurosci",
+  volume =       "32",
+  pages =        "1930",
+  year =         "2010",
+}
+
+@Article{Hahnloser02,
+  author =       "R. H. R. Hahnloser and A. A. Kozhevnikov and M. S. Fee",
+  title =        "An ultra-sparse code underlies the generation of neural sequences in a songbird",
+  journal =      "Nature",
+  volume =       "419",
+  pages =        "65",
+  year =         "2002",
+}
+
+@Article{Han95,
+  author =       "S. K. Han and C. Kurrer and Y. Kuramoto",
+  title =        "Dephasing and bursting in coupled neural oscillators",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "75",
+  pages =        "3190",
+  year =         "1995",
+}
+
+@Article{Hanley82,
+  author =       "J. A. Hanley and B. J. McNeil",
+  title =        "The meaning and use of the area under a receiver operating characteristic (\textsc{ROC}) curve",
+  journal =      "Radiology",
+  volume =       "143",
+  pages =        "29",
+  year =         "1982",
+}
+
+@Article{Haut02,
+  author =       "S. R. Haut and C. Swick and K. Freeman and S. Spencer",
+  title =        "Seizure clustering during epilepsy monitoring",
+  journal =      "Epilepsia",
+  volume =       "43",
+  pages =        "711",
+  year =         "2002",
+}
+
+@Article{Heagy94,
+  author =       "J. F. Heagy and T. L. Caroll and L. M. Pecora",
+  title =        "Synchronous chaos in coupled oscillator systems",
+  journal =      "Phys. Rev. E",
+  volume =       "50",
+  pages =        "1874",
+  year =         "1994",
+}
+
+@Article{Henon76,
+  author =       "M. H\'{e}non",
+  title =        "A two-dimensional mapping with a strange attractor",
+  journal =      "Commun. Math. Phys.",
+  volume =       "50",
+  pages =        "69",
+  year =         "1976",
+}
+
+@Article{Hill00,
+  author =       "M. W. Hill and M. Wong and A. Amarakone and S. M. Rothman",
+  title =        "Rapid cooling aborts seizure-like activity in rodent hippocampal-entorhinal slices",
+  journal =      "Epilepsia",
+  volume =       "41",
+  pages =        "1241",
+  year =         "2000",
+}
+
+@Article{Hindmarsh84,
+  author =       "J. L. Hindmarsh and R. M. Rose",
+  title =        "A model of neuronal bursting using three coupled first order differential equations",
+  journal =      "Proc. R. Soc. London B",
+  volume =       "221",
+  pages =        "87",
+  year =         "1984",
+}
+
+@Article{Hochberg06,
+  author =       "L. R. Hochberg and M. D. Serruya and G. M. Friehs and J. A. Mukand and M. Saleh and A. H. Caplan and A. Branner and D. Chen and R. D. Penn and J. P. Donoghue",
+  title =        "Neuronal ensemble control of prosthetic devices by a human with tetraplegia",
+  journal =      "Nature",
+  volume =       "442",
+  pages =        "164",
+  year =         "2006",
+}
+
+@Article{Hjorth70,
+  author =       "B. Hjorth",
+  title =        "\textsc{EEG} analysis based on time domain properties",
+  journal =      "Electroenceph Clin Neurophysiol",
+  volume =       "29",
+  pages =        "306",
+  year =         "1970",
+}
+
+@Article{Hodgkin52,
+  author =       "A. L. Hodgkin and A. F. Huxley",
+  title =        "A quantitative description of membrane currents and its application to conduction and excitation in nerve",
+  journal =      "J. Physiol. (London)",
+  volume =       "117",
+  pages =        "500",
+  year =         "1952",
+}
+
+@Article{Holden04,
+  author =       "A. V. Holden",
+  title =        "Neural coding by correlation",
+  journal =      "Nature",
+  volume =       "428",
+  pages =        "382",
+  year =         "2004",
+}
+
+@Article{Hopkins00,
+  author =       "W. G. Hopkins",
+  title =        "Measures of Reliability in Sports Medicine and Science",
+  journal =      "Sports Medicine",
+  volume =       "30",
+  pages =        "1",
+  year =         "2000",
+}
+
+@Article{Houghton08,
+  author =       "C. Houghton and K. Sen",
+  title =        "A new multineuron spike train metric",
+  journal =      "Neural Computation",
+  volume =       "20",
+  pages =        "1495",
+  year =         "2008",
+}
+
+@Article{Houghton08b,
+  author =       "C. Houghton",
+  title =        "Studying spike trains using a van Rossum metric with a synapse-like filter",
+  journal =      "J Comput Neurosci",
+  volume =       "26",
+  pages =        "149",
+  year =         "2008",
+}
+
+@Article{Houghton12,
+  author =       "C. Houghton and T. Kreuz",
+  title =        "On the efficient calculation of van Rossum distances",
+  journal =      "Network: Computation in Neural Systems",
+  volume =       "23",
+  pages =        "48",
+  year =         "2012",
+}
+
+@Article{Hunter98,
+  author =       "J. D. Hunter and G. Milton  and P. J. Thomas and J. D. Cowan",
+  title =        "Resonance effect for neural spike time reliability",
+  journal =      "J Neurophysiol",
+  volume =       "80",
+  pages =        "1427",
+  year =         "1998",
+}
+
+@Article{Hunter03,
+  author =       "J. D. Hunter and G. Milton",
+  title =        "Amplitude and frequency dependence of spike timing: implications for dynamic regulation",
+  journal =      "J Neurophysiol",
+  volume =       "90",
+  pages =        "387",
+  year =         "2003",
+}
+
+@Book{Huygens1673,
+  author =       "C. Huygens",
+  title =        "Horoloquium Oscilatorium",
+  address =      "Paris",
+  year =         "1673",
+}
+
+@Book{Hyvaerinen01,
+  author =       "A. Hyv{\"a}rinen and J. Karhunen and E. Oja",
+  title =        "Independent component analysis",
+  publisher =    "John Wiley and Sons",
+  address =      "New York",
+  year =         "2001",
+}
+
+@Article{Iasemidis90,
+  author =       "L. D. Iasemidis and J. C. Sackellares and H. P. Zaveri and W. J. Williams",
+  title =        "Phase space topography and the \textsc{L}yapunov exponent of electrocorticograms in partial seizures",
+  journal =      "Brain Topogr.",
+  volume =       "2",
+  pages =        "187",
+  year =         "1990",
+}
+
+@Article{Iasemidis94,
+  author =       "L. D. Iasemidis and L. D. Olson and R. S. Savit and J. C. Sackellares",
+  title =        "Time dependencies in the occurrences of epileptic seizures.",
+  journal =      "Epilepsy Res.",
+  volume =       "17",
+  number =       "1",
+  pages =        "81",
+  year =         "1994",
+}
+
+@Article{Iasemidis01,
+  author =       "L. D. Iasemidis and P. Pardalos and J. C. Sackellares and D. S. Shiau",
+  title =        "Quadratic binary programming and dynamical system approach to determine the predictability of
+                  epileptic seizures",
+  journal =      "J. Combinatorial Optimization",
+  volume =       "5",
+  pages =        "9",
+  year =         "2001",
+}
+
+@Article{Ibarz10,
+  author =       "J. M. Ibarz and G. Foffani and E. Cid and M. Inostroza and L. M. {de la Prida}",
+  title =        "Emergent Dynamics of Fast Ripples in the Epileptic Hippocampus.",
+  journal =      "J. Neurosci",
+  volume =       "30",
+  pages =        "16249",
+  year =         "2010",
+}
+
+@Article{Ishikane05,
+  author =       "H. Ishikane and M. Gangi and S. Honda and M. Tachibana",
+  title =        "Synchronized retinal oscillations encode essential information for escape behavior in frogs.",
+  journal =      "Nat Neurosci",
+  volume =       "80",
+  pages =        "1087",
+  year =         "2005",
+}
+
+@Book{Jain88,
+  author =       "A. K. Jain and R. C. Dubes",
+  title =        "Algorithms for clustering data",
+  publisher =    "Prentice Hall",
+  address =      "Englewood Cliffs, NJ",
+  year =         "1988",
+}
+
+@Article{Jain99,
+  author =       "A. K. Jain and M. N. Murty and P. J. Flynn",
+  title =        "Data Clustering: A Review.",
+  journal =      "ACM Computer Surveys",
+  volume =       "31 (3)",
+  pages =        "264",
+  year =         "1999",
+}
+
+@Article{Jelles99,
+  author =       "B. Jelles and J. H. {van Birgelen} and J. P. J. Slaets and R. E. M. Hekster and
+                 E. J. Jonkman and C. J. Stam",
+  title =        "Decrease of non-linear structure in the \textsc{EEG} of Alzheimer patients compared to healthy controls",
+  journal =      "Clin. Neurophysiol.",
+  volume =       "110",
+  pages =        "1159",
+  year =         "1999",
+}
+
+@Article{Jerger01,
+  author =       "K. K. Jerger and T. I. Netoff and J. T. Francis and T. Sauer and L. Pecora and S. L. Weinstein
+   and S. J. Schiff",
+  title =        "Early seizure detection",
+  journal =      "J. Clin. Neurophysiol.",
+  volume =       "18",
+  number =       "3",
+  pages =        "259",
+  year =         "2001",
+}
+
+@Article{Jeong99,
+  author =       "J. Jeong and M. S. Kim and S. Y. Kim",
+  title =        "Test for low-dimensional determinism in electroencephalograms",
+  journal =      "Phys. Rev. E",
+  volume =       "60",
+  pages =        "831",
+  year =         "1999",
+}
+
+@Article{Jeong01,
+  author =       "J. Jeong and T. H. Chae and S. Y. Kim and S. H. Han",
+  title =        "Nonlinear dynamic analysis of the \textsc{EEG} in patients with \textsc{A}lzheimer's disease and
+                  vascular dementia",
+  journal =      "J. Clin. Neurophysiol.",
+  volume =       "18",
+  pages =        "58",
+  year =         "2001",
+}
+
+@Article{Ji07,
+  author =       "D. Ji and M. A. Wilson",
+  title =        "Coordinated memory replay in the visual cortex and hippocampus during sleep.",
+  journal =      "Nat. Neurosci.",
+  volume =       "10",
+  pages =        "100-107",
+  year =         "2007",
+}
+
+@Article{Jing00,
+  author =       "H. Jing and M. Takigawa",
+  title =        "Topographic analysis of dimension estimates of \textsc{EEG} and filtered rhythms in epileptic patients
+                  with complex partial seizures",
+  journal =      "Biol. Cybern.",
+  volume =       "83",
+  pages =        "391",
+  year =         "2000",
+}
+
+@Article{Johnson01,
+  author =       "D. H. Johnson and C. M. Gruner and K. Baggerly and C. Seshagiri",
+  title =        "Information-Theoretic Analysis of Neural Coding",
+  journal =      "J Comp Neurosci",
+  volume =       "10",
+  pages =        "47",
+  year =         "2001",
+}
+
+@Article{Jolivet08,
+  author =       "R. Jolivet and R. Kobayashi and A. Rauch and R. Naud and S. Shinomoto and W. Gerstner",
+  title =        "A benchmark test for a quantitative assessment of simple neuron models",
+  journal =      "J Neurosci Methods",
+  volume =       "169",
+  pages =        "417–424",
+  year =         "2008",
+}
+
+@Article{Jouny11,
+  author =       "C. C. Jouny and P. J. Franaszczuk and G. K. Bergey",
+  title =        "Improving early seizure detection",
+  journal =      "Epilepsy \& Behavior",
+  volume =       "22",
+  pages =        "44",
+  year =         "2011",
+}
+
+@Article{Kagan97,
+  author =       "Y. Y. Kagan",
+  title =        "Are earthquakes predictable",
+  journal =      "Geophys. J. Int.",
+  volume =       "131",
+  number =       "3",
+  pages =        "505",
+  year =         "1997",
+}
+
+@Article{Kaiser02,
+  author =       "A. Kaiser and T. Schreiber",
+  title =        "Information transfer in continuous processes.",
+  journal =      "Physica D",
+  volume =       "166",
+  pages =        "43",
+  year =         "2002",
+}
+
+@Article{Kantz94,
+  author =       "H. Kantz",
+  title =        "Quantifying the closeness of fractal measures",
+  journal =      "Phys. Rev. E",
+  volume =       "49",
+  pages =        "5091",
+  year =         "1994",
+}
+
+@Book{Kantz97,
+  author =       "H. Kantz and T. Schreiber",
+  title =        "Nonlinear Time Series Analysis",
+  publisher =    "Cambridge Univ. Press",
+  address =      "Cambridge, UK",
+  year =         "1997",
+}
+
+@Article{Kaplan92,
+  author =       "D. Kaplan and L. Glass",
+  title =        "A direct test for determinism",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "68",
+  number =       "4",
+  pages =        "427",
+  year =         "1992",
+}
+
+@Article{Kass05,
+  author =       "R. E. Kass and V. Ventura and E. N. Brown",
+  title =        "Statistical issues in the Analysis of Neuronal Data",
+  journal =      "J Neurophysiol",
+  volume =       "94",
+  pages =        "8-25",
+  year =         "2005",
+}
+
+@Article{Katz91,
+  author =       "A. Katz and D. A. Marks and G. McCarthy and S. S. Spencer",
+  title =        "Does interictal spiking rate change prior to seizures?",
+  journal =      "Electroencephalogr. Clin. Neurophysiol.",
+  volume =       "79",
+  pages =        "153",
+  year =         "1991",
+}
+
+@Article{Kirkpatrik83,
+  author =       "S. Kirkpatrik and C. D. Gelatt and M. P. Vecchi",
+  title =        "Optimization by simulated annealing",
+  journal =      "Science",
+  volume =       "220",
+  pages =        "671",
+  year =         "1983",
+}
+
+@Article{Kirsch00,
+  author =       "P. Kirsch and C. Besthorn and  S. Klein and J. Rindfleisch and R. Olbrich",
+  title =        "The dimensional complexity of the \textsc{EEG} during cognitive tasks reflects the
+                    impaired information processing in schizophrenic patients",
+  journal =      "Brain Topography",
+  volume =       "2",
+  pages =        "187",
+  year =         "1990",
+}
+
+@Article{Klink93,
+  author =       "R. Klink and A. Alonso",
+  title =        "Ionic mechanisms for the subthreshold oscillations and differential electroresponsiveness of medial entorhinal
+                  cortex layer II neurons.",
+  journal =      "J. Neurophysiol.",
+  volume =       "70",
+  pages =        "144",
+  year =         "1993",
+}
+
+@Article{Klink97,
+  author =       "R. Klink and A. Alonso",
+  title =        "Muscarinic Modulation of the Oscillatory and Repetitive Firing Properties of Entorhinal Cortex Layer
+                  II Neurons",
+  journal =      "J. Neurophysiol.",
+  volume =       "77",
+  pages =        "1813",
+  year =         "1997",
+}
+
+@Article{Knight72,
+  author =       {B. Knight},
+  title =        {Dynamics of encoding in a population of neurons.},
+  journal =      {J. Gen. Physiol.},
+  volume =       59,
+  pages =        734,
+  year =         1972,
+}
+
+@Article{Knight72b,
+  author =       {B. Knight},
+  title =        {The relation between the firing rate of a single neuron and the
+                  level of activity in a population of neurons. Experimental evidence
+                  for resonant enhancement in the population response.},
+  journal =      {J. Gen. Physiol.},
+  volume =       59,
+  pages =        767,
+  year =         1972,
+}
+
+@Article{Kocarev95,
+  author =       {L. Kocarev and U. Parlitz},
+  title =        {General approach for chaotic synchronization with applications to communication},
+  journal =      {Phys. Rev. Lett.},
+  volume =       74,
+  pages =        5028,
+  year =         1995,
+}
+
+@Article{Kocarev96,
+  author =       {L. Kocarev and U. Parlitz},
+  title =        {Generalized synchronization, predictability, and equivalence of unidirectionally
+                 coupled dynamical systems},
+  journal =      {Phys. Rev. Lett.},
+  year =         1996,
+  volume =       76,
+  pages =        1816
+}
+
+@Book{Koch99,
+  author =       "C. Koch",
+  title =        "Biophysics of Computation",
+  publisher =    "Oxford University Press",
+  address =      "New York",
+  year =         "1999",
+}
+
+@MastersThesis{Krajsek03,
+  author =       "K. Krajsek",
+  title =        "Charakterisierung der {D}ynamik r{\"a}umlich ausgedehnter {S}ysteme mit der multivariaten
+                  spatio-temporalen {Z}ustandsraumkonstruktion",
+  school =       "Department of Physics, University of Bonn, Germany",
+  year =         "2003",
+}
+
+@Article{Kramer40,
+  author =       {H. A. Kramers},
+  title =        {***},
+  journal =      {Physica},
+  volume =       284,
+  year =         1940,
+}
+
+@Article{Kramer04,
+  author =       {M. A. Kramer and E. Edwards and M. Soltani and M. S. Berger and R. T. Knight and A. J. Szeri},
+  title =        {Synchronization measures of bursting data: Application to the electrocorticogram
+                  of an auditory event-related experiment},
+  journal =      {Phys. Rev. E},
+  volume =       70,
+  pages =        011914,
+  year =         2004,
+}
+
+@Article{KraskovPC,
+  author =       "A. Kraskov",
+  title =        "Personal communication",
+  journal =      "",
+  volume =       "",
+  pages =        "",
+  year =         "",
+}
+
+@Article{Kraskov01,
+  author =       "A. Kraskov and T. Kreuz and R. {Quian Quiroga} and P. Grassberger and F. Mormann and K. Lehnertz and
+                  C. E. Elger",
+  title =        "Phase synchronization using continuous wavelet transform of the \textsc{EEG} for interictal focus localization
+                  in mesial temporal lobe epilepsy.",
+  journal =      "Epilepsia",
+  volume =       "42",
+  number =       "7",
+  pages =        "43",
+  year =         "2001",
+}
+
+@Article{Kraskov03b,
+  author =       "A. Kraskov and T. Kreuz and R. G. Andrzejak and H. St{\"o}gbauer and W. Nadler and P. Grassberger",
+  title =        "Extracting phases from aperiodic signals.",
+  journal =      "(submitted)",
+  volume =       "",
+  pages =        "",
+  year =         "2003",
+}
+
+@Article{Kraskov04,
+  author =       "A. Kraskov and H. St{\"o}gbauer and P. Grassberger",
+  title =        "Estimating mutual information",
+  journal =      "Phys. Rev. E",
+  volume =       "69",
+  pages =        "066138",
+  year =         "2004",
+}
+
+@Article{Kraskov04b,
+  author =       "A. Kraskov and H. St{\"o}gbauer and R. G. Andrzejak and P. Grassberger",
+  title =        "Hierarchical clustering based on mutual information.",
+  journal =      "(submitted)",
+  volume =       "",
+  pages =        "",
+  year =         "2004",
+}
+
+@PhDThesis{Kraskov04c,
+  author =       "A. Kraskov",
+  title =        "Synchronization and interdependence measures and their application to the electroencephalogram of epilepsy patients
+                  and clustering of data.",
+  school =       "Department of Physics, University of Wuppertal, Germany",
+  year =         "2004",
+}
+
+@Article{Kraskov05,
+  author =       "A. Kraskov and H. St{\"o}gbauer and R. G. Andrzejak and P. Grassberger",
+  title =        "Hierarchical clustering using mutual information.",
+  journal =      "Europhysics Letters",
+  volume =       "70",
+  pages =        "278",
+  year =         "2005",
+}
+
+@Article{Kreiman00,
+  author =       "G. Kreiman and R. Krahe and W. Metzner and C. Koch and F. Gabbiani",
+  title =        "Robustness and variability of neuronal coding by amplitude-sensitive afferents in the weakly electric fish Eigenmannia.",
+  journal =      "J. Neurophysiol.",
+  volume =       "84",
+  pages =        "189-204",
+  year =         "2000",
+}
+
+@Article{Kreiman04,
+  author =       "G. Kreiman",
+  title =        "Neural coding: computational and biophysical perspectives",
+  journal =      "Physics of Life Reviews",
+  volume =       "1",
+  pages =        "71-102",
+  year =         "2004",
+}
+
+@MastersThesis{Kreuz99,
+  author =       "T. Kreuz",
+  title =        "Symbolische \textsc{D}ynamik in nichtlinearen \textsc{M}odellsystemen und
+                  \textsc{Z}eitreihen hirnelektrischer \textsc{A}ktivit{\"a}t.",
+  school =       "Department of Physics, University of Bonn, Germany",
+  year =         "1999",
+}
+
+@Article{Kreuz00,
+  author =       "T. Kreuz and K. Lehnertz and P. David and C. E. Elger",
+  title =        "Symbolic Dynamics: Reducing the information content of the \textsc{EEG} for interictal focus localization
+                  in mesial temporal lobe epilepsy." ,
+  journal =      "Epilepsia",
+  volume =       "41",
+  number =       "7",
+  pages =        "212",
+  year =         "2000",
+}
+
+@Article{Kreuz01,
+  author =       "T. Kreuz and R. {Quian Quiroga} and P. Grassberger and K. Lehnertz and C. E. Elger",
+  title =        "Interdependencies in intracranial \textsc{EEG} recordings of epilepsy patients: A comparison of
+                  different measures." ,
+  journal =      "Epilepsia",
+  volume =       "42",
+  pages =        "49",
+  year =         "2001",
+}
+
+@Article{Kreuz01b,
+  author =       "T. Kreuz and A. Kraskov and R. {Quian Quiroga} and P. Grassberger and R. G. Andrzejak and
+                  F. Mormann and C. Rieke and K. Lehnertz and C. E. Elger",
+  title =        "The capability of different interdependence measures to predict epileptic seizures." ,
+  journal =      "Epilepsia",
+  volume =       "42",
+  number =       "7",
+  pages =        "39",
+  year =         "2001",
+}
+
+@Article{Kreuz02,
+  author =       "T. Kreuz and A. Kraskov and R. G. Andrzejak and F. Mormann and C. Rieke and P. Grassberger
+                  and K. Lehnertz and C. E. Elger",
+  title =        "Seizure prediction: Quantifying the performance of measures in distinguishing pre-ictal from
+                  inter-ictal states." ,
+  journal =      "Epilepsia",
+  volume =       "43",
+  number =       "7",
+  pages =        "48",
+  year =         "2002",
+}
+
+@Article{Kreuz03xxx,
+  author =       "T. Kreuz et al.",
+  title =        "The fine art of seizure prediction",
+  journal =      "Nature",
+  volume =       "1",
+  pages =        "1-1000",
+  year =         "2003",
+}
+
+@Article{Kreuz03b,
+  author =       "T. Kreuz and R. G. Andrzejak and A. Kraskov and F. Mormann and H. St{\"o}gbauer and C. E. Elger
+                  and P. Grassberger and K. Lehnertz",
+  title =        "Time profile surrogates: A new method to validate the performance of seizure prediction algorithms." ,
+  journal =      "Epilepsia",
+  volume =       "44",
+  number =       "7",
+  pages =        "231",
+  year =         "2003",
+}
+
+@PhDThesis{Kreuz03c,
+  author =       "T. Kreuz",
+  title =        "Measuring synchronization in model systems and electroencephalographic time series from epilepsy patients",
+  school =       "Department of Physics, University of Wuppertal, Germany",
+  year =         "2003",
+}
+
+@Article{Kreuz04,
+  author =       "T. Kreuz and R. G. Andrzejak and F. Mormann and A. Kraskov and H. St{\"o}gbauer and C. E. Elger and
+                  K. Lehnertz and P. Grassberger",
+  title =        "Measure profile surrogates: A method to validate the performance of epileptic seizure prediction
+                  algorithms",
+  journal =      "Phys. Rev. E",
+  volume =       "69",
+  pages =        "061915",
+  year =         "2004",
+}
+
+@Article{Kreuz05xxx,
+  author =       "T. Kreuz and F. Mormann and A. Kraskov and R. G. Andrzejak and C. E. Elger and
+                  K. Lehnertz and P. Grassberger",
+  title =        "Measuring synchronization in electroencephalographic time series from epilepsy patients: An
+                  application to the prediction of epileptic seizures.",
+  journal =      "(in preparation)",
+  volume =       "",
+  pages =        "",
+  year =         "2005",
+}
+
+@Article{Kreuz06,
+  author =       "T. Kreuz and S. Luccioli and A. Torcini",
+  title =        "Double coherence resonance in neuron models driven by discrete correlated noise",
+  journal =      "Phys Rev Lett",
+  volume =       "97",
+  pages =        "238101",
+  year =         "2006"
+}
+
+@Article{Kreuz07a,
+  author =       "T. Kreuz and F. Mormann and R. G. Andrzejak and A. Kraskov and K. Lehnertz and P. Grassberger",
+  title =        "Measuring synchronization in coupled model systems: A comparison of different approaches.",
+  journal =      "Phys D",
+  volume =       "225",
+  pages =        "29",
+  year =         "2007",
+}
+
+@Article{Kreuz07b,
+  author =       "T. Kreuz and S. Luccioli and A. Torcini",
+  title =        "Coherence Resonance due to correlated noise in neuronal models",
+  journal =      "Neurocomputing",
+  volume =       "70",
+  pages =        "1970",
+  year =         "2007"
+}
+
+@Article{Kreuz07c,
+  author =       "T. Kreuz and J. S. Haas and A. Morelli and H. D. I. Abarbanel and A. Politi",
+  title =        "Measuring spike train synchrony",
+  journal =      "J Neurosci Methods",
+  volume =       "165",
+  pages =        "151",
+  year =         "2007"
+}
+
+@Article{Kreuz09,
+  author =       "T. Kreuz and D. Chicharro and R. G. Andrzejak and J. S. Haas and H. D. I. Abarbanel",
+  title =        "Measuring multiple spike train synchrony",
+  journal =      "J Neurosci Methods",
+  volume =       "183",
+  pages =        "287",
+  year =         "2009"
+}
+
+@Article{Kreuz11,
+  author =       "T. Kreuz and D. Chicharro and M. Greschner and R. G. Andrzejak",
+  title =        "Time-resolved and time-scale adaptive measures of spike train synchrony",
+  journal =      "J Neurosci Methods",
+  volume =       "195",
+  pages =        "92",
+  year =         "2011"
+}
+
+@Article{Kreuz11b,
+  author =       "T. Kreuz",
+  title =        "Measures of spike train synchrony",
+  journal =      "Scholarpedia",
+  volume =       "6(10)",
+  pages =        "11934",
+  year =         "2011"
+}
+
+@Article{Kreuz11c,
+  author =       "T. Kreuz",
+  title =        "Measures of neuronal signal synchrony",
+  journal =      "Scholarpedia",
+  volume =       "6(12)",
+  pages =        "11922",
+  year =         "2011"
+}
+
+@Article{Kreuz13,
+  author =       "T. Kreuz and D. Chicharro and C. Houghton and R. G. Andrzejak and F. Mormann",
+  title =        "Monitoring spike train synchrony",
+  journal =      "J Neurophysiology",
+  volume =       "109",
+  pages =        "1457",
+  year =         "2013"
+}
+
+@Article{Kreuz12b,
+  author =       "T. Kreuz and D. Chicharro and C. Houghton",
+  title =        "Measures of spike train synchrony: From single neurons to populations",
+  journal =      "Pesenson book chapter (in preparation)",
+  volume =       "",
+  pages =        "",
+  year =         "2012"
+}
+
+@Article{Kreuz12c,
+  author =       "T. Kreuz",
+  title =        "SPIKE-distance",
+  journal =      "Scholarpedia",
+  volume =       ")",
+  pages =        "",
+  year =         "2012"
+}
+
+@Article{Kugiumtzis99,
+  author =       "D. Kugiumtzis",
+  title =        "Test your surrogate data before you test for nonlinearity",
+  journal =      "Phys. Rev. E",
+  volume =       "60",
+  pages =        "2808",
+  year =         "1999",
+}
+
+@Article{Kugiumtzis04,
+  author =       "D. Kugiumtzis and A. Kehagias and E. C. Aifantis and H. Neuh{\"a}user",
+  title =        "Statistical analysis of the extreme values of stress time series from the Portevin–Le Châtelier effect",
+  journal =      "Phys. Rev. E",
+  volume =       "70",
+  pages =        "036110",
+  year =         "2004",
+}
+
+@Article{Lachaux99,
+  author =       "J. P. Lachaux and E. Rodriguez and J. Martinerie and F. J. Varela",
+  title =        "Measuring phase synchrony in brain signals",
+  journal =      "Hum. Brain Mapp.",
+  volume =       "8",
+  pages =        "194",
+  year =         "1999",
+}
+
+@Article{Lachaux00,
+  author =       "J. P. Lachaux and E. Rodriguez and M. {Le Van Quyen} and A. Lutz and J. Martinerie and
+                  F. J. Varela",
+  title =        "Studying single-trials of phase-synchronous activity in brain",
+  journal =      "Int. J. Bifurcation Chaos Appl. Sci. Eng.",
+  volume =       "10",
+  pages =        "2429",
+  year =         "2000",
+}
+
+@Article{Lai03,
+  author =       "Y. Lai and M. A. F. Harrison and M. G. Frey and I. Osorio",
+  title =        "Inability of \textsc{L}yapunov exponents to predict epileptic seizures",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "91",
+  pages =        "068102",
+  year =         "2003",
+}
+
+@Book{Laidlaw88,
+  author =       "J. Laidlaw and A. Richens and J. Oxley",
+  title =        "A Textbook of Epilepsy",
+  publisher =    "Churchill Livingstone",
+  address =      "New York",
+  year =         "1988",
+}
+
+@Article{Lange83,
+  author =       "H. H. Lange and J. P. Lieb and J. Engel and P. H. Crandall",
+  title =        "Temporo-spatial patterns of pre-ictal spike activity in human temporal lobe epilepsy",
+  journal =      "Electroencephalogr. Clin. Neurophysiol.",
+  volume =       "56",
+  pages =        "543",
+  year =         "1983",
+}
+
+@Article{Schneidman05,
+  author =       "P. E. Latham and S. Nirenberg",
+  title =        "Synergy, Redundancy, and Independence in Population Codes, Revisited",
+  journal =      "J Neurosci",
+  volume =       "25",
+  pages =        "5195",
+  year =         "2005",
+}
+
+@Article{Lee98,
+  author =       "S.-G. Lee and A. Neiman and S. Kim",
+  title =        "Coherence resonance in a Hodgkin-Huxley neuron",
+  journal =      "Phys. Rev. E",
+  volume =       "57",
+  pages =        "3292",
+  year =         "1998",
+}
+
+@Article{Lehnertz95,
+  author =       "K. Lehnertz and C. E. Elger",
+  title =        "Spatio-temporal dynamics of the primary epileptogenic area in temporal lobe epilepsy characterized by
+                 neuronal complexity loss",
+  journal =      "Electroencephalogr. Clin. Neurophysiol.",
+  volume =       "95",
+  pages =        "108",
+  year =         "1995",
+}
+
+@Article{Lehnertz97,
+  author =       "K. Lehnertz and C. E. Elger",
+  title =        "Neuronal complexity loss in temporal lobe epilepsy: \textsc{E}ffects of carbamazepine
+                  on the dynamics of the epileptogenic focus.",
+  journal =      "Electroencephalogr. Clin. Neurophysiol.",
+  volume =       "103",
+  pages =        "376",
+  year =         "1997",
+}
+
+@PhDThesis{Lehnertz97a,
+  author =       "K. Lehnertz",
+  title =        "Nichtlineare \textsc{\it{Z}}eitreihenanalysen intrakraniell registrierter hirnelektrischer
+                  \textsc{\it{A}}ktivit{\"a}t: \textsc{\it{C}}harakterisierung der r{\"a}umlich-zeitlichen
+                  \textsc{\it{D}}ynamik des prim{\"a}ren epileptogenen \textsc{\it{A}}reals von \textsc{\it{P}}atienten
+                  mit \textsc{\it{S}}chl{\"a}fenlappenepilepsie",
+  school =       "Department of Physics, University of Bonn, Germany",
+  year =         "1997",
+}
+
+@Article{Lehnertz98,
+  author =       "K. Lehnertz and C. E. Elger",
+  title =        "Can epileptic seizures be predicted? \textsc{E}vidence from nonlinear time series analysis of brain
+                  electrical activity",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "80",
+  pages =        "5019",
+  year =         "1998",
+}
+
+@Book{Lehnertz00,
+  author =       "K. Lehnertz and J. Arnhold and P. Grassberger and C. E. Elger",
+  title =        "Chaos in Brain?",
+  publisher =    "World Scientific",
+  address =      "Singapore",
+  year =         "2000",
+}
+
+@Article{Lehnertz01,
+  author =       "K. Lehnertz and R. G. Andrzejak and J. Arnhold and T. Kreuz and F. Mormann and C. Rieke and
+                  G. Widman and C. E. Elger",
+  title =        "Nonlinear \textsc{EEG} analysis in epilepsy: \textsc{I}ts possible use for interictal focus localization,
+                  seizure anticipation, and prevention.",
+  journal =      "J. Clin. Neurophysiol.",
+  volume =       "18",
+  pages =        "209",
+  year =         "2001",
+}
+
+@Article{Lehnertz03,
+  author =       "K. Lehnertz and F. Mormann and T. Kreuz and R. G. Andrzejak and C. Rieke and P. David and C. E. Elger",
+  title =        "Seizure prediction by nonlinear \textsc{EEG} Analysis",
+  journal =      "IEEE Eng. Med. Biol.",
+  volume =       "22",
+  pages =        "57",
+  year =         "2003",
+}
+
+@Article{Lehnertz05,
+  author =       "K. Lehnertz and  B. Litt and the International Seizure Prediction Group",
+  title =        "The First International Collaborative Workshop on Seizure Prediction:  Summary and Data Descriptions.",
+  journal =      "Clin. Neurophysiol.",
+  volume =       "116",
+  pages =        "493",
+  year =         "2005",
+}
+
+@Article{LeVanQuyen98,
+  author =       "M. {Le Van Quyen} and C. Adam and M. Baulac and J. Martinerie and F. J. Varela",
+  title =        "Nonlinear interdependencies of \textsc{EEG} signals in human intracranially recorded temporal lobe
+                  seizures",
+  journal =      "Brain Res.",
+  volume =       "792",
+  pages =        "24",
+  year =         "1998",
+}
+
+@Article{LeVanQuyen99a,
+  author =       "M. {Le Van Quyen} and J. Martinerie and C. Adam and F. J. Varela",
+  title =        "Nonlinear analyses of interictal \textsc{EEG} map the brain interdepences in human focal epilepsy",
+  journal =      "Physica D",
+  volume =       "127",
+  pages =        "250",
+  year =         "1999",
+}
+
+@Article{LeVanQuyen99b,
+  author =       "M. {Le Van Quyen} and J. Martinerie and M. Baulac and F. J. Varela",
+  title =        "Anticipating epileptic seizure in real time by a nonlinear analysis of similarity between \textsc{EEG}
+                  recordings",
+  journal =      "Neuroreport",
+  volume =       "10",
+  pages =        "2149",
+  year =         "1999",
+}
+
+@Article{LeVanQuyen00,
+  author =       "M. {Le Van Quyen} and C. Adam and J. Martinerie and M. Baulac and S. Cl\'{e}menceau and
+                  F. J. Varela",
+  title =        "Spatio-temporal characterization of non-linear changes in intracranial activities prior to
+                  human temporal lobe seizures",
+  journal =      "Eur. J. Neurosci.",
+  volume =       "12",
+  pages =        "2124",
+  year =         "2000",
+}
+
+@Article{LeVanQuyen01a,
+  author =       "M. {Le Van Quyen} and J. Martinerie and V. Navarro and P. Boon and M. D'Hav\'{e} and
+                  C. Adam and B. Renault and M. Baulac and F. J. Varela",
+  title =        "Anticipation of epileptic seizures from standard \textsc{EEG} recordings",
+  journal =      "Lancet",
+  volume =       "357",
+  pages =        "183",
+  year =         "2001",
+}
+
+@Article{LeVanQuyen01b,
+  author =       "M. {Le Van Quyen} and J. Martinerie and V. Navarro and M. Baulac and F. J. Varela",
+  title =        "Characterizing neurodynamic changes before seizures",
+  journal =      "J. Clin. Neurophysiol.",
+  volume =       "95",
+  pages =        "108",
+  year =         "2001",
+}
+
+@Article{LeVanQuyen01c,
+  author =       "M. {Le Van Quyen} and J. Foucher and J. Lachaux and E. Rodriguez and A. Lutz and J. Martinerie and
+                  F. J. Varela",
+  title =        "Comparison of \textsc{H}ilbert transform and wavelet methods for the analysis of neuronal synchrony",
+  journal =      "J. Neurosci. Meth.",
+  volume =       "111",
+  pages =        "83",
+  year =         "2001",
+}
+
+@Article{LeVanQuyen03,
+  author =       "M. {Le Van Quyen} and V. Navarro and M. Baulac and B. Renault and J. Martinerie",
+  title =        "Reply to: \textsc{A}nticipation of epileptic seizures from standard \textsc{EEG} recordings",
+  journal =      "Lancet",
+  volume =       "361",
+  pages =        "970",
+  year =         "2003",
+}
+
+@Article{Lindner02,
+  author =       "B. Lindner and L. Schimansky-Geier and A. Longtin",
+  title =        "Maximizing spike train coherence or incoherence in the leaky integrate-and-fire model",
+  journal =      "Phys. Rev. E",
+  volume =       "66",
+  pages =        "031916",
+  year =         "2002",
+}
+
+@Article{Lindner04,
+  author =       "B. Lindner and J. Garcia-Ojalvo and A. Neiman and L. Schimansky-Geier",
+  title =        "Effects of noise in exciteable systems",
+  journal =      "Physics Reports",
+  volume =       "392",
+  pages =        "321",
+  year =         "2004",
+}
+
+@Article{Litke04,
+  author =       "A. M. Litke and N. Bezayiff and E. J. Chichilnisky and W. Cunningham and W. Dabrowski and A. A. Grillo and M. Grivich and P. Grybos and P. Hottowy and S. Kachiguine and R. S. Kalmar and K. Mathieson and D. Petrusca and M. Rahman and A. Sher",
+  title =        "What does the eye tell the brain?: development of a system for the large-scale recording of retinal output activity",
+  journal =      "IEEE Trans Nuclear Science",
+  volume =       "51",
+  pages =        "1434-1440",
+  year =         "2004",
+}
+
+@Article{Litt01,
+  author =       "B. Litt and R. Esteller and J. Echaux and M. D'Alessandro and R. Shor and T. Henry and
+  P. Pennell and C. Epstein and R. Bakay and M. Dichter and G Vachtsevanos",
+  title =        "Epileptic seizures may begin hours in advance of clinical onset: \textsc{A} report of five patients",
+  journal =      "Neuron",
+  volume =       "30",
+  pages =        "51",
+  year =         "2001",
+}
+
+@Article{Litt02a,
+  author =       "B. Litt and J. Echaux",
+  title =        "Prediction of epileptic seizures",
+  journal =      "Lancet Neurol",
+  volume =       "1",
+  pages =        "22",
+  year =         "2002",
+}
+
+@Article{Litt02b,
+  author =       "B. Litt and K. Lehnertz",
+  title =        "Seizure Prediction and the preseizure period",
+  journal =      "Curr Opin Neurol",
+  volume =       "15",
+  pages =        "173",
+  year =         "2002",
+}
+
+@Article{Liu01,
+  author =       "F. Liu and B. Hu and W. Wang",
+  title =        "Effects of correlated and independent noise on signal processing in neuronal systems",
+  journal =      "Phys. Rev. E",
+  volume =       "63",
+  pages =        "031907",
+  year =         "2001",
+}
+
+@Article{Longtin97,
+  author =       "A. Longtin",
+  title =        "Autonomous stochastic resonance in bursting neurons",
+  journal =      "Phys. Rev. E",
+  volume =       "55",
+  pages =        "868",
+  year =         "1997",
+}
+
+@Article{LopesDaSilva91,
+  author =       "F. H. {Lopes da Silva}",
+  title =        "Neuronal mechanisms underlying brain waves: \textsc{A}nticipation of epileptic seizures from
+                  standard \textsc{EEG} recordingsfrom neural membranes to networks",
+  journal =      "Electroencephalogr. clin. Neurophysiol.",
+  volume =       "79",
+  pages =        "81",
+  year =         "1991",
+}
+
+@InCollection{LopesDaSilva93,
+  author =       "F. H. {Lopes da Silva}",
+  editor =       "E. Niedermayer and F. H. {Lopes da Silva}",
+  title =        "\textsc{EEG} analysis: \textsc{T}heory and practice",
+  booktitle =    "Electroencephalography, basic principles, clinical applications and related fields",
+  publisher =    "Urban and Schwarzenberg",
+  address =      "3rd Ed. (Williams and Wilkins, Baltimore)",
+  pages=         "p. 1097",
+  year =         "1993",
+}
+
+@InBook{LopesDaSilva94,
+  author =   {F. H. Lopes da Silva and J. P. Pijn and W. J. Wadman},
+  title =    {Progress in Brain Research},
+  chapter =  {24,Dynamics of focal neuronal networks: \textsc{C}ontrol parameters and state bifurcations in
+              epileptogenesis},
+  publisher ={Elesevier Science B.V.},
+  year =     1994,
+  editor =   {J. {van Pelt} and M. A. Corner and H. B. M. Uylings and F. H. Lopes da Silva},
+  volume =   102,
+  pages =    {359}
+}
+
+@Article{LopesDaSilva97,
+  author =       "F. H. {Lopes da Silva} and J. P. Pijn and D. Velis and P. C. G. Nijssen",
+  title =        "Alpha rhythms: \textsc{N}oise, dynamics and models.",
+  journal =      "Int J Psychophysiology",
+  volume =       "26",
+  pages =        "237",
+  year =         "1997",
+}
+
+@Article{LopesDaSilva03,
+  author =       "F. H. {Lopes da Silva} and W. Blanes and S. N. Kalitzin and J. Parra and P. Suffczynski and D. N. Velis",
+  title =        "Epilepsies as dynamical diseases of brain systems: basic models of the transition between normal and epileptic activity",
+  journal =      "Epilepsia",
+  volume =       "44",
+  pages =        "72",
+  year =         "2003",
+}
+
+@Article{Lorenz63,
+  author =       "E. N. Lorenz",
+  title =        "Deterministic non-periodic flow",
+  journal =      "J. Atmos. Sci.",
+  volume =       "20",
+  pages =        "130",
+  year =         "1963"
+}
+
+@Article{Lorenz91,
+  author =       "E. N. Lorenz",
+  title =        "Dimension of weather and climate attractors",
+  journal =      "Nature",
+  volume =       "353",
+  pages =        "241",
+  year =         "1991"
+}
+
+@Article{Louis10,
+  author =       "S. Louis and G. L. Gerstein and S. Gr{\"u}en and M. Diesmann",
+  title =        "Surrogate spike train generation through dithering in operational time",
+  journal =      "Front Comp Neurosci",
+  volume =       "4",
+  pages =        "127",
+  year =         "2010"
+}
+
+@Article{Luccioli06,
+  author =       "S. Luccioli and T. Kreuz and A. Torcini",
+  title =        "Dynamical response of the Hodgkin-Huxley model in the high-input regime",
+  journal =      "Phys. Rev. E",
+  volume =       "73",
+  pages =        "041902",
+  year =         "2006"
+}
+
+@InCollection{Lueders78,
+  author =       "H. O. L{\"u}ders and I. Awad ",
+  editor =       "H. O. L{\"u}ders",
+  title =        "Conceptual considerations",
+  booktitle =    "Epilepsy Surgery",
+  pages =        "51",
+  publisher =    "Raven Press",
+  address =      "New York",
+  year =         "1991",
+}
+
+@Article{Lyttle11,
+  author =       "D. Lyttle and J. M. Fellous",
+  title =        "A new similarity measure for spike trains: Sensitivity to bursts and periods of inhibition.",
+  journal =      "J Neurosci Methods",
+  volume =       "199",
+  pages =        "296",
+  year =         "2011"
+}
+
+@Article{Magistretti04,
+  author =       "J. Magistretti and L. Ma and M. H. Shalinsky and W. Lin and R. Klink and A. Alonso",
+  title =        "Spike Patterning by Ca2+-Dependent Regulation of a Muscarinic Cation
+                  Current in Entorhinal Cortex Layer II Neurons",
+  journal =      "J Neurophysiol",
+  volume =       "92",
+  pages =        "1644",
+  year =         "2004",
+}
+
+@Article{Mainen95,
+  author =       "Z. Mainen and T. J. Sejnowski",
+  title =        "Reliability of spike timing in neocortical neurons",
+  journal =      "Science",
+  volume =       "268",
+  pages =        "1503",
+  year =         "1995",
+}
+
+@Article{Makarov01,
+  author =       "V. A. Makarov and V. I. Nekorkin and M. G. Velarde",
+  title =        "Spiking behavior in a noise-driven system combining oscillatory and excitatory properties",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "86",
+  pages =        "3431",
+  year =         "2001",
+}
+
+@Article{Manjarrez02,
+  author =       "E. Manjarrez and J. G. Rojas-Piloni and I. Mendez and L. Martinez and D. Velez and D. Vazquez and A. Flores",
+  title =        "Internal stochastic resonance in the coherence between spinal and cortical neuronal ensembles in the cat",
+  journal =      "Neurosci Lett",
+  volume =       "326",
+  pages =        "93",
+  year =         "2002",
+}
+
+@Article{Manning98,
+  author =       "W. G. Manning",
+  title =        "The logged dependent variable, heteroscedasticity, and the retransformation problem ",
+  journal =      "Journal of Health Economics",
+  volume =       "17",
+  pages =        "283",
+  year =         "1998",
+}
+
+@Book{Mardia72,
+  author =       "K. V. Mardia",
+  title =        "Probability and mathematical statistics: \textsc{S}tatistics of directional data",
+  publisher =    "Academy Press",
+  address =      "London",
+  year =         "1972",
+}
+
+@Article{Marmarelis72,
+  author =       "P. Z. Marmarelis and K. Naka",
+  title =        "White-noise analysis of a neuron chain: an application of the wiener theory.",
+  journal =      "Science",
+  volume =       "175",
+  pages =        "1276",
+  year =         "1972",
+}
+
+@Article{Martinerie98,
+  author =       "J. Martinerie and C. Adam and M. {Le Van Quyen} and M. Baulac and S. Clemenceau and B. Renault and F. J. Varela",
+  title =        "Epileptic seizures can be anticipated by non-linear analysis",
+  journal =      "Nature Med.",
+  volume =       "4",
+  pages =        "1173",
+  year =         "1998",
+}
+
+@Article{Martinerie03,
+  author =       "J. Martinerie and M. {Le Van Quyen} and M. Baulac and B. Renault",
+  title =        "Reply to: Prediction of epileptic seizures: \textsc{A}re nonlinear methods relevant?",
+  journal =      "Nature Medicine",
+  volume =       "9",
+  number =       "3",
+  pages =        "242",
+  year =         "2003",
+}
+
+@Article{Mastronarde83,
+  author =       "D. N. Mastronarde",
+  title =        "Correlated firing of cat retinal ganglion cells. I. Spontaneously active inputs to X- and Y-cells.",
+  journal =      "J. Neurophysiol.",
+  volume =       "49",
+  pages =        "303",
+  year =         "1983",
+}
+
+@Article{Matsumoto64a,
+  author =       "H. Matsumoto and C. Ajmone-Marsan",
+  title =        "Cortical cellular phenomena in experimental epilepsy: \textsc{I}nterictal manifestations",
+  journal =      "Exp. Neurol.",
+  volume =       "9",
+  pages =        "286",
+  year =         "1964",
+}
+
+@Article{Matsumoto64b,
+  author =       "H. Matsumoto and C. Ajmone-Marsan",
+  title =        "Cortical cellular phenomena in experimental epilepsy: \textsc{I}ctal manifestations",
+  journal =      "Exp. Neurol.",
+  volume =       "9",
+  pages =        "305",
+  year =         "1964",
+}
+
+@Article{May76,
+  author =       "R. M. May",
+  title =        "Simple mathematical models with very complicated dynamics",
+  journal =      "Nature",
+  volume =       "261",
+  pages =        "459",
+  year =         "1976",
+}
+
+@Article{McCormick92,
+  author =       "R. M. May",
+  title =        "Simple mathematical models with very complicated dynamics",
+  journal =      "Nature",
+  volume =       "261",
+  pages =        "459",
+  year =         "1976",
+}
+
+@InCollection{McNames98,
+  author =    "J. McNames",
+  title =     "A nearest trajectory strategy for time series prediction",
+  booktitle = "Proc. International Workshop on Advanced Black-Box Techniques for Nonlinear Modeling",
+  publisher = "Katholieke Universiteit Leuven, Belgium",
+  pages=      "112",
+  year =      "1998",
+}
+
+@Article{McSharry03,
+  author =       "P. E. McSharry and L. E. Smith and L. Tarassenko",
+  title =        "Prediction of epileptic seizures: \textsc{A}re nonlinear methods relevant?",
+  journal =      "Nature Medicine",
+  volume =       "9",
+  number =       "3",
+  pages =        "241",
+  year =         "2003",
+}
+
+@Article{Meister95,
+  author =       "M. Meister and L. Lagnado and D. A. Baylor",
+  title =        "Concerted signaling by retinal ganglion cells.",
+  journal =      "Science",
+  volume =       "2700",
+  pages =        "1207",
+  year =         "1995",
+}
+
+@Article{Meister99,
+  author =       "M. Meister and M. J. Berry",
+  title =        "The neural code of the retina",
+  journal =      "Neuron",
+  volume =       "22",
+  pages =        "435",
+  year =         "1999",
+}
+
+@Article{Metropolis53,
+  author =       "N. Metropolis and A. Rosenbluth and M. Rosenbluth and A. Teller and E. Teller",
+  title =        "******************************",
+  journal =      "J. Chem. Phys.",
+  volume =       "21",
+  pages =        "1097",
+  year =         "1953",
+}
+
+@Article{Miller08,
+  author =       {E. K. Miller and M. A. Wilson},
+  title =        {All My Circuits: Using Multiple Electrodes to Understand Functioning Neural Networks},
+  journal =      {Neuron},
+  volume =       {60},
+  pages =        {483},
+  year =         {2008},
+}
+
+@Article{Mitchell07,
+  author =       "J. F. Mitchell and K. A.  Sundberg and J. H. Reynolds",
+  title =        "Differential attention-dependent response modulation across cell classes in macaque visual area \textsc{V}4.",
+  journal =      "Neuron",
+  volume =       "55",
+  pages =        "131",
+  year =         "2007",
+}
+
+@Article{Molotchnikoff01,
+  author =       "S. Molotchnikoff and J. Aitoubah and F. Bretzner and S. Shumikhina and Y. F. Tan and J. P. Guillemot",
+  title =        "Comparative computations of spike synchronization in visual cortex of cats",
+  journal =      "Brain Research Protocols",
+  volume =       "6",
+  pages =        "148-158",
+  year =         "2001",
+}
+
+@Article{Morelli05,
+  author =       "A. Morelli and R. Laura Grotto and F. T. Arecchi",
+  title =        "A feature-based model of semantic memory: \textsc{T}he importance of being chaotic",
+  journal =      "Lecture Notes in Computer Science",
+  volume =       "3704",
+  pages =        "328",
+  year =         "2005",
+}
+
+@Article{Morelli06,
+  author =       "A. Morelli and R. Laura Grotto and F. T. Arecchi",
+  title =        "Neural coding for the retrieval of multiple memory patterns.",
+  journal =      "Biosystems",
+  volume =       "86",
+  pages =        "100",
+  year =         "2006",
+}
+
+@Article{Moreno02,
+  author =       "R. Moreno and J. {de la Rocha} and A. Renart and N. Parga",
+  title =        "Response of spiking neurons to correlated inputs",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "89",
+  pages =        "288101",
+  year =         "2002",
+}
+
+@MastersThesis{Mormann98,
+  author =       "F. Mormann",
+  title =        "Synchronisationsph{\"a}nomene in synthetischen \textsc{Z}eitreihen und \textsc{Z}eitreihen
+                  hirnelektrischer \textsc{A}ktivit{\"a}t",
+  school =       "Department of Physics, University of Bonn, Germany",
+  year =         "1998",
+}
+
+@Article{Mormann00,
+  author =       "F. Mormann and K. Lehnertz and P. David and C. E. Elger",
+  title =        "Mean phase coherence as a measure for phase synchronization and
+                  its application to the \textsc{EEG} of epilepsy patients",
+  journal =      "Physica D",
+  volume =       "144",
+  pages =        "358",
+  year =         "2000",
+}
+
+@Article{Mormann00b,
+  author =       "F. Mormann and K. Lehnertz and R. G. Andrzejak and C. E. Elger",
+  title =        "Characterizing preictal states by changes in mean phase coherence in intracranial \textsc{EEG}
+                  recordings of epilepsy patiens",
+  journal =      "Epilepsia",
+  volume =       "41",
+  number =       "7",
+  pages =        "167",
+  year =         "2000",
+}
+
+@Article{Mormann02,
+  author =       "F. Mormann and T. Kreuz and R. G. Andrzejak and C. Rieke and A. Kraskov and P. David and C. E. Elger
+  and K. Lehnertz",
+  title =        "Preictal state detection in continuous intracranial \textsc{EEG} recordings based on decresed phase
+                  synchronization: Problems and pitfalls",
+  journal =      "Epilepsia",
+  volume =       "43",
+  number =       "7",
+  pages =        "121",
+  year =         "2002",
+}
+
+@Article{Mormann03a,
+  author =       "F. Mormann and T. Kreuz and R. G. Andrzejak and P. David and K. Lehnertz and C. E. Elger",
+  title =        "Epileptic seizures are preceded by a decrease in synchronization",
+  journal =      "Epilepsy Res.",
+  volume =       "53",
+  pages =        "173",
+  year =         "2003",
+}
+
+@Article{Mormann03b,
+  author =       "F. Mormann and R. G. Andrzejak and T. Kreuz and C. Rieke and P. David and C. E. Elger and
+                  K. Lehnertz",
+  title =        "Automated preictal state detection based on a decrease in synchronization in intracranial
+  electroencephalography recordings from epilepsy patients",
+  journal =      "Phys. Rev. E",
+  volume =       "67",
+  pages =        "021912",
+  year =         "2003",
+}
+
+@PhDThesis{Mormann03d,
+  author =       "F. Mormann",
+  title =        "Synchronization phenomena in the human epileptic brain",
+  school =       "Department of Physics, University of Bonn, Germany",
+  year =         "2003",
+}
+
+@Article{Mormann05,
+  author =       "F. Mormann and T. Kreuz and C. Rieke and R. G. Andrzejak and A. Kraskov and P. David and C. E. Elger and K. Lehnertz",
+  title =        "On the predictability of epileptic seizures",
+  journal =      "Clin. Neurophysiol.",
+  volume =       "116",
+  pages =        "569",
+  year =         "2005",
+}
+
+@Article{Mormann07,
+  author =       "F. Mormann and R. G. Andrzejak and C. E. Elger and K. Lehnertz",
+  title =        "Seizure prediction: the long and winding road.",
+  journal =      "Brain",
+  volume =       "130",
+  pages =        "314",
+  year =         "2007",
+}
+
+@Article{Mrowka00,
+  author =       "R. Mrowka and A. Patzak and M. Rosenblum",
+  title =        "Quantitative analysis of cardiorespiratory synchronization in infants.",
+  journal =      "Int. J. Bifurcation Chaos",
+  volume =       "10",
+  pages =        "2479",
+  year =         "2000",
+}
+
+@Article{Mueller01,
+  author =       "V. M{\"u}ller and W Lutzenberger and F Pulverm{\"u}ller and B Mohr and N Birbaumer",
+  title =        "Investigation of brain dynamics in Parkinson's disease by methods derived from nonlinear dynamics",
+  journal =      "Exp. Brain Res.",
+  volume =       "137",
+  pages =        "103",
+  year =         "2001",
+}
+
+@Article{Mulliken08,
+  author =       "G. H. Mulliken and S. Musallam and R. A. Andersen",
+  title =        "Forward estimation of movement state in posterior parietal cortex",
+  journal =      "Proc. Natl. Acad. Sci. USA",
+  volume =       "105",
+  pages =        "8170",
+  year =         "2008",
+}
+
+@Article{Nandrino94,
+   author =       "J-L. Nandrino and L. Pezard and J. Martinerie and F. { El Massioui} and B. Renault and
+                   R. Jouvent and J-F. Allilaire and D. Wildl{\"o}cher",
+  title =        "Decrease of a complexity in \textsc{EEG} as a symptom of depression",
+  journal =      "NeuroReport",
+  volume =       "5",
+  pages =        "528",
+  year =         "1994",
+}
+
+@Article{Narayan06,
+   author =       "R. Narayan and G. Gra{\~{n}}a and K. Sen",
+  title =        "Distinct time scales in cortical discrimination of natural sounds in songbirds",
+  journal =      "Journal of Neurophysiology",
+  volume =       "96",
+  pages =        "252--258",
+  year =         "2006",
+}
+
+@Article{Navarro02,
+  author =       "V. Navarro and J. Martinerie and  M. {Le Van Quyen} and S. Clemenceau and C. Adam and
+                  M. Baulac and F Varela",
+  title =        "Seizure anticipation in human neocortical partial epilepsy.",
+  journal =      "Brain",
+  volume =       "125",
+  pages =        "640",
+  year =         "2002",
+}
+
+@Article{Nawrot03,
+  author =       "M. P. Nawrot and A. Aertsen and S. Rotter",
+  title =        "Elimination of response latency variability in neuronal spike trains",
+  journal =      "Biol Cybern",
+  volume =       "88",
+  pages =        "321-334",
+  year =         "2003",
+}
+
+@Article{Netoff02,
+  author =       "T. I. Netoff and S. J. Schiff",
+  title =        "Decreased Neuronal Synchronization during Experimental seizures",
+  journal =      "J. Neurosci.",
+  volume =       "22",
+  pages =        "7297",
+  year =         "2002",
+}
+
+@Article{Neuenschwander99,
+  author =       "S. Neuenschwander and M. Castelo-Branco and W. Singer",
+  title =        "Synchronous oscillations in the cat retina",
+  journal =      "Vis. Res.",
+  volume =       "39",
+  pages =        "2485",
+  year =         "1999",
+}
+
+@Article{Nicolis81,
+  author =       "C. Nicolis and G. Nicolis",
+  title =        "Stochastic Aspects of Climate Transitions-Additive fluctuations",
+  journal =      "Tellus",
+  volume =       "33",
+  pages =        "225",
+  year =         "1981",
+}
+
+@Book{Niedermeyer90,
+  author =       "E. Niedermeyer",
+  title =        "The Epilepsies - Diagnosis and Management",
+  publisher =    "Urban and Schwarzenberg",
+  address =      "Baltimore",
+  year =         "1990",
+}
+
+@Article{Nirenberg98,
+  author =       "S. Nirenberg and P. E. Latham",
+  title =        "Population coding in the retina",
+  journal =      "Curr Opin Neurobiol",
+  volume =       "17",
+  pages =        "1927",
+  year =         "1998",
+}
+
+@Article{Nirenberg01,
+  author =       "S. Nirenberg and S. M. Carcieri and A. L. Jacobs and P. E. Latham",
+  title =        "Retinal ganglion cells act largely as independent encoders.",
+  journal =      "Nature",
+  volume =       "411",
+  pages =        "698",
+  year =         "2001",
+}
+
+@Article{Nirenberg03,
+  author =       "S. Nirenberg and P. E. Latham",
+  title =        "Decoding neuronal spike trains: How important are correlations?",
+  journal =      "PNAS",
+  volume =       "100",
+  pages =        "7348",
+  year =         "2003",
+}
+
+@Article{Nirenberg07,
+  author =       "S. Nirenberg and J. D. Victor",
+  title =        "Analyzing the activity of large populations of neurons: how tractable is the problem?",
+  journal =      "Curr Opin Neurobiol",
+  volume =       "17",
+  pages =        "397",
+  year =         "2007",
+}
+
+@Book{Okabe00,
+  author =       "A. Okabe and B. Boots and K. Sugihara and S. N. Chiu",
+  title =        "Spatial tessellations: concepts and applications of Voronoi diagrams. Wiley series in probability and statistics.",
+  publisher =    "Wiley",
+  address =      "New York",
+  year =         "2000",
+}
+
+@Article{Okatan05,
+  author =       "M. Okatan and M. A. Wilson and E. N. Brown",
+  title =        "Analyzing functional connectivity using a network likelihood model of ensemble neural spiking activity",
+  journal =      "Neural Comput",
+  volume =       "17",
+  pages =        "1927",
+  year =         "2005",
+}
+
+@Article{Osborne89a,
+  author =       "A. R. Osborne and A. Provenzale ************",
+  title =        "Finite correlation dimension for stochastic systems with power-law spectra",
+  journal =      "Phys. D",
+  volume =       "35",
+  pages =        "357",
+  year =         "1989",
+}
+
+@Article{Osipov97,
+  author =       "G. V. Osipov and A. S. Pikovsky and M. G. Rosenblum and J. Kurths",
+  title =        "Phase synchronization effects in a lattice of nonidentical \textsc{R}{\"o}ssler oscillators",
+  journal =      "Phys. Rev. E",
+  volume =       "55",
+  pages =        "2353",
+  year =         "1997",
+}
+
+@Article{Osorio98,
+  author =       "I. Osorio and F.G. Frei and S. B. Wilkinson",
+  title =        "Real-time automated **********************",
+  journal =      "Epilepsia",
+  volume =       "39",
+  number =       "6",
+  pages =        "615",
+  year =         "1998",
+}
+
+@MastersThesis{Osterhage03,
+  author =       "H. Osterhage",
+  title =        "Synchronisation und \textsc{I}nterdependenz: \textsc{E}ine vergleichende \textsc{U}ntersuchung
+                  an \textsc{M}odellsystemen und \textsc{Z}eitreihen hirnelektrischer \textsc{A}ktivit{\"a}t",
+  school =       "Department of Physics, University of Bonn, Germany",
+  year =         "2003",
+}
+
+@Book{Ott93,
+  author =       "E. Ott",
+  title =        "Chaos in dynamical systems",
+  publisher =    "Cambridge University Press",
+  address =      "Cambridge",
+  year =         "1994",
+}
+
+@Book{Ott94b,
+  author =       "E. Ott and T. Sauer and J. A. Yorke",
+  title =        "Coping with Chaos",
+  publisher =    "Wiley",
+  address =      "New York",
+  year =         "1994",
+}
+
+@Article{Paiva10,
+  author =       "A. R. C. Paiva and I. Park and J. C. Principe",
+  title =        "A comparison of binless spike train measures",
+  journal =      "Neural Computing and Applications",
+  volume =       "19",
+  pages =        "405-419",
+  year =         "2010",
+}
+
+@Article{Paiva09b,
+  author =       "A. R. C. Paiva and I. Park and J. C. Principe",
+  title =        "A Reproducing Kernel Hilbert Space Framework for Spike Train Signal Processing",
+  journal =      "Neural Computation",
+  volume =       "21",
+  pages =        "424",
+  year =         "2009",
+}
+
+@Article{Pakdaman01,
+  author =       "K. Pakdaman and S. Tanabe and T. Shimokawa",
+  title =        "Coherence resonance and discharge time reliability in neurons and neuronal models",
+  journal =      "Neural Networks",
+  volume =       "14",
+  pages =        "895",
+  year =         "2001",
+}
+
+@Article{Palus96a,
+  author =       "M. Palus",
+  title =        "Nonlinearity in Normal Human \textsc{EEG}: \textsc{C}ycles, Temporal
+                 Asymmetry, Nonstationarity and Randomness, Not Chaos",
+  journal =      "Biol. Cybern.",
+  volume =       "75",
+  pages =        "389",
+  year =         "1996",
+}
+
+@Article{Palus97,
+  author =       "M. Palus",
+  title =        "Detecting phase synchronization in noisy systems",
+  journal =      "Phys. Lett. A",
+  volume =       "227",
+  pages =        "301",
+  year =         "1997",
+}
+
+@Article{Palus01,
+  author =       "M. Palus and V. Kom{\'a}rec and Z. Hrnc{\'i}r and K. Strebov{\'a}",
+  title =        "Synchronization as adjustment of information rates: \textsc{D}etection from bivariate time series",
+  journal =      "Phys. Rev. E",
+  volume =       "63",
+  pages =        "046211",
+  year =         "2001",
+}
+
+@Article{Palus03,
+  author =       "M. Palus and A. Stefanovska",
+  title =        "Direction of coupling from phases of interacting oscillators: \textsc{A}n information-theoretic approach",
+  journal =      "Phys. Rev. E",
+  volume =       "67",
+  pages =        "055201(R)",
+  year =         "2003",
+}
+
+@Book{Panter65,
+  author =       "P. Panter",
+  title =        "Modulation, noise, and spectral analysis",
+  publisher =    "McGraw-Hill",
+  address =      "New York",
+  year =         "1965",
+}
+
+@Article{Parlitz96,
+  author =       "U. Parlitz and L. Junge and W. Lauterborn and L. Kocarev",
+  title =        "Experimental observation of phase synchronization",
+  journal =      "Phys. Rev. E",
+  volume =       "54",
+  pages =        "2115",
+  year =         "1996",
+}
+
+@Article{Pawelzik87,
+  author =       "K. Pawelzik and H.G. Schuster",
+  title =        "Generalized dimensions and entropies from a measured time series",
+  journal =      "Phys. Rev. A",
+  volume =       "35",
+  pages =        "481",
+  year =         "1987",
+}
+
+@Book{Peck05,
+  author =       "R. Peck, C. Olsen and J. Devore",
+  title =        "Introduction to statistics and data analysis.",
+  publisher =    "Duxbury Press",
+  address =      "Belmont, CA",
+  year =         "2005",
+}
+
+@Article{Pecora90,
+  author =       {L. M. Pecora and T. L. Carroll},
+  title =        {Synchronization in chaotic systems},
+  journal =      {Phys. Rev. Lett.},
+  year =         1990,
+  volume =       64,
+  pages =        821
+}
+
+@Article{Pecora91,
+  author =       {L. M. Pecora and T. L. Carroll},
+  title =        {Synchronization in chaotic systems},
+  journal =      {Phys. Rev. A},
+  volume =       44,
+  pages =        2374,
+  year =         1991,
+}
+
+@Article{Pecora97,
+  author =       {L. M. Pecora and T. L. Carroll and G. A. Johnson and D. J. Mar and J. F. Heagy},
+  title =        {Fundamentals of synchronization in chaotic systems, concepts and applications},
+  journal =      {Chaos},
+  volume =       7,
+  pages =        520,
+  year =         1997
+}
+
+@Article{Pereda01,
+  author =       {E. Pereda and R. Rial and A. Gamundi and J. Gonzalez},
+  title =        {Assessment of changing interdependencies between human electroencephalograms using non-linear methods},
+  journal =      {Physica D},
+  volume =       148,
+  pages =        147,
+  year =         2001
+}
+
+@Article{Peterman95,
+  author =       {D. W. Peterman and M. Ye and P. E. Wigen},
+  title =        {High frequency synchronization of chaos},
+  journal =      {Phys. Rev. Lett.},
+  volume =       74,
+  pages =        1740,
+  year =         1995
+}
+
+@Article{Petrosian00,
+  author =       "A. Petrosian and D. Prokhorov and R. Homan and R. Dasheiff and D. Wunsch",
+  title =        "Recurrent neural network *****",
+  journal =      "Neurocomputing",
+  volume =       "30",
+  number =       "1",
+  pages =        "201",
+  year =         "2000",
+}
+
+@Article{Pezard01,
+  author =       "L. Pezard and R. Jech and E. Ruzicka",
+  title =        "Investigation of non-linear properties of multichannel \textsc{EEG} in the early stages of Parkinson's
+                  disease",
+  journal =      "Clin.  Neurophysiol.",
+  volume =       "112",
+  pages =        "38",
+  year =         "2001",
+}
+
+@Article{Pfurtscheller99,
+  author =   "G. Pfurtscheller and  F. H. {Lopes da Silva}",
+  title =    "Event-related EEG/MEG synchronization and desynchronization: basic principles.",
+  journal =  "Clinical Neurophysiology",
+  volume =   "110",
+  pages =    "1842-1857",
+  year =     "1999",
+}
+
+@Article{Pijn97,
+  author =   "J. P. Pijn and D. N. Velis and M. J. {van der Heyden} and J. DeGoede and C. W. M. van Veelen and
+  F. H. {Lopes da Silva}",
+  title =    "Nonlinear dynamics of epileptic seizures on basis of intracranial \textsc{EEG} recordings",
+  journal =  "Brain Topography",
+  volume =   9,
+  pages =    249,
+  year =     1997,
+}
+
+@Article{Pikovsky84,
+  author =   "A. S. Pikovsky",
+  title =    "On the interaction of strange attractors",
+  journal =  "Z. Phys. B: Condens Matter",
+  volume =   55,
+  pages =    149,
+  year =     1984
+}
+
+@Article{Pikovsky85,
+  author =   "A. S. Pikovsky",
+  title =    "Phase synchronization of chaotic oscillations by a periodic external field",
+  journal =  {Sov J Commun Technol Electron},
+  volume =   30,
+  pages =    85,
+  year =     1985
+}
+
+@Article{Pikovsky96,
+  author =   "A. S. Pikovsky and M. G. Rosenblum and J. Kurths",
+  title =    "Synchronization in a population of globally coupled chaotic oscillators",
+  journal =  {Europhys. Lett.},
+  volume =   34,
+  pages =    165,
+  year =     1996
+}
+
+@Article{Pikovsky97,
+  author =   "A. S. Pikovsky and J. Kurths",
+  title =    "Coherence resonance in a noise-driven excitable system",
+  journal =  {Phys. Rev. Lett.},
+  volume =   78,
+  pages =    775,
+  year =     1997
+}
+
+@Book{Pikovsky01,
+  author =       "A. S. Pikovsky and M. G. Rosenblum and J. Kurths",
+  title =        "Synchronization. \textsc{A} universal concept in nonlinear sciences",
+  publisher =    "Cambridge Univ. Press",
+  address =      "Cambridge, UK",
+  year =         "2001",
+}
+
+@Article{Pillow05,
+  author =       "J. W. Pillow and L. Paninski and V. J. Uzzell and E. P. Simoncelli and E. J. Chichilnisky",
+  title =        "Prediction and Decoding of Retinal Ganglion Cell Responses with a Probabilistic Spiking Model",
+  journal =      "J Neurosci",
+  volume =       "454",
+  pages =        "995",
+  year =         "2008",
+}
+
+@Article{Pillow08,
+  author =       "J. W. Pillow and J. Shlens and L. Paninski and A. Sher and A. M. Litke and E. J. Chichilnisky and E. P. Simoncelli",
+  title =        "Spatio-temporal correlations and visual signalling in a complete neuronal population",
+  journal =      "Nature",
+  volume =       "454",
+  pages =        "995",
+  year =         "2008",
+}
+
+@Article{Postnov99,
+  author =       "D. E. Postnov and S. K. Han and T. G. Yim and O. V. Sosnovtseva",
+  title =        "Experimental observation of coherence resonance in cascaded excitable systems",
+  journal =      "Phys. Rev. E",
+  volume =       "59",
+  pages =        "R3791",
+  year =         "1999",
+}
+
+@Article{Pradines99,
+  author =       "J. R. Pradines and G. V. Osipov and J. J. Collins",
+  title =        "Coherence resonance in excitable and oscillatory systems:
+                  The essential role of slow and fast dynamics",
+  journal =      "Phys. Rev. E",
+  volume =       "60",
+  pages =        "6407",
+  year =         "1999",
+}
+
+@Book{Press89,
+  author =       "W. H. Press and B. Flannery and S. Teukolsky and W. Vetterling",
+  title =        "Numerical recipes in Pascal: \textsc{T}he art of scientific computing",
+  publisher =    "Cambridge Univ. Press",
+  address =      "Cambridge, UK",
+  year =         "1989",
+}
+
+@Article{Priebe08,
+  author =       "N. J. Priebe and D. Ferster",
+  title =        "Inhibition, spike threshold, and stimulus selectivity in primary visual cortex.",
+  journal =      "Neuron",
+  volume =       "570",
+  pages =        "482",
+  year =         "2008",
+}
+
+@Article{Prichard94,
+  author =       "D. Prichard and J. Theiler",
+  title =        "Generating surrogate data for time series with several simultaneously measured variables",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "73",
+  pages =        "951",
+  year =         "1994",
+}
+
+@Article{Pritchard95,
+  author =       "W. S. Pritchard and D. W. Duke and K. K. Krieble",
+  title =        "Dimensional Analysis of resting human \textsc{EEG} II: \textsc{S}urrogate-data testing indicates
+                  nonlinearity but not low-dimensional chaos",
+  journal =      "Psychophysiology",
+  volume =       "32",
+  pages =        "486",
+  year =         "1995",
+}
+
+@Article{Pritchard95b,
+  author =       "W. S. Pritchard and J. Theiler",
+  title =        "Dimensional Analysis of resting human \textsc{EEG} II: \textsc{S}urrogate-data testing indicates
+                  nonlinearity but not low-dimensional chaos",
+  journal =      "Phys. D",
+  volume =       "84",
+  pages =        "476",
+  year =         "1995",
+}
+
+@Article{Puchalla05,
+  author =       "J. L. Puchalla and E. Schneidman and R. A. Harris and M. J. Berry",
+  title =        "Redundancy in the Population Code of the Retina",
+  journal =      "Neuron",
+  volume =       "46",
+  pages =        "493",
+  year =         "2005",
+}
+
+@Article{Pyragas92,
+  author =       "K. Pyragas",
+  title =        "Continuous control of chaos by self-controlling feedback",
+  journal =      "Phys. Lett. A",
+  volume =       "170",
+  pages =        "421",
+  year =         "1992",
+}
+
+@Article{Pritchard95b,
+  author =       "W. S. Pritchard and J. Theiler",
+  title =        "Dimensional Analysis of resting human \textsc{EEG} II: \textsc{S}urrogate-data testing indicates
+                  nonlinearity but not low-dimensional chaos",
+  journal =      "Phys. D",
+  volume =       "84",
+  pages =        "476",
+  year =         "1995",
+}
+
+@Article{Pyragas96,
+  author =       "K. Pyragas",
+  title =        "Weak and strong synchronization of chaos",
+  journal =      "Phys. Rev. E",
+  volume =       "54",
+  pages =        "4508",
+  year =         "1996",
+}
+
+@Article{Qu12,
+  author =       "J. Qu and R. Wang and Y. Du and J. Cao",
+  title =        "Synchronization study in ring-like and grid-like neuronal networks",
+  journal =      "Cogn Neurodyn",
+  volume =       "6",
+  pages =        "21",
+  year =         "2012",
+}
+
+@Article{QuianQuiroga00,
+  author =       "R. {Quian Quiroga} and J. Arnhold and P. Grassberger",
+  title =        "Learning driver-response relationships from synchronization patterns",
+  journal =      "Phys. Rev. E",
+  volume =       "61",
+  pages =        "5142",
+  year =         "2000",
+}
+
+@Article{QuianQuiroga00b,
+  author =       "R. {Quian Quiroga} and J. Arnhold and P. Grassberger",
+  title =        "Kullback-Leibler and renormalized entropies: \textsc{A}pplication to electroencephalograms of epilepsy
+                  patients",
+  journal =      "Phys. Rev. E",
+  volume =       "62",
+  pages =        "8380",
+  year =         "2000",
+}
+
+@Article{QuianQuiroga02,
+  author =       "R. {Quian Quiroga} and A. Kraskov and T. Kreuz and P. Grassberger",
+  title =        "Performance of different synchronization measures in real data: \textsc{A} case study on
+                  electroencephalographic signals",
+  journal =      "Phys. Rev. E",
+  volume =       "65",
+  pages =        "041903",
+  year =         "2002",
+}
+
+@Article{QuianQuiroga02b,
+  author =       "R. {Quian Quiroga} and T. Kreuz and P. Grassberger",
+  title =        "Event Synchronization: \textsc{A} simple and fast method to measure synchronicity and time delay
+                  patterns",
+  journal =      "Phys. Rev. E",
+  volume =       "66",
+  pages =        "041904",
+  year =         "2002",
+}
+
+@Article{QuianQuiroga03,
+  author =       "R. {Quian Quiroga} and A. Kraskov and T. Kreuz and P. Grassberger",
+  title =        "Reply to: Comment on `Performance of different synchronization measures in real data: \textsc{A} case study on
+                  electroencephalographic signals'",
+  journal =      "Phys. Rev. E",
+  volume =       "67",
+  pages =        "063902",
+  year =         "2003",
+}
+
+@Article{QuianQuiroga04,
+  author =       "R. {Quian Quiroga} and Z. Nadasdy and Y. Ben-Shaul",
+  title =        "Unsupervised spike detection and sorting with wavelets and superparamagnetic clustering",
+  journal =      "Neural Comp",
+  volume =       "16",
+  pages =        "1661",
+  year =         "2004",
+}
+
+@Article{Rapp89,
+  author =       "P. E. Rapp and T. R. Bashore and J. A. Martinerie
+                  and A. M. Albano and I. D. Zimmermann and A. I. Mees",
+  title =        "Dynamics of brain electrical activity",
+  journal =      "Brain Topography",
+  volume =       "2",
+  pages =        "99",
+  year =         "1989",
+}
+
+@Article{Rapp94,
+  author =       "P. E. Rapp and A. M. Albano and I. D. Zimmerman and M.A. Jimen\'{e}z-Montano",
+  title =        "Phase-randomized surrogates can produce spurious identifications of non-random structure",
+  journal =      "Phys. Lett. A",
+  volume =       "192",
+  pages =        "27",
+  year =         "1994",
+}
+
+@Article{Rappel94,
+  author =       "W.-J. Rappel and S. H. Strogatz",
+  title =        "Stochastic resonance in an autonomous system with a nonuniform limit cycle",
+  journal =      "Phys. Rev. E",
+  volume =       "50",
+  pages =        "3249",
+  year =         "1994",
+}
+
+@Article{Reich98,
+  author =       "D. S. Reich and J. D. Victor and B. W. Knight",
+  title =        "The Power Ratio and the Interval Map: Spiking Models and Extracellular Recordings",
+  journal =      "J Neurosci",
+  volume =       "18",
+  pages =        "10090",
+  year =         "1998",
+}
+
+@Book{Renyi71,
+  author =       "A. Renyi",
+  title =        "Probability Theory",
+  publisher =    "North Holland",
+  address =      "Amsterdam",
+  year =         "1971",
+}
+
+@Article{Reyes03,
+  author =       "A. D. Reyes",
+  title =        "Synchrony-dependent propagation of firing rate in iteratively constructed networks in vitro",
+  journal =      "Nature Neurosci",
+  volume =       "6",
+  pages =        "593",
+  year =         "2003",
+}
+
+@Article{Reynolds99,
+  author =       "J. H. Reynolds and L. Chelazzi and R. Desimone",
+  title =        "Competitive mechanisms subserve attention in macaque areas \textsc{V}2 and \textsc{V}4.",
+  journal =      "J Neurosci",
+  volume =       "19",
+  pages =        "1736",
+  year =         "1999",
+}
+
+@Book{Rieke96,
+  author =       "F. Rieke and D. Warland and R. {de Ruyter van Steveninck} and W. Bialek",
+  title =        "Spikes: Exploring the neural code",
+  publisher =    "Institute of Technology",
+  address =      "Cambridge, Massachusetts",
+  year =         "1996",
+}
+
+@MastersThesis{Rieke99,
+  author =       "C. Rieke",
+  title =        "Nichtlinearit{\"a}t in \textsc{M}odellsystemen und in \textsc{Z}eitreihen hirnelektrischer
+                  \textsc{A}ktivit{\"a}t: \textsc{D}er \textsc{E}influ\ss von
+                  \textsc{N}ichtstationarit{\"a}t",
+  school =       "Department of Physics, University of Bonn, Germany",
+  year =         "1999",
+}
+
+@Article{Rieke02,
+  author =       "C. Rieke and K. Sternickel and R. G. Andrzejak and C. E. Elger and P. David and K. Lehnertz",
+  title =        "Measuring nonstationarity by analyzing the loss of recurrence in dynamical systems",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "88",
+  pages =        "244102",
+  year =         "2002",
+}
+
+@Article{Rieke03,
+  author =       "C. Rieke and F. Mormann and R. G. Andrzejak and T. Kreuz and P. K. A. David and C. E. Elger
+                  and K. Lehnertz",
+  title =        "Discerning nonstationarity from nonlinearity in seizure-free and pre-seizure \textsc{EEG} recordings
+                  from epilepsy patients",
+  journal =      "IEEE Eng. Med. Biol.",
+  volume =       "50",
+  pages =        "634",
+  year =         "2003",
+}
+
+@PhDThesis{Rieke03a,
+  author =       "C. Rieke",
+  title =        "Nichtstationarit{\"a}t in dynamischen \textsc{S}ystemen",
+  school =       "Department of Physics, University of Bonn, Germany",
+  year =         "2003",
+}
+
+@Article{Robinson02,
+  author =       "H. P. C. Robinson and A. Harsch",
+  title =        "Stages of spike time variability during neuronal responses to transient inputs",
+  journal =      "Phys. Rev. E",
+  volume =       "66",
+  pages =        "061902",
+  year =         "2002",
+}
+
+@Article{Rodriguez99,
+  author =       "E. Rodriguez and N. George and J. P. Lachaux and J. Martinerie and B. Renault and F. J. Varela",
+  title =        "Perception's shadow: long-distance synchronization of human brain activity.",
+  journal =      "Nature",
+  volume =       "397",
+  pages =        "430",
+  year =         "1999",
+}
+
+@Article{Roerdink01,
+  author =       "J. Roerdink and A. Meijster",
+  title =        "The watershed transform: definitions, algorithms and parallelization strategies.",
+  journal =      "Fundam Inform",
+  volume =       "41",
+  pages =        "187",
+  year =         "2001",
+}
+
+@Article{Roessler76,
+  author =       "O. E. R{\"o}ssler",
+  title =        "An equation for continuous chaos.",
+  journal =      "Phys. Lett. A",
+  volume =       "57",
+  pages =        "397",
+  year =         "1976",
+}
+
+@Article{Rogowski81,
+  author =       "Z. Rogowski and I. Gath and E. Bental",
+  title =        "On the prediction of epileptic seizures.",
+  journal =      "Biol. Cybern.",
+  volume =       "42",
+  pages =        "9",
+  year =         "1981",
+}
+
+@Article{Romano04,
+  author =       "M.C. Romano and M. Thiel and J. Kurths and W. von Bloh",
+  title =        "Multivariate recurrence plots",
+  journal =      "Phys. Lett. A",
+  volume =       "330",
+  pages =        "214",
+  year =         "2004",
+}
+
+@Article{Rombouts95,
+  author =       "S. A. R. B. Rombouts and R. W. M. Keunen and C. J. Stam",
+  title =        "Investigation of nonlinear structure in multichannel \textsc{EEG}",
+  journal =      "Phys. Lett. A",
+  volume =       "202",
+  pages =        "352",
+  year =         "1995",
+}
+
+@Article{Romo03,
+  author =       "R. Romo and E. Salinas",
+  title =        "Flutter discrimination: neural codes, perception, memory and decision making.",
+  journal =      "Nat. Rev. Neurosci.",
+  volume =       "40",
+  pages =        "203",
+  year =         "2003",
+}
+
+@Article{Rosa00,
+  author =       "E. {Rosa Jr.} and W. B. Pardo and C. M. Ticos and J. A. Walkenstein and M. Monti",
+  title =        "Phase synchronization of chaos in a plasma discharge tube",
+  journal =      "Int. J. Bifurc. Chaos",
+  volume =       "10",
+  pages =        "2551",
+  year =         "2000",
+}
+
+@Article{Rosenblum96,
+  author =       "M. G. Rosenblum and A. S. Pikovsky and J. Kurths",
+  title =        "Phase synchronization of chaotic oscillators",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "76",
+  number =       "11",
+  pages =        "1804",
+  year =         "1996",
+}
+
+@Article{Rosenblum97,
+  author =       "M. G. Rosenblum and A. S. Pikovsky and J. Kurths",
+  title =        "From phase to lag synchronization in coupled chaotic oscillators",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "78",
+  pages =        "4193",
+  year =         "1997",
+}
+
+@Article{Rosenblum98,
+  author =       "M. G. Rosenblum and J. Kurths and A. S. Pikovsky and C. Schaefer and P. A.  Tass and H. H. Abel",
+  title =        "Synchronization in noisy systems and cardiorespiratory interaction",
+  journal =      "IEEE Eng. Med. Biol.",
+  volume =       "17",
+  pages =        "46",
+  year =         "1998",
+}
+
+@InCollection{Rosenblum01,
+  author =       "M. G. Rosenblum and A. S. Pikovsky and J. Kurths and C. Schaefer and P. A. Tass",
+  editor =       "F. Moss and S. Gielen",
+  title =        "Phase synchronization: from theory to data analysis",
+  booktitle =    "Handbook of biological physics",
+  publisher =    "Elsevier Science",
+  address =      "Amsterdam",
+  pages=         "297",
+  year =         "2001",
+}
+
+@Article{Rosenblum01b,
+  author =       "M. G. Rosenblum and A. S. Pikovsky",
+  title =        "Detecting direction of coupling in interacting oscillators",
+  journal =      "Phys. Rev. E",
+  volume =       "64",
+  pages =        "045202(R)",
+  year =         "2001",
+}
+
+@Article{Rosenblum01c,
+  author =       "M. G. Rosenblum and A. S. Pikovsky and J. Kurths",
+  title =        "Comment on ‘‘Phase synchronization in discrete chaotic systems’’",
+  journal =      "Phys. Rev. E",
+  volume =       "63",
+  pages =        "058201",
+  year =         "2001",
+}
+
+@Article{Rosenblum02,
+  author =       "M. G. Rosenblum and L. Cimponeriu and A. Bezerianos and A. Patzak and R. Mrowka",
+  title =        "Identification of coupling direction: Application to cardiorespiratory interaction",
+  journal =      "Phys. Rev. E",
+  volume =       "65",
+  pages =        "041909",
+  year =         "2002",
+}
+
+@Article{Rossberg04,
+  author =       "A. G. Rossberg and K. Bartholome and J. Timmer",
+  title =        "Data driven optimal filtering for phase and frequency of noisy oscillations:
+                  Application to vortex flowmetering",
+  journal =      "Phys. Rev. E",
+  volume =       "69",
+  pages =        "016216",
+  year =         "2004",
+}
+
+@Article{Roy94,
+  author =       "R. Roy and K. S. Thornburg",
+  title =        "Experimental synchronization on chaotic lasers",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "72",
+  pages =        "2009",
+  year =         "1994",
+}
+
+@Article{Rudolph01,
+  author =       "M. Rudolph and A. Destexhe",
+  title =        "Correlation detection and resonance in neural systems with distributed sources",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "86",
+  pages =        "3662",
+  year =         "2001",
+}
+
+@Article{Rulkov94,
+  author =       "N. F. Rulkov and L. S. Tsimring and H. D. I. Abarbanel",
+  title =        "Tracking unstable orbits in chaos using dissipative feedback control",
+  journal =      "Phys. Rev. E",
+  volume =       "50",
+  pages =        "314",
+  year =         "1994",
+}
+
+@Article{Rulkov95,
+  author =       "N. F. Rulkov and M. M. Sushchik and L. S. Tsimring and H. D. I. Abarbanel",
+  title =        "Generalized synchronization of chaos in directionally coupled chaotic systems",
+  journal =      "Phys. Rev. E",
+  volume =       "51",
+  number =       "2",
+  pages =        "980",
+  year =         "1995",
+}
+
+@Article{Rusu14,
+  author =       "Catalin V. Rusu and Razvan V. Florian",
+  title =        "A new class of metrics for spike trains",
+  journal =      "Neural Computation",
+  volume =       "26",
+  number =       "2",
+  pages =        "306-348",
+  year =         "2014",
+}
+
+@InCollection{Sackellares02,
+  author =       "J.C. Sackellares and L.D. Iasemidis and P.M. Pardalos and D. S. Shiau",
+  editor =       "P.M. Pardalos and J. Principe",
+  title =        "Combined application of global optimization and nonlinear dynamics to detect state resetting in
+                  human epilepsy",
+  booktitle =    "Biocomputing",
+  publisher =    "Kluwer Academic Publishers",
+  address =      "Dordrecht",
+  year =         "2002",
+}
+
+@Article{Salinas00,
+  author =       {E. Salinas and T. J. Sejnowski},
+  title =        {Impact of Correlated Synaptic Input on Output Firing Rate and
+                  Variability in Simple Neuronal Models},
+  journal =      {J Neurophysiol.},
+  volume =       {20},
+  pages =        {6193},
+  year =         {2000},
+}
+
+@Article{Salinas01,
+  author =       {E. Salinas and T. J. Sejnowski},
+  title =        {Correlated neuronal activity and the flow of neural information},
+  journal =      {Nature Reviews},
+  volume =       {2},
+  pages =        {593},
+  year =         {2001},
+}
+
+@Article{Sanchez08,
+  author =       {J. C. Sanchez and J. C. Principe and T. Nishida and R. Bashirullah and J. G. Harris and J. A. B. Fortes},
+  title =        {Technology and Signal Processing for Brain-Machine Interfaces},
+  journal =      {IEEE Signal Processing},
+  volume =       {25},
+  pages =        {29},
+  year =         {2008},
+}
+
+@Article{Santos04,
+  author =       {G. J. E. Santos and M. Rivera and P. Parmananda},
+  title =        {Experimental Evidence of Coexisting Periodic Stochastic Resonance and Coherence Resonance Phenomena},
+  journal =      {Phys. Rev. Lett.},
+  volume =       {92},
+  pages =        {230601},
+  year =         {2004},
+}
+
+@Article{Sauer91,
+  author =       {T. Sauer and J.A. Yorke and M. Casdagli},
+  title =        {Embeddology},
+  journal =      {J. Stat. Phys.},
+  year =         1991,
+  volume =       {65},
+  pages =        {579}
+}
+
+@Article{Schäfer98,
+  author =       "C. Sch{\"a}fer and M. G. Rosenblum and J. Kurths and H. H. Abel",
+  title =        "Heartbeat synchronized with ventilation",
+  journal =      "Nature",
+  volume =       "392",
+  pages =        "239",
+  year =         "1998",
+}
+
+@Article{Schäfer99,
+  author =       "C. Sch{\"a}fer and M. G. Rosenblum and H. H. Abel and J. Kurths",
+  title =        "Synchronization in the human cardiorespiratory system",
+  journal =      "Phys. Rev. E",
+  volume =       "60",
+  number =       "1",
+  pages =        "857",
+  year =         "1999",
+}
+
+@Article{Schevon12,
+  author =       "C. A. Schevon and S. A. Weiss and G. {McKhann Jr} and R. R. Goodman and R. Yuste and R. G. Emerson and A. J. Trevelyan",
+  title =        "Evidence of an inhibitory restraint of seizure activity in humans.",
+  journal =      "Nature Communications",
+  volume =       "3",
+  pages =        "1060",
+  year =         "2012",
+}
+
+@InCollection{Schiek98,
+  author =       "M. Schiek and F. R. Drepper and R. Engbert and H. H. Abel and K. Suder",
+  editor =       "H. Kantz et al.",
+  title =        "Cardiorespiratory synchronization",
+  booktitle =    "Nonlinear analysis of physiological data",
+  publisher =    "Springer",
+  address =      "Berlin",
+  pages=         "297",
+  year =         "1998",
+}
+
+@Article{Schiff94,
+  author =       "S. J. Schiff and K. Jerger and D. H. Duong and T. Chang and M. L. Spano and W. L. Ditto",
+  title =        "Controlling chaos in the brain",
+  journal =      "Nature",
+  volume =       "370",
+  number =       "8",
+  pages =        "615",
+  year =         "1994",
+}
+
+@Article{Schiff96,
+  author =       "S. J. Schiff and P. So and T. Chang and R. E. Burke and T. Sauer",
+  title =        "Detecting dynamical interdependence and generalized synchrony throug mutual prediction
+                  in a neural ensemble.",
+  journal =      "Phys. Rev. E",
+  volume =       "54",
+  pages =        "6708",
+  year =         "1996",
+}
+
+@Article{Schindler01,
+  author =       "K. Schindler and R. Wiest and M. Kollar and F. Donati",
+  title =        "Using simulated neuronal cell models for detection of epileptic seizures in foramen ovale and scalp
+                  \textsc{EEG}",
+  journal =      "Clin. Neurophysiol.",
+  volume =       "112",
+  pages =        "1006",
+  year =         "2001",
+}
+
+@Article{Schindler02,
+  author =       "K. Schindler and R. Wiest and M. Kollar and F. Donati",
+  title =        "\textsc{EEG} analysis with simulated neuronal cell models helps to detect pre-seizure changes",
+  journal =      "Clin. Neurophysiol.",
+  volume =       "113",
+  pages =        "604",
+  year =         "2002",
+}
+
+@Article{Schmitz00,
+  author =       "A. Schmitz",
+  title =        "Measuring statistical dependence and coupling of subsystems",
+  journal =      "Phys. Rev. E",
+  volume =       "62",
+  pages =        "7508",
+  year =         "2000",
+}
+
+@PhDThesis{Schmitz00a,
+  author =       "A. Schmitz",
+  title =        "Erkennung von \textsc{\it{N}}ichtlinearit{\"a}ten und wechselseitigen \textsc{\it{A}}bh{\"a}ngigkeiten
+                  in \textsc{\it{Z}}eitreihen",
+  school =       "Department of Physics, University of Wuppertal, Germany",
+  year =         "2000",
+}
+
+@Article{Schnapf90,
+  author =       "J. L. Schnapf and B. J. Nunn and M. Meister and D. A. Baylor",
+  title =        "Visual transduction in cones of the monkey Macaca fascicularis.",
+  journal =      "J Physiol",
+  volume =       "427",
+  pages =        "681",
+  year =         "1990",
+}
+
+@Article{Schneidman03,
+  author =       "E. Schneidman and W Bialek and M. J. Berry",
+  title =        "Synergy, Redundancy, and Independence in Population Codes",
+  journal =      "J Neurosci",
+  volume =       "23",
+  pages =        "11539",
+  year =         "2003",
+}
+
+@Article{Schneidman06,
+  author =       "E. Schneidman and M. J. Berry and R. Segev and W. Bialek",
+  title =        "Weak pairwise correlations imply strongly correlated network states in a neural population",
+  journal =      "Nature",
+  volume =       "440",
+  pages =        "1007",
+  year =         "2006",
+}
+
+@Article{Schnitzer03,
+  author =       "M. J. Schnitzer and M. Meister",
+  title =        "Multineuronal firing patterns in the signal from eye to brain.",
+  journal =      "Neuron",
+  volume =       "37",
+  pages =        "499",
+  year =         "2003",
+}
+
+@Article{Schrauwen07,
+  author =       "B. Schrauwen and J. V. Campenhout",
+  title =        "Linking non-binned spike train kernels to several existing spike train metrics.",
+  journal =      "Neurocomputing",
+  volume =       "70",
+  pages =        "1247-1253",
+  year =         "2007",
+}
+
+@Article{Schreiber95,
+  author =       "T. Schreiber",
+  title =        "Efficient neighbor searching in nonlinear time series analysis.",
+  journal =      "Int J Bifurcation and Chaos",
+  volume =       "5",
+  pages =        "349",
+  year =         "1995",
+}
+
+@Article{Schreiber96a,
+  author =       "T. Schreiber and A. Schmitz",
+  title =        "Improved surrogate data for nonlinearity tests",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "77",
+  number =       "4",
+  pages =        "635",
+  year =         "1996",
+}
+
+@Article{Schreiber97,
+  author =       "T. Schreiber",
+  title =        "Detecting and analysing nonstationarity in a time series using nonlinear cross predictions",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "78",
+  pages =        "843",
+  year =         "1997",
+}
+
+@Article{Schreiber98b,
+  author =       "T. Schreiber",
+  title =        "Constrained randomization of time series data",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "80",
+  number =       "10",
+  pages =        "2105",
+  year =         "1998",
+}
+
+@Article{Schreiber00,
+  author =       "T. Schreiber and A. Schmitz",
+  title =        "Surrogate time series",
+  journal =      "Physica D",
+  volume =       "142",
+  pages =        "346",
+  year =         "2000",
+}
+
+@Article{Schreiber00b,
+  author =       "T. Schreiber",
+  title =        "Measuring information transfer",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "85",
+  pages =        "461",
+  year =         "2000",
+}
+
+@Article{S_Schreiber03,
+  author =       "S. Schreiber and J. M. Fellous and J. H. Whitmer and P. H. E. Tiesinga and T. J. Sejnowski",
+  title =        "A new correlation-based measure of spike timing reliability",
+  journal =      "Neurocomputing",
+  volume =       "52",
+  pages =        "925",
+  year =         "2003",
+}
+
+@Article{S_Schreiber04,
+  author =       "S. Schreiber and J. M. Fellous and P. H. E. Tiesinga and T. J. Sejnowski",
+  title =        "Influence of Ionic Conductances on Spike Timing Reliability
+                  of Cortical Neurons for Suprathreshold Rhythmic Inputs",
+  journal =      "J Neurophysiol",
+  volume =       "91",
+  pages =        "194",
+  year =         "2004",
+}
+
+@Article{Schreiner07,
+  author =       "C. E. Schreiner and J. A. Winer",
+  title =        "Auditory cortex mapmaking: principles, projections, and plasticity.",
+  journal =      "Neuron",
+  volume =       "560",
+  pages =        "356",
+  year =         "2007",
+}
+
+@MastersThesis{Schumacher02,
+  author =       "J. Schumacher",
+  title =        "Charakterisierung von {N}ichtlinearit{\"a}t in gekoppelten {M}odellsystemen
+                  und {Z}eitreihen hirnelektrischer {A}ktivit{\"a}t mit multivariaten
+                  stochastischen {K}ontrollsignalen",
+  school =       "Department of Physics, University of Bonn, Germany",
+  year =         "2002",
+}
+
+@Article{Schuermann04,
+  author =       "M. Sch{\"u}rmann",
+  title =        "Bias analysis in entropy estimation.",
+  journal =      "J. Phys. A: Math. Gen.",
+  volume =       "37",
+  pages =        "295",
+  year =         "2004",
+}
+
+@Book{Schuster89,
+  author =       "H. G. Schuster",
+  title =        "Deterministic chaos: \textsc{A}n introduction.",
+  publisher =    "VCH",
+  address =      "Weinheim",
+  year =         "1989",
+}
+
+@Article{Schwartz06,
+  author =       "O. Schwartz and J. W. Pillow and N. C. Rust and E. P. Simoncelli",
+  title =        "Spike-triggered neural characterization",
+  journal =      "Journal of Vision",
+  volume =       "88",
+  pages =        "484",
+  year =         "2006",
+}
+
+@Article{Segev02,
+  author =       "R. Segev and M. Benveniste and E. Hulata and N. Cohen and
+                  A. Palevski and E. Kapon and Y. Shapira and E. Ben-Jacob",
+  title =        "Long term behavior of lithographically prepared in vitro neuronal networks.",
+  journal =      "Phys Rev Lett",
+  volume =       "88",
+  pages =        "118102",
+  year =         "2002",
+}
+
+@Article{Shabunin02,
+  author =       "A. Shabunin and V. Demidov and V. Astakhov and V. Anishchenko",
+  title =        "Information theoretic approach to quantify complete and phase synchronization of chaos",
+  journal =      "Phys. Rev. E",
+  volume =       "65",
+  pages =        "056215",
+  year =         "2002",
+}
+
+@Article{Shadlen98,
+  author =       "M. N. Shadlen and W. T. Newsome",
+  title =        "The Variable Discharge of Cortical Neurons: Implications for
+                  Connectivity, Computation, and Information Coding",
+  journal =      "J Neurosci",
+  volume =       "18",
+  pages =        "3870",
+  year =         "1998",
+}
+
+@Article{Shannon48,
+  author =       "C. E. Shannon",
+  title =        "A mathematical theory of communication",
+  journal =      "Bell System Technol. J",
+  volume =       "27",
+  pages =        "379",
+  year =         "1948",
+}
+
+@Article{Shlens06,
+  author =       "J. Shlens and G. D. Field and J. L. Gauthier and M. I. Grivich and D. Petrusca and A. Sher and A. M. Litke and E. L. Chichilnisky",
+  title =        "The structure of multi-neuron firing patterns in primate retina",
+  journal =      "J Neurosci",
+  volume =       "26",
+  pages =        "8254",
+  year =         "2006",
+}
+
+@Article{Shlens08,
+  author =       "J. Shlens and F. Rieke and E. L. Chichilnisky",
+  title =        "Synchronized firing in the retina",
+  journal =      "Curr Opin Neurobiol",
+  volume =       "18",
+  pages =        "396",
+  year =         "2008",
+}
+
+@Article{Shlens09,
+  author =       "J. Shlens and G. D. Field and J. L. Gauthier and M. Greschner and A. Sher and A. M. Litke and E. J. Chichilnisky",
+  title =        "The structure of large-scale synchronized firing in primate retina",
+  journal =      "J Neurosci",
+  volume =       "29",
+  pages =        "5022",
+  year =         "2009",
+}
+
+@Article{Siegel82,
+  author =       "A. Siegel and C. L. Grady and A. M. Mirsky",
+  title =        "Changes in ****************",
+  journal =      "Epilepsia",
+  volume =       "23",
+  pages =        "47",
+  year =         "1982",
+}
+
+@Article{Singer09,
+  author =       "W. Singer",
+  title =        "Distributed processing and temporal codes in neuronal networks.",
+  journal =      "Cogn Neurodyn",
+  volume =       "3",
+  pages =        "189",
+  year =         "2009",
+}
+
+@Article{Smirnov03,
+  author =       "D. A. Smirnov and B. P. Bezruchko",
+  title =        "Estimation of interaction strength and direction from short and noisy time series",
+  journal =      "Phys. Rev. E",
+  volume =       "68",
+  pages =        "046209",
+  year =         "2003",
+}
+
+@Article{Smirnov05,
+  author =       "D. A. Smirnov and R. G. Andrzejak",
+  title =        "Detection of weak directional coupling: Phase-dynamics approach versus state-space approach.",
+  journal =      "Phys. Rev. E",
+  volume =       "71",
+  pages =        "036207",
+  year =         "2005",
+}
+
+@Article{Soong89,
+  author =       "A. C. K. Soong and C. I. J. M. Stuart",
+  title =        "Evidence of Chaotic Dynamics Underlying the Human Alpha-Rhythm Electroencephalogram",
+  journal =      "Biol. Cybern.",
+  volume =       "62",
+  pages =        "55",
+  year =         "1989",
+}
+
+@Article{Stacey02,
+  author =       "W. C. Stacey and D. M. Durand",
+  title =        "Noise and Coupling Affect Signal Detection and Bursting in a Simulated Physiological Neural Network",
+  journal =      "Electroencephalogr. Clin. Neurophysiol.",
+  volume =       "88",
+  pages =        "2598",
+  year =         "2002",
+}
+
+@Article{Stam96,
+  author =       "C. J. Stam and T. C. A. M {van Woerkom} and W. S. Pritchard",
+  title =        "Use of Non Linear \textsc{EEG} Measures to Characterize \textsc{EEG}
+                 Changes During Mental Activity",
+  journal =      "Electroencephalogr. Clin. Neurophysiol.",
+  volume =       "99",
+  pages =        "214",
+  year =         "1996",
+}
+
+@Article{Stam97,
+  author =       "C. J. Stam and T. C. A. M {van Woerkom} and R. W. M. Keunen",
+  title =        "Non-linear analysis of the electroencephalogram in Creutzfeldt-Jakob disease",
+  journal =      "Biol. Cybern.",
+  volume =       "77",
+  pages =        "247",
+  year =         "1997",
+}
+
+@Article{Stam99,
+  author =       "C. J. Stam and J. P. M. Pijn and P. Suffczynski and F. H. {Lopes da Silva}",
+  title =        "Dynamics of the human alpha rhythm: \textsc{E}vidence for non-linearity?",
+  journal =      "Clin. Neurophysiol.",
+  volume =       "110",
+  pages =        "1801",
+  year =         "1999",
+}
+
+@Article{Stam02,
+  author =       "C. J. Stam and B. W. {van Dijk}",
+  title =        "Synchronization likelihood: \textsc{A}n unbiased measure of generalized synchronization in multivariate
+  data sets",
+  journal =      "Physica D",
+  volume =       "163",
+  pages =        "236",
+  year =         "2002",
+}
+
+@Article{Stein00,
+  author =       "A. G. Stein and H. G. Eder and D. E. Blum and A. Drachev and R.S. Fisher",
+  title =        "An automated drug delivery system for focal epilepsy",
+  journal =      "Epilepsy Res.",
+  volume =       "39",
+  pages =        "103",
+  year =         "2000",
+}
+
+@Article{Steinmetz00,
+  author =       "P. Steinmetz and A. Roy and P. Fitzgerald and S. Hsiao and K. Johnson and E. Niebur",
+  title =        "Attention modulates synchronized neuronal firing in primate somatosensory cortex",
+  journal =      "Nature",
+  volume =       "404",
+  pages =        "187",
+  year =         "2000",
+}
+
+@Article{Stopfer97,
+  author =       "M. Stopfer and S. Bhagavan and B. H. Smith and G. Laurent",
+  title =        "Impaired odour discrimination on desynchronization of odour-encoding neural assemblies",
+  journal =      "Nature",
+  volume =       "390",
+  pages =        "70",
+  year =         "1997",
+}
+
+@Book{Stuart99,
+  author =       "A. Stuart and J. K. Ord and S. Arnold",
+  title =        "Kendall's advanced theory of statistics. Vol. 2A: Classical inference and the linear model",
+  publisher =    "Hodder Arnold",
+  address =      "London",
+  year =         "1999",
+}
+
+@Article{Stuart05,
+  author =       "L. Stuart and M. Walter and R. Borisyuk",
+  title =        "The correlation grid: analysis of synchronous spiking in multi-dimensional spike train data and
+                  identification of feasible connection architectures",
+  journal =      "BioSystems",
+  volume =       "79",
+  pages =        "223-233",
+  year =         "2005",
+}
+
+@Article{Szucs98,
+  author =       "A. Sz{\"u}cs",
+  title =        "Applications of the spike density function in analysis of neuronal firing patterns.",
+  journal =      "J Neurosci Methods",
+  volume =       "81",
+  pages =        "159",
+  year =         "1998",
+}
+
+@InCollection{Takens80,
+  author =       "F. Takens",
+  editor =       "D. A. Rand and L. S. Young",
+  title =        "Detecting strange attractors in turbulence",
+  booktitle =    "Dynamical Systems and Turbulence",
+  series =       "Lecture Notes in Mathematics",
+  volume =       "898",
+  pages =        "366",
+  publisher =    "Springer-Verlag",
+  address =      "Berlin",
+  year =         "1980",
+}
+
+@Article{Tang98,
+  author =       "D. Y. Tang and R. Dykstra and M. W. Hamilton and N. R. Heckenberg",
+  title =        "Experimental evidence of frequency entrainment between coupled chaotic oscillations.",
+  journal =      "Phys. Rev. E",
+  volume =       "57",
+  number =       "3",
+  pages =        "3649",
+  year =         "1998",
+}
+
+@Article{Tass98,
+  author =       "P. Tass and M. G. Rosenblum and J. Weule and J. Kurths and A. Pikovsky and J. Volkmann and
+                  A. Schnitzler and H. J. Freund",
+  title =        "Detection of n:m phase locking from noisy data: \textsc{A}pplication to magnetoencephalography",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "81",
+  number =       "15",
+  pages =        "3291",
+  year =         "1998",
+}
+
+@InCollection{Tassinari90,
+  author =       "C. A. Tassinari and G. Rubboli and R. Michelucci",
+  editor =       "M. Dam and L. Gram",
+  title =        "Reflex Epilepsy",
+  booktitle =    "Comprehensive Epileptology",
+  publisher =    "Raven Press",
+  address =      "New York",
+  pages =        "233",
+  year =         "1990",
+}
+
+@Article{Tallon-Baudry96,
+  author =       "C. Tallon-Baudry and O. Bertrand and C. Delpuech and J. Pernier",
+  title =        "Stimulus Specificity of Phase-Locked and Non-Phase-Locked 40 Hz Visual Responses in Human",
+  journal =      "J. Neurosci.",
+  volume =       "16",
+  pages =        "4240",
+  year =         "1996",
+}
+
+@Article{Teich97,
+  author =       "M. C. Teich and C. Heneghan and S. B. Lowen and T. Ozaki and E. Kaplan",
+  title =        "Fractal character of the neural spike train in the visual system of the cat",
+  journal =      "J. Opt. Soc. Am. A",
+  volume =       "14",
+  pages =        "529",
+  year =         "1997",
+}
+
+@Article{Theiler86,
+  author =       "J. Theiler",
+  title =        "Spurious dimensions from correlation algorithms applied to limited time-series data",
+  journal =      "Phys. Rev. A",
+  volume =       "34",
+  pages =        "2427",
+  year =         "1986",
+}
+
+@Article{Theiler92c,
+  author =       "J. Theiler and S. Eubank and A. Longtin and B. Galdrikian and J. D. Farmer",
+  title =        "Testing for nonlinearity in time series: \textsc{T}he method of surrogate data",
+  journal =      "Physica D",
+  volume =       "58",
+  pages =        "77",
+  year =         "1992",
+}
+
+@Article{Theiler95,
+  author =       "J. Theiler",
+  title =        "On the evidence for low-dimensional chaos in an epileptic electroencephalogram",
+  journal =      "Phys. Lett. A",
+  volume =       "196",
+  pages =        "335",
+  year =         "1995",
+}
+
+@Article{Theiler96,
+  author =       "J. Theiler and P. E. Rapp",
+  title =        "Re-examination of the evidence for low-dimensional, nonlinear structure in the human
+                  electroencephalogram",
+  journal =      "Electroencephalogr. Clin. Neurophysiol.",
+  volume =       "98",
+  pages =        "213",
+  year =         "1996",
+}
+
+@Article{Theunissen95,
+  author =       "F. Theunissen and J. P. Miller",
+  title =        "Temporal encoding in nervous systems: A rigorous definition",
+  journal =      "J Comput Neurosci",
+  volume =       "2",
+  pages =        "149",
+  year =         "1995",
+}
+
+@Article{Thibeault14,
+  author =       "C. M. Thibeault and M. J. O'Brien and N. Srinivasa",
+  title =        "Analyzing large-scale spiking neural data with HRLAnalysis?",
+  journal =      "Front. Neuroinform.",
+  volume =       "8",
+  pages =        "17",
+  year =         "2014",
+}
+
+@Article{Tiesinga00,
+  author =       "P. H. E. Tiesinga and J. V. José and T. J. Sejnowski",
+  title =        "Comparison of current-driven and conductance-driven neocortical model neurons with Hodgkin-Huxley voltage-gated channels",
+  journal =      "Phys. Rev. E",
+  volume =       "62",
+  pages =        "8413",
+  year =         "2000",
+}
+
+@Article{Tiesinga02,
+  author =       "P. H. E. Tiesinga",
+  title =        "Precision and reliability of periodically and quasiperiodically
+                  driven integrate-and-fire neurons",
+  journal =      "Phys. Rev. E",
+  volume =       "65",
+  pages =        "041913",
+  year =         "2002",
+}
+
+@Article{Tiesinga02b,
+  author =       "P. H. E. Tiesinga and J. M. Fellous and T. J. Sejnowski",
+  title =        "Attractor reliability reveals deterministic structure in neuronal spike trains",
+  journal =      "Neural Comput.",
+  volume =       "14",
+  pages =        "1629",
+  year =         "2002",
+}
+
+@Article{Tiesinga04,
+  author =       "P. H. E. Tiesinga",
+  title =        "Chaos-induced modulation of reliability boosts output firing rate
+                  in downstream cortical areas",
+  journal =      "Phys. Rev. E",
+  volume =       "69",
+  pages =        "031912",
+  year =         "2004",
+}
+
+@Article{Tiesinga04b,
+  author =       "P. H. E. Tiesinga and T. J. Sejnowski",
+  title =        "Rapid Temporal Modulation of Synchrony by Competition in Cortical Interneuron Networks",
+  journal =      "Neural Comput.",
+  volume =       "16",
+  pages =        "251",
+  year =         "2004",
+}
+
+@Article{Tiesinga04c,
+  author =       "P. H. E. Tiesinga and J. M. Fellous and E. Salinas and J. V. José and T. J. Sejnowski",
+  title =        "Inhibitory synchrony as a mechanism for attentional gain modulation",
+  journal =      "J Physiology, Paris",
+  volume =       "98",
+  pages =        "296",
+  year =         "2004",
+}
+
+@Article{Tiesinga04d,
+  author =       "P. H. E. Tiesinga and J. M. Fellous and E. Salinas and J. V. José and T. J. Sejnowski",
+  title =        "Synchronization as a mechanism for attentional gain modulation",
+  journal =      "Neurocomputing",
+  volume =       "58-60",
+  pages =        "641",
+  year =         "2004",
+}
+
+@Article{Tiesinga08,
+  author =       "P. H. E. Tiesinga and J. M. Fellous and T. J. Sejnowski",
+  title =        "Regulation of spike timing in visual cortical circuits",
+  journal =      "Nature Reviews Neuroscience ",
+  volume =       "9",
+  pages =        "97",
+  year =         "2008",
+}
+
+@Article{Timmer98b,
+  author =       "J. Timmer",
+  title =        "Power of surrogate data testing with respect to nonstationarity",
+  journal =      "Phys. Rev. E",
+  volume =       "58",
+  number =       "4",
+  pages =        "5153",
+  year =         "1998",
+}
+
+@Article{Toral03,
+  author =       "R. Toral and C. R. Mirasso and J. D. Gunton",
+  title =        "System size coherence resonance in coupled FitzHugh-Nagumo models",
+  journal =      "Europhys. Lett.",
+  volume =       "61",
+  number =       "2",
+  pages =        "162",
+  year =         "2003",
+}
+
+@Article{Torcini07,
+  author =       "A. Torcini and S. Luccioli and T. Kreuz",
+  title =        "Coherent response of the Hodgkin-Huxley neuron in the high-input regime",
+  journal =      "Neurocomputing",
+  volume =       "70",
+  pages =        "1943",
+  year =         "2007"
+}
+
+@Article{Traub82,
+  author =       "R. D. Traub and R. K. Wong",
+  title =        "Cellular mechanism of neuronal synchronization in epilepsy.",
+  journal =      "Science",
+  volume =       "216",
+  pages =        "745",
+  year =         "1982",
+}
+
+@Article{Truccolo11,
+  author =       "W. Truccolo and J. A. Donoghue and L. R. Hochberg and E. N. Eskandar and J. R. Madsen and W. S. Anderson and E. N. Brown and E. Halgren and S. S. Cash",
+  title =        "Single-neuron dynamics in human focal epilepsy",
+  journal =      "Nature Neurosci",
+  volume =       "14",
+  pages =        "635",
+  year =         "2011",
+}
+
+@Book{Tuckwell88,
+  author =       "H.C Tuckwell",
+  title =        "Introduction to theoretical neurobiology",
+  publisher =    "Cambridge University Press",
+  address =      "New York",
+  volume =       "2",
+  year =         "1988",
+}
+
+@Article{Ushakov05,
+  author =       "O. V. Ushakov and H.-J. W{\"u}nsche and F. Henneberger and I. A. Khovanov and L. {Schimansky-Geier} and M. A. Zaks",
+  title =        "Coherence resonance near a Hopf bifurcation",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "95",
+  pages =        "123903",
+  year =         "2005",
+}
+
+@Article{Usrey99,
+  author =       "W. M. Usrey and R. C. Reid",
+  title =        "Synchronous activity in the visual system.",
+  journal =      "Annu. Rev. Physiol.",
+  volume =       "61",
+  pages =        "435",
+  year =         "1999",
+}
+
+@Article{Uzzell04,
+  author =       "V. J. Uzzell and E. J. Chichilnisky",
+  title =        "Precision of spike trains in primate retinal ganglion cells",
+  journal =      "J Neurophysiol",
+  volume =       "92",
+  pages =        "780",
+  year =         "2004",
+}
+
+@Article{VanDerPol27,
+  author =       "B. {van der Pol}",
+  title =        "Forced oscillations in a circuit with non-linear resistance.",
+  journal =      "Phil. Mag.",
+  volume =       "3",
+  pages =        "64",
+  year =         "1927",
+}
+
+@Article{VanDerPol28,
+  author =       "B. {van der Pol} and J. {van der Mark}",
+  title =        "The heartbeat considered as a relaxation oscillation, and an electrical model of the heart",
+  journal =      "Phil. Mag.",
+  volume =       "6",
+  pages =        "763",
+  year =         "1928",
+}
+
+@Article{VanRossum01,
+  author =       "M. C. W. {van Rossum}",
+  title =        "A novel spike distance",
+  journal =      "Neural Computation",
+  volume =       "13",
+  pages =        "751",
+  year =         "2001",
+}
+
+@Book{Vapnik82,
+  author =       "V. N. Vapnik",
+  title =        "Estimation of dependences based on empirical data",
+  publisher =    "Springer",
+  address =      "New York",
+  year =         "1982",
+}
+
+@Article{Varela95,
+  author =       "F. J. Varela",
+  title =        "Resonant cell assemblies: {A} new approach to cognitive functions and neuronal synchrony",
+  journal =      "Biol. Res.",
+  volume =       "28",
+  pages =        "81",
+  year =         "1995",
+}
+
+@Article{Varela01,
+  author =       "F. J. Varela and J. P. Lachaux and E. Rodriguez and J. Martinerie",
+  title =        "The brain web: {P}hase synchronization and large-scale integration",
+  journal =      "Nature Rev. Neurosci.",
+  volume =       "2",
+  pages =        "229",
+  year =         "2001",
+}
+
+@Article{Velasco00,
+  author =       "M. Velasco and F. Velasco and A. L. Velasco and B. Boleaga and F. Jimenez and F. Brito and I. Marquez",
+  title =        "Subacute electrical stimulation of the hippocampus blocks intractable temporal lobe seizures and
+                  paroxysmal \textsc{EEG} activities",
+  journal =      "Epilepsia",
+  volume =       "41",
+  pages =        "158",
+  year =         "2000",
+}
+
+@Article{Victor96,
+  author =       "J. D. Victor and K. P. Purpura",
+  title =        "Nature and precision of Temporal Coding in Visual Cortex: A Metric-Space Analysis",
+  journal =      "J Neurophysiol",
+  volume =       "76",
+  pages =        "1310",
+  year =         "1996",
+}
+
+@Article{Victor97,
+  author =       "J. D. Victor and K. P. Purpura",
+  title =        "Metric-space analysis of spike trains: theory, algorithms and application",
+  journal =      "Network: Comput. Neural Syst",
+  volume =       "8",
+  pages =        "127",
+  year =         "1997",
+}
+
+@Article{Victor05,
+  author =       "J. D. Victor",
+  title =        "Spike train metrics",
+  journal =      "Current Opinion in Neurobiology",
+  volume =       "15",
+  pages =        "585",
+  year =         "2005",
+}
+
+@Article{Victor07,
+  author =       "J. D. Victor and K. P. Purpura and D. Gardner",
+  title =        "Dynamic programming algorithms for comparing multineuronal spike trains via cost-based metrics
+                  and alignments",
+  journal =      "J Neurosci Methods",
+  volume =       "161",
+  pages =        "351",
+  year =         "2007",
+}
+
+@Book{Vidal93,
+  editor =       "R. V. V. Vidal",
+  title =        "Applied Simulated Annealing",
+  publisher =    "Springer Verlag",
+  address =      "Berlin",
+  year =         "1993",
+  pages =        "396",
+}
+
+@Article{Viglione75,
+  author =       "S. S. Viglione and G. O. Walsh",
+  title =        "Epileptic seizure prediction",
+  journal =      "Electroencephalogr. Clin. Neurophysiol.",
+  volume =       "39",
+  pages =        "435",
+  year =         "1975",
+}
+
+@Article{Voronoi1907,
+  author =       "G. Voronoi",
+  title =        "Nouvelles applications des parame`tres continus a` la the´orie des formes quadratiques.",
+  journal =      "J Reine Angew Math",
+  volume =       "133",
+  pages =        "97",
+  year =         "1907",
+}
+
+@Article{Waddell07,
+  author =       "J. Waddell and R. Dzakpasu and V. Booth and B. Riley and J. Reasor and G. Poe and M. Zochowski",
+  title =        "Causal entropies - A measure for determining changes in the temporal organization of neural systems",
+  journal =      "J Neurosci Methods",
+  volume =       "162",
+  pages =        "320-332",
+  year =         "2007",
+}
+
+@Article{Wang96,
+  author =       "X. J. Wang and G. Buzsáki",
+  title =        "Gamma oscillations by Synaptic Inhibition in a Hippocampal Interneuronal Network Model",
+  journal =      "J Neurosci",
+  volume =       "16",
+  pages =        "6402",
+  year =         "1996",
+}
+
+@Article{Wang07,
+  author =       "L. Wang and R. Narayan and G. Gra{\~{n}}a and M. Shamir and K. Sen",
+  title =        "Cortical discrimination of complex natural stimuli: Can single neurons match behavior?",
+  journal =      "J Neurosci",
+  volume =       "27",
+  pages =        "582--589",
+  year =         "2007",
+}
+
+@Article{Wassle83,
+  author =       "H. Wassle and L. Peichl and B. B. Boycott",
+  title =        "Mosaics and territories of cat retinal ganglion cells.",
+  journal =      "Prog Brain Res",
+  volume =       "58",
+  pages =        "183",
+  year =         "1983",
+}
+
+@Article{Weber98,
+  author =       "B. Weber and K. Lehnertz and C. E. Elger and H. G. Wieser",
+  title =        "Neuronal complexity loss in intracranial \textsc{EEG} recorded with foram ovale electrodes predicts side
+                  of primary epileptogenic area in temporal lobe epilepsy: \textsc{A} replication study.",
+  journal =      "Epilepsia",
+  volume =       "39",
+  pages =        "922",
+  year =         "1998",
+}
+
+@MastersThesis{Wegner98,
+  author =       "J. Wegner",
+  title =        "Zeitreihenanalyse synthetischer \textsc{D}aten sowie hirnelektrischer \textsc{A}ktivit{\"a}t
+                  mit \textsc{H}ilfe des gr{\"o}{\ss }ten \textsc{L}yapunov-\textsc{E}xponenten",
+  school =       "Department of Physics, University of Bonn, Germany",
+  year =         "1998",
+}
+
+@Book{Weigend93a,
+  author =       "A. S. Weigend and N. A. Gershenfeld",
+  title =        "Time series prediction: \textsc{F}orecasting the future and understanding the past",
+  series =       "Santa Fe Institute Studies in the Science of Complexity, Proc.",
+  volume =       "XV",
+  publisher =    "Addison-Wesley",
+  address =      "Reading",
+  year =         "1993",
+}
+
+@Article{Whitney36,
+  author =       "H. Whitney",
+  title =        "Differentiable manifolds",
+  journal =      "Ann. Math.",
+  volume =       "37",
+  pages =        "645",
+  year =         "1936",
+}
+
+@Article{Widman98,
+  author =       "G. Widman and K. Lehnertz and P. Jansen and W. Meyer and W. Burr and C. E. Elger",
+  title =        "A fast general purpose algorithm for the computation of auto- and cross-correlation integrals
+                  from single channel data",
+  journal =      "Physica D",
+  volume =       "121",
+  pages =        "65",
+  year =         "1998",
+}
+
+@Article{Widman00,
+  author =       "G. Widman and T. Schreiber and B. Rehberg and A. Hoeft and C. E. Elger",
+  title =        "Quantification of depth of anesthesia by nonlinear time series analysis of brain electrical activity",
+  journal =      "Phys. Rev. E",
+  volume =       "62",
+  pages =        "4898",
+  year =         "2000",
+}
+
+@Article{Wieser89,
+  author =       "H. G. Wieser",
+  title =        "Preictal \textsc{EEG} findings",
+  journal =      "Epilepsia",
+  volume =       "30",
+  pages =        "669",
+  year =         "1989",
+}
+
+@Article{Wilcoxon45,
+  author =       "F. Wilcoxon",
+  title =        "Individual comparisons by ranking methods",
+  journal =      "Biometrics",
+  volume =       "1",
+  pages =        "80",
+  year =         "1945",
+}
+
+@Article{Wildie12,
+  author =       "M. Wildie and M. Shanahan",
+  title =        "Establishing communication between neuronal populations through competitive entrainment",
+  journal =      "Front Comp Neurosci",
+  volume =       "5",
+  pages =        "62",
+  year =         "2012",
+}
+
+@Article{Wilson06,
+  author =       "R. I. Wilson and Z. F. Mainen",
+  title =        "Early events in olfactory processing",
+  journal =      "Annu Rev Neurosci",
+  volume =       "29",
+  pages =        "163",
+  year =         "2006",
+}
+
+@Article{Winterhalder03,
+  author =       "M. Winterhalder and T. Maiwald and H. U. Voss and R. Aschenbrenner-Scheibe and J. Timmer and
+                  A. Schulze-Bonhage",
+  title =        "The seizure prediction characteristic: A general framework to assess and compare seizure
+                  prediction methods",
+  journal =      "Epilepsy and Behavior",
+  volume =       "3",
+  pages =        "318",
+  year =         "2003",
+}
+
+@Book{Wolf94,
+  author =       "P. Wolf",
+  title =        "Epileptic seizures and syndromes",
+  publisher =    "John Libbey",
+  address =      "London",
+  year =         "1994",
+}
+
+@Article{Womelsdorf07,
+  author =       "T. Womelsdorf and P. Fries",
+  title =        "The role of neuronal synchronization in selective attention.",
+  journal =      "Curr Op Neurobiol",
+  volume =       "17",
+  pages =        "154-160",
+  year =         "2007",
+}
+
+@InCollection{Wyler92,
+  author =       "A. R. Wyler and A. A. Ward",
+  editor =       "J. S. Lockard and A. A. Ward",
+  title =        "Epileptic neurons",
+  booktitle =    "Epilepsy, A Window to Brain Mechanisms",
+  publisher =    "Raven Press",
+  address =      "New York",
+  year =         "1992",
+}
+
+@Article{Yaari02,
+  author =       "Y. Yaari and H. Beck",
+  title =        "Epileptic neurons in temporal lobe epilepsy",
+  journal =      "Brain Pathol.",
+  volume =       "12",
+  pages =        "234",
+  year =         "2002",
+}
+
+@Article{Yamada83,
+  author =       "T. Yamada and H. Fujisaka",
+  title =        "Stability theory of synchronized motion in coupled oscillator systems II. The mapping approach.",
+  journal =      "Prog. Theor. Phys.",
+  volume =       "70",
+  pages =        "1240",
+  year =         "1983",
+}
+
+@Article{Yamada85,
+  author =       "T. Yamada and H. Fujisaka",
+  title =        "**********************************",
+  journal =      "Prog. Theor. Phys.",
+  volume =       "72",
+  pages =        "885",
+  year =         "1985",
+}
+
+@Article{Yamada86,
+  author =       "T. Yamada and H. Fujisaka",
+  title =        "Intermittency caused by chaotic modulation: 1. Analysis with a multiplicative noise model",
+  journal =      "Prog. Theor. Phys.",
+  volume =       "76",
+  pages =        "582",
+  year =         "1986",
+}
+
+@Article{Zaks99,
+  author =       "M. Zaks and E. Park and M. Rosenblum and J. Kurths",
+  title =        "Alternating locking ratios in imperfect phase synchronization",
+  journal =      "Phys. Rev. Lett.",
+  volume =       "82",
+  pages =        "4228",
+  year =         "1999",
+}
+
+@Article{Zheng00,
+  author =       "Z. Zheng and G. Hu",
+  title =        "Generalized synchronization versus phase synchronization",
+  journal =      "Phys. Rev. E",
+  volume =       "62",
+  pages =        "7882",
+  year =         "2000",
+}
+
+@Article{Zheng02,
+  author =       "Z. Zheng and X. Wang and M. C. Cross",
+  title =        "Transitions from partial to complete generalized synchronizations in bidirectionally coupled chaotic
+                 oscillators",
+  journal =      "Phys. Rev. E",
+  volume =       "65",
+  pages =        "56211",
+  year =         "2002",
+}
+
+@Article{Zochowski04,
+  author =       "M. Zochowski and R. Dzakpasu",
+  title =        "Condtional entropies; phase synchronization and changes in the directionality of information flow in neural systems.",
+  journal =      "J. Phys. A",
+  volume =       "37",
+  pages =        "3823",
+  year =         "2004",
+}
+
+@Article{Zohary94,
+  author =       "E. Zohary and M. N. Shadlen and W. T. Newsome",
+  title =        "Correlated neuronal discharge rate and its implifications for psychophysical performance",
+  journal =      "Nature",
+  volume =       "370",
+  pages =        "140",
+  year =         "1994",
+}
+
+@Book{Zschocke02,
+  author =       "S. Zschocke",
+  title =        "Klinische Elektroenzephalographie",
+  publisher =    "Springer",
+  address =      "Berlin",
+  year =         "2002",
+}
