@@ -4,8 +4,8 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{bm}
-%\usepackage{hyperref}
 \usepackage{natbib}
+\usepackage{hyperref}
 
 % 
 %
@@ -146,7 +146,7 @@ and analogously $S_2 (t)$ is obtained for the second spike train. Averaging over
      S'' (t) = \frac{S_1 (t) + S_2 (t)}{2 \langle x_{\mathrm {ISI}}^{(n)} \rangle_n}.
 \end{equation}
 
-This quantity weights the spike time differences for each spike train according to the relative distance of the corner spike from the time instant under investigation. This way relative distances within each spike train are taken care of, while relative distances between spike trains are not. In order to get these ratios straight and to account for differences in firing rate, in a last step the two contributions from the two spike trains are locally weighted by their instantaneous interspike intervals. This leads to the improved definition of the dissimilarity profile
+This quantity weights the spike time differences for each spike train according to the relative distance of the corner spike from the time instant under investigation. This way relative distances within each spike train are taken care of, while relative distances between spike trains are not. In order to get these ratios straight and to account for differences in firing rate, in a last step the two contributions from the two spike trains are locally weighted by their instantaneous interspike intervals. This leads to the definition of the dissimilarity profile
 %
 \begin{equation} \label{eq:Bi-Spike-Diss-Improved}
      S (t) = \frac{S_1 (t) x_{\mathrm {ISI}}^{(2)} + S_2 (t) x_{\mathrm {ISI}}^{(1)}}{2 \langle x_{\mathrm {ISI}}^{(n)} \rangle_n^2}.
@@ -158,18 +158,13 @@ The SPIKE-distance is defined as the temporal average of this dissimilarity prof
     D_S = \frac{1}{T} \int_{t=0}^T dt S (t).
 \end{equation}
 %
-The dissimilarity profile $S (t)$ and the SPIKE-distance $D_S$ as its average are bounded in the interval $[0, 1]$. The distance value $D_S = 0$ is obtained for identical spike trains only.
+The dissimilarity profile $S (t)$ and the SPIKE-distance $D_S$ as its average are bounded in the interval $[0, 1]$. The distance value $D_S = 0$ is obtained for identical spike trains only. Since the dissimilarity profile is obtained from a linear interpolation of three piecewise constant quantities it is piecewise linear.
 
 There exists a straightforward extension to the case of more than two spike trains (number of spike trains $N > 2$), the averaged bivariate distance. This average over all pairs of neurons commutes with the average over time, so it is possible to achieve the same kind of time-resolved visualization as in the bivariate case by first calculating the instantaneous average, e.g., $S^{\mathrm {a}} (t)$ over all pairwise instantaneous values $S^{mn} (t)$,
 %
 \begin{equation} \label{eq:Bivariate-Average}
     S^{\mathrm {a}} (t) = \frac{1}{N(N-1)/2}\sum_{n=1}^{N-1} \sum_{m=n+1}^N S^{mn} (t)
 \end{equation}
-
-
-
-
-xxx We define the ISI as going from right after the last spike to the exact time of the next spike. So the previous spike is not part of the ISI while the following is. So when you are on a spike this is the following spike and the one before is the previous spike. xxx not needed anymore xxx
 
 
 \subsubsection{\label{sss:Edge-effect} Edge effect}
@@ -224,8 +219,7 @@ While the dissimilarity profile of the SPIKE-distance is extracted from differen
                   \end{cases}
 \end{equation}
 %
-This ISI-ratio equals $0$ for identical ISI in the two spike trains, and approaches $-1$ and $1$, respectively, if the first or the second spike train is much faster than the other. For the ISI-distance the temporal averaging analogous to Eq. \ref{eq:Temporal-Average} is performed on the absolute value of the ISI-ratio, thus both kinds of deviations are treated equally. Since the ISI-distance relies on the instantaneous ISI-values and thus requires knowledge about the following spikes, no causal realtime extension is possible.
-
+This ISI-ratio equals $0$ for identical ISI in the two spike trains, and approaches $-1$ and $1$, respectively, if the first or the second spike train is much faster than the other. Since the ISI-values only change at the times of spikes, the dissimilarity profile is piecewise constant. For the ISI-distance the temporal averaging analogous to Eq. \ref{eq:Temporal-Average} is performed on the absolute value of the ISI-ratio, thus both kinds of deviations are treated equally. Since the ISI-distance relies on the instantaneous ISI-values and thus requires knowledge about the following spikes, no causal realtime extension is possible.
 
 \subsection{\label{ss:Representations} Representations}
 
@@ -271,10 +265,6 @@ Please have a look at the program 'Spiky\_loop\_surro.m'. This is similar to 'SP
 \section{\label{s:SPIKY} SPIKY}
 
 SPIKY is a graphical user interface (GUI) for monitoring synchrony between artificially simulated or experimentally recorded neuronal spike trains. It is based on two recently proposed methods to measure spike train (dis)similarity, the ISI- and the SPIKE-distance. SPIKY is a free software package programmed by Thomas Kreuz and Nebojsa Bozanic. All source codes are written in Matlab (MathWorks Inc, MA) with the most time-consuming loops coded in MEX-files. It is not stand-alone but requires Matlab to run.
-
-BSD licence:
-Copyright (c) 2013, Thomas Kreuz, Nebojsa Bozanic
-All rights reserved.
 
 
 
@@ -348,26 +338,27 @@ For this purpose you can use the program SPIKY\_loop which is complementary to t
 
 \subsection{\label{sss:Sampling} Sampling}
 
+Earlier versions of the codes for calculating the ISI- and the SPIKE-distance relied on sampled dissimilarity profiles. Typically the precision was set to the sampling interval of the neuronal recording. Since the dissimilarity profile has to be calculated and stored for each pair of spike trains, this resulted, for each measure, in a matrix of order 'number of sampled time instants s' × 'squared number of spike trains' (i.e., $\# (t_s) N^2$). For small sampling intervals and a large number of recorded spike trains this lead to memory problems. In SPIKY we use an optimized and more memory-efficient way of storing the data where we make use of the fact that the ISI-distance is piecewise constant and the SPIKE-distance is piecewise linear. For each interval in the pooled spike train (and each pair of spike trains) we have to store only one value for the ISI-distance and two values for the SPIKE-distance, one at the beginning and one at the end of the interval. 
+
 \subsection{\label{sss:MEX-files} MEX-files}
 
 
 %
 \begin{figure}
     \includegraphics[width=85mm]{Fig3-SPIKY-Flowchart.eps}
-    \caption{\abb\label{fig:Fig3-SPIKY-Flowchart} Annotated screenshot from a movie.   A. Artificially generated spike trains.   B. Dissimilarity matrices obtained by averaging over two separate time intervals for both the regular and the real-time SPIKE-distance as well as their averages over subgroups of spike trains (denoted by $<•>_G$).   C. Corresponding dendrograms.}
+    \caption{\abb\label{fig:Fig3-SPIKY-Flowchart} SPIKY-Flowchart}
 \end{figure}
 
 XXXXX Rewrite and extend, add part on MEX-files XXXXX
 
 The improved dissimilarity profile $S (t)$ of the SPIKE-distance is piecewise linear (with each linear interval running from one spike of the pooled spike train to the next) rather than piecewise constant as is the case for the ISI-distance.
-Therefore, when the localized visualization is desired, a new value has to be calculated for each sampling point and not just once per each interval in the pooled spike train. In cases where the distance value itself is sufficient, the short computation time can be even further decreased by representing each interval by the value of its center and weighting it by its length. This is not only faster, but it actually gives the exact result, whereas the time-resolved calculation is a very good approximation only for sufficiently small sampling intervals dt (imagine the example of a rectangular function, at some point any sampled representation has to cut the right angle). The dissimilarity profiles $S_r(t)$ and $S_f (t)$ of the real-time and the future SPIKE-distances are hyperbolic and not linear but here also the exact result can be obtained by piecewise integration over all intervals of the pooled spike train.
+Therefore, when the localized visualization is desired, a new value has to be calculated for each sampling point and not just once per each interval in the pooled spike train. In cases where the distance value itself is sufficient, the short computation time can be even further decreased by representing each interval by the value of its center and weighting it by its length. This is not only faster, but it actually gives the exact result, whereas the time-resolved calculation is a very good approximation only for sufficiently small sampling intervals $dt$ (imagine the example of a rectangular function, at some point any sampled representation has to cut the right angle). The dissimilarity profiles $S_r(t)$ and $S_f (t)$ of the real-time and the future SPIKE-distances are hyperbolic and not linear but here also the exact result can be obtained by piecewise integration over all intervals of the pooled spike train.
 
 The calculation of the SPIKE-distance consists of three steps: In a precalculation step, for each spike the distance to the nearest spike in all the other spike trains is calculated. Successively, for each time instant and each pair of spike trains, the distances of the four corner spikes are first locally weighted and then normalized. These latter steps involve
 matrices of the order 'number of time instants' × 'number of spike train pairs', which for very long datasets with many spike trains can lead to memory problems. The solution to these problems is to make the calculation sequential, i.e., to cut the recording interval into smaller segments, and to perform the averaging over all pairs of spike trains for
 each segment separately (no additional auxiliary spikes are needed except for very huge datasets for which even the calculation of the first matrix is too memory-demanding). In the end the dissimilarity profiles for the different segments (already averaged over pairs of spike trains) are concatenated, and its temporal average yields the distance value for the whole recording interval.
 
-The computational load scales with the number of spike trains $N$ as $N^2$. More information on the implementation as well as the Matlab source code for both the ISI- and the SPIKE-distance (including its real-time variant) can be found at www.fi.isc.cnr.it/users/thomas.kreuz/sourcecode.html.
-
+The computational load scales with the number of spike trains $N$ as $N^2$. 
 
 
 
@@ -383,19 +374,17 @@ XXXXXXXXXX
 
 Python-Implementation of SPIKE-distance courtesy of Jeremy Fix:
 
-http://jeremy.fix.free.fr/Softwares/spike.html
+\url{http://jeremy.fix.free.fr/Softwares/spike.html}
 
 Python-Implementation of the pairwise ISI-distance courtesy of Michael Chary:
 
-https://pypi.python.org/pypi/ISIpy/1.0.1
+\url{https://pypi.python.org/pypi/ISIpy/1.0.1}
 
 R{\v a}zvan Florian:
 
-https://github.com/modulus-metric/spike-train-metrics
+\url{https://github.com/modulus-metric/spike-train-metrics}
 
 \citep{Rusu14}
-
-The Matlab source code for calculating and visualizing the SPIKE-distance can be found under http://www.fi.isc. cnr.it/users/thomas.kreuz/sourcecode.html.
 
 
 HRLAnalysis$^{TM}$ \citep{Thibeault14}
@@ -403,7 +392,7 @@ HRLAnalysis$^{TM}$ \citep{Thibeault14}
 
 \subsection{\label{ss:Access} Access to SPIKY}
 
-SPIKY is distributed under a BSD licence (Copyright (c) 2014, Thomas Kreuz, Nebojsa Bozanic. All rights reserved.). A zip-package containing all the necessary files can be downloaded for free on \url{http://www.fi.isc.cnr.it/users/thomas.kreuz/Source-Code/SPIKY.html}. This package also contains a folder with lots of documentation (such as a FAQ-file). Further information and some demonstrations (both images and movies) can be found on the download page and on the SPIKY Facebook-page (\url{https://www.facebook.com/SPIKYgui}). Both of these pages will be used to announce updates and distribute the latest information about new features. The Facebook-page also provides the user with an opportunity to provide feedback and ask questions. Finally, the movies can also be viewed on the SPIKY Youtube-channel (\url{https://www.youtube.com/channel/UCgSz0YQ5lWdVF0_Z1FNN0Bw}).
+SPIKY is distributed under a BSD licence (Copyright (c) 2014, Thomas Kreuz, Nebojsa Bozanic. All rights reserved.). A zip-package containing all the necessary files can be accessed for free on the \href{http://www.fi.isc.cnr.it/users/thomas.kreuz/Source-Code/SPIKY.html}{download page} (\url{http://www.fi.isc.cnr.it/users/thomas.kreuz/Source-Code/SPIKY.html}). This package also contains a folder with lots of documentation (such as a FAQ-file). Further information and some demonstrations (both images and movies) can be found on the download page and on the \href{https://www.facebook.com/SPIKYgui}{SPIKY Facebook-page} (\url{https://www.facebook.com/SPIKYgui}). Both of these pages will be used to announce updates and distribute the latest information about new features. The Facebook-page also provides the user with an opportunity to provide feedback and ask questions. Finally, the movies can also be viewed on the \href{https://www.youtube.com/channel/UCgSz0YQ5lWdVF0_Z1FNN0Bw}{SPIKY Youtube-channel} (\url{https://www.youtube.com/channel/UCgSz0YQ5lWdVF0_Z1FNN0Bw}).
 
 
 
@@ -434,9 +423,9 @@ We also thank Thomas Alderson, Black Square, Mayte Bonilla Quintana, Hamid Chark
 \end{thanks}
 
 
-\bibliography{Kreuz_Bibliography}{8}
+\bibliography{Kreuz_Bibliography}
 
 %\bibliographystyle{plainnat}
-\bibliographystyle{elsart-harv}
+%\bibliographystyle{elsart-harv}
 
 \end{document}
