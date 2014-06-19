@@ -76,7 +76,7 @@
 %
 \section{\label{s:Intro} Introduction}
 
-A wide variety of approaches to quantify the dissimilarity, or distance, between two spike trains has been suggested. Among these is the metric introduced in \citet{Victor96}, which evaluates the cost needed to transform one spike train into the other, using only certain elementary steps. Another metric proposed in \citet{VanRossum01}, measures the Euclidean distance between the two spike trains after convolution of the spikes with an exponential function. Both methods involve one parameter that sets the time scale. In contrast, two more recent bivariate approaches, the ISI- and the SPIKE-distance are time scale independent and self-adaptive \citep{Kreuz07c, Kreuz13}. These two measures are complementary: The ISI-distance relies on the relative length of simultaneous interspike intervals and is thus well-designed to quantify similarities in the neurons’ firing-rate profiles \citep{Kreuz07c, Kreuz09}. The SPIKE-distance is based on differences between the spike times of the two spike trains and is therefore ideally suited to track synchrony that is mediated by spike timing \citep{Kreuz11, Kreuz13}.
+A wide variety of approaches to quantify the dissimilarity, or distance, between two spike trains has been suggested. Among these is the metric introduced in \citet{Victor96}, which evaluates the cost needed to transform one spike train into the other, using only certain elementary steps. Another metric proposed in \citet{VanRossum01}, measures the Euclidean distance between the two spike trains after convolution of the spikes with an exponential function. Both methods involve one parameter that sets the time scale. In contrast, two more recent bivariate approaches, the ISI- and the SPIKE-distance are time scale independent and self-adaptive \citep{Kreuz07c, Kreuz13}. These two measures are complementary: The ISI-distance relies on the relative length of simultaneous interspike intervals and is thus well-designed to quantify similarities in the neurons' firing-rate profiles \citep{Kreuz07c, Kreuz09}. The SPIKE-distance is based on differences between the spike times of the two spike trains and is therefore ideally suited to track synchrony that is mediated by spike timing \citep{Kreuz11, Kreuz13}.
 
 XXXXX Computational aspects XXXXX
 
@@ -269,14 +269,8 @@ So far it includes four different types of spike train surrogates. They differ i
 
 % Daniel's Email 13.07.2011:
 %
-% Regarding the use of Poisson processes to have a benchmark it will have different implications
-% depending on the structure of your data. If the rate is almost constant then comparing to processes
-% with the same estimated average rate is the best option. If the rate is time-dependent you may want
-% to compare with processes which are Poisson but mimic the same time-dependent profile of the rate.
-% These are just alternatives that give you complementary information on the structure of the
-% reliability.
-%
-% Surrogate data with the same time dependent rate can be obtained by randomly reassigning each spike % to any of the spike trains.
+% Regarding the use of Poisson processes to have a benchmark it will have different implications depending on the structure of your data. If the rate is almost constant then comparing to processes with the same estimated average rate is the best option. If the rate is time-dependent you may want to compare with processes which are Poisson but mimic the same time-dependent profile of the rate. These are just alternatives that give you complementary information on the structure of the reliability.
+% Surrogate data with the same time dependent rate can be obtained by randomly reassigning each spike to any of the spike trains.
 
 
 \section{\label{s:SPIKY} SPIKY}
@@ -294,27 +288,46 @@ Typically the suggested element for the next user action is marked by a bold fon
 
 \subsection{\label{ss:Input} Input}
 
-There are three possibilities:
+There are three different possibilities to input spike train data into SPIKY.
 
-1.	In the Selection: Data panel there is a listbox containing predefined examples. Initially these are the examples used in \citep{Kreuz13} but you can delete them and/or add your own data via the Matlab file 'SPIKY\_f\_user\_interface'. Just make sure that the listbox entries defined in the variable listbox\_str match the examples detailed below that.
+The first option is to select one of the predefined examples which are generated using Matlab-code. Initially these are the examples used in \citep{Kreuz13} but one can also define new examples.
 
-2.	You can load your own data via the Load button in the toolbar (left upper corner) or in the menu. Currently two different file formats are allowed, '.mat' and '.txt' (ASCII) files. For the mat-files SPIKY allows three different kinds of input formats:
-- cell arrays (ca) with just the spike times (this is the preferred format used by SPIKY since it is most memory efficient. The two other formats will internally be converted into this format)
-- regular matrices with each row being a spike train and zero padding (zp) in case the spike numbers are different.
-- matrices representing time bins where each zero/one (01) indicates the absence/presence of a spike
-If the spikes are stored in a Mat-file SPIKY looks for a variable called 'spikes', if it cannot find it you have the chance to select the variable name (or field name) which contains the spikes via some input mask which provides a hierarchical structure tree.
-In the text format spike times should be written as a matrix with each row being one spike train. The package contains one example file for each format ('testdata\_ca.mat', 'testdata\_zp.mat', 'testdata\_01.mat' as well as 'testdata.txt').
+The second option is to create new spike train data via the spike train generator (see below in Section \ref{sss:Spike-train-generator}).
 
-3.	You can generate your own spike trains via the Spike Train Generator. After setting some defining variables (number of spike trains, start and end time, sampling rate) you can build your spike trains by using predefined spike train patterns (such as periodic, Splay, uniform or Poisson) and/or by manually adding, shifting and deleting individual spikes or groups of spikes. For an overview of the general structure of the spike train generator please have a look at the file STG-flowchart.pdf, more detailed information can be found in the file STG-Elements.doc.
+The third option is to load spike train data from a file. Two different file formats are allowed, '.mat' and '.txt' (ASCII) files. For the mat-files SPIKY currently allows three different kinds of input formats.
+
+\begin{itemize}
+\item cell arrays (ca) with just the spike times (this is the preferred format used by SPIKY since it is most memory efficient. The two other formats will internally be converted into this format)
+\item regular matrices with each row being a spike train and zero padding (zp) in case the spike numbers are different.
+\item matrices representing time bins where each zero/one (01) indicates the absence/presence of a spike
+\end{itemize}
+
+If the spikes are stored in a mat-file SPIKY looks for a variable called 'spikes', if it cannot find it you have the chance to select the variable name (or field name) which contains the spikes via some input mask which provides a hierarchical structure tree.
+In the text format spike times should be written as a matrix with each row being one spike train. The SPIKY-package contains one example file for each format ('testdata\_ca.mat', 'testdata\_zp.mat', 'testdata\_01.mat' and 'testdata.txt').
+
+
+% 1.	In the Selection: Data panel there is a listbox containing predefined examples. Initially these are the examples used in \citep{Kreuz13} but you can delete them and/or add your own data via the Matlab file 'SPIKY\_f\_user\_interface'. Just make sure that the listbox entries defined in the variable listbox\_str match the examples detailed below that.
+%
+% 2. You can load your own data via the Load button in the toolbar (left upper corner) or in the menu. Currently two different file formats are allowed, '.mat' and '.txt' (ASCII) files. For the mat-files SPIKY allows three different kinds of input formats:
+% - cell arrays (ca) with just the spike times (this is the preferred format used by SPIKY since it is most memory efficient. The two other formats will internally be converted into this format)
+% - regular matrices with each row being a spike train and zero padding (zp) in case the spike numbers are different.
+% - matrices representing time bins where each zero/one (01) indicates the absence/presence of a spike
+% If the spikes are stored in a Mat-file SPIKY looks for a variable called 'spikes', if it cannot find it you have the chance to select the variable name (or field name) which contains the spikes via some input mask which provides a hierarchical structure tree.
+% In the text format spike times should be written as a matrix with each row being one spike train. The package contains one example file for each format ('testdata\_ca.mat', 'testdata\_zp.mat', 'testdata\_01.mat' as well as 'testdata.txt').
+
 
 
 Input:
-Matrix 'spikes' with two or more spike trains (if trains have different numbers of spikes, fill with zeros)
+Matrix 'spikes' with two or more spike trains
 Parameter structure 'para' that describe the data (see below)
 tmin:  Beginning of recording
 tmax:  End of recording
 dts:  Sampling interval, precision of spike times [!!! Please take care that this value is not larger than the actual sampling size, otherwise two spikes can occur at the same time instant and this can lead to problems in the algorithm !!!]
 select\_measures: Vector with order of measures
+
+\subsection{\label{sss:Spike-train-generator} Spike train generator}
+
+You can generate your own spike trains via the Spike Train Generator. After setting some defining variables (number of spike trains, start and end time, sampling interval) you can build your spike trains by using predefined spike train patterns (such as periodic, splay, uniform or Poisson) and/or by manually adding, shifting and deleting individual spikes or groups of spikes. You c
 
 
 \subsection{\label{ss:Output} Output}
