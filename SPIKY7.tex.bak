@@ -20,14 +20,14 @@
 % SPIKE-realtime      															Done
 % SPIKE-future      																Done
 % Representations      															Done
-% Spike train surrogates (Significance), Comparison with Poisson
+% Spike train surrogates (Significance), Comparison with Poisson					Done
 % Computational Cost (Memory, Speed)
 %
 % SPIKY
 % =====
-% Input (data format), Spike Train Generator (Patterns, by hand) 
+% Input (data format), Spike Train Generator (Patterns, by hand)					Done 
 % Output
-% Figure Layout
+% Figure Layout      															Done
 % GUI vs Loop
 % Comparison with other measures/implementations
 %
@@ -59,12 +59,15 @@
 \date{\today}
 
 \begin{abstract}
-    Recently, the SPIKE-distance has been proposed as a measure of spike train synchrony which is both parameter-free and time-scale independent. Since it relies on instantaneous estimates of spike train dissimilarity, it is also time-resolved which makes it possible to track changes in instantaneous clustering, i.e., time-localized patterns of (dis)similarity among multiple spike trains. Further features include selective and triggered temporal averaging as well as the instantaneous comparison of spike train groups. Besides the regular SPIKE-distance, there also exists a causal variant which is defined such that the instantaneous values of dissimilarity rely on past information only so that time-resolved spike train synchrony can be estimated in real-time. Finally, here we introduce the future SPIKE-distance which can be used in triggered temporal averaging in order to evaluate the effect of certain spikes or of certain stimuli features on future spiking. In the first part of this report we address some of the computational aspects in the calculation and implementation of the SPIKE-distance while in the second part we present SPIKY, a graphical user interface which facilitates the application of the SPIKE-distance and all its variants to both simulated and real data.
+
+XXXXX Preliminary, to be edited in the end XXXXX
+Recently, the SPIKE-distance has been proposed as a measure of spike train synchrony which is both parameter-free and time-scale independent. Since it relies on instantaneous estimates of spike train dissimilarity, it is also time-resolved which makes it possible to track changes in instantaneous clustering, i.e., time-localized patterns of (dis)similarity among multiple spike trains. Further features include selective and triggered temporal averaging as well as the instantaneous comparison of spike train groups. Besides the regular SPIKE-distance, there also exists a causal variant which is defined such that the instantaneous values of dissimilarity rely on past information only so that time-resolved spike train synchrony can be estimated in real-time. Finally, here we introduce the future SPIKE-distance which can be used in triggered temporal averaging in order to evaluate the effect of certain spikes or of certain stimuli features on future spiking. In the first part of this report we address some of the computational aspects in the calculation and implementation of the SPIKE-distance while in the second part we present SPIKY, a graphical user interface which facilitates the application of the SPIKE-distance and all its variants to both simulated and real data.
+ 
 \end{abstract}
 
 
 %\begin{keyword}
-%    time series analysis; spike trains; clustering; neuronal coding
+%    time series analysis; spike trains; clustering; neuronal coding; SPIKE-distance; ISI-distance; graphical user interface; Matlab; SPIKY
 %\end{keyword}
 
 \end{frontmatter}
@@ -76,7 +79,11 @@
 %
 \section{\label{s:Intro} Introduction}
 
+XXXXX Preliminary, to be edited in the end XXXXX
+
 A wide variety of approaches to quantify the dissimilarity, or distance, between two spike trains has been suggested. Among these is the metric introduced in \citet{Victor96}, which evaluates the cost needed to transform one spike train into the other, using only certain elementary steps. Another metric proposed in \citet{VanRossum01}, measures the Euclidean distance between the two spike trains after convolution of the spikes with an exponential function. Both methods involve one parameter that sets the time scale. In contrast, two more recent bivariate approaches, the ISI- and the SPIKE-distance are time scale independent and self-adaptive \citep{Kreuz07c, Kreuz13}. These two measures are complementary: The ISI-distance relies on the relative length of simultaneous interspike intervals and is thus well-designed to quantify similarities in the neurons' firing-rate profiles \citep{Kreuz07c, Kreuz09}. The SPIKE-distance is based on differences between the spike times of the two spike trains and is therefore ideally suited to track synchrony that is mediated by spike timing \citep{Kreuz11, Kreuz13}.
+
+Reliability includes clustering
 
 XXXXX Computational aspects XXXXX
 
@@ -254,7 +261,7 @@ where we use the length of the first known interspike interval $t_2-t_1$ as an u
 
 \subsection{\label{sss:Sampling} Sampling}
 
-Earlier versions of the codes for calculating the ISI- and the SPIKE-distance relied on sampled dissimilarity profiles. Typically the precision was set to the sampling interval of the neuronal recording. Since the dissimilarity profile has to be calculated and stored for each pair of spike trains, this resulted, for each measure, in a matrix of order 'number of sampled time instants s' × 'squared number of spike trains' (i.e., $\# (t_s) N^2$). For small sampling intervals and a large number of recorded spike trains this lead to memory problems. In SPIKY we use an optimized and more memory-efficient way of storing the data where we make use of the fact that the ISI-distance is piecewise constant and the SPIKE-distance is piecewise linear. For each interval in the pooled spike train (and each pair of spike trains) we have to store only one value for the ISI-distance and two values for the SPIKE-distance, one at the beginning and one at the end of the interval. For both dissimilarity profiles there are instantaneous jumps at the times of the spikes since this is where the lengths of the interspike intervals and the identity of the previous and the following spikes change abruptly. In contrast to the calculation based on sampling we get the exact result since each spike is both the previous and the next spike and there is no need anymore to cut the corners of the dissimilarity profiles.
+Earlier versions of the codes for calculating the ISI- and the SPIKE-distance relied on sampled dissimilarity profiles. Typically the precision was set to the sampling interval of the neuronal recording. Since the dissimilarity profile has to be calculated and stored for each pair of spike trains, this resulted, for each measure, in a matrix of order 'number of sampled time instants' × 'squared number of spike trains' (i.e., $\# (t_s) N^2$). For small sampling intervals and a large number of recorded spike trains this lead to memory problems. In SPIKY we use an optimized and more memory-efficient way of storing the data where we make use of the fact that the dissimilarity profile $I (t)$ of the ISI-distance is piecewise constant and the dissimilarity profile $S (t)$ of the SPIKE-distance is piecewise linear with each interval running from one spike of the pooled spike train to the next one. Thus for each such interval (and for each pair of spike trains) we have to store only one value for the ISI-distance and two values for the SPIKE-distance, one at the beginning and one at the end of the interval. For both dissimilarity profiles there are instantaneous jumps at the times of the spikes since this is where the lengths of the interspike intervals and the identity of the previous and the following spikes change abruptly. In contrast to the calculation based on sampling we get the exact result since each spike is both the previous and the next spike and there is no need anymore to 'cut the corners' of the dissimilarity profiles as had to be done for the sampled dissimilarity profiles. The dissimilarity profiles $S_r(t)$ and $S_f (t)$ of the real-time and the future SPIKE-distances are hyperbolic but for these measures the exact result can be obtained by piecewise integration over all intervals of the pooled spike train.
 
 
 
@@ -275,8 +282,9 @@ So far it includes four different types of spike train surrogates. They differ i
 
 \section{\label{s:SPIKY} SPIKY}
 
-SPIKY is a graphical user interface (GUI) for monitoring synchrony between artificially simulated or experimentally recorded neuronal spike trains. It is based on two recently proposed methods to measure spike train (dis)similarity, the ISI- and the SPIKE-distance. SPIKY is a free software package programmed by Thomas Kreuz and Nebojsa Bozanic. All source codes are written in Matlab (MathWorks Inc, MA) with the most time-consuming loops coded in MEX-files. It is not stand-alone but requires Matlab to run.
+SPIKY is a graphical user interface (GUI) for monitoring synchrony between artificially simulated or experimentally recorded neuronal spike trains. It is based on two recently proposed methods to measure spike train (dis)similarity, the ISI- and the SPIKE-distance. SPIKY is a free software package programmed by Thomas Kreuz and Nebojsa Bozanic. All source codes are written in Matlab (MathWorks Inc, MA, USA) with the most time-consuming loops coded in MEX-files (in our case these are subroutines written in C). It is not stand-alone but requires Matlab to run
 
+XXXXX Update, now stand-alone? XXXXX.
 
 
 
@@ -285,6 +293,12 @@ SPIKY is a graphical user interface (GUI) for monitoring synchrony between artif
 First extract the zip-package (all files should be in one directory named SPIKY), then within Matlab go to this directory or add it to the path (addpath). Compile the MEX-files using 'SPIKY\_compile\_MEX', finally run SPIKY. 
 
 Typically the suggested element for the next user action is marked by a bold font. The most complete initial example is the entry 'Clustering' in the Data listbox. We suggest to follow this example through till the end advancing from panel to panel by pressing the highlighted button. With the same example in a second step you can start to change some parameters and see the consequences. Later, if you do not want to set all the parameters each time when you start SPIKY with a new dataset have a look at the file 'SPIKY\_f\_user\_interface' and try to understand how for this example the spike train and the parameter values have been created. Hopefully you should then be able to do similar things with your own datasets. For quick information about the individual elements of the GUI activate the Hints-checkbox in the Options-Menu and then hover with the mouse cursor above the elements of interest and you will see short hints. An overview of all this information can be found in the file SPIKY-Elements.doc.
+%
+\begin{figure}
+    \includegraphics[width=85mm]{SPIKY_Flowchart_Neb.eps}
+    \caption{\abb\label{fig:Fig3-SPIKY-Flowchart} SPIKY-Flowchart}
+\end{figure}
+
 
 \subsection{\label{ss:Input} Input}
 
@@ -292,70 +306,41 @@ There are three different possibilities to input spike train data into SPIKY.
 
 The first option is to select one of the predefined examples which are generated using Matlab-code. Initially these are the examples used in \citep{Kreuz13} but one can also define new examples.
 
-The second option is to create new spike train data via the spike train generator (see below in Section \ref{sss:Spike-train-generator}).
-
-The third option is to load spike train data from a file. Two different file formats are allowed, '.mat' and '.txt' (ASCII) files. For the mat-files SPIKY currently allows three different kinds of input formats.
+The second option is to load spike train data from a file. Two different file formats are allowed, '.mat' and '.txt' (ASCII) files. For the mat-files SPIKY currently allows three different kinds of input formats (further formats can be added on demand).
 
 \begin{itemize}
-\item cell arrays (ca) with just the spike times (this is the preferred format used by SPIKY since it is most memory efficient. The two other formats will internally be converted into this format)
+\item cell arrays (ca) with just the spike times. This is the preferred format used by SPIKY since it is most memory efficient. The two other formats will internally be converted into this format.
 \item regular matrices with each row being a spike train and zero padding (zp) in case the spike numbers are different.
 \item matrices representing time bins where each zero/one (01) indicates the absence/presence of a spike
 \end{itemize}
 
-If the spikes are stored in a mat-file SPIKY looks for a variable called 'spikes', if it cannot find it you have the chance to select the variable name (or field name) which contains the spikes via some input mask which provides a hierarchical structure tree.
-In the text format spike times should be written as a matrix with each row being one spike train. The SPIKY-package contains one example file for each format ('testdata\_ca.mat', 'testdata\_zp.mat', 'testdata\_01.mat' and 'testdata.txt').
+If case of a mat-file SPIKY looks for a variable called 'spikes', if it cannot find it you have the chance to select the variable name (or field name) which contains the spikes via an input mask which provides a hierarchical structure tree of the variable structure. In the text format spike times should be written as a matrix with each row being one spike train. The SPIKY-package contains one example file for all four formats ('testdata\_ca.mat', 'testdata\_zp.mat', 'testdata\_01.mat' and 'testdata.txt').
 
-
-% 1.	In the Selection: Data panel there is a listbox containing predefined examples. Initially these are the examples used in \citep{Kreuz13} but you can delete them and/or add your own data via the Matlab file 'SPIKY\_f\_user\_interface'. Just make sure that the listbox entries defined in the variable listbox\_str match the examples detailed below that.
-%
-% 2. You can load your own data via the Load button in the toolbar (left upper corner) or in the menu. Currently two different file formats are allowed, '.mat' and '.txt' (ASCII) files. For the mat-files SPIKY allows three different kinds of input formats:
-% - cell arrays (ca) with just the spike times (this is the preferred format used by SPIKY since it is most memory efficient. The two other formats will internally be converted into this format)
-% - regular matrices with each row being a spike train and zero padding (zp) in case the spike numbers are different.
-% - matrices representing time bins where each zero/one (01) indicates the absence/presence of a spike
-% If the spikes are stored in a Mat-file SPIKY looks for a variable called 'spikes', if it cannot find it you have the chance to select the variable name (or field name) which contains the spikes via some input mask which provides a hierarchical structure tree.
-% In the text format spike times should be written as a matrix with each row being one spike train. The package contains one example file for each format ('testdata\_ca.mat', 'testdata\_zp.mat', 'testdata\_01.mat' as well as 'testdata.txt').
-
-
-
-Input:
-Matrix 'spikes' with two or more spike trains
-Parameter structure 'para' that describe the data (see below)
-tmin:  Beginning of recording
-tmax:  End of recording
-dts:  Sampling interval, precision of spike times [!!! Please take care that this value is not larger than the actual sampling size, otherwise two spikes can occur at the same time instant and this can lead to problems in the algorithm !!!]
-select\_measures: Vector with order of measures
-
-\subsection{\label{sss:Spike-train-generator} Spike train generator}
-
-You can generate your own spike trains via the Spike Train Generator. After setting some defining variables (number of spike trains, start and end time, sampling interval) you can build your spike trains by using predefined spike train patterns (such as periodic, splay, uniform or Poisson) and/or by manually adding, shifting and deleting individual spikes or groups of spikes. You c
+The third option is to create new spike train data via the spike train generator. After setting some defining variables (number of spike trains, start and end time, sampling interval) you can build your spike trains by using predefined spike train patterns (such as periodic, splay, uniform or Poisson) and/or by manually adding, shifting and deleting individual spikes or groups of spikes.
 
 
 \subsection{\label{ss:Output} Output}
 
-How can I extract the spike trains and the results of the analysis (measure profiles, matrices) to the workspace?
-By clicking (left mouse button) on the element whose data you wish to extract. Results will be stored in variables such as 'SPIKY\_spikes', 'SPIKY\_profile\_X\_1', 'SPIKY\_profile\_Y\_1', 'SPIKY\_profile\_name\_1' as well as 'SPIKY\_matrix\_1' and 'SPIKY\_matrix\_name\_1'. In addition, the results obtained during an analysis will automatically be stored in the structure 'SPIKY\_results' which will have one field for each measure selected. 
+From within SPIKY it is possible to extract the spike trains and the results of the analyses (measure profiles, matrices, dendrograms) to the Matlab workspace for further processing. When one clicks the right mouse button on the element whose data one wishes to extract results will be stored in variables such as 'SPIKY\_spikes', 'SPIKY\_profile\_X\_1', 'SPIKY\_profile\_Y\_1', 'SPIKY\_profile\_name\_1' as well as 'SPIKY\_matrix\_1' and 'SPIKY\_matrix\_name\_1'. In addition, the results obtained during an analysis will automatically be stored in the output structure 'SPIKY\_results' which will have one field for each measure selected. Depending on the parameter selection within SPIKY, for each measure the structure can contains the following subfields which largely correspond to the different representations ident:
 
-How do I save/print figures?
-Press the Print to postscript button in the toolbar (left upper corner).
+\begin{itemize}
+\item SPIKY\_results.<Measure>.name: Name of selected measures (helps to identify the order within all other variables)
+\item SPIKY\_results.<Measure>.distance: Level of dissimilarity over all spike trains and the whole interval. This is just one value, obtained by averaging over both spike trains and time
+\item SPIKY\_results.<Measure>.matrix: Pairwise distance matrices, obtained by averaging over time
+\item SPIKY\_results.<Measure>.x: Time-values of overall dissimilarity profile
+\item SPIKY\_results.<Measure>.y: Overall dissimilarity profile obtained by averaging over spike train pairs
+\end{itemize}
 
-Output (Structure 'SPIKY\_results'):
-SPIKY\_results.<Measure>.name:     Name of selected measures (helps to identify the order within all other variables)
-SPIKY\_results.<Measure>.distance: Level of dissimilarity over all spike trains and the whole interval. This is just one value, obtained by averaging over both spike trains and time
-SPIKY\_results.<Measure>.matrix:   Pairwise distance matrices, obtained by averaging over time
-SPIKY\_results.<Measure>.x:        Time-values of overall dissimilarity profile
-SPIKY\_results.<Measure>.y:        Overall dissimilarity profile obtained by averaging over spike train pairs
+Note that the dissimilarity profiles are not equidistantly sampled. Rather they are stored as memory-efficiently as possible which means just one value for each interval of the pooled spike train for the ISI- and two values for the SPIKE-distance. Since this format can be more difficult to process, the functions 'SPIKY\_f\_selective\_averaging', 'SPIKY\_f\_triggered\_averaging', and 'SPIKY\_f\_average\_pi' are provided in order to compute the selective average over time intervals, the triggered over time instants, or the average over many dissimilarity profiles, respectively. Furthermore, for the ISI-distance the function 'SPIKY\_f\_pico.m' can be used to obtain the average value as well as the x- and y-vectors for plotting.
 
-Note: For the ISI-distance the function 'SPIKY\_f\_pico.m' can be used to obtain the average value as well as x- and y-vectors for plotting:
-%[overall_dissimilarity,plot_x_values,plot_y_values] = SPIKY_f_pico(SPIKY_results.isi,SPIKY_results.dissimilarity_profiles{1},para.dts,para.tmin);
+Besides the standard way to work with Matlab-figures SPIKY also offers the opportunity to save each figure as a postscript-file. Finally, it is possible to save a sequence of images as an 'avi'-movie.
 
 
 \subsection{\label{ss:Figure-Layout} Figure-Layout}
 
-To change elements (fonts, lines, etc.) in the figure simply click the right mouse button on the element you wish to change. Please use the file 'SPIKY\_f\_user\_interface' to set the standard values for all the parameters that describe the layout of the figure (mainly the parameter structure 'p\_para').
+SPIKY was designed in a way that allows to directly generate figures suitable for publication. To this aim the user is given control over the appearance of every individual element (e.g. fonts, lines etc.) in each type of figure. There are two ways to determine essential properties such as color, font size or line width. Most conveniently, one can use the file 'SPIKY\_f\_user\_interface' to define the standard values for all the parameters that describe the principal layout of the figure. But it is also possible to change elements in the active figure while the program is already running. To do so the user has to simply click the right mouse button on the element to be changed. A context menu will appear which lets the user either edit either the properties of individual elements or of all elements of a certain type. This also includes the string property of any font (title, x- and y-labels etc.).
 
-How can I move subplots (spikes and profiles subplot, matrices) in the figure? How can I change their size?
-
-Move the cursor to the respective axis (either just left or just below the subplot) and click the right mouse button. Now you can either edit all position variables by hand or change the x-position, the y-position, the width and the height individually. In case there are several matrices/dendrograms you can do this either for an individual matrix/dendrogram or for all of them at the same time.
+If a figure contains more than one subplot (besides the combined subplot containing the spike rasterplot and dissimilarity profiles these are typically subplots with dissimilarity matrices and dendrograms), it is also possible to change their position and size. To do so just move the cursor to the respective axis (either just left or just below the subplot) and click the right mouse button. Now one can edit all position variables by hand or change the x-position, the y-position, the width and the height individually. In case there are several dissimilarity matrices / dendrograms one can do this either for an individual matrix / dendrogram or for all of them at the same time.
 
 
 \subsection{\label{ss:GUI-vs-loop} GUI vs. loop} 
@@ -364,26 +349,10 @@ How can I get the statistics of a certain quantity over a large number of datase
 
 For this purpose you can use the program SPIKY\_loop which is complementary to the graphical user interface SPIKY'. Both programs can be used to calculate time-resolved spike train distances (ISI and SPIKE) between two (or more) spike trains. However, whereas SPIKY was mainly designed to facilitate the detailed analysis of one dataset, SPIKY\_loop is meant to be used in order to compare the 'SPIKY\_results' for many different datasets (e.g. in some kind of loop). Note that the new program 'SPIKY\_loop' uses the full functionality of SPIKY (access to time instants, selective and triggered averages as well as averages over spike train groups).
 
-\subsection{\label{ss:Computational-aspects} Computational aspects}
 
-\subsection{\label{sss:MEX-files} MEX-files}
 
-%
-\begin{figure}
-    \includegraphics[width=85mm]{SPIKY_Flowchart_Neb.eps}
-    \caption{\abb\label{fig:Fig3-SPIKY-Flowchart} SPIKY-Flowchart}
-\end{figure}
 
-XXXXX Rewrite and extend, add part on MEX-files XXXXX
 
-The dissimilarity profile $S (t)$ of the SPIKE-distance is piecewise linear (with each linear interval running from one spike of the pooled spike train to the next) rather than piecewise constant as is the case for the ISI-distance.
-Therefore, when the localized visualization is desired, a new value has to be calculated for each sampling point and not just once per each interval in the pooled spike train. In cases where the distance value itself is sufficient, the short computation time can be even further decreased by representing each interval by the value of its center and weighting it by its length. This is not only faster, but it actually gives the exact result, whereas the time-resolved calculation is a very good approximation only for sufficiently small sampling intervals $dt$ (imagine the example of a rectangular function, at some point any sampled representation has to cut the right angle). The dissimilarity profiles $S_r(t)$ and $S_f (t)$ of the real-time and the future SPIKE-distances are hyperbolic and not linear but here also the exact result can be obtained by piecewise integration over all intervals of the pooled spike train.
-
-The calculation of the SPIKE-distance consists of three steps: In a precalculation step, for each spike the distance to the nearest spike in all the other spike trains is calculated. Successively, for each time instant and each pair of spike trains, the distances of the four corner spikes are first locally weighted and then normalized. These latter steps involve
-matrices of the order 'number of time instants' × 'number of spike train pairs', which for very long datasets with many spike trains can lead to memory problems. The solution to these problems is to make the calculation sequential, i.e., to cut the recording interval into smaller segments, and to perform the averaging over all pairs of spike trains for
-each segment separately (no additional auxiliary spikes are needed except for very huge datasets for which even the calculation of the first matrix is too memory-demanding). In the end the dissimilarity profiles for the different segments (already averaged over pairs of spike trains) are concatenated, and its temporal average yields the distance value for the whole recording interval.
-
-The computational load scales with the number of spike trains $N$ as $N^2$. 
 
 
 
@@ -392,8 +361,6 @@ The computational load scales with the number of spike trains $N$ as $N^2$.
 
 
 \subsection{\label{ss:Other-Implementations} Comparison with other implementations}
-
-
 
 Python-Implementation of SPIKE-distance courtesy of Jeremy Fix:
 
@@ -428,13 +395,23 @@ SPIKY is distributed under a BSD licence (Copyright (c) 2014, Thomas Kreuz, Nebo
 
 \section{\label{s:Discussion} Discussion}
 
+So far the SPIKE-distance has been applied in the following papers:
+
+\citep{Papoutsi13, DiPoppa13, Rusu14, Sacre14}
+
+XXXXX Update at the end XXXXX
+
 \subsection{\label{ss:Summary} Summary}
 
-\subsection{\label{ss:Limits} Limits}
+\subsection{\label{ss:Limitations} Limitations}
+
+The calculation of the SPIKE-distance consists of three steps: First for each spike the distance to the nearest spike in all the other spike trains is calculated. Successively, for each time instant and each pair of spike trains, the distances of the four corner spikes are first locally weighted and then normalized. These latter steps involve matrices of the order 'number of time instants' × 'number of spike train pairs', which for very long datasets with many spike trains can lead to memory problems. The solution to this problem is to make the calculation sequential, i.e., to cut the recording interval into smaller segments, and to perform the averaging over all pairs of spike trains for each segment separately. In the end the dissimilarity profiles for the different segments (already averaged over pairs of spike trains) are concatenated, and its temporal average yields the distance value for the whole recording interval. If such a sequential calculation is required the user is continuously informed about the progress via a waitbar.
+
+
 
 \subsection{\label{ss:Outlook} Outlook}
 
-
+Stand-Alone, Python/C++
 
 %\begin{appendix} \label{Appendix}
 %
@@ -445,18 +422,19 @@ SPIKY is distributed under a BSD licence (Copyright (c) 2014, Thomas Kreuz, Nebo
 
 \begin{thanks}
 \section{\label{s:Acknowledgement} \textbf{Acknowledgements}}
-NB and TK acknowledge funding support from the European Commission through the Marie Curie Initial Training Network 'Neural Engineering Transformative Technologies (NETT)', project 289146. TK also acknowledges the Italian Ministry of Foreign Affairs regarding the activity of the Joint Italian-Israeli Laboratory on Neuroscience. 
+
+NB and TK acknowledge funding support from the European Commission through the Marie Curie Initial Training Network 'Neural Engineering Transformative Technologies (NETT)', project 289146. TK also acknowledges the Italian Ministry of Foreign Affairs regarding the activity of the Joint Italian-Israeli Laboratory on Neuroscience.
+
+TK thanks Marcus Kaiser for hosting him at the University of Newcastle, UK.
      
 We thank Emily Caporello, Daniel Chicharro, Tim Gentner, Conor Houghton, Jutta Kretzberg, Stefano Luccioli, Florian Mormann, Leon Paz, Friederice Pirschel, Alessandro Torcini, Jonathan Victor for useful discussions.
 
 We also thank Thomas Alderson, Black Square, Mayte Bonilla Quintana, Hamid Charkhkar, Didier Desaintjan, Mario DiPoppa, Mahboubeh Etemadi, Marion Najac, Matthew Phillips, Eugenio Piasini, Robert Rein, Rodrigo Salazar, Michael Schaub, Eitan Schechtman, Matthew Williams, Yunguo Yu for advice and user feedback.
-     
 \end{thanks}
 
 
 \bibliography{Kreuz_Bibliography}
-
-%\bibliographystyle{plainnat}
 %\bibliographystyle{elsart-harv}
+%\bibliographystyle{plainnat}
 
 \end{document}
