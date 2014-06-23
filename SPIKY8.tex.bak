@@ -16,11 +16,11 @@
 % ========
 % ISI        																	Done
 % SPIKE      																	Done
-% Edge effect																	Done
 % SPIKE-realtime      															Done
 % SPIKE-future      																Done
+% Edge effect																	Done
+% Sampling   																	Done
 % Representations      															Done
-% Spike train surrogates (Significance), Comparison with Poisson					Done
 % Computational Cost (Memory, Speed)
 %
 % SPIKY
@@ -29,6 +29,7 @@
 % Output      																	Done
 % Figure Layout      															Done
 % GUI vs Loop
+% Spike train surrogates (Significance), Comparison with Poisson					Done
 % Comparison with other measures/implementations
 %
 % Discussion
@@ -88,7 +89,7 @@ Reliability includes clustering
 XXXXX Computational aspects XXXXX
 
 %
-% **************************************************************** Methods **************
+% **************************************************************** Measures **************
 %
 \section{\label{s:Measures} Measures}
 
@@ -214,6 +215,28 @@ While the dissimilarity profile of the SPIKE-distance is extracted from differen
 This ISI-ratio equals $0$ for identical ISI in the two spike trains, and approaches $-1$ and $1$, respectively, if the first or the second spike train is much faster than the other. Since the ISI-values only change at the times of spikes, the dissimilarity profile is piecewise constant. For the ISI-distance the temporal averaging analogous to Eq. \ref{eq:Temporal-Average} is performed on the absolute value of the ISI-ratio, thus both kinds of deviations are treated equally. Since the ISI-distance relies on the instantaneous ISI-values and thus requires knowledge about the following spikes, no causal realtime extension is possible.
 
 
+\subsection{\label{ss:Computational-aspects} Computational aspects}
+
+\subsubsection{\label{sss:Edge-effect} Correction of the edge effect}
+
+In previous versions of the SPIKE-distance the ambiguity regarding the definition of the initial (final) distance to the preceding (following) spike as well as the very first and the very last interspike intervals was resolved by adding to each spike train an auxiliary leading spike at time $t = 0$ and an auxiliary trailing spike at time $t = T$. This lead to spurious synchrony at the edges where by construction the dissimilarity profile reached the zero value. Here we follow a suggestion by Conor Houghton (personal communication) and at least partly correct this edge effect. We describe the correction for the beginning of the recording, it is an analogous mirror image at the end of the recording.
+
+We count the auxiliary spikes as normal spikes which can be nearest neighbor to other spikes. But instead of calculating their spike time distance (which is always zero) we use the spike time difference of the first real spike. For the first interspike interval we know that it is at least the distance to the first spike $t_1-t_0 = t_1$ but it could be longer. So to take the local firing rate (or its inverse) into consideration we set
+%
+\begin{equation} \label{eq:Corrected-First-ISI}
+    x_{\mathrm {ISI}} (0) = \max ( t_1, t_2 - t_1 ).
+\end{equation}
+%
+where we use the length of the first known interspike interval $t_2-t_1$ as an upper limit of the inverse firing rate. This way we get at least a crude estimate of how much longer the first interspike interval could be.
+
+
+\subsubsection{\label{sss:Sampling} Increase of memory efficiency by avoiding sampling}
+
+Earlier versions of the codes for calculating the ISI- and the SPIKE-distance relied on sampled dissimilarity profiles. Typically the precision was set to the sampling interval of the neuronal recording. Since the dissimilarity profile has to be calculated and stored for each pair of spike trains, this resulted, for each measure, in a matrix of order 'number of sampled time instants' $\times$ 'number of spike train pairs' (i.e., $\# (t_s) \times N(N-1)/2$). For small sampling intervals and a large number of recorded spike trains this lead to memory problems. In SPIKY we use an optimized and more memory-efficient way of storing the data where we make use of the fact that the dissimilarity profile $I (t)$ of the ISI-distance is piecewise constant and the dissimilarity profile $S (t)$ of the SPIKE-distance is piecewise linear with each interval running from one spike of the pooled spike train to the next one. Thus for each such interval (and for each pair of spike trains) we have to store only one value for the ISI-distance and two values for the SPIKE-distance, one at the beginning and one at the end of the interval. Typically the storage space required will be much smaller than for dissimilarity profiles sampled with a reasonable precision.
+
+For both dissimilarity profiles there are instantaneous jumps at the times of the spikes since this is where the lengths of the interspike intervals and the identity of the previous and the following spikes change abruptly. In contrast to the calculation based on sampling we get the exact result since each spike is both the previous and the next spike and there is no need anymore to 'cut the corners' of the dissimilarity profiles as had to be done for the sampled dissimilarity profiles. The dissimilarity profiles $S_r(t)$ and $S_f (t)$ of the real-time and the future SPIKE-distances are hyperbolic but for these measures the exact result can be obtained by piecewise integration over all intervals of the pooled spike train.
+
+
 \subsection{\label{ss:Representations} Representations}
 
 The ISI- and the SPIKE-distance combine a variety of properties that make them well suited for applications to real data. In particular, they are conceptually simple, computationally efficient, and easy to visualize in a time-resolved manner. By taking into account only the preceding and the following spike in each spike train, these distances rely on local information only. They are also time-scale-adaptive since the information used is not contained within a window of fixed size but rather within a time frame whose size depends on the local rate of each spike train.
@@ -222,9 +245,9 @@ Moreover, the sensitivity to spike timing and the instantaneous reliability achi
 
 \subsubsection{\label{sss:Full-matrix-and-cross-sections} Full matrix and cross sections}
 
-The starting point is the most detailed representation in which one instantaneous value is obtained for each pair of spike trains (see Eq. \ref{eq:Bi-Spike-Diss-Improved}). For multineuron data, this results in a matrix of size 'number of sampled time instants s' × 'squared number of spike trains' (i.e., $\# (t_s) N^2$).
+The starting point is the most detailed representation in which one instantaneous value is obtained for each pair of spike trains (see Eq. \ref{eq:Bi-Spike-Diss-Improved}). For multi-neuron data, this results in a matrix of size 'number of unique spikes in the pooled spike train' $\times$ 'number of spike train pairs' ($\times 2$ for the SPIKE-distance, see Section \ref{sss:Sampling}).
 
-From this matrix, it is possible to extract any desired information. By selecting a pair of spike trains, one obtains the bivariate dissimilarity profile S(t) for this pair of spike trains. Selecting a time instant $t_s$ instead yields an instantaneous matrix of pairwise spike train dissimilarities $S_{mn}(t_s)$. This matrix can be used to divide the spike trains into instantaneous clusters, that is, groups of spike trains with low intra-group and high inter-group dissimilarity.
+From this matrix, it is possible to extract any desired information. By selecting a pair of spike trains, one obtains the bivariate dissimilarity profile $S (t)$ for this pair of spike trains. Selecting a time instant $t_s$ (and using linear interpolation for time instants in between spikes) yields an instantaneous matrix of pairwise spike train dissimilarities $S_{mn}(t_s)$. This matrix can be used to divide the spike trains into instantaneous clusters, that is, groups of spike trains with low intra-group and high inter-group dissimilarity.
 
 \subsubsection{\label{sss:Spatial-and-temporal-Averaging} Spatial and temporal averaging}
 
@@ -244,42 +267,12 @@ A last possibility is spatial averaging such that the spike trains are manually 
 \end{figure}
 
 
-\subsubsection{\label{sss:Edge-effect} Edge effect}
-
-In previous versions of the SPIKE-distance the ambiguity regarding the definition of the initial (final) distance to the preceding (following) spike as well as the very first and the very last interspike intervals was resolved by adding to each spike train an auxiliary leading spike at time $t = 0$ and an auxiliary trailing spike at time $t = T$. This lead to spurious synchrony at the edges where by construction the dissimilarity profile reached the zero value. Here we follow a suggestion by Conor Houghton (personal communication) and at least partly correct this edge effect. We describe the correction for the beginning of the recording, it is an analogous mirror image at the end of the recording.
-
-We count the auxiliary spikes as normal spikes which can be nearest neighbor to other spikes. But instead of calculating their spike time distance (which is always zero) we use the spike time difference of the first real spike. For the first interspike interval we know that it is at least the distance to the first spike $t_1-t_0 = t_1$ but it could be longer. So to take the local firing rate (or its inverse) into consideration we set
 %
-\begin{equation} \label{eq:Corrected-First-ISI}
-    x_{\mathrm {ISI}} (0) = \max ( t_1, t_2 - t_1 ).
-\end{equation}
+% **************************************************************** SPIKY **************
 %
-where we use the length of the first known interspike interval $t_2-t_1$ as an upper limit of the inverse firing rate. This way we get at least a crude estimate of how much longer the first interspike interval could be.
-
-
-\subsection{\label{sss:Sampling} Sampling}
-
-Earlier versions of the codes for calculating the ISI- and the SPIKE-distance relied on sampled dissimilarity profiles. Typically the precision was set to the sampling interval of the neuronal recording. Since the dissimilarity profile has to be calculated and stored for each pair of spike trains, this resulted, for each measure, in a matrix of order 'number of sampled time instants' × 'squared number of spike trains' (i.e., $\# (t_s) N^2$). For small sampling intervals and a large number of recorded spike trains this lead to memory problems. In SPIKY we use an optimized and more memory-efficient way of storing the data where we make use of the fact that the dissimilarity profile $I (t)$ of the ISI-distance is piecewise constant and the dissimilarity profile $S (t)$ of the SPIKE-distance is piecewise linear with each interval running from one spike of the pooled spike train to the next one. Thus for each such interval (and for each pair of spike trains) we have to store only one value for the ISI-distance and two values for the SPIKE-distance, one at the beginning and one at the end of the interval. For both dissimilarity profiles there are instantaneous jumps at the times of the spikes since this is where the lengths of the interspike intervals and the identity of the previous and the following spikes change abruptly. In contrast to the calculation based on sampling we get the exact result since each spike is both the previous and the next spike and there is no need anymore to 'cut the corners' of the dissimilarity profiles as had to be done for the sampled dissimilarity profiles. The dissimilarity profiles $S_r(t)$ and $S_f (t)$ of the real-time and the future SPIKE-distances are hyperbolic but for these measures the exact result can be obtained by piecewise integration over all intervals of the pooled spike train.
-
-
-\subsection{\label{ss:Spike-train-surrogates} Spike train surrogates and significance}
-
-An important question that has not yet been asked is the one of statistical significance.
-Given a certain value of the SPIKE-distance how can one judge whether it reflects a significant decrease or increase in spike train synchrony and does not just lie within the range of values obtained for random fluctuations. One way to address this question is the use of spike train surrogates \citep{Kass05, Gruen09, Louis10}. The idea is to compare the results obtained for the original dataset versus the results obtained for spike train surrogates generated from that dataset. If the value obtained for the original lies outside the range of values for the surrogates this value can be assumed to be significant to a level defined by the number of surrogates used (e.g. $\alpha = 0.05$ for $19$ surrogates or $\alpha = 0.001$ for $999$ surrogates).
-
-The SPIKY-package contains a program 'Spiky\_loop\_surro' which was designed to look at significance.
-So far it includes four different types of spike train surrogates. They differ in the properties that are preserved and maintain either the individual spike numbers (obtained by shuffling the spikes), the individual interspike interval distribution (obtained by shuffling the interspike intervals), the pooled spike train (obtained by shuffling spikes among the spike trains) or the peri-stimulus time histogram (PSTH) (obtained by drawing from the probability density function (PDF) of the data).
-
-
-% Daniel's Email 13.07.2011:
-%
-% Regarding the use of Poisson processes to have a benchmark it will have different implications depending on the structure of your data. If the rate is almost constant then comparing to processes with the same estimated average rate is the best option. If the rate is time-dependent you may want to compare with processes which are Poisson but mimic the same time-dependent profile of the rate. These are just alternatives that give you complementary information on the structure of the reliability.
-% Surrogate data with the same time dependent rate can be obtained by randomly reassigning each spike to any of the spike trains.
-
-
 \section{\label{s:SPIKY} SPIKY}
 
-SPIKY is a graphical user interface (GUI) for monitoring synchrony between artificially simulated or experimentally recorded neuronal spike trains. It is based on two recently proposed methods to measure spike train (dis)similarity, the ISI- and the SPIKE-distance. SPIKY is a free software package programmed by Thomas Kreuz and Nebojsa Bozanic. All source codes are written in Matlab (MathWorks Inc, MA, USA) with the most time-consuming loops coded in MEX-files (in our case these are subroutines written in C). It is not stand-alone but requires Matlab to run
+SPIKY is a graphical user interface (GUI) for monitoring synchrony between artificially simulated or experimentally recorded neuronal spike trains. It is based on two recently proposed methods to measure spike train (dis)similarity, the ISI- and the SPIKE-distance. SPIKY is a free software package programmed by Thomas Kreuz and Nebojsa Bozanic. All source codes are written in Matlab (MathWorks Inc, Natick, MA, USA) with the most time-consuming loops coded in MEX-files \footnote{In our case these are subroutines written in C. However, as some users may not have access to a suitable C compiler, SPIKY contains the pure Matlab code as well.}. It is not stand-alone but requires Matlab to run
 
 XXXXX Update, now stand-alone? XXXXX.
 
@@ -340,11 +333,35 @@ SPIKY was designed in a way that allows to directly generate figures suitable fo
 If a figure contains more than one subplot (besides the combined subplot containing the spike rasterplot and dissimilarity profiles these are typically subplots with dissimilarity matrices and dendrograms), it is also possible to change their position and size. To do so just move the cursor to the respective axis (either just left or just below the subplot) and click the right mouse button. Now one can edit all position variables by hand or change the x-position, the y-position, the width and the height individually. In case there are several dissimilarity matrices / dendrograms one can do this either for an individual matrix / dendrogram or for all of them at the same time.
 
 
-\subsection{\label{ss:GUI-vs-loop} GUI vs. loop} 
+\subsection{\label{ss:GUI-vs-loop} GUI vs. loop}
+
+SPIKY was mainly designed to facilitate the detailed analysis of one dataset. It enables the user to switch between different representations and to zoom in on both spatial and temporal features of interest. However, it is not very suitable for the more coarse-grained analysis over many different datasets when e.g. the statistics of a certain quantity in some kind of loop). 
+
+
+For these purposes the SPIKY-package contains a program called 'SPIKY\_loop'
+
+
+ is meant to be used in order to compare the 'SPIKY\_results' for many different datasets (e.g. in some kind of loop). 
+ 
+'SPIKY\_loop' uses the full functionality of SPIKY (access to time instants, selective and triggered averages as well as averages over spike train groups).
 
 How can I get the statistics of a certain quantity over a large number of datasets?
 
 For this purpose you can use the program SPIKY\_loop which is complementary to the graphical user interface SPIKY'. Both programs can be used to calculate time-resolved spike train distances (ISI and SPIKE) between two (or more) spike trains. However, whereas SPIKY was mainly designed to facilitate the detailed analysis of one dataset, SPIKY\_loop is meant to be used in order to compare the 'SPIKY\_results' for many different datasets (e.g. in some kind of loop). Note that the new program 'SPIKY\_loop' uses the full functionality of SPIKY (access to time instants, selective and triggered averages as well as averages over spike train groups).
+
+
+\subsection{\label{ss:Spike-train-surrogates} Spike train surrogates and significance}
+
+An important question that has not yet been asked is the one of statistical significance. Given a certain value of the SPIKE-distance how can one judge whether it reflects a significant decrease or increase in spike train synchrony and does not just lie within the range of values obtained for random fluctuations. One way to address this question is the use of spike train surrogates \citep{Kass05, Gruen09, Louis10}. The idea is to compare the results obtained for the original dataset versus the results obtained for spike train surrogates generated from that dataset. If the value obtained for the original lies outside the range of values for the surrogates this value can be assumed to be significant to a level defined by the number of surrogates used (e.g. $\alpha = 0.05$ for $19$ surrogates or $\alpha = 0.001$ for $999$ surrogates).
+
+The SPIKY-package contains a program 'Spiky\_loop\_surro' which was designed to look at significance.
+So far it includes four different types of spike train surrogates. They differ in the properties that are preserved and maintain either the individual spike numbers (obtained by shuffling the spikes), the individual interspike interval distribution (obtained by shuffling the interspike intervals), the pooled spike train (obtained by shuffling spikes among the spike trains) or the peri-stimulus time histogram (PSTH) (obtained by drawing from the probability density function (PDF) of the data).
+
+
+% Daniel's Email 13.07.2011:
+%
+% Regarding the use of Poisson processes to have a benchmark it will have different implications depending on the structure of your data. If the rate is almost constant then comparing to processes with the same estimated average rate is the best option. If the rate is time-dependent you may want to compare with processes which are Poisson but mimic the same time-dependent profile of the rate. These are just alternatives that give you complementary information on the structure of the reliability.
+% Surrogate data with the same time dependent rate can be obtained by randomly reassigning each spike to any of the spike trains.
 
 
 \subsection{\label{ss:Other-Implementations} Comparison with other implementations}
@@ -397,6 +414,8 @@ The calculation of the SPIKE-distance consists of three steps: First for each sp
 
 
 \subsection{\label{ss:Outlook} Outlook}
+
+
 
 Stand-Alone, Python/C++
 
