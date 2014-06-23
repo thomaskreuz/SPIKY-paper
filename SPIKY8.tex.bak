@@ -21,16 +21,17 @@
 % Edge effect																	Done
 % Sampling   																	Done
 % Representations      															Done
-% Computational Cost (Memory, Speed)
 %
 % SPIKY
 % =====
+% SPIKY-Intro
+% Structure
 % Input (data format), Spike Train Generator (Patterns, by hand)					Done 
 % Output      																	Done
 % Figure Layout      															Done
-% GUI vs Loop
+% GUI vs Loop      																Done
 % Spike train surrogates (Significance), Comparison with Poisson					Done
-% Comparison with other measures/implementations
+% Comparison with other measures/implementations, Computational Cost (Memory, Speed)
 %
 % Discussion
 % ==========
@@ -272,10 +273,7 @@ A last possibility is spatial averaging such that the spike trains are manually 
 %
 \section{\label{s:SPIKY} SPIKY}
 
-SPIKY is a graphical user interface (GUI) for monitoring synchrony between artificially simulated or experimentally recorded neuronal spike trains. It is based on two recently proposed methods to measure spike train (dis)similarity, the ISI- and the SPIKE-distance. SPIKY is a free software package programmed by Thomas Kreuz and Nebojsa Bozanic. All source codes are written in Matlab (MathWorks Inc, Natick, MA, USA) with the most time-consuming loops coded in MEX-files \footnote{In our case these are subroutines written in C. However, as some users may not have access to a suitable C compiler, SPIKY contains the pure Matlab code as well.}. It is not stand-alone but requires Matlab to run
-
-XXXXX Update, now stand-alone? XXXXX.
-
+SPIKY is a graphical user interface (GUI) for monitoring synchrony between artificially simulated or experimentally recorded neuronal spike trains. It is based on two recently proposed methods to measure spike train (dis)similarity, the ISI- and the SPIKE-distance. SPIKY is a free software package programmed by Thomas Kreuz and Nebojsa Bozanic. All source codes are written in Matlab (MathWorks Inc, Natick, MA, USA) with the most time-consuming loops coded in MEX-files \footnote{In our case these are subroutines written in C. However, as some users may not have access to a suitable C compiler, SPIKY contains the pure Matlab code as well.}. It is not stand-alone but requires Matlab to run. XXXXX Update, now stand-alone? XXXXX.
 
 
 \subsection{\label{ss:Structure} Structure of SPIKY}
@@ -335,19 +333,9 @@ If a figure contains more than one subplot (besides the combined subplot contain
 
 \subsection{\label{ss:GUI-vs-loop} GUI vs. loop}
 
-SPIKY was mainly designed to facilitate the detailed analysis of one dataset. It enables the user to switch between different representations and to zoom in on both spatial and temporal features of interest. However, it is not very suitable for the more coarse-grained analysis over many different datasets when e.g. the statistics of a certain quantity in some kind of loop). 
+SPIKY was mainly designed to facilitate the detailed analysis of one dataset. It enables the user to switch between different representations (see Section \ref{ss:Representations}) and to zoom in on both spatial and temporal features of interest. However, SPIKY is not very suitable for the collective analysis of many different datasets when e.g. the statistics of a certain quantity such as an average over certain time intervals should be evaluated over all available datasets in some kind of loop. For these purposes the SPIKY-package contains a program called 'SPIKY\_loop' which is complementary to SPIKY. It is not a graphical user interface but it should be simple enough (and plenty of examples are provided) to allow everyone to run the same kind of analysis for many different datasets and to evaluate and compare their 'SPIKY\_results'. 'SPIKY\_loop' uses the full functionality of SPIKY such as access to time instants, selective and triggered averages as well as averages over spike train groups.
 
-
-For these purposes the SPIKY-package contains a program called 'SPIKY\_loop'
-
-
- is meant to be used in order to compare the 'SPIKY\_results' for many different datasets (e.g. in some kind of loop). 
- 
-'SPIKY\_loop' uses the full functionality of SPIKY (access to time instants, selective and triggered averages as well as averages over spike train groups).
-
-How can I get the statistics of a certain quantity over a large number of datasets?
-
-For this purpose you can use the program SPIKY\_loop which is complementary to the graphical user interface SPIKY'. Both programs can be used to calculate time-resolved spike train distances (ISI and SPIKE) between two (or more) spike trains. However, whereas SPIKY was mainly designed to facilitate the detailed analysis of one dataset, SPIKY\_loop is meant to be used in order to compare the 'SPIKY\_results' for many different datasets (e.g. in some kind of loop). Note that the new program 'SPIKY\_loop' uses the full functionality of SPIKY (access to time instants, selective and triggered averages as well as averages over spike train groups).
+So combining these two programs it is possible to first use SPIKY for a rather exploratory but detailed analysis of a limited number of individual datasets and then use SPIKY\_loop and its output structure 'SPIKY\_loop\_results' to verify whether any effect discovered on the example dataset is consistently present within all of the datasets.
 
 
 \subsection{\label{ss:Spike-train-surrogates} Spike train surrogates and significance}
@@ -415,9 +403,9 @@ The calculation of the SPIKE-distance consists of three steps: First for each sp
 
 \subsection{\label{ss:Outlook} Outlook}
 
+We chose to write SPIKY in Matlab because of its ease of use, popularity in the neuroscience community, and the well-developed MEX-interface for integrating C functions for performance enhancements. However, in the future we plan to export at least some of its functionality into an open-source environment which could for example be based on Python code within a C++ core. XXXXX Check advice on alternatives again XXXXX
 
-
-Stand-Alone, Python/C++
+Stand-Alone, 
 
 %\begin{appendix} \label{Appendix}
 %

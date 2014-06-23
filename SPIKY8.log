@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.8)  23 JUN 2014 15:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.8)  23 JUN 2014 21:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -504,10 +504,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [3]
 
 Package natbib Warning: Citation `Kreuz13' on page 4 undefined on input line 24
-3.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+4.
 
 Package epstopdf Info: Source file: <Fig2-Movie-Screenshot.eps>
 (epstopdf)                    date: 2013-03-19 01:53:16
@@ -518,7 +515,7 @@ Package epstopdf Info: Source file: <Fig2-Movie-Screenshot.eps>
 (epstopdf)                    size: 27510 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig2-Movie-Screenshot-eps-
 converted-to.pdf Fig2-Movie-Screenshot.eps>
-(epstopdf)             \includegraphics on input line 264.
+(epstopdf)             \includegraphics on input line 265.
 Package epstopdf Info: Output file is already uptodate.
 
 <Fig2-Movie-Screenshot-eps-converted-to.pdf, id=154, 572.1375pt x 422.57875pt>
@@ -526,7 +523,7 @@ File: Fig2-Movie-Screenshot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig2-Movie-Screenshot-eps-converted-to.pdf>
 Package pdftex.def Info: Fig2-Movie-Screenshot-eps-converted-to.pdf used on inp
-ut line 264.
+ut line 265.
 (pdftex.def)             Requested size: 241.84842pt x 178.62961pt.
 Missing character: There is no • in font cmr8!
  [4 <./Fig2-Movie-Screenshot-eps-converted-to.pdf>]
@@ -538,31 +535,28 @@ Package epstopdf Info: Source file: <SPIKY_Flowchart_Neb.eps>
 (epstopdf)                    size: 315793 bytes
 (epstopdf)             Command: <repstopdf --outfile=SPIKY_Flowchart_Neb-eps-co
 nverted-to.pdf SPIKY_Flowchart_Neb.eps>
-(epstopdf)             \includegraphics on input line 287.
+(epstopdf)             \includegraphics on input line 288.
 Package epstopdf Info: Output file is already uptodate.
 
-<SPIKY_Flowchart_Neb-eps-converted-to.pdf, id=178, 1158.3275pt x 1157.32375pt>
+<SPIKY_Flowchart_Neb-eps-converted-to.pdf, id=179, 1158.3275pt x 1157.32375pt>
 File: SPIKY_Flowchart_Neb-eps-converted-to.pdf Graphic file (type pdf)
 
 <use SPIKY_Flowchart_Neb-eps-converted-to.pdf>
 Package pdftex.def Info: SPIKY_Flowchart_Neb-eps-converted-to.pdf used on input
- line 287.
+ line 288.
 (pdftex.def)             Requested size: 241.84842pt x 241.63242pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 
 Package natbib Warning: Citation `Kreuz13' on page 5 undefined on input line 29
-6.
+7.
 
 
-Underfull \hbox (badness 4144) in paragraph at lines 313--314
+Underfull \hbox (badness 4144) in paragraph at lines 314--315
 \OT1/cmr/m/n/10 workspace for fur-ther pro-cess-ing. When one clicks
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--314
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
 \OT1/cmr/m/n/10 ables such as 'SPIKY[]spikes', 'SPIKY[]profile[]X[]1',
  []
 
@@ -631,19 +625,19 @@ No file SPIKY8.bbl.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 434.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 434.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 436.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 436.
 (./SPIKY8.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 434.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 434.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 436.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 436.
 Package rerunfilecheck Info: File `SPIKY8.out' has not changed.
 (rerunfilecheck)             Checksum: 160D28CA01048AA5879AA649223DB20F;1325.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 434.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 436.
  ) 
 Here is how much of TeX's memory you used:
- 7029 strings out of 493315
- 98275 string characters out of 6137905
- 192203 words of memory out of 5000000
+ 7030 strings out of 493315
+ 98286 string characters out of 6137905
+ 192281 words of memory out of 5000000
  10327 multiletter control sequences out of 15000+600000
  21447 words of font info for 85 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -659,21 +653,22 @@ al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local
 /texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texli
-ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
-2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/201
-3/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsl8.pfb></usr/local/texlive/2013/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2013/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2013/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2013/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2013/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on SPIKY8.pdf (7 pages, 613066 bytes).
+ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/
+2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/201
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsl8.pfb></usr/local/texlive/2013/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2013/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2013/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2013/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2013/texmf-dist/font
+s/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on SPIKY8.pdf (7 pages, 624490 bytes).
 PDF statistics:
- 302 PDF objects out of 1000 (max. 8388607)
- 248 compressed objects within 3 object streams
- 55 named destinations out of 1000 (max. 500000)
+ 308 PDF objects out of 1000 (max. 8388607)
+ 253 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
  184 words of extra memory for PDF output out of 10000 (max. 10000000)
 
