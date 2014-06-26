@@ -78,6 +78,8 @@ Recently, the SPIKE-distance has been proposed as a measure of spike train synch
 %
 \section{\label{s:Intro} Introduction}
 
+
+
 XXXXX Preliminary, to be edited in the end XXXXX
 
 A wide variety of approaches to quantify the dissimilarity, or distance, between two spike trains has been suggested. Among these is the metric introduced in \citet{Victor96}, which evaluates the cost needed to transform one spike train into the other, using only certain elementary steps. Another metric proposed in \citet{VanRossum01}, measures the Euclidean distance between the two spike trains after convolution of the spikes with an exponential function. Both methods involve one parameter that sets the time scale. In contrast, two more recent bivariate approaches, the ISI- and the SPIKE-distance are time scale independent and self-adaptive \citep{Kreuz07c, Kreuz13}. These two measures are complementary: The ISI-distance relies on the relative length of simultaneous interspike intervals and is thus well-designed to quantify similarities in the neurons' firing-rate profiles \citep{Kreuz07c, Kreuz09}. The SPIKE-distance is based on differences between the spike times of the two spike trains and is therefore ideally suited to track synchrony that is mediated by spike timing \citep{Kreuz11, Kreuz13}.
@@ -85,6 +87,13 @@ A wide variety of approaches to quantify the dissimilarity, or distance, between
 Reliability includes clustering
 
 XXXXX Computational aspects XXXXX
+
+The remainder of the paper is organized as follows.
+
+\ref{s:Measures}
+\ref{s:SPIKY}
+\ref{ss:Access}
+\ref{s:Discussion}
 
 %
 % **************************************************************** Measures **************
@@ -230,7 +239,8 @@ where we use the length of the first known interspike interval $t_2-t_1$ as an u
 
 \subsubsection{\label{sss:Sampling} Increase of memory efficiency by avoiding sampling}
 
-Earlier versions of the codes for calculating the ISI- and the SPIKE-distance relied on sampled dissimilarity profiles. Typically the precision was set to the sampling interval of the neuronal recording. Since the dissimilarity profile has to be calculated and stored for each pair of spike trains, this resulted, for each measure, in a matrix of order 'number of sampled time instants' $\times$ 'number of spike train pairs' (i.e., $\# (t_s) \times N(N-1)/2$). For small sampling intervals and a large number of recorded spike trains this lead to memory problems. In SPIKY we use an optimized and more memory-efficient way of storing the data where we make use of the fact that the dissimilarity profile $I (t)$ of the ISI-distance is piecewise constant and the dissimilarity profile $S (t)$ of the SPIKE-distance is piecewise linear with each interval running from one spike of the pooled spike train to the next one. Thus for each such interval (and for each pair of spike trains) we have to store only one value for the ISI-distance and two values for the SPIKE-distance, one at the beginning and one at the end of the interval. Typically the storage space required will be much smaller than for dissimilarity profiles sampled with a reasonable precision.
+Earlier versions of the codes for calculating the ISI- and the SPIKE-distance relied on sampled dissimilarity profiles. Typically the precision was set to the sampling interval of the neuronal recording. Since the dissimilarity profile has to be calculated and stored for each pair of spike trains, this resulted, for each measure, in a matrix of order 'number of sampled time instants' $\times$ 'number of spike train pairs' (i.e., $\# (t_s) \times N(N-1)/2$). For small sampling intervals and a large number of recorded spike trains this lead to memory problems.
+In SPIKY we use an optimized and more memory-efficient way of storing the data where we make use of the fact that the dissimilarity profile $I (t)$ of the ISI-distance is piecewise constant and the dissimilarity profile $S (t)$ of the SPIKE-distance is piecewise linear with each interval running from one spike of the pooled spike train to the next one. Thus for each such interval (and for each pair of spike trains) we have to store only one value for the ISI-distance and two values for the SPIKE-distance, one at the beginning and one at the end of the interval. Typically the storage space required will be much smaller than for dissimilarity profiles sampled with a reasonable precision.
 
 For both dissimilarity profiles there are instantaneous jumps at the times of the spikes since this is where the lengths of the interspike intervals and the identity of the previous and the following spikes change abruptly. In contrast to the calculation based on sampling we get the exact result since each spike is both the previous and the next spike and there is no need anymore to 'cut the corners' of the dissimilarity profiles as had to be done for the sampled dissimilarity profiles. The dissimilarity profiles $S_r(t)$ and $S_f (t)$ of the real-time and the future SPIKE-distances are hyperbolic but for these measures the exact result can be obtained by piecewise integration over all intervals of the pooled spike train.
 
@@ -257,7 +267,9 @@ The local average over spike train pairs yields a dissimilarity profile for the 
 
 The fact that there are no limits to the temporal resolution allows further analyses such as internally or externally triggered temporal averaging. Here, the matrices are averaged over certain trigger time instants only. The idea is to check whether this triggered temporal average is significantly different from the global average since this would indicate that something peculiar is happening at these trigger instants. These trigger times can either be obtained from internal conditions (such as the spike times of a certain spike train) or from external influences (such as the occurrence of certain features in a stimulus). In real multi-neuron data, internal triggering might help to uncover the connectivity in neural networks or to detect converging or diverging patterns of firing propagation. External triggering might be helpful in addressing questions of neuronal coding, for example, it could be used to evaluate the influence of localized stimulus features on the reliability of real neurons under repeated stimulation.
 
-A last possibility is spatial averaging such that the spike trains are manually assigned to subgroups, and a block matrix (and the corresponding dendrogram) is obtained by averaging over the respective submatrices of the original dissimilarity matrix. In applications to real data, these groups could be different neuronal populations or responses to different stimuli, depending on whether the spike trains were recorded simultaneously or successively.
+A last possibility is spatial averaging such that the spike trains are manually assigned to subgroups, and a block matrix (and the corresponding dendrogram XXXXX) is obtained by averaging over the respective submatrices of the original dissimilarity matrix. In applications to real data, these groups could be different neuronal populations or responses to different stimuli, depending on whether the spike trains were recorded simultaneously or successively.
+
+XXXX Create one Matlab figure which includes as many representations as possible XXXXX
 
 
 %
@@ -270,28 +282,39 @@ SPIKY is a graphical user interface (GUI) for monitoring synchrony between artif
 
 \subsection{\label{ss:Access} Access to SPIKY and how to get started}
 
-SPIKY is distributed under a BSD licence (Copyright (c) 2014, Thomas Kreuz, Nebojsa Bozanic. All rights reserved.). A zip-package containing all the necessary files can be accessed for free on the \href{http://www.fi.isc.cnr.it/users/thomas.kreuz/Source-Code/SPIKY.html}{download page} (\url{http://www.fi.isc.cnr.it/users/thomas.kreuz/Source-Code/SPIKY.html}). This package also contains a folder with lots of documentation (such as a FAQ-file and an introduction to all individual elements and all individual files of SPIKY). Further information and many demonstrations (both images and movies) can be found on the download page and on the \href{https://www.facebook.com/SPIKYgui}{SPIKY Facebook-page} (\url{https://www.facebook.com/SPIKYgui}). Both of these pages are used to announce updates and distribute the latest information about new features. They also provides the user with an opportunity to provide feedback and ask questions.
+SPIKY is distributed under a BSD licence (Copyright (c) 2014, Thomas Kreuz, Nebojsa Bozanic. All rights reserved.). A zip-package containing all the necessary files can be accessed for free on the \href{http://www.fi.isc.cnr.it/users/thomas.kreuz/Source-Code/SPIKY.html}{download page} (\url{http://www.fi.isc.cnr.it/users/thomas.kreuz/Source-Code/SPIKY.html}). This package also contains a folder with lots of documentation (such as a FAQ-file and an introduction to all individual elements and all individual files of SPIKY). Further information and many demonstrations (both images and movies) can be found on the download page and on the \href{https://www.facebook.com/SPIKYgui}{SPIKY Facebook-page} (\url{https://www.facebook.com/SPIKYgui}). Both of these pages are used to announce updates and distribute the latest information about new features. They also provide the user with an opportunity to provide feedback and ask questions.
 
 The Facebook-page include various screen recordings with voice-over in which the user is guided step by step through some of the most important features of SPIKY. All of these movies can also be viewed on the \href{https://www.youtube.com/channel/UCgSz0YQ5lWdVF0_Z1FNN0Bw}{SPIKY Youtube-channel} (\url{https://www.youtube.com/channel/UCgSz0YQ5lWdVF0_Z1FNN0Bw}).
 
-After having downloaded SPIKY from the download page the user has to first extract the zip-package which leaves all files in one folder named 'SPIKY'. If the system has a suitable MEX-compiler installed, the MEX-files can be compiled from within this folder by running the m-file 'SPIKY\_compile\_MEX'. The last step is to run the m-file 'SPIKY'. XXXXX stand-alone version? XXXXX 
+After having downloaded SPIKY from the download page the user has to first extract the zip-package which leaves all files in one folder named 'SPIKY'. If the system has a suitable MEX-compiler installed, the MEX-files can be compiled from within this folder by running the m-file 'SPIKY\_compile\_MEX'. The last step is to run the m-file 'SPIKY'. XXXXX Stand-alone version? XXXXX 
 
 When SPIKY is running, the user can find quick information about the individual elements of the graphical user interface by activating the 'Hints'-checkbox in the 'Options'-Menu. Hovering with the mouse cursor above the elements of interest will then show short hints. An overview of all the information contained in the hints can be found in the documentation file 'SPIKY-Elements.doc'. Furthermore, at each step the suggested element for the next user action is highlighted by a bold font. 
 
-To get the user started quickly, SPIKY provides a few (artificial) example datasets from previous publications. The most useful example is the entry 'Clustering' in the 'Selection: Data'-listbox. This dataset has already been used in several figures as well as in the supplementary movies of \cite{Kreuz13}. A good introduction to SPIKY would be to follow this example through till the end advancing from panel to panel by pressing the highlighted button. In a second step one could reset and run the same example again while changing some parameters in order to see the consequences. Note that it is not necessary to set all the parameters each time when SPIKY is started. Rather it is possible to use the file 'SPIKY\_f\_user\_interface' to set and modify the spike train data as well as the parameters (again refer to the dataset 'Clustering' for an example).
+To get the user started quickly, SPIKY provides a few (artificial) example datasets from previous publications. The most useful example is the entry 'Clustering' in the 'Selection: Data'-listbox. This dataset has already been used in several figures as well as in the supplementary movie of \cite{Kreuz13}. A good introduction to SPIKY would be to follow this example through till the end advancing from panel to panel by pressing the highlighted button. In a second step one could reset and run the same example again while changing some parameters in order to see the consequences. Note that it is not necessary to set all the parameters each time when SPIKY is started. Rather it is possible to use the file 'SPIKY\_f\_user\_interface' to set and modify the spike train data as well as the parameters (again refer to the dataset 'Clustering' for an example).
 
 
 \subsection{\label{ss:Structure} Structure of SPIKY}
 
-(see Section \ref{ss:Input})
+Overall, SPIKY has a rather linear workflow, however, it is much more interactive than previous implementations and there are many potential shortcuts and loops along the way. As you can see in Fig. \ref{fig:Fig2-SPIKY-Flowchart}, the general flow is clearly directed from the input of spike train data to the output of results. So the first step the user has to do is to give SPIKY some spike trains to work with. There are three possibilities to do so: one can make use of predefined examples, load data from a file, or employ the spike train generator (see Section \ref{ss:Input} for more details). Once the full dataset is there, it is organized in a rasterplot, spike times per spike train versus time.
+
+Now it is possible to impose some external structure on the spike train rasterplot.
+
+Once the full dataset is there, one can restrict the analysis to a specific subset, e.g., select a smaller time window and/or a subset of spike trains. 
+
+It is also possible to impose some external structure on the spike train rasterplot. SPIKY allows the definition of 
+
+(see Fig. \ref{fig:Fig3-Movie-Screenshot} for an annotated example).
+
+
+define spike train groups 
+
+For example, these could be spike trains recorded in different brain regions, during different kinds of stimulations.
+
 'Update' button
 (see Section \ref{ss:Figure-Layout})
 (see Section \ref{ss:Output})
 'Calculate' button
 
-XXXXX Describe flowchart XXXXX
-
-Fig. \ref{fig:Fig2-SPIKY-Flowchart}
 
 %
 \begin{figure}
@@ -299,7 +322,6 @@ Fig. \ref{fig:Fig2-SPIKY-Flowchart}
     \caption{\abb\label{fig:Fig2-SPIKY-Flowchart} SPIKY-Flowchart}
 \end{figure}
 
-Fig. \ref{fig:Fig3-Movie-Screenshot}
 
 %
 \begin{figure}
@@ -419,6 +441,8 @@ The calculation of the SPIKE-distance consists of three steps: First for each sp
 
 \subsection{\label{ss:Outlook} Outlook}
 
+This manuscript is concerned with a new method and a new program primarily designed to analyze electrophysiological data such as neuronal spike trains. But in principle it is also applicable to any other kind of discrete data which comes in the form of sequences of time stamps (such as times of bouncing basketballs and coded parent and child acts during children's tantrums just to mention two examples which we already dealt with).
+
 We chose to write SPIKY in Matlab because of its ease of use, popularity in the neuroscience community, and the well-developed MEX-interface for integrating C functions for performance enhancements. However, in the future we plan to export at least some of its functionality into an open-source environment which could for example be based on Python code within a C++ core. XXXXX Check advice on alternatives again XXXXX
 
 Stand-Alone, 
@@ -427,9 +451,11 @@ Stand-Alone,
 %
 %\end{appendix}
 
-Regarding the application to real neuronal data, 
+Regarding the application to real neuronal data within any of the three different scenarios listed in the introduction,
 
-if there are changes in overall spike train synchrony or in spike train clustering SPIKY should be able to detect them.
+The question whether synchrony on the single-neuron level is relevant for neuronal coding is not discussed here.
+
+However, if there are changes in overall spike train synchrony or in spike train clustering SPIKY should be able to detect them.
 
 
 \vspace{1cm}
