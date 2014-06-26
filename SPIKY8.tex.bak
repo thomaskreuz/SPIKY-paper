@@ -7,7 +7,7 @@
 \usepackage{natbib}
 \usepackage{hyperref}
 
-% 
+
 %
 % Introduction
 % ============
@@ -38,9 +38,6 @@
 % Limitations
 % Outlook
 %
-%
-%
-
 
 
 \begin{document}
@@ -88,6 +85,13 @@ A wide variety of approaches to quantify the dissimilarity, or distance, between
 Reliability includes clustering
 
 XXXXX Computational aspects XXXXX
+
+The remainder of the paper is organized as follows.
+
+\ref{s:Measures}
+\ref{s:SPIKY}
+\ref{ss:Access}
+\ref{s:Discussion}
 
 %
 % **************************************************************** Measures **************
@@ -261,11 +265,6 @@ The local average over spike train pairs yields a dissimilarity profile for the 
 The fact that there are no limits to the temporal resolution allows further analyses such as internally or externally triggered temporal averaging. Here, the matrices are averaged over certain trigger time instants only. The idea is to check whether this triggered temporal average is significantly different from the global average since this would indicate that something peculiar is happening at these trigger instants. These trigger times can either be obtained from internal conditions (such as the spike times of a certain spike train) or from external influences (such as the occurrence of certain features in a stimulus). In real multi-neuron data, internal triggering might help to uncover the connectivity in neural networks or to detect converging or diverging patterns of firing propagation. External triggering might be helpful in addressing questions of neuronal coding, for example, it could be used to evaluate the influence of localized stimulus features on the reliability of real neurons under repeated stimulation.
 
 A last possibility is spatial averaging such that the spike trains are manually assigned to subgroups, and a block matrix (and the corresponding dendrogram) is obtained by averaging over the respective submatrices of the original dissimilarity matrix. In applications to real data, these groups could be different neuronal populations or responses to different stimuli, depending on whether the spike trains were recorded simultaneously or successively.
-%
-\begin{figure}
-    \includegraphics[width=85mm]{Fig2-Movie-Screenshot.eps}
-    \caption{\abb\label{fig:Fig2-Movie-Screenshot} Annotated screenshot from a movie.   A. Artificially generated spike trains.   B. Dissimilarity matrices obtained by averaging over two separate time intervals for both the regular and the real-time SPIKE-distance as well as their averages over subgroups of spike trains (denoted by $<•>_G$).   C. Corresponding dendrograms.}
-\end{figure}
 
 
 %
@@ -273,20 +272,49 @@ A last possibility is spatial averaging such that the spike trains are manually 
 %
 \section{\label{s:SPIKY} SPIKY}
 
-SPIKY is a graphical user interface (GUI) for monitoring synchrony between artificially simulated or experimentally recorded neuronal spike trains. It is based on two recently proposed methods to measure spike train (dis)similarity, the ISI- and the SPIKE-distance. SPIKY is a free software package programmed by Thomas Kreuz and Nebojsa Bozanic. All source codes are written in Matlab (MathWorks Inc, Natick, MA, USA) with the most time-consuming loops coded in MEX-files \footnote{In our case these are subroutines written in C. However, as some users may not have access to a suitable C compiler, SPIKY contains the pure Matlab code as well.}. It is not stand-alone but requires Matlab to run. XXXXX Update, now stand-alone? XXXXX.
+SPIKY is a graphical user interface (GUI) for monitoring synchrony between artificially simulated or experimentally recorded neuronal spike trains. It is an implementation of the ISI- and the SPIKE-distance (including simulations of its realtime and future variants) which allows  interactive access to all the different representations described in Section \ref{ss:Representations}. SPIKY is a free software package programmed by Thomas Kreuz and Nebojsa Bozanic. All source codes are written in Matlab (MathWorks Inc, Natick, MA, USA) with the most time-consuming loops coded in MEX-files \footnote{In our case these are subroutines written in C. However, as some users may not have access to a suitable C compiler, SPIKY contains the (slower) pure Matlab code as well.}. SPIKY is not stand-alone but requires Matlab to run. XXXXX Update, now stand-alone? XXXXX.
+
+
+\subsection{\label{ss:Access} Access to SPIKY and how to get started}
+
+SPIKY is distributed under a BSD licence (Copyright (c) 2014, Thomas Kreuz, Nebojsa Bozanic. All rights reserved.). A zip-package containing all the necessary files can be accessed for free on the \href{http://www.fi.isc.cnr.it/users/thomas.kreuz/Source-Code/SPIKY.html}{download page} (\url{http://www.fi.isc.cnr.it/users/thomas.kreuz/Source-Code/SPIKY.html}). This package also contains a folder with lots of documentation (such as a FAQ-file and an introduction to all individual elements and all individual files of SPIKY). Further information and many demonstrations (both images and movies) can be found on the download page and on the \href{https://www.facebook.com/SPIKYgui}{SPIKY Facebook-page} (\url{https://www.facebook.com/SPIKYgui}). Both of these pages are used to announce updates and distribute the latest information about new features. They also provides the user with an opportunity to provide feedback and ask questions.
+
+The Facebook-page include various screen recordings with voice-over in which the user is guided step by step through some of the most important features of SPIKY. All of these movies can also be viewed on the \href{https://www.youtube.com/channel/UCgSz0YQ5lWdVF0_Z1FNN0Bw}{SPIKY Youtube-channel} (\url{https://www.youtube.com/channel/UCgSz0YQ5lWdVF0_Z1FNN0Bw}).
+
+After having downloaded SPIKY from the download page the user has to first extract the zip-package which leaves all files in one folder named 'SPIKY'. If the system has a suitable MEX-compiler installed, the MEX-files can be compiled from within this folder by running the m-file 'SPIKY\_compile\_MEX'. The last step is to run the m-file 'SPIKY'. XXXXX Stand-alone version? XXXXX 
+
+When SPIKY is running, the user can find quick information about the individual elements of the graphical user interface by activating the 'Hints'-checkbox in the 'Options'-Menu. Hovering with the mouse cursor above the elements of interest will then show short hints. An overview of all the information contained in the hints can be found in the documentation file 'SPIKY-Elements.doc'. Furthermore, at each step the suggested element for the next user action is highlighted by a bold font. 
+
+To get the user started quickly, SPIKY provides a few (artificial) example datasets from previous publications. The most useful example is the entry 'Clustering' in the 'Selection: Data'-listbox. This dataset has already been used in several figures as well as in the supplementary movie of \cite{Kreuz13}. A good introduction to SPIKY would be to follow this example through till the end advancing from panel to panel by pressing the highlighted button. In a second step one could reset and run the same example again while changing some parameters in order to see the consequences. Note that it is not necessary to set all the parameters each time when SPIKY is started. Rather it is possible to use the file 'SPIKY\_f\_user\_interface' to set and modify the spike train data as well as the parameters (again refer to the dataset 'Clustering' for an example).
 
 
 \subsection{\label{ss:Structure} Structure of SPIKY}
 
-First extract the zip-package (all files should be in one directory named SPIKY), then within Matlab go to this directory or add it to the path (addpath). Compile the MEX-files using 'SPIKY\_compile\_MEX', finally run SPIKY. 
+SPIKY has a rather linear workflow 
 
-Typically the suggested element for the next user action is marked by a bold font. The most complete initial example is the entry 'Clustering' in the Data listbox. We suggest to follow this example through till the end advancing from panel to panel by pressing the highlighted button. With the same example in a second step you can start to change some parameters and see the consequences. Later, if you do not want to set all the parameters each time when you start SPIKY with a new dataset have a look at the file 'SPIKY\_f\_user\_interface' and try to understand how for this example the spike train and the parameter values have been created. Hopefully you should then be able to do similar things with your own datasets. For quick information about the individual elements of the GUI activate the Hints-checkbox in the Options-Menu and then hover with the mouse cursor above the elements of interest and you will see short hints. An overview of all this information can be found in the file SPIKY-Elements.doc.
+(see Section \ref{ss:Input})
+'Update' button
+(see Section \ref{ss:Figure-Layout})
+(see Section \ref{ss:Output})
+'Calculate' button
+
+XXXXX Describe flowchart XXXXX
+
+Fig. \ref{fig:Fig2-SPIKY-Flowchart}
+
 %
 \begin{figure}
     \includegraphics[width=85mm]{SPIKY_Flowchart_Neb.eps}
-    \caption{\abb\label{fig:Fig3-SPIKY-Flowchart} SPIKY-Flowchart}
+    \caption{\abb\label{fig:Fig2-SPIKY-Flowchart} SPIKY-Flowchart}
 \end{figure}
 
+Fig. \ref{fig:Fig3-Movie-Screenshot}
+
+%
+\begin{figure}
+    \includegraphics[width=85mm]{Fig2-Movie-Screenshot.eps}
+    \caption{\abb\label{fig:Fig3-Movie-Screenshot} Annotated screenshot from a movie.   A. Artificially generated spike trains.   B. Dissimilarity matrices obtained by averaging over two separate time intervals for both the regular and the real-time SPIKE-distance as well as their averages over subgroups of spike trains (denoted by $<•>_G$).   C. Corresponding dendrograms.}
+\end{figure}
 
 \subsection{\label{ss:Input} Input}
 
@@ -307,6 +335,13 @@ If case of a mat-file SPIKY looks for a variable called 'spikes', if it cannot f
 The third option is to create new spike train data via the spike train generator. After setting some defining variables (number of spike trains, start and end time, sampling interval) you can build your spike trains by using predefined spike train patterns (such as periodic, splay, uniform or Poisson) and/or by manually adding, shifting and deleting individual spikes or groups of spikes.
 
 
+\subsection{\label{ss:Figure-Layout} Figure-Layout}
+
+SPIKY was designed in a way that allows to directly generate figures suitable for publication. To this aim the user is given control over the appearance of every individual element (e.g. fonts, lines etc.) in each type of figure. There are two ways to determine essential properties such as color, font size or line width. Most conveniently, one can use the file 'SPIKY\_f\_user\_interface' to define the standard values for all the parameters that describe the principal layout of the figure. But it is also possible to change elements in the active figure while the program is already running. To do so the user has to simply click the right mouse button on the element to be changed. A context menu will appear which lets the user either edit either the properties of individual elements or of all elements of a certain type. This also includes the string property of any font (title, x- and y-labels etc.).
+
+If a figure contains more than one subplot (besides the combined subplot containing the spike rasterplot and dissimilarity profiles these are typically subplots with dissimilarity matrices and dendrograms), it is also possible to change their position and size. To do so just move the cursor to the respective axis (either just left or just below the subplot) and click the right mouse button. Now one can edit all position variables by hand or change the x-position, the y-position, the width and the height individually. In case there are several dissimilarity matrices / dendrograms one can do this either for an individual matrix / dendrogram or for all of them at the same time.
+
+
 \subsection{\label{ss:Output} Output}
 
 From within SPIKY it is possible to extract the spike trains and the results of the analyses (measure profiles, matrices, dendrograms) to the Matlab workspace for further processing. When one clicks the right mouse button on the element whose data one wishes to extract results will be stored in variables such as 'SPIKY\_spikes', 'SPIKY\_profile\_X\_1', 'SPIKY\_profile\_Y\_1', 'SPIKY\_profile\_name\_1' as well as 'SPIKY\_matrix\_1' and 'SPIKY\_matrix\_name\_1'. In addition, the results obtained during an analysis will automatically be stored in the output structure 'SPIKY\_results' which will have one field for each measure selected. Depending on the parameter selection within SPIKY, for each measure the structure can contains the following subfields which largely correspond to the different representations identified in Section \ref{ss:Representations}:
@@ -322,13 +357,6 @@ From within SPIKY it is possible to extract the spike trains and the results of 
 Note that the dissimilarity profiles are not equidistantly sampled. Rather they are stored as memory-efficiently as possible which means just one value for each interval of the pooled spike train for the ISI- and two values for the SPIKE-distance. Since this format can be more difficult to process, the functions 'SPIKY\_f\_selective\_averaging', 'SPIKY\_f\_triggered\_averaging', and 'SPIKY\_f\_average\_pi' are provided in order to compute the selective average over time intervals, the triggered over time instants, or the average over many dissimilarity profiles, respectively. Furthermore, for the ISI-distance the function 'SPIKY\_f\_pico.m' can be used to obtain the average value as well as the x- and y-vectors for plotting.
 
 Besides the standard way to work with Matlab-figures SPIKY also offers the opportunity to save each figure as a postscript-file. Finally, it is possible to save a sequence of images as an 'avi'-movie.
-
-
-\subsection{\label{ss:Figure-Layout} Figure-Layout}
-
-SPIKY was designed in a way that allows to directly generate figures suitable for publication. To this aim the user is given control over the appearance of every individual element (e.g. fonts, lines etc.) in each type of figure. There are two ways to determine essential properties such as color, font size or line width. Most conveniently, one can use the file 'SPIKY\_f\_user\_interface' to define the standard values for all the parameters that describe the principal layout of the figure. But it is also possible to change elements in the active figure while the program is already running. To do so the user has to simply click the right mouse button on the element to be changed. A context menu will appear which lets the user either edit either the properties of individual elements or of all elements of a certain type. This also includes the string property of any font (title, x- and y-labels etc.).
-
-If a figure contains more than one subplot (besides the combined subplot containing the spike rasterplot and dissimilarity profiles these are typically subplots with dissimilarity matrices and dendrograms), it is also possible to change their position and size. To do so just move the cursor to the respective axis (either just left or just below the subplot) and click the right mouse button. Now one can edit all position variables by hand or change the x-position, the y-position, the width and the height individually. In case there are several dissimilarity matrices / dendrograms one can do this either for an individual matrix / dendrogram or for all of them at the same time.
 
 
 \subsection{\label{ss:GUI-vs-loop} GUI vs. loop}
@@ -379,9 +407,6 @@ XXX Nebojsa figure (Performance comparison) XXX
 %\end{figure}
 
 
-\subsection{\label{ss:Access} Access to SPIKY}
-
-SPIKY is distributed under a BSD licence (Copyright (c) 2014, Thomas Kreuz, Nebojsa Bozanic. All rights reserved.). A zip-package containing all the necessary files can be accessed for free on the \href{http://www.fi.isc.cnr.it/users/thomas.kreuz/Source-Code/SPIKY.html}{download page} (\url{http://www.fi.isc.cnr.it/users/thomas.kreuz/Source-Code/SPIKY.html}). This package also contains a folder with lots of documentation (such as a FAQ-file). Further information and some demonstrations (both images and movies) can be found on the download page and on the \href{https://www.facebook.com/SPIKYgui}{SPIKY Facebook-page} (\url{https://www.facebook.com/SPIKYgui}). Both of these pages will be used to announce updates and distribute the latest information about new features. The Facebook-page also provides the user with an opportunity to provide feedback and ask questions. Finally, the movies can also be viewed on the \href{https://www.youtube.com/channel/UCgSz0YQ5lWdVF0_Z1FNN0Bw}{SPIKY Youtube-channel} (\url{https://www.youtube.com/channel/UCgSz0YQ5lWdVF0_Z1FNN0Bw}).
 
 
 
@@ -411,6 +436,10 @@ Stand-Alone,
 %
 %\end{appendix}
 
+Regarding the application to real neuronal data, 
+
+if there are changes in overall spike train synchrony or in spike train clustering SPIKY should be able to detect them.
+
 
 \vspace{1cm}
 
@@ -421,7 +450,7 @@ NB and TK acknowledge funding support from the European Commission through the M
 
 TK thanks Marcus Kaiser for hosting him at the University of Newcastle, UK.
      
-We thank Emily Caporello, Daniel Chicharro, Tim Gentner, Conor Houghton, Jutta Kretzberg, Stefano Luccioli, Florian Mormann, Leon Paz, Friederice Pirschel, Alessandro Torcini, Jonathan Victor for useful discussions.
+We thank Ralph Andrzejak, Emily Caporello, Daniel Chicharro, Tim Gentner, Conor Houghton, Jutta Kretzberg, Stefano Luccioli, Florian Mormann, Leon Paz, Friederice Pirschel, Alessandro Torcini, Jonathan Victor, and Sid Visser for useful discussions.
 
 We also thank Thomas Alderson, Black Square, Mayte Bonilla Quintana, Hamid Charkhkar, Didier Desaintjan, Mario DiPoppa, Mahboubeh Etemadi, Marion Najac, Matthew Phillips, Eugenio Piasini, Robert Rein, Rodrigo Salazar, Michael Schaub, Eitan Schechtman, Matthew Williams, Yunguo Yu for advice and user feedback.
 \end{thanks}
