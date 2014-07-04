@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.8)  27 JUN 2014 23:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2014.5.8)  1 JUL 2014 17:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -111,18 +111,10 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: dvips.def on input line 91.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count107
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
 \Gin@req@height=\dimen122
 \Gin@req@width=\dimen123
@@ -159,13 +151,13 @@ Package: amsbsy 1999/11/29 v1.2d
 Package: amsopn 1999/12/14 v2.01 operator names
 LaTeX Info: Redefining \operatorname on input line 46.
 )
-\inf@bad=\count108
+\inf@bad=\count107
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count109
-\leftroot@=\count110
+\uproot@=\count108
+\leftroot@=\count109
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count111
-\DOTSCASE@=\count112
+\classnum@=\count110
+\DOTSCASE@=\count111
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
@@ -174,15 +166,15 @@ LaTeX Info: Redefining \cdots on input line 466.
 \big@size=\dimen128
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count113
-\c@MaxMatrixCols=\count114
+\macc@depth=\count112
+\c@MaxMatrixCols=\count113
 \dotsspace@=\muskip10
-\c@parentequation=\count115
-\dspbrk@lvl=\count116
+\c@parentequation=\count114
+\dspbrk@lvl=\count115
 \tag@help=\toks22
-\row@=\count117
-\column@=\count118
-\maxfields@=\count119
+\row@=\count116
+\column@=\count117
+\maxfields@=\count118
 \andhelp@=\toks23
 \eqnshift@=\dimen129
 \alignsep@=\dimen130
@@ -220,7 +212,7 @@ Package: natbib 2006/09/06 7.4a (PWD)
 \bibhang=\skip49
 \bibsep=\skip50
 LaTeX Info: Redefining \cite on input line 541.
-\c@NAT@ctr=\count120
+\c@NAT@ctr=\count119
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
@@ -232,15 +224,15 @@ Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
-Package hobsub Info: Skipping package `infwarerr' (already loaded).
-Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -253,7 +245,7 @@ Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
+Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
 Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
 Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
 )
@@ -280,13 +272,13 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen135
-\Hy@linkcounter=\count121
-\Hy@pagecounter=\count122
+\Hy@linkcounter=\count120
+\Hy@pagecounter=\count121
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count123
+\Hy@SavedSpaceFactor=\count122
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -298,7 +290,7 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count124
+\c@Hy@tempcnt=\count123
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
@@ -306,7 +298,7 @@ Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen136
-\Fld@menulength=\count125
+\Fld@menulength=\count124
 \Field@Width=\dimen137
 \Fld@charsize=\dimen138
 Package hyperref Info: Hyper figures OFF on input line 6295.
@@ -318,15 +310,23 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count126
-\c@Item=\count127
-\c@Hfootnote=\count128
+\Hy@abspage=\count125
+\c@Item=\count126
+\c@Hfootnote=\count127
 )
 
-Package hyperref Message: Driver (autodetected): hpdftex.
+Package hyperref Message: Driver (default): hdvips.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/hdvips.def
+File: hdvips.def 2012/11/06 v6.83m Hyperref driver for dvips
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/pdfmark.def
+File: pdfmark.def 2012/11/06 v6.83m Hyperref definitions for pdfmark specials
+\pdf@docset=\toks26
+\pdf@box=\box33
+\pdf@toks=\toks27
+\pdf@defaulttoks=\toks28
+\HyField@AnnotCount=\count128
 \Fld@listcount=\count129
 \c@bookmark@seq@number=\count130
 
@@ -336,7 +336,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip51
-)
+))
 (./SPIKY9.aux)
 \openout1 = `SPIKY9.aux'.
 
@@ -354,35 +354,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
 LaTeX Font Info:    ... okay on input line 43.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
 LaTeX Font Info:    ... okay on input line 43.
-
-(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count131
-\scratchdimen=\dimen139
-\scratchbox=\box33
-\nofMPsegments=\count132
-\nofMParguments=\count133
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count134
-\MPscratchDim=\dimen140
-\MPnumerator=\count135
-\makeMPintoPDFobject=\count136
-\everyMPtoPDFconversion=\toks27
-) (/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-)
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
 \AtBeginShipoutBox=\box34
 
 
@@ -396,7 +367,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count137
+\c@section@level=\count131
 )
 LaTeX Info: Redefining \ref on input line 43.
 LaTeX Info: Redefining \pageref on input line 43.
@@ -406,8 +377,11 @@ LaTeX Info: Redefining \nameref on input line 43.
 \@outlinefile=\write3
 \openout3 = `SPIKY9.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 47.
 
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 47.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -422,271 +396,374 @@ LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 55.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 55.
-\c@sv@footnote=\count138
+\c@sv@footnote=\count132
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 79.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 83.
 
-Underfull \hbox (badness 5217) in paragraph at lines 83--85
-[]\OT1/cmr/m/n/10 Measuring syn-chro-niza-tion be-tween two or more
- []
+
+Package natbib Warning: Citation `Pikovsky01' on page 1 undefined on input line
+ 96.
+
+
+Package natbib Warning: Citation `Tiesinga08' on page 1 undefined on input line
+ 96.
+
+
+Package natbib Warning: Citation `Shlens08' on page 1 undefined on input line 9
+6.
+
+
+Package natbib Warning: Citation `Nirenberg07' on page 1 undefined on input lin
+e 96.
+
+
+Package natbib Warning: Citation `Kumar10' on page 1 undefined on input line 96
+.
+
+
+Package natbib Warning: Citation `Mainen95' on page 1 undefined on input line 9
+8.
+
+
+Package natbib Warning: Citation `Victor05' on page 1 undefined on input line 9
+8.
+
+
+Package natbib Warning: Citation `Truccolo11' on page 1 undefined on input line
+ 100.
+
+
+Package natbib Warning: Citation `Bower12' on page 1 undefined on input line 10
+0.
+
+
+Package natbib Warning: Citation `Mormann07' on page 1 undefined on input line 
+100.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ [1
 
 ]
 
+Package natbib Warning: Citation `Miller08' on page 2 undefined on input line 1
+02.
+
+
+Package natbib Warning: Citation `Hochberg06' on page 2 undefined on input line
+ 102.
+
+
+Package natbib Warning: Citation `Sanchez08' on page 2 undefined on input line 
+102.
+
+
+Package natbib Warning: Citation `Truccolo11' on page 2 undefined on input line
+ 108.
+
+
+Package natbib Warning: Citation `Bower12' on page 2 undefined on input line 10
+8.
+
+
+Package natbib Warning: Citation `Miller08' on page 2 undefined on input line 1
+08.
+
+
+Package natbib Warning: Citation `Mormann07' on page 2 undefined on input line 
+108.
+
+
+Package natbib Warning: Citation `Hochberg06' on page 2 undefined on input line
+ 108.
+
+
+Package natbib Warning: Citation `Sanchez08' on page 2 undefined on input line 
+108.
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no Ì in font cmr10!
+Missing character: There is no ˆ in font cmr10!
+
 Package natbib Warning: Citation `Victor96' on page 2 undefined on input line 1
-20.
+39.
 
 
 Package natbib Warning: Citation `VanRossum01' on page 2 undefined on input lin
-e 120.
+e 139.
 
 
 Package natbib Warning: Citation `Kreuz07c' on page 2 undefined on input line 1
-20.
+39.
 
 
-Package natbib Warning: Citation `Kreuz13' on page 2 undefined on input line 12
-0.
+Package natbib Warning: Citation `Kreuz13' on page 2 undefined on input line 13
+9.
 
 
 Package natbib Warning: Citation `Kreuz07c' on page 2 undefined on input line 1
-20.
+39.
 
 
-Package natbib Warning: Citation `Kreuz09' on page 2 undefined on input line 12
-0.
+Package natbib Warning: Citation `Kreuz09' on page 2 undefined on input line 13
+9.
 
 
-Package natbib Warning: Citation `Kreuz11' on page 2 undefined on input line 12
-0.
+Package natbib Warning: Citation `Kreuz11' on page 2 undefined on input line 13
+9.
 
 
-Package natbib Warning: Citation `Kreuz13' on page 2 undefined on input line 12
-0.
+Package natbib Warning: Citation `Kreuz13' on page 2 undefined on input line 13
+9.
 
 
-Package natbib Warning: Citation `Kreuz11' on page 2 undefined on input line 14
-0.
-
-
-Package natbib Warning: Citation `Kreuz13' on page 2 undefined on input line 14
-0.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package epstopdf Info: Source file: <Fig1_SPIKE_Illustration.eps>
-(epstopdf)                    date: 2012-12-12 00:14:46
-(epstopdf)                    size: 15248 bytes
-(epstopdf)             Output file: <Fig1_SPIKE_Illustration-eps-converted-to.p
-df>
-(epstopdf)                    date: 2014-05-08 15:08:08
-(epstopdf)                    size: 9241 bytes
-(epstopdf)             Command: <repstopdf --outfile=Fig1_SPIKE_Illustration-ep
-s-converted-to.pdf Fig1_SPIKE_Illustration.eps>
-(epstopdf)             \includegraphics on input line 161.
-Package epstopdf Info: Output file is already uptodate.
-
-<Fig1_SPIKE_Illustration-eps-converted-to.pdf, id=91, 534.99875pt x 315.1775pt>
-File: Fig1_SPIKE_Illustration-eps-converted-to.pdf Graphic file (type pdf)
-<use Fig1_SPIKE_Illustration-eps-converted-to.pdf>
-Package pdftex.def Info: Fig1_SPIKE_Illustration-eps-converted-to.pdf used on i
-nput line 161.
-(pdftex.def)             Requested size: 241.84842pt x 142.4778pt.
- [2 <./Fig1_SPIKE_Illustration-eps-converted-to.pdf>]
-
-Package natbib Warning: Citation `Kreuz07c' on page 3 undefined on input line 2
-48.
-
-
-Package natbib Warning: Citation `Kreuz09' on page 3 undefined on input line 24
-8.
-
-[3]
-
-Package natbib Warning: Citation `Kreuz13' on page 4 undefined on input line 28
+LaTeX Warning: Reference `ss:Improvements' on page 2 undefined on input line 14
 7.
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 320--321
-\OT1/cmr/m/n/10 ([]$\OT1/cmtt/m/n/10 http : / / www . fi . isc . cnr . it / use
-rs / thomas . kreuz /
+
+LaTeX Warning: Reference `ss:Information-reduction' on page 2 undefined on inpu
+t line 147.
+
+[2]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.149 ...terface itself. While the program 'SPIKY_
+                                                  loop' (Subsection \ref{ss:...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.149 ...ously published codes (e.g. \cite{Rusu14}
+                                                  ). Finally, in Section \re...
+
+Please use the math alphabet \mathbf instead of the \bfseries command. 
+
+
+Package natbib Warning: Citation `Rusu14' on page 3 undefined on input line 149
+.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.150 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (1965.6443pt too wide) in paragraph at lines 149--150
+\OT1/cmr/m/n/10 'SPIKY$[]\OML/cmm/m/it/10 oop[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/1
+0 Subsection\OT1/cmr/m/n/10 3\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 3)\OML/cmm/m/it/
+10 ismeanttobeusedforthecollectiveanalysisofmanydifferentdatasets\OT1/cmr/m/n/1
+0 (\OML/cmm/m/it/10 e:g:whenthestatisticsofacertainquantityshouldbeevaluatedove
+rallavailabledatasets\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; theprogram[]SPIKY[]oop
+[]urro[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Subsection\OT1/cmr/m/n/10 3\OML/cmm/m
+/it/10 :\OT1/cmr/m/n/10 4)\OML/cmm/m/it/10 wasdesignedtoevaluatethestatisticals
+ignificanceoftheresultsobtainedfortheoriginaldatasetbycomparingthemagainstthere
+sultsobtainedforspiketrainsurrogatesgeneratedfromthatdataset:InSubsection\OT1/c
+mr/m/n/10 3\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5\OML/cmm/m/it/10 weinvestigatethe
+performanceofournewimplementationofthetime \OMS/cmsy/m/n/10 ^^@
  []
 
 
-Package natbib Warning: Citation `Kreuz13' on page 5 undefined on input line 32
-8.
+Overfull \hbox (754.88425pt too wide) in paragraph at lines 149--150
+\OML/cmm/m/it/10 resolvedmeasuresofspiketrainsynchronyandcompareitwithpreviousl
+ypublishedcodes\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 e:g:[]\OT1/cmr/m/n/10 )\OML/cm
+m/m/it/10 :Finally; inSection\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 wesummarizebotht
+hemethodsandtheprogram; discusstheirlimitationsandpresentanoutlookonfuturedevel
+opments:$ 
+ []
+
+
+Package natbib Warning: Citation `Kreuz07c' on page 3 undefined on input line 1
+62.
+
+
+Package natbib Warning: Citation `Kreuz09' on page 3 undefined on input line 16
+2.
+
+
+Package natbib Warning: Citation `Kreuz11' on page 3 undefined on input line 18
+0.
+
+
+Package natbib Warning: Citation `Kreuz13' on page 3 undefined on input line 18
+0.
+
+File: Fig1_SPIKE_Illustration.eps Graphic file (type eps)
+<Fig1_SPIKE_Illustration.eps> [3] [4]
+Underfull \vbox (badness 3229) has occurred while \output is active []
+
+
+
+Package natbib Warning: Citation `Kreuz13' on page 5 undefined on input line 31
+6.
 
 [5]
-Package epstopdf Info: Source file: <SPIKY_Flowchart_Neb.eps>
-(epstopdf)                    date: 2014-06-17 15:58:19
-(epstopdf)                    size: 4324158 bytes
-(epstopdf)             Output file: <SPIKY_Flowchart_Neb-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-06-17 16:33:08
-(epstopdf)                    size: 315793 bytes
-(epstopdf)             Command: <repstopdf --outfile=SPIKY_Flowchart_Neb-eps-co
-nverted-to.pdf SPIKY_Flowchart_Neb.eps>
-(epstopdf)             \includegraphics on input line 336.
-Package epstopdf Info: Output file is already uptodate.
 
-<SPIKY_Flowchart_Neb-eps-converted-to.pdf, id=167, 1158.3275pt x 1157.32375pt>
-File: SPIKY_Flowchart_Neb-eps-converted-to.pdf Graphic file (type pdf)
+LaTeX Warning: Reference `ss:Information-reduction' on page 6 undefined on inpu
+t line 347.
 
-<use SPIKY_Flowchart_Neb-eps-converted-to.pdf>
-Package pdftex.def Info: SPIKY_Flowchart_Neb-eps-converted-to.pdf used on input
- line 336.
-(pdftex.def)             Requested size: 241.84842pt x 241.63242pt.
-Package epstopdf Info: Source file: <Fig2-Movie-Screenshot.eps>
-(epstopdf)                    date: 2013-03-19 01:53:16
-(epstopdf)                    size: 94413 bytes
-(epstopdf)             Output file: <Fig2-Movie-Screenshot-eps-converted-to.pdf
->
-(epstopdf)                    date: 2014-05-08 15:08:10
-(epstopdf)                    size: 27510 bytes
-(epstopdf)             Command: <repstopdf --outfile=Fig2-Movie-Screenshot-eps-
-converted-to.pdf Fig2-Movie-Screenshot.eps>
-(epstopdf)             \includegraphics on input line 343.
-Package epstopdf Info: Output file is already uptodate.
 
-<Fig2-Movie-Screenshot-eps-converted-to.pdf, id=168, 572.1375pt x 422.57875pt>
-File: Fig2-Movie-Screenshot-eps-converted-to.pdf Graphic file (type pdf)
+Overfull \hbox (105.55257pt too wide) in paragraph at lines 352--353
+\OT1/cmr/m/n/10 ([][][][]).
+ []
 
-<use Fig2-Movie-Screenshot-eps-converted-to.pdf>
-Package pdftex.def Info: Fig2-Movie-Screenshot-eps-converted-to.pdf used on inp
-ut line 343.
-(pdftex.def)             Requested size: 241.84842pt x 178.62961pt.
+
+Overfull \hbox (32.15997pt too wide) in paragraph at lines 352--353
+[][][][] \OT1/cmr/m/n/10 ([][][][]).
+ []
+
+
+Overfull \hbox (161.93669pt too wide) in paragraph at lines 354--355
+[][][][] \OT1/cmr/m/n/10 ([][][][]). 
+ []
+
+
+Package natbib Warning: Citation `Kreuz13' on page 6 undefined on input line 36
+0.
+
+File: SPIKY_Flowchart_Neb.eps Graphic file (type eps)
+<SPIKY_Flowchart_Neb.eps> [6]
+File: Fig2-Movie-Screenshot.eps Graphic file (type eps)
+ <Fig2-Movie-Screenshot.eps>
 Missing character: There is no ï in font cmr8!
 Missing character: There is no ¿ in font cmr8!
 Missing character: There is no ½ in font cmr8!
 
 
-Package natbib Warning: Citation `Kreuz11' on page 6 undefined on input line 34
-7.
-
-[6 <./SPIKY_Flowchart_Neb-eps-converted-to.pdf> <./Fig2-Movie-Screenshot-eps-co
-nverted-to.pdf>]
-
-Package natbib Warning: Citation `Kreuz13' on page 7 undefined on input line 35
-8.
+Package natbib Warning: Citation `Kreuz11' on page 7 undefined on input line 37
+9.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Reference `ss:Information-reduction' on page 7 undefined on inpu
+t line 379.
 
 
-Underfull \hbox (badness 4144) in paragraph at lines 382--383
+Package natbib Warning: Citation `Kreuz13' on page 7 undefined on input line 39
+0.
+
+[7]
+
+LaTeX Warning: Reference `ss:Information-reduction' on page 8 undefined on inpu
+t line 414.
+
+
+Underfull \hbox (badness 4144) in paragraph at lines 414--415
 \OT1/cmr/m/n/10 workspace for fur-ther pro-cess-ing. When one clicks
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--383
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
 \OT1/cmr/m/n/10 ables such as 'SPIKY[]spikes', 'SPIKY[]profile[]X[]1',
  []
 
 
 Underfull \vbox (badness 3503) has occurred while \output is active []
 
- [7]
 
-Package natbib Warning: Citation `Kass05' on page 8 undefined on input line 406
+
+LaTeX Warning: Reference `ss:Information-reduction' on page 8 undefined on inpu
+t line 431.
+
+[8]
+
+Package natbib Warning: Citation `Kass05' on page 9 undefined on input line 438
 .
 
 
-Package natbib Warning: Citation `Gruen09' on page 8 undefined on input line 40
-6.
+Package natbib Warning: Citation `Gruen09' on page 9 undefined on input line 43
+8.
 
 
-Package natbib Warning: Citation `Louis10' on page 8 undefined on input line 40
-6.
+Package natbib Warning: Citation `Louis10' on page 9 undefined on input line 43
+8.
 
 
-Overfull \hbox (8.45099pt too wide) in paragraph at lines 408--410
+Overfull \hbox (8.45099pt too wide) in paragraph at lines 440--442
 []\OT1/cmr/m/n/10 The SPIKY-package con-tains a pro-gram 'Spiky[]loop[]surro'
  []
 
 
-Overfull \hbox (37.74759pt too wide) in paragraph at lines 430--431
-[][]$\OT1/cmtt/m/n/10 https : / / github . com / modulus-[]metric / spike-[]tra
-in-[]metrics$[] 
+Overfull \hbox (37.74759pt too wide) in paragraph at lines 462--463
+[][][][][] 
  []
 
 
-Package natbib Warning: Citation `Rusu14' on page 8 undefined on input line 432
+Package natbib Warning: Citation `Rusu14' on page 9 undefined on input line 464
 .
 
 
-Package natbib Warning: Citation `Thibeault14' on page 8 undefined on input lin
-e 435.
+LaTeX Warning: Reference `ss:Information-reduction' on page 9 undefined on inpu
+t line 466.
 
 
-Package natbib Warning: Citation `Papoutsi13' on page 8 undefined on input line
- 452.
+Package natbib Warning: Citation `Thibeault14' on page 9 undefined on input lin
+e 471.
 
 
-Package natbib Warning: Citation `DiPoppa13' on page 8 undefined on input line 
-452.
+Package natbib Warning: Citation `Papoutsi13' on page 9 undefined on input line
+ 491.
 
 
-Package natbib Warning: Citation `Rusu14' on page 8 undefined on input line 452
+Package natbib Warning: Citation `DiPoppa13' on page 9 undefined on input line 
+491.
+
+
+Package natbib Warning: Citation `Rusu14' on page 9 undefined on input line 491
 .
 
 
-Package natbib Warning: Citation `Sacre14' on page 8 undefined on input line 45
-2.
+Package natbib Warning: Citation `Sacre14' on page 9 undefined on input line 49
+1.
 
-[8]
-No file SPIKY9.bbl.
 [9]
+No file SPIKY9.bbl.
+[10
+
+]
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 502.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 502.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 541.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 541.
 (./SPIKY9.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 502.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 502.
-Package rerunfilecheck Info: File `SPIKY9.out' has not changed.
-(rerunfilecheck)             Checksum: 36E9DFC80691F472E0A88229986A1C1E;1184.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 502.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 541.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 541.
+
+
+Package rerunfilecheck Warning: File `SPIKY9.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `SPIKY9.out':
+(rerunfilecheck)             Before: 36E9DFC80691F472E0A88229986A1C1E;1184
+(rerunfilecheck)             After:  02A72D254A4AB35DCBB96139F9CDE311;1214.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 541.
  ) 
 Here is how much of TeX's memory you used:
- 7029 strings out of 493315
- 98257 string characters out of 6137905
- 192603 words of memory out of 5000000
- 10324 multiletter control sequences out of 15000+600000
+ 6483 strings out of 493316
+ 89774 string characters out of 6137931
+ 187860 words of memory out of 5000000
+ 9856 multiletter control sequences out of 15000+600000
  21447 words of font info for 85 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 31i,8n,28p,1297b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
-/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
-/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
-ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loc
-al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local
-/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
-exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/tex
-live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texli
-ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/
-2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/201
-3/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsl8.pfb></usr/local/texlive/2013/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2013/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2013/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2013/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2013/texmf-dist/font
-s/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on SPIKY9.pdf (9 pages, 634399 bytes).
-PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 250 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
- 160 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31i,8n,28p,1682b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
 
+Output written on SPIKY9.dvi (10 pages, 87944 bytes).
