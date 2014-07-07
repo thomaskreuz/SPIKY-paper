@@ -148,7 +148,7 @@ The ISI-distance, proposed as a bivariate measure in \citep{Kreuz07c} and extend
                   \end{cases}
 \end{equation}
 %
-Since the ISI-values only change at the times of spikes, the dissimilarity profile is piecewise constant. The ISI-ratio equals $0$ for identical ISI in the two spike trains, and approaches $-1$ and $1$, respectively, if the first or the second spike train is much faster than the other. In order to treat both kinds of deviations equally, the temporal averaging is performed on the absolute value of the ISI-ratio:
+Since the ISI-values only change at the times of spikes, the dissimilarity profile is piecewise constant (with potential discontinuities at the spikes). The ISI-ratio equals $0$ for identical ISI in the two spike trains, and approaches $-1$ and $1$, respectively, in intervals in which the first or the second spike train is much faster than the other. In order to treat both kinds of deviations equally, the temporal averaging is performed on the absolute value of the ISI-ratio:
 %
 \begin{equation} \label{eq:Temporal-Average}
     D_I = \frac{1}{T} \int_{t=0}^T dt |I (t)|.
@@ -214,7 +214,7 @@ This quantity weights the spike time differences for each spike train according 
      S (t) = \frac{S_1 (t) x_{\mathrm {ISI}}^{(2)} + S_2 (t) x_{\mathrm {ISI}}^{(1)}}{2 \langle x_{\mathrm {ISI}}^{(n)} \rangle_n^2}.
 \end{equation}
 %
-Since the dissimilarity profile is obtained from a linear interpolation of piecewise constant quantities, it is piecewise linear.
+Since the dissimilarity profile is obtained from a linear interpolation of piecewise constant quantities, it is piecewise linear (with potential discontinuities at the spikes).
 
 Similar to the ISI-distance, the SPIKE-distance is defined as the temporal average of this dissimilarity profile:
 %
@@ -289,7 +289,7 @@ For both dissimilarity profiles there are instantaneous jumps at the times of th
 
 The ISI- and the SPIKE-distance combine a variety of properties that make them well suited for applications to real data. In particular, they are conceptually simple, computationally efficient, and easy to visualize in a time-resolved manner. By taking into account only the preceding and the following spike in each spike train, these distances rely on local information only. They are also time-scale-adaptive since the information used is not contained within a window of fixed size but rather within a time frame whose size depends on the local rate of each spike train.
 
-Moreover, the sensitivity to spike timing and the instantaneous reliability achieved by the SPIKE-distance opens up many new possibilities in multi-neuron spike train analysis \citep{Kreuz13}. These build upon the fact that there are several levels of information reduction.
+Moreover, the sensitivity to spike timing and the instantaneous reliability achieved by the SPIKE-distance opens up many new possibilities in multi-neuron spike train analysis \citep{Kreuz13}. These build upon the fact that there are several levels of information reduction all of which we describe in the following. As illustration we use the detailed analysis of an artificially generated spike train dataset (Fig. \ref{fig:Fig2-SPIKE-Representations}).
 %
 % #########################################################################################
 % #########################################################################################
@@ -299,7 +299,7 @@ Moreover, the sensitivity to spike timing and the instantaneous reliability achi
 %
 \begin{figure}
     \includegraphics[width=85mm]{Fig2_SPIKE_Representations.eps}
-    \caption{\abb\label{fig:Fig2-SPIKE-Representations} The different levels of information reduction for the SPIKE-distance.  A. Spike rasterplot of $20$ artificially generated spike trains divided in $4$ spike train groups of $5$ spike trains each and the dissimilarity profiles of the SPIKE-distance for the four spike train groups (thin color-coded lines) and for all spike trains (thick black line). The overall dissimilarity is defined as the temporal average of the dissimilarity profile of all spike trains ($0.192$ in this case) and is marked by a black horizontal line.  B-E. Matrices of pairwise instantaneous dissimilarity values for a single time instant, for two selective averages and for a triggered average.  F. Matrices of overall pairwise instantaneous dissimilarity values for the $4$ spike train groups.  G. Dendrogram of spike train group matrix in F.  H-I. Dendrogram of spike train matrices in D and E. Note that the triggered averages in contrast to the overall average captures the local similarity between $5$ of the spike trains.}
+    \caption{\abb\label{fig:Fig2-SPIKE-Representations} The different levels of information reduction for the SPIKE-distance.  A. Top: Spike rasterplot of $20$ artificially generated spike trains divided in $4$ spike train groups of $5$ spike trains each. The clustering behavior changes every $500$ ms. Bottom: Dissimilarity profiles of the SPIKE-distance for the four spike train groups (thin color-coded lines) and for all spike trains (thick black line). The overall dissimilarity is defined as the temporal average of the dissimilarity profile of all spike trains ($0.192$ in this case) and is marked by a black horizontal line.  B-E. Matrices of pairwise instantaneous dissimilarity values for a single time instant, for two selective averages and for a triggered average.  F. Matrices of overall pairwise instantaneous dissimilarity values for the $4$ spike train groups.  G. Dendrogram of spike train group matrix in F.  H-I. Dendrogram of spike train matrices in D and E. Note that the triggered averages in contrast to the overall average captures the local similarity between $5$ of the spike trains.}
 \end{figure}
 %
 % #########################################################################################
@@ -310,7 +310,9 @@ Moreover, the sensitivity to spike timing and the instantaneous reliability achi
 
 \subsubsection{\label{sss:Full-matrix-and-cross-sections} Full matrix and cross sections}
 
-The starting point is the most detailed representation in which one instantaneous value is obtained for each pair of spike trains (see Eq. \ref{eq:Bi-Spike-Diss-Improved}). For multi-neuron data, this results in a matrix of size 'number of unique spikes in the pooled spike train' $\times$ 'number of spike train pairs' ($\times 2$ for the SPIKE-distance, see Section \ref{sss:Sampling}).
+The starting point is the most detailed representation in which one instantaneous value is obtained for each pair of spike trains (see Eq. \ref{eq:Bi-Spike-Diss-Improved}). 
+%This representation could be viewed as a movie of a (symmetric) pairwise dissimilarity matrix in which each frame corresponds to one (sampled) time instant. 
+In principle, given the continuity of the time axis this results in an infinite number of values but since all dissimilarity profiles are piecewise linear (with potential discontinuities only at the times of the spikes) there is a lot of redundancy. Using the most compact and memory-efficient representation on can store all pairwise dissimilarity profiles in a matrix of size 'number of unique spikes in the pooled spike train' $\times$ 'number of spike train pairs' ($\times 2$ for the SPIKE-distance, see Section \ref{sss:Sampling}).
 
 From this matrix, it is possible to extract any desired information. By selecting a pair of spike trains, one obtains the bivariate dissimilarity profile $S (t)$ for this pair of spike trains. Selecting a time instant $t_s$ (and using linear interpolation for time instants in between spikes) yields an instantaneous matrix of pairwise spike train dissimilarities $S_{mn}(t_s)$. This matrix can be used to divide the spike trains into instantaneous clusters, that is, groups of spike trains with low intra-group and high inter-group dissimilarity.
 
