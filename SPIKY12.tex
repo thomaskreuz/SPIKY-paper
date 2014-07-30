@@ -5,6 +5,7 @@
 \usepackage{amssymb}
 \usepackage{bm}
 \usepackage{natbib}
+\usepackage[noperiod]{jabbrv}
 \usepackage{hyperref}
 
 %
@@ -37,7 +38,6 @@
 % Limitations
 % Outlook
 %
-
 
 \begin{document}
 
@@ -148,7 +148,7 @@ The ISI-distance, proposed as a bivariate measure in \citep{Kreuz07c} and extend
                   \end{cases}
 \end{equation}
 %
-Since the ISI-values only change at the times of spikes, the dissimilarity profile is piecewise constant. The ISI-ratio equals $0$ for identical ISI in the two spike trains, and approaches $-1$ and $1$, respectively, if the first or the second spike train is much faster than the other. In order to treat both kinds of deviations equally, the temporal averaging is performed on the absolute value of the ISI-ratio:
+Since the ISI-values only change at the times of spikes, the dissimilarity profile is piecewise constant (with potential discontinuities at the spikes). The ISI-ratio equals $0$ for identical ISI in the two spike trains, and approaches $-1$ and $1$, respectively, in intervals in which the first or the second spike train is much faster than the other. In order to treat both kinds of deviations equally, the temporal averaging is performed on the absolute value of the ISI-ratio:
 %
 \begin{equation} \label{eq:Temporal-Average}
     D_I = \frac{1}{T} \int_{t=0}^T dt |I (t)|.
@@ -214,7 +214,7 @@ This quantity weights the spike time differences for each spike train according 
      S (t) = \frac{S_1 (t) x_{\mathrm {ISI}}^{(2)} + S_2 (t) x_{\mathrm {ISI}}^{(1)}}{2 \langle x_{\mathrm {ISI}}^{(n)} \rangle_n^2}.
 \end{equation}
 %
-Since the dissimilarity profile is obtained from a linear interpolation of piecewise constant quantities, it is piecewise linear.
+Since the dissimilarity profile is obtained from a linear interpolation of piecewise constant quantities, it is piecewise linear (with potential discontinuities at the spikes).
 
 Similar to the ISI-distance, the SPIKE-distance is defined as the temporal average of this dissimilarity profile:
 %
@@ -223,6 +223,7 @@ Similar to the ISI-distance, the SPIKE-distance is defined as the temporal avera
 \end{equation}
 %
 The dissimilarity profile $S (t)$ and the SPIKE-distance $D_S$ as its average are bounded in the interval $[0, 1]$. The distance value $D_S = 0$ is obtained for identical spike trains only.
+
 	
 For both the ISI- and the SPIKE-distance there exists a straightforward extension to the case $N > 2$ (with $N$ denoting the number of spike trains), the averaged bivariate distance. This average over all pairs of neurons commutes with the average over time, so it is possible to achieve the same kind of time-resolved visualization as in the bivariate case by first calculating the instantaneous average $S^{\mathrm {a}} (t)$ (for the SPIKE-distance) over all pairwise instantaneous values $S^{mn} (t)$,
 %
@@ -232,7 +233,7 @@ For both the ISI- and the SPIKE-distance there exists a straightforward extensio
 
 
 
-\subsection{\label{ss:Realtime-Spike-Distance} Realtime SPIKE-distance}
+\subsubsection{\label{sss:Realtime-Spike-Distance} Realtime SPIKE-distance}
 
 The realtime SPIKE-distance $D_{S_r}$ is a modification of the SPIKE-distance with the key difference that the corresponding time profile $S_r(t)$ can be calculated online because it relies on past information only \footnote{For the ISI-distance no such causal realtime extension is possible, since it relies on the instantaneous ISI-values and thus requires knowledge about the following spikes.}. From the perspective of an online measure, the information provided by the following spikes, both their position and the length of the interspike interval, is not yet available. Like the regular (improved) SPIKE-distance $D_S$, this causal variant is also based on local spike time differences but now only two corner spikes are available, and the spikes of comparison are restricted to past spikes, e.g., for the preceding spike of the first spike train
 %
@@ -247,7 +248,7 @@ Since there are no following spikes available, there is no local weighting, and 
 \end{equation}
 
 
-\subsection{\label{ss:Future-Spike-Distance} Future SPIKE-distance}
+\subsubsection{\label{sss:Future-Spike-Distance} Future SPIKE-distance}
 
 The future SPIKE-distance $D_{S_f}$ can be used in triggered temporal averaging in order to evaluate the effect of certain spikes or of certain stimuli features on future spiking. It is the inverse measure to the realtime SPIKE-distance but instead of relying on past information only it relies on future information only. Again for each time instant there are just two corner spikes and the potential nearest spikes in the other spike train are future spikes only. Thus the spike time difference for the following spike of the first spike train reads
 %
@@ -289,7 +290,7 @@ For both dissimilarity profiles there are instantaneous jumps at the times of th
 
 The ISI- and the SPIKE-distance combine a variety of properties that make them well suited for applications to real data. In particular, they are conceptually simple, computationally efficient, and easy to visualize in a time-resolved manner. By taking into account only the preceding and the following spike in each spike train, these distances rely on local information only. They are also time-scale-adaptive since the information used is not contained within a window of fixed size but rather within a time frame whose size depends on the local rate of each spike train.
 
-Moreover, the sensitivity to spike timing and the instantaneous reliability achieved by the SPIKE-distance opens up many new possibilities in multi-neuron spike train analysis \citep{Kreuz13}. These build upon the fact that there are several levels of information reduction.
+Moreover, the sensitivity to spike timing and the instantaneous reliability achieved by the SPIKE-distance opens up many new possibilities in multi-neuron spike train analysis \citep{Kreuz13}. These build upon the fact that there are several levels of information reduction all of which we describe in the following. As illustration we use the detailed analysis of an artificially generated spike train dataset (Fig. \ref{fig:Fig2-SPIKE-Representations}).
 %
 % #########################################################################################
 % #########################################################################################
@@ -299,7 +300,7 @@ Moreover, the sensitivity to spike timing and the instantaneous reliability achi
 %
 \begin{figure}
     \includegraphics[width=85mm]{Fig2_SPIKE_Representations.eps}
-    \caption{\abb\label{fig:Fig2-SPIKE-Representations} The different levels of information reduction for the SPIKE-distance.}
+    \caption{\abb\label{fig:Fig2-SPIKE-Representations} The different levels of information reduction for the SPIKE-distance.  A. Top: Spike rasterplot of $20$ artificially generated spike trains divided in $4$ spike train groups of $5$ spike trains each. The clustering behavior changes every $500$ ms. Bottom: Dissimilarity profiles of the SPIKE-distance for the four spike train groups (thin color-coded lines) and for all spike trains (thick black line). The overall dissimilarity is defined as the temporal average of the dissimilarity profile of all spike trains ($0.192$ in this case) and is marked by a black horizontal line.  B-E. Matrices of pairwise instantaneous dissimilarity values for a single time instant, for two selective averages and for a triggered average.  F. Matrices of overall pairwise instantaneous dissimilarity values for the $4$ spike train groups.  G. Dendrogram of spike train group matrix in F.  H-I. Dendrogram of spike train matrices in D and E. Note that the triggered averages in contrast to the overall average captures the local similarity between $5$ of the spike trains.}
 \end{figure}
 %
 % #########################################################################################
@@ -310,7 +311,7 @@ Moreover, the sensitivity to spike timing and the instantaneous reliability achi
 
 \subsubsection{\label{sss:Full-matrix-and-cross-sections} Full matrix and cross sections}
 
-The starting point is the most detailed representation in which one instantaneous value is obtained for each pair of spike trains (see Eq. \ref{eq:Bi-Spike-Diss-Improved}). For multi-neuron data, this results in a matrix of size 'number of unique spikes in the pooled spike train' $\times$ 'number of spike train pairs' ($\times 2$ for the SPIKE-distance, see Section \ref{sss:Sampling}).
+The starting point is the most detailed representation in which one instantaneous value is obtained for each pair of spike trains (see Eq. \ref{eq:Bi-Spike-Diss-Improved}). This representation could be viewed as a movie of a symmetric pairwise dissimilarity matrix in which each frame corresponds to one time instant (an example can be found in the supplementary material of \citep{Kreuz13}). For a movie of finite length the time axis necessarily has to be sampled but in principle this most detailed representation is continuous and consists of an infinite number of values. However, since all dissimilarity profiles are piecewise linear (with potential discontinuities only at the times of the spikes) there is a lot of redundancy. Using the most compact and memory-efficient representation one can store all pairwise dissimilarity profiles in a matrix of size 'number of unique spikes in the pooled spike train' $\times$ 'number of spike train pairs' ($\times 2$ for the SPIKE-distance, see Section \ref{sss:Sampling}).
 
 From this matrix, it is possible to extract any desired information. By selecting a pair of spike trains, one obtains the bivariate dissimilarity profile $S (t)$ for this pair of spike trains. Selecting a time instant $t_s$ (and using linear interpolation for time instants in between spikes) yields an instantaneous matrix of pairwise spike train dissimilarities $S_{mn}(t_s)$. This matrix can be used to divide the spike trains into instantaneous clusters, that is, groups of spike trains with low intra-group and high inter-group dissimilarity.
 
@@ -384,7 +385,7 @@ Once the full dataset is there, modification is still possible. One can restrict
 %
 \begin{figure}
     \includegraphics[width=85mm]{Fig4_Movie_Screenshot.eps}
-    \caption{\abb\label{fig:Fig4-Movie-Screenshot} Annotated screenshot from a movie.   A.				Artificially generated spike trains.   B. Dissimilarity matrices obtained by averaging 			over two separate time intervals for both the regular and the real-time SPIKE-distance 			as well as their averages over subgroups of spike trains (denoted by $<�>_G$).   C. 				Corresponding dendrograms.}
+    \caption{\abb\label{fig:Fig4-Movie-Screenshot} Annotated screenshot from a movie.   A.				Artificially generated spike trains.   B. Dissimilarity matrices obtained by averaging 			over two separate time intervals for both the regular and the real-time SPIKE-distance 			as well as their averages over subgroups of spike trains (denoted by $<\cdot>_G$).   C. 				Corresponding dendrograms.}
 \end{figure}
 %
 % #########################################################################################
@@ -509,6 +510,8 @@ So far the SPIKE-distance has been applied in the following papers:
 
 XXXXX Update at the end XXXXX
 
+Realtime algorithm for the SPIKE-distance
+
 \subsection{\label{ss:Summary} Summary}
 
 \subsection{\label{ss:Limitations} Limitations}
@@ -551,8 +554,104 @@ We also thank Thomas Alderson, Black Square, Mayte Bonilla Quintana, Hamid Chark
 \end{thanks}
 
 
-\bibliography{Kreuz_Bibliography}
+%\begin{thebibliography}{24}
+%
+%\bibitem[{Andrzejak et al.(2011)}]{Andrzejak11}
+%Andrzejak RG, Kreuz T. Characterizing unidirectional couplings between point processes and flows. Europhysics Letters, 2011;96:50012.
+%
+%\bibitem[{Brown et al.(2004)}]{Brown04}
+%Brown EN, Kass RE, Mitra PP. Multiple neural spike train data analysis: state-of-the-art and future challenges. Nature Neuroscience, 2004;7:456-61.
+%
+%\bibitem[{Chicharro et al.(2011)}]{Chicharro11}
+%Chicharro D, Kreuz T, Andrzejak RG. What can spike train distances tell us about the neural code? J Neurosci Methods, 2011;199:146-65.
+%
+%\bibitem[{C{Di Poppa} and Gutkin(2013)}]{DiPoppa13}
+%{DiPoppa} M, Gutkin BS. Correlations in background activity control persistent state stability and allow execution of working memory tasks. Front Comp Neurosci, 2013;7:139.
+%
+%\bibitem[{Fries(2005)}]{Fries05}
+%Fries P. A mechanism for cognitive dynamics: neuronal communication through neuronal coherence. Trends in Cognitive Sciences, 2005;9:474-80.
+%
+%\bibitem[{Hochberg et al.(2006)}]{Hochberg06}
+%Hochberg LR, Serruya MD, Friehs GM, Mukand JA, Saleh M, Caplan AH, Branner A, Chen D, Penn RD, Donoghue JP. Neuronal ensemble control of prosthetic devices by a human with tetraplegia. Nature, 2006;442:164-71.
+%
+%\bibitem[{Ji and Wilson(2007)}]{Ji07}
+%Ji D, Wilson MA. Coordinated memory replay in the visual cortex and hippocampus during sleep. Nature Neuroscience, 2007;10:100-7.
+%
+%\bibitem[{Kreuz et al.(2007)}]{Kreuz07c}
+%Kreuz T, Haas JS, Morelli A, Abarbanel HDI, Politi A.
+%  Measuring spike train synchrony. J Neurosci Methods, 2007;165:151-61.
+%
+%\bibitem[{Kreuz et al.(2009)}]{Kreuz09}
+%Kreuz T, Chicharro D, Andrzejak RG, Haas JS, Abarbanel HDI.
+%  Measuring multiple spike train synchrony. J Neurosci Methods, 2009;183:287-99.
+%
+%\bibitem[{Kreuz et al.(2011)}]{Kreuz11}
+%Kreuz T, Chicharro D, Greschner M, Andrzejak RG.
+%  Time-resolved and time-scale adaptive measures of spike train synchrony. J Neurosci Methods, 2011;195:92-106.
+%
+%\bibitem[{Kreuz(2011)}]{Kreuz11b}
+%Kreuz T.
+%  Measures of spike train synchrony. Scholarpedia, 2011;6:11934.
+%
+%\bibitem[{Kreuz et al.(2013)}]{Kreuz13}
+%Kreuz T, Chicharro D, Houghton C, Andrzejak RG, Mormann F.
+%  Monitoring spike train synchrony. J Neurophysiol, 2013;109:1457.
+%
+%\bibitem[{Meister and Berry(1995)}]{Meister99}
+%Meister M, Berry MJ. The Neural Code of the Retina. Neuron, 1999;22:435-50.
+%
+%\bibitem[{Miller and Wilson(2008)}]{Miller08}
+%Miller EK, Wilson MA. All My Circuits: Using Multiple Electrodes to Understand Functioning Neural Networks. Neuron, 2008;60:483-8.
+%
+%\bibitem[{Mitchell et~al.(2007)}]{Mitchell07}
+%Mitchell JF, Sundberg KA, Reynolds JH. Differential attention-dependent response modulation across cell classes in macaque visual area \textsc{V}4. Neuron, 2007;55:131-41.
+%
+%\bibitem[{Mormann et~al.(2007)}]{Mormann07}
+%Mormann F, Andrzejak RG, Elger CE, Lehnertz K. Seizure prediction: the long and winding road. Brain, 2007;130:314-33.
+%
+%\bibitem[{Mulliken et~al.(2008)}]{Mulliken08}
+%Mulliken GH, Musallam S, Andersen RA. Forward estimation of movement state in posterior parietal cortex. Proc. Natl. Acad. Sci. USA, 2008;105:8170-7.
+%
+%\bibitem[{Pillow et~al.(2008)}]{Pillow08}
+%Pillow JW, Shlens J, Paninski L, Sher A, Litke AM, Chichilnisky EJ, Simoncelli EP. Spatio-temporal correlations and visual signalling in a complete neuronal population. Nature, 2008;454:995.
+%
+%\bibitem[{Priebe and Ferster(2008)}]{Priebe08}
+%Priebe NJ, Ferster D. Inhibition, spike threshold, and stimulus selectivity in primary visual cortex. Neuron, 2008;570:482-97.
+%
+%\bibitem[{Reyes(2003)}]{Reyes03}
+%Reyes AD. Synchrony-dependent propagation of firing rate in
+%  iteratively constructed networks in vitro. Nature Neurosci, 2003;6:593-99.
+%
+%\bibitem[{Rusu and Florian(2014)}]{Rusu14}
+%Rusu CV, RV Florian. A new class of metrics for spike trains. Neural Computation, 2014;26:306-48.
+%
+%\bibitem[{Sanchez(2008)}]{Sanchez08}
+%Sanchez JC, Principe JC, Nishida T, Bashirullah R, Harris JG, Fortes JAB. Technology and Signal Processing for Brain-Machine Interfaces. IEEE Signal Processing, 2008;25:29-40.
+%
+%\bibitem[{Shlens et al.(2008)}]{Shlens08}
+%Shlens J, Rieke F, Chichilnisky EJ. Synchronized firing in the retina. Curr Opin Neurobiol, 2008;18:396-402.
+%
+%\bibitem[{Thibeault et al.(2014)}]{Thibeault14}
+%Thibeault CM, {O'Brien} MJ, Srinivasa N. Analyzing large-scale spiking neural data with HRLAnalysis. Front. Neuroinform., 2014;8:17.
+%
+%\bibitem[{Truccolo et al.(2011)}]{Truccolo11}
+%Truccolo W, Donoghue JP, Hochberg LR, Eskandar EN, Madsen JR, Anderson WS, Brown EN, Halgren E, Cash SS. Single-neuron dynamics in human focal epilepsy. Nature Neurosci, 2011;14:635-41.
+%
+%\bibitem[{Usrey et al.(1999)}]{Usrey99}
+%Usrey WM, Reid RC. Synchronous activity in the visual system. Annu Rev Physiol, 1999;61:435-56.
+%
+%\end{thebibliography}
+%
 %\bibliographystyle{elsart-harv}
+
+
+
+\bibliography{Kreuz_Bibliography}
+
+
+\bibliographystyle{elsart-harv}
+%\bibliographystyle{jabbrv_plain}
+%\bibliographystyle{jneurophysiol}
 %\bibliographystyle{plainnat}
 
 \end{document}

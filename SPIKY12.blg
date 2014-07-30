@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: SPIKY12.aux
+The style file: elsart-harv.bst
+Database file #1: Kreuz_Bibliography.bib
+You've used 25 entries,
+            2825 wiz_defined-function locations,
+            809 strings with 8560 characters,
+and the built_in function-call counts, 12807 in all, are:
+= -- 1247
+> -- 817
+< -- 8
++ -- 306
+- -- 279
+* -- 1161
+:= -- 2403
+add.period$ -- 75
+call.type$ -- 25
+change.case$ -- 217
+chr.to.int$ -- 25
+cite$ -- 25
+duplicate$ -- 446
+empty$ -- 769
+format.name$ -- 362
+if$ -- 2518
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 26
+newline$ -- 82
+num.names$ -- 100
+pop$ -- 194
+preamble$ -- 1
+purify$ -- 193
+quote$ -- 0
+skip$ -- 333
+stack$ -- 0
+substring$ -- 538
+swap$ -- 54
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 222
+warning$ -- 0
+while$ -- 99
+width$ -- 0
+write$ -- 280

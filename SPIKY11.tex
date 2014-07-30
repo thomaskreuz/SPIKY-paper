@@ -223,6 +223,7 @@ Similar to the ISI-distance, the SPIKE-distance is defined as the temporal avera
 \end{equation}
 %
 The dissimilarity profile $S (t)$ and the SPIKE-distance $D_S$ as its average are bounded in the interval $[0, 1]$. The distance value $D_S = 0$ is obtained for identical spike trains only.
+
 	
 For both the ISI- and the SPIKE-distance there exists a straightforward extension to the case $N > 2$ (with $N$ denoting the number of spike trains), the averaged bivariate distance. This average over all pairs of neurons commutes with the average over time, so it is possible to achieve the same kind of time-resolved visualization as in the bivariate case by first calculating the instantaneous average $S^{\mathrm {a}} (t)$ (for the SPIKE-distance) over all pairwise instantaneous values $S^{mn} (t)$,
 %
@@ -232,7 +233,7 @@ For both the ISI- and the SPIKE-distance there exists a straightforward extensio
 
 
 
-\subsection{\label{ss:Realtime-Spike-Distance} Realtime SPIKE-distance}
+\subsubsection{\label{sss:Realtime-Spike-Distance} Realtime SPIKE-distance}
 
 The realtime SPIKE-distance $D_{S_r}$ is a modification of the SPIKE-distance with the key difference that the corresponding time profile $S_r(t)$ can be calculated online because it relies on past information only \footnote{For the ISI-distance no such causal realtime extension is possible, since it relies on the instantaneous ISI-values and thus requires knowledge about the following spikes.}. From the perspective of an online measure, the information provided by the following spikes, both their position and the length of the interspike interval, is not yet available. Like the regular (improved) SPIKE-distance $D_S$, this causal variant is also based on local spike time differences but now only two corner spikes are available, and the spikes of comparison are restricted to past spikes, e.g., for the preceding spike of the first spike train
 %
@@ -247,7 +248,7 @@ Since there are no following spikes available, there is no local weighting, and 
 \end{equation}
 
 
-\subsection{\label{ss:Future-Spike-Distance} Future SPIKE-distance}
+\subsubsection{\label{sss:Future-Spike-Distance} Future SPIKE-distance}
 
 The future SPIKE-distance $D_{S_f}$ can be used in triggered temporal averaging in order to evaluate the effect of certain spikes or of certain stimuli features on future spiking. It is the inverse measure to the realtime SPIKE-distance but instead of relying on past information only it relies on future information only. Again for each time instant there are just two corner spikes and the potential nearest spikes in the other spike train are future spikes only. Thus the spike time difference for the following spike of the first spike train reads
 %
@@ -310,9 +311,7 @@ Moreover, the sensitivity to spike timing and the instantaneous reliability achi
 
 \subsubsection{\label{sss:Full-matrix-and-cross-sections} Full matrix and cross sections}
 
-The starting point is the most detailed representation in which one instantaneous value is obtained for each pair of spike trains (see Eq. \ref{eq:Bi-Spike-Diss-Improved}). 
-%This representation could be viewed as a movie of a (symmetric) pairwise dissimilarity matrix in which each frame corresponds to one (sampled) time instant. 
-In principle, given the continuity of the time axis this results in an infinite number of values but since all dissimilarity profiles are piecewise linear (with potential discontinuities only at the times of the spikes) there is a lot of redundancy. Using the most compact and memory-efficient representation on can store all pairwise dissimilarity profiles in a matrix of size 'number of unique spikes in the pooled spike train' $\times$ 'number of spike train pairs' ($\times 2$ for the SPIKE-distance, see Section \ref{sss:Sampling}).
+The starting point is the most detailed representation in which one instantaneous value is obtained for each pair of spike trains (see Eq. \ref{eq:Bi-Spike-Diss-Improved}). This representation could be viewed as a movie of a symmetric pairwise dissimilarity matrix in which each frame corresponds to one time instant (an example can be found in the supplementary material of \citep{Kreuz13}). For a movie of finite length the time axis necessarily has to be sampled but in principle this most detailed representation is continuous and consists of an infinite number of values. However, since all dissimilarity profiles are piecewise linear (with potential discontinuities only at the times of the spikes) there is a lot of redundancy. Using the most compact and memory-efficient representation one can store all pairwise dissimilarity profiles in a matrix of size 'number of unique spikes in the pooled spike train' $\times$ 'number of spike train pairs' ($\times 2$ for the SPIKE-distance, see Section \ref{sss:Sampling}).
 
 From this matrix, it is possible to extract any desired information. By selecting a pair of spike trains, one obtains the bivariate dissimilarity profile $S (t)$ for this pair of spike trains. Selecting a time instant $t_s$ (and using linear interpolation for time instants in between spikes) yields an instantaneous matrix of pairwise spike train dissimilarities $S_{mn}(t_s)$. This matrix can be used to divide the spike trains into instantaneous clusters, that is, groups of spike trains with low intra-group and high inter-group dissimilarity.
 
@@ -511,6 +510,8 @@ So far the SPIKE-distance has been applied in the following papers:
 
 XXXXX Update at the end XXXXX
 
+Realtime algorithm for the SPIKE-distance
+
 \subsection{\label{ss:Summary} Summary}
 
 \subsection{\label{ss:Limitations} Limitations}
@@ -554,7 +555,7 @@ We also thank Thomas Alderson, Black Square, Mayte Bonilla Quintana, Hamid Chark
 
 
 \bibliography{Kreuz_Bibliography}
-%\bibliographystyle{elsart-harv}
+\bibliographystyle{elsart-harv}
 %\bibliographystyle{plainnat}
 
 \end{document}
