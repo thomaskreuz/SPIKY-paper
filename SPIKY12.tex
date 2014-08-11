@@ -5,7 +5,7 @@
 \usepackage{amssymb}
 \usepackage{bm}
 \usepackage{natbib}
-\usepackage[noperiod]{jabbrv}
+%\usepackage[noperiod]{jabbrv}
 \usepackage{hyperref}
 
 %
@@ -432,7 +432,7 @@ If a figure contains more than one subplot (besides the combined subplot contain
 From within SPIKY it is possible to extract the spike trains and the results of the analyses (measure profiles, matrices, dendrograms) to the Matlab workspace for further processing. When one clicks the right mouse button on the element whose data one wishes to extract results will be stored in variables such as 'SPIKY\_spikes', 'SPIKY\_profile\_X\_1', 'SPIKY\_profile\_Y\_1', 'SPIKY\_profile\_name\_1' as well as 'SPIKY\_matrix\_1' and 'SPIKY\_matrix\_name\_1'. In addition, the results obtained during an analysis will automatically be stored in the output structure 'SPIKY\_results' which will have one field for each measure selected. Depending on the parameter selection within SPIKY, for each measure the structure can contains the following subfields which largely correspond to the different representations identified in Section \ref{ss:Information-reduction}:
 
 \begin{itemize}
-\item SPIKY\_results.<Measure>.name: Name of selected measures (helps to identify the order within all other variables)
+\item SPIKY\_results.$<$Measure>.name: Name of selected measures (helps to identify the order within all other variables)
 \item SPIKY\_results.<Measure>.distance: Level of dissimilarity over all spike trains and the whole interval. This is just one value, obtained by averaging over both spike trains and time
 \item SPIKY\_results.<Measure>.matrix: Pairwise distance matrices, obtained by averaging over time
 \item SPIKY\_results.<Measure>.x: Time-values of overall dissimilarity profile
@@ -554,102 +554,98 @@ We also thank Thomas Alderson, Black Square, Mayte Bonilla Quintana, Hamid Chark
 \end{thanks}
 
 
-%\begin{thebibliography}{24}
-%
-%\bibitem[{Andrzejak et al.(2011)}]{Andrzejak11}
-%Andrzejak RG, Kreuz T. Characterizing unidirectional couplings between point processes and flows. Europhysics Letters, 2011;96:50012.
-%
-%\bibitem[{Brown et al.(2004)}]{Brown04}
-%Brown EN, Kass RE, Mitra PP. Multiple neural spike train data analysis: state-of-the-art and future challenges. Nature Neuroscience, 2004;7:456-61.
-%
-%\bibitem[{Chicharro et al.(2011)}]{Chicharro11}
-%Chicharro D, Kreuz T, Andrzejak RG. What can spike train distances tell us about the neural code? J Neurosci Methods, 2011;199:146-65.
-%
-%\bibitem[{C{Di Poppa} and Gutkin(2013)}]{DiPoppa13}
-%{DiPoppa} M, Gutkin BS. Correlations in background activity control persistent state stability and allow execution of working memory tasks. Front Comp Neurosci, 2013;7:139.
-%
-%\bibitem[{Fries(2005)}]{Fries05}
-%Fries P. A mechanism for cognitive dynamics: neuronal communication through neuronal coherence. Trends in Cognitive Sciences, 2005;9:474-80.
-%
-%\bibitem[{Hochberg et al.(2006)}]{Hochberg06}
-%Hochberg LR, Serruya MD, Friehs GM, Mukand JA, Saleh M, Caplan AH, Branner A, Chen D, Penn RD, Donoghue JP. Neuronal ensemble control of prosthetic devices by a human with tetraplegia. Nature, 2006;442:164-71.
-%
-%\bibitem[{Ji and Wilson(2007)}]{Ji07}
-%Ji D, Wilson MA. Coordinated memory replay in the visual cortex and hippocampus during sleep. Nature Neuroscience, 2007;10:100-7.
-%
-%\bibitem[{Kreuz et al.(2007)}]{Kreuz07c}
-%Kreuz T, Haas JS, Morelli A, Abarbanel HDI, Politi A.
-%  Measuring spike train synchrony. J Neurosci Methods, 2007;165:151-61.
-%
-%\bibitem[{Kreuz et al.(2009)}]{Kreuz09}
-%Kreuz T, Chicharro D, Andrzejak RG, Haas JS, Abarbanel HDI.
-%  Measuring multiple spike train synchrony. J Neurosci Methods, 2009;183:287-99.
-%
-%\bibitem[{Kreuz et al.(2011)}]{Kreuz11}
-%Kreuz T, Chicharro D, Greschner M, Andrzejak RG.
-%  Time-resolved and time-scale adaptive measures of spike train synchrony. J Neurosci Methods, 2011;195:92-106.
-%
+\begin{thebibliography}{}{25}
+
+\bibitem[{Bower et al.(2012)}]{Bower12}
+Bower MR, Stead M, Meyer FB, Marsh WR, Worrell GA. Spatiotemporal neuronal correlates of seizure generation in focal epilepsy. Epilepsia, 2012;53:807-16.
+
+\bibitem[{C{Di Poppa} and Gutkin(2013)}]{DiPoppa13}
+{DiPoppa} M, Gutkin BS. Correlations in background activity control persistent state stability and allow execution of working memory tasks. Front Comp Neurosci, 2013;7:139.
+
+\bibitem[{Gruen(2009)}]{Gruen09}
+Gr{\"u}n S. Data-Driven Significance Estimation for Precise Spike Correlation. J Neurophysiol, 2009;101:1126-40.
+
+\bibitem[{Hochberg et al.(2006)}]{Hochberg06}
+Hochberg LR, Serruya MD, Friehs GM, Mukand JA, Saleh M, Caplan AH, Branner A, Chen D, Penn RD, Donoghue JP. Neuronal ensemble control of prosthetic devices by a human with tetraplegia. Nature, 2006;442:164-71.
+
+\bibitem[{Kass et al.(2005)}]{Kass05}
+Kass RS, Ventura V, Brown EN. Statistical issues in the Analysis of Neuronal Data. J Neurophysiol, 2005;94:8-25.
+
+\bibitem[{Kreuz et al.(2009)}]{Kreuz09}
+Kreuz T, Chicharro D, Andrzejak RG, Haas JS, Abarbanel HDI.
+  Measuring multiple spike train synchrony. J Neurosci Methods, 2009;183:287-99.
+
+\bibitem[{Kreuz et al.(2011)}]{Kreuz11}
+Kreuz T, Chicharro D, Greschner M, Andrzejak RG.
+  Time-resolved and time-scale adaptive measures of spike train synchrony. J Neurosci Methods, 2011;195:92-106.
+
 %\bibitem[{Kreuz(2011)}]{Kreuz11b}
-%Kreuz T.
-%  Measures of spike train synchrony. Scholarpedia, 2011;6:11934.
-%
-%\bibitem[{Kreuz et al.(2013)}]{Kreuz13}
-%Kreuz T, Chicharro D, Houghton C, Andrzejak RG, Mormann F.
-%  Monitoring spike train synchrony. J Neurophysiol, 2013;109:1457.
-%
-%\bibitem[{Meister and Berry(1995)}]{Meister99}
-%Meister M, Berry MJ. The Neural Code of the Retina. Neuron, 1999;22:435-50.
-%
-%\bibitem[{Miller and Wilson(2008)}]{Miller08}
-%Miller EK, Wilson MA. All My Circuits: Using Multiple Electrodes to Understand Functioning Neural Networks. Neuron, 2008;60:483-8.
-%
-%\bibitem[{Mitchell et~al.(2007)}]{Mitchell07}
-%Mitchell JF, Sundberg KA, Reynolds JH. Differential attention-dependent response modulation across cell classes in macaque visual area \textsc{V}4. Neuron, 2007;55:131-41.
-%
-%\bibitem[{Mormann et~al.(2007)}]{Mormann07}
-%Mormann F, Andrzejak RG, Elger CE, Lehnertz K. Seizure prediction: the long and winding road. Brain, 2007;130:314-33.
-%
-%\bibitem[{Mulliken et~al.(2008)}]{Mulliken08}
-%Mulliken GH, Musallam S, Andersen RA. Forward estimation of movement state in posterior parietal cortex. Proc. Natl. Acad. Sci. USA, 2008;105:8170-7.
-%
-%\bibitem[{Pillow et~al.(2008)}]{Pillow08}
-%Pillow JW, Shlens J, Paninski L, Sher A, Litke AM, Chichilnisky EJ, Simoncelli EP. Spatio-temporal correlations and visual signalling in a complete neuronal population. Nature, 2008;454:995.
-%
-%\bibitem[{Priebe and Ferster(2008)}]{Priebe08}
-%Priebe NJ, Ferster D. Inhibition, spike threshold, and stimulus selectivity in primary visual cortex. Neuron, 2008;570:482-97.
-%
-%\bibitem[{Reyes(2003)}]{Reyes03}
-%Reyes AD. Synchrony-dependent propagation of firing rate in
-%  iteratively constructed networks in vitro. Nature Neurosci, 2003;6:593-99.
-%
-%\bibitem[{Rusu and Florian(2014)}]{Rusu14}
-%Rusu CV, RV Florian. A new class of metrics for spike trains. Neural Computation, 2014;26:306-48.
-%
-%\bibitem[{Sanchez(2008)}]{Sanchez08}
-%Sanchez JC, Principe JC, Nishida T, Bashirullah R, Harris JG, Fortes JAB. Technology and Signal Processing for Brain-Machine Interfaces. IEEE Signal Processing, 2008;25:29-40.
-%
-%\bibitem[{Shlens et al.(2008)}]{Shlens08}
-%Shlens J, Rieke F, Chichilnisky EJ. Synchronized firing in the retina. Curr Opin Neurobiol, 2008;18:396-402.
-%
-%\bibitem[{Thibeault et al.(2014)}]{Thibeault14}
-%Thibeault CM, {O'Brien} MJ, Srinivasa N. Analyzing large-scale spiking neural data with HRLAnalysis. Front. Neuroinform., 2014;8:17.
-%
-%\bibitem[{Truccolo et al.(2011)}]{Truccolo11}
-%Truccolo W, Donoghue JP, Hochberg LR, Eskandar EN, Madsen JR, Anderson WS, Brown EN, Halgren E, Cash SS. Single-neuron dynamics in human focal epilepsy. Nature Neurosci, 2011;14:635-41.
-%
-%\bibitem[{Usrey et al.(1999)}]{Usrey99}
-%Usrey WM, Reid RC. Synchronous activity in the visual system. Annu Rev Physiol, 1999;61:435-56.
-%
-%\end{thebibliography}
-%
-%\bibliographystyle{elsart-harv}
+%Kreuz T. Measures of spike train synchrony. Scholarpedia, 2011;6:11934.
 
+\bibitem[{Kreuz et al.(2013)}]{Kreuz13}
+Kreuz T, Chicharro D, Houghton C, Andrzejak RG, Mormann F.
+  Monitoring spike train synchrony. J Neurophysiol, 2013;109:1457.
 
+\bibitem[{Kreuz et al.(2007)}]{Kreuz07c}
+Kreuz T, Haas JS, Morelli A, Abarbanel HDI, Politi A.
+  Measuring spike train synchrony. J Neurosci Methods, 2007;165:151-61.
 
-\bibliography{Kreuz_Bibliography}
+\bibitem[{Kumar et al.(2010)}]{Kumar10}
+Kumar A, Rotter S, Aertsen A. Spiking activity propagation in neuronal networks: reconciling different perspectives on neural coding. Nature Rev Neurosci, 2010;11:615-27.
 
+\bibitem[{Louis et al.(2010)}]{Louis10}
+Louis S, Gerstein GL, Gr{\"u}n S, Diesmann M. Surrogate spike train generation through dithering in operational time. Front Comp Neurosci, 2010;4:127.
+
+\bibitem[{Mainen and Sejnowski(1995)}]{Mainen95}
+Mainen Z, Sejnowski TJ. Reliability of spike timing in neocortical neurons. Science 1995;268:1503-6.
+
+\bibitem[{Miller and Wilson(2008)}]{Miller08}
+Miller EK, Wilson MA. All My Circuits: Using Multiple Electrodes to Understand Functioning Neural Networks. Neuron, 2008;60:483-8.
+
+\bibitem[{Mormann et~al.(2007)}]{Mormann07}
+Mormann F, Andrzejak RG, Elger CE, Lehnertz K. Seizure prediction: the long and winding road. Brain, 2007;130:314-33.
+
+\bibitem[{Nirenberg and Victor(2007)}]{Nirenberg07}
+Nirenberg S, Victor JD. Analyzing the activity of large populations of neurons: how tractable is the problem? Curr Opin Neurobiol 2007;17:397-400.
+
+\bibitem[{Papoutsi et~al.(2013)}]{Papoutsi13}
+Papoutsi A, Sidiropoulou K, Cutsuridis V, Poirazi P. Induction and modulation of persistent activity in a layer v pfc microcircuit model. Front Neural Circuits 2013;7:161.
+
+\bibitem[{Pikovsky et~al.(2001)}]{Pikovsky01}
+Pikovsky AS, Rosenblum MG, Kurths J. Synchronization. A universal concept in nonlinear sciences. Cambridge Univ. Press, Cambridge, UK 2001.
+
+\bibitem[{Rusu and Florian(2014)}]{Rusu14}
+Rusu CV, RV Florian. A new class of metrics for spike trains. Neural Computation, 2014;26:306-48.
+
+\bibitem[{Secr and Sepulchre(2014)}]{Secr14}
+Sacr P, Sepulchre R. Sensitivity analysis of oscillator models in the space of phase-response curves: Oscillators as open systems. Control Systems, IEEE 2014;34:50–74.
+
+\bibitem[{Sanchez(2008)}]{Sanchez08}
+Sanchez JC, Principe JC, Nishida T, Bashirullah R, Harris JG, Fortes JAB. Technology and Signal Processing for Brain-Machine Interfaces. IEEE Signal Processing, 2008;25:29-40.
+
+\bibitem[{Shlens et al.(2008)}]{Shlens08}
+Shlens J, Rieke F, Chichilnisky EJ. Synchronized firing in the retina. Curr Opin Neurobiol, 2008;18:396-402.
+
+\bibitem[{Thibeault et al.(2014)}]{Thibeault14}
+Thibeault CM, {O'Brien} MJ, Srinivasa N. Analyzing large-scale spiking neural data with HRLAnalysis. Front. Neuroinform., 2014;8:17.
+
+\bibitem[{Tiesinga et al.(2008)}]{Tiesinga08}
+Tiesinga PHE, Fellous JM, Sejnowski TJ. Regulation of spike timing in visual cortical circuits. Nature Reviews Neuroscience 2008;9:97-107.
+
+\bibitem[{Truccolo et al.(2011)}]{Truccolo11}
+Truccolo W, Donoghue JP, Hochberg LR, Eskandar EN, Madsen JR, Anderson WS, Brown EN, Halgren E, Cash SS. Single-neuron dynamics in human focal epilepsy. Nature Neurosci, 2011;14:635-41.
+
+\bibitem[{Victor(2005)}]{Victor05}
+Victor JD. Spike train metrics. Current Opinion in Neurobiology 2005;15:585-592.
+
+\end{thebibliography}
 
 \bibliographystyle{elsart-harv}
+
+
+
+%\bibliography{Kreuz_Bibliography}
+
 %\bibliographystyle{jabbrv_plain}
 %\bibliographystyle{jneurophysiol}
 %\bibliographystyle{plainnat}
