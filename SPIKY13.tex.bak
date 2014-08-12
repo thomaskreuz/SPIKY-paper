@@ -88,11 +88,9 @@ In the other major scenario the neuronal spiking response is recorded in differe
 
 In both population and successive trial recordings a high temporal resolution would be very desirable. Analyzing the changing spiking patterns of large ensembles of single neurons in epilepsy patients could lead to a better understanding of the mechanisms of seizure generation, propagation, and termination \citep{Truccolo11, Bower12} in the same way as the analysis of neuronal responses to successive presentations of time-dependent stimuli could help to understand the role of synchronous firing in neuronal coding \citep{Miller08}. Moreover, in population recordings it would be even more advantageous to be able to monitor spike train synchrony in realtime. In epilepsy this would be a necessary condition for the implementation of a prospective seizure prediction algorithm \citep{Mormann07}, but it could also be very useful for the rapid online decoding of neural signals needed to control prosthetics \citep{Hochberg06, Sanchez08}.
 
-
-
+XXXXX to be continued XXXXX
 
 Many different representations, i.e. degrees of information reduction
-
 
 Need for a graphical user interface (GUI)
 
@@ -103,6 +101,8 @@ Improvements regarding the possible size of the dataset (memory and speed)
 edge effect
 
 Computational aspects
+
+XXXXX to be continued XXXXX
 
 The remainder of this paper is organized as follows. In Section \ref{s:Measures} we introduce and discuss the different measures available in SPIKY. These include the ISI-distance and the SPIKE-distance (as well as its realtime and future variants). In Subsection \ref{ss:Improvements} we present the improvements we have realized in this new implementation of the measures such as the correction of the edge-effect and the increase of memory efficiency by avoiding sampling. An overview of the different levels of information reduction is given in Subsection \ref{ss:Information-reduction}. These range from the most detailed representation in which one instantaneous value is obtained for each pair of spike trains to the most condensed representation in which successive temporal and spatial averaging leads to one single distance value which describes the overall level of synchrony for a group of spike trains over a given time interval.
 
@@ -273,7 +273,7 @@ In previous versions of the SPIKE-distance the ambiguity regarding the definitio
 We count the auxiliary spikes as normal spikes which can be nearest neighbor to other spikes. But instead of calculating their spike time distance (which is always zero) we use the spike time difference of the first real spike. For the first interspike interval we know that it is at least the distance to the first spike $t_1-t_0 = t_1$ but it could be longer. So to take the local firing rate (or its inverse) into consideration we set
 %
 \begin{equation} \label{eq:Corrected-First-ISI}
-    x_{\mathrm {ISI}} (0) = \max ( t_1, t_2 - t_1 ).
+    x_{\mathrm {ISI}} (0) = \max ( t_1, t_2 - t_1 )	
 \end{equation}
 %
 where we use the length of the first known interspike interval $t_2-t_1$ as an upper limit of the inverse firing rate. This way we get at least a crude estimate of how much longer the first interspike interval could be.
@@ -291,7 +291,7 @@ For both dissimilarity profiles there are instantaneous jumps at the times of th
 
 The ISI- and the SPIKE-distance combine a variety of properties that make them well suited for applications to real data. In particular, they are conceptually simple, computationally efficient, and easy to visualize in a time-resolved manner. By taking into account only the preceding and the following spike in each spike train, these distances rely on local information only. They are also time-scale-adaptive since the information used is not contained within a window of fixed size but rather within a time frame whose size depends on the local rate of each spike train.
 
-Moreover, the sensitivity to spike timing and the instantaneous reliability achieved by the SPIKE-distance opens up many new possibilities in multi-neuron spike train analysis \citep{Kreuz13}. These build upon the fact that there are several levels of information reduction all of which we describe in the following. As illustration we use the detailed analysis of an artificially generated spike train dataset (Fig. \ref{fig:Fig2-SPIKE-Representations}).
+Moreover, the sensitivity to spike timing and the instantaneous reliability achieved by the SPIKE-distance opens up many new possibilities in multi-neuron spike train analysis \citep{Kreuz13}. These build upon the fact that there are several levels of information reduction all of which we describe in the following. As illustration we use the detailed analysis of an artificially generated spike train dataset (see upper subplot of Fig. \ref{fig:Fig2-SPIKE-Representations}A for the rasterplot).
 %
 % #########################################################################################
 % #########################################################################################
@@ -301,7 +301,7 @@ Moreover, the sensitivity to spike timing and the instantaneous reliability achi
 %
 \begin{figure}
     \includegraphics[width=85mm]{Fig2_SPIKE_Representations.eps}
-    \caption{\abb\label{fig:Fig2-SPIKE-Representations} The different levels of information reduction for the SPIKE-distance.  A. Top: Spike rasterplot of $20$ artificially generated spike trains divided in $4$ spike train groups of $5$ spike trains each. The clustering behavior changes every $500$ ms. Bottom: Dissimilarity profiles of the SPIKE-distance for the four spike train groups (thin color-coded lines) and for all spike trains (thick black line). The overall dissimilarity is defined as the temporal average of the dissimilarity profile of all spike trains ($0.192$ in this case) and is marked by a black horizontal line.  B-E. Matrices of pairwise instantaneous dissimilarity values for a single time instant, for two selective averages and for a triggered average.  F. Matrices of overall pairwise instantaneous dissimilarity values for the $4$ spike train groups.  G. Dendrogram of spike train group matrix in F.  H-I. Dendrogram of spike train matrices in D and E. Note that the triggered averages in contrast to the overall average captures the local similarity between $5$ of the spike trains.}
+    \caption{\abb\label{fig:Fig2-SPIKE-Representations} The different levels of information reduction for the SPIKE-distance.  A. Top: Spike rasterplot of $20$ artificially generated spike trains divided in $4$ spike train groups of $5$ spike trains each. The clustering behavior changes every $500$ ms. Bottom: Dissimilarity profiles of the SPIKE-distance for the four spike train groups (thin color-coded lines) and for all spike trains (thick black line). The overall dissimilarity is defined as the temporal average of the dissimilarity profile of all spike trains ($0.192$ in this case) and is marked by a black horizontal line.  B-E. Matrices of pairwise instantaneous dissimilarity values for a single time instant, for two selective averages and for a triggered average.  F. Matrices of overall pairwise instantaneous dissimilarity values for the $4$ spike train groups.  G. Dendrogram of spike train group matrix in F.  H/I. Dendrogram of spike train matrices in D/E. Note that the triggered averages in contrast to the overall average captures the local similarity between $5$ of the spike trains.}
 \end{figure}
 %
 % #########################################################################################
@@ -312,23 +312,22 @@ Moreover, the sensitivity to spike timing and the instantaneous reliability achi
 
 \subsubsection{\label{sss:Full-matrix-and-cross-sections} Full matrix and cross sections}
 
-The starting point is the most detailed representation in which one instantaneous value is obtained for each pair of spike trains (see Eq. \ref{eq:Bi-Spike-Diss-Improved}). This representation could be viewed as a movie of a symmetric pairwise dissimilarity matrix in which each frame corresponds to one time instant (an example can be found in the supplementary material of \citep{Kreuz13}). For a movie of finite length the time axis necessarily has to be sampled but in principle this most detailed representation is continuous and consists of an infinite number of values. However, since all dissimilarity profiles are piecewise linear (with potential discontinuities only at the times of the spikes) there is a lot of redundancy. Using the most compact and memory-efficient representation one can store all pairwise dissimilarity profiles in a matrix of size `number of unique spikes in the pooled spike train' $\times$ `number of spike train pairs' ($\times 2$ for the SPIKE-distance, see Section \ref{sss:Sampling}).
+The starting point is the most detailed representation in which one instantaneous value is obtained for each pair of spike trains (see Eq. \ref{eq:Bi-Spike-Diss-Improved}). This representation could be viewed as a movie of a symmetric pairwise dissimilarity matrix in which each frame corresponds to one time instant (an example can be found in the supplementary material of \citeauthor{Kreuz13}, \citeyear{Kreuz13}). For a movie of finite length the time axis necessarily has to be sampled but in principle this most detailed representation is continuous and consists of an infinite number of values. However, since all dissimilarity profiles are piecewise linear (with potential discontinuities only at the times of the spikes) there is a lot of redundancy. Using the most compact and memory-efficient representation one can store all pairwise dissimilarity profiles in a matrix of size `number of unique spikes in the pooled spike train' $\times$ `number of spike train pairs' ($\times 2$ for the SPIKE-distance, see Section \ref{sss:Sampling}).
 
-From this matrix, it is possible to extract any desired information. By selecting a pair of spike trains, one obtains the bivariate dissimilarity profile $S (t)$ for this pair of spike trains. Selecting a time instant $t_s$ (and using linear interpolation for time instants in between spikes) yields an instantaneous matrix of pairwise spike train dissimilarities $S_{mn}(t_s)$. This matrix can be used to divide the spike trains into instantaneous clusters, that is, groups of spike trains with low intra-group and high inter-group dissimilarity.
+From this matrix, it is possible to extract any desired information. By selecting a pair of spike trains, one obtains the bivariate dissimilarity profile $S (t)$ for this pair of spike trains. An average dissimilarity profile $S (t)$ is obtained upon the selection of a subgroup or of all pairs of spike trains. Selecting a time instant $t_s$ (and using linear interpolation for time instants in between spikes) yields an instantaneous matrix of pairwise spike train dissimilarities $S_{mn}(t_s)$  (see Fig. \ref{fig:Fig2-SPIKE-Representations}B). This matrix can be used to divide the spike trains into instantaneous clusters, that is, groups of spike trains with low intra-group and high inter-group dissimilarity.
 
 \subsubsection{\label{sss:Spatial-and-temporal-Averaging} Spatial and temporal averaging}
 
 Another way to reduce the information of the dissimilarity matrix is averaging. There are two possibilities that commute: the spatial average over spike train pairs and the temporal average.
 
-The local average over spike train pairs yields a dissimilarity profile for the whole population. Temporal averaging over certain (continuous or noncontinuous) intervals on the other hand leads to a bivariate distance matrix (in real data, these intervals could be chosen to correspond to different external conditions such as normal vs. pathological, asleep vs. awake, target vs. non-target stimulus, or presence/absence of a certain channel blocker). Finally, in both cases, application of the respective remaining average results in one distance value that describes the overall level of synchrony for a group of spike trains over a given time interval.
+The local average over spike train pairs yields a dissimilarity profile for the whole population. Examples for $4$ different spike train groups as well as all spike trains are shown in the lower subplot of Fig. \ref{fig:Fig2-SPIKE-Representations}A. Temporal averaging over certain intervals on the other hand leads to a bivariate distance matrix (see Fig. \ref{fig:Fig2-SPIKE-Representations}C and D for examples of non-continuous and continuous intervals). In real data, these intervals could be chosen to correspond to different external conditions such as normal vs. pathological, asleep vs. awake, target vs. non-target stimulus, or presence/absence of a certain channel blocker. Finally, in both cases, application of the respective remaining average results in one distance value that describes the overall level of synchrony for a group of spike trains over a given time interval. In Fig. \ref{fig:Fig2-SPIKE-Representations}A this value is stated in the upper right of the lower subplot.
 
 \subsubsection{\label{sss:Triggered-Averaging} Triggered averaging}
 
-The fact that there are no limits to the temporal resolution allows further analyses such as internally or externally triggered temporal averaging. Here, the matrices are averaged over certain trigger time instants only. The idea is to check whether this triggered temporal average is significantly different from the global average since this would indicate that something peculiar is happening at these trigger instants. The trigger times can either be obtained from internal conditions (such as the spike times of a certain spike train) or from external influences (such as the occurrence of certain features in a stimulus). In real multi-neuron data, internal triggering might help to uncover the connectivity in neural networks or to detect converging or diverging patterns of firing propagation. External triggering is a standard tool to address questions of neuronal coding, for example, it can be used to evaluate the influence of localized stimulus features on the reliability of real neurons under repeated stimulation.
+The fact that there are no limits to the temporal resolution allows further analyses such as internally or externally triggered temporal averaging. Here, the matrices are averaged over certain trigger time instants only. The idea is to check whether this triggered temporal average is significantly different from the global average since this would indicate that something peculiar is happening at these trigger instants. The trigger times can either be obtained from external influences (such as the occurrence of certain features in a stimulus) or from internal conditions (such as the spike times of a certain spike train). External triggering is a standard tool to address questions of neuronal coding, for example, it can be used to evaluate the influence of localized stimulus features on the reliability of neurons under repeated stimulation. In multi-neuron data, internal triggering might help to uncover the connectivity in neural networks or to detect converging or diverging patterns of firing propagation. An example is shown in Fig. \ref{fig:Fig2-SPIKE-Representations}E. Here, neurons $2$, $9$, $14$, and $19$ follow neuron $7$ 		
 
+ 
 A last possibility is spatial averaging such that the spike trains are manually assigned to subgroups, and a block matrix (and the corresponding dendrogram XXXXX) is obtained by averaging over the respective submatrices of the original dissimilarity matrix. In applications to real data, these groups could be different neuronal populations or responses to different stimuli, depending on whether the spike trains were recorded simultaneously or successively.
-
-XXXX Create one Matlab figure which includes as many representations as possible XXXXX
 
 %
 %
@@ -339,7 +338,7 @@ XXXX Create one Matlab figure which includes as many representations as possible
 %
 \section{\label{s:SPIKY} SPIKY}
 
-SPIKY is a graphical user interface (GUI) for monitoring synchrony between artificially simulated or experimentally recorded neuronal spike trains. It is an implementation of the ISI- and the SPIKE-distance (including simulations of its realtime and future variants) which allows  interactive access to all the different representations described in Section \ref{ss:Information-reduction}. SPIKY is a free software package programmed by Thomas Kreuz and Nebojsa Bozanic. All source codes are written in Matlab (MathWorks Inc, Natick, MA, USA) with the most time-consuming loops coded in MEX-files \footnote{In our case these are subroutines written in C. However, as some users may not have access to a suitable C compiler, SPIKY contains the (slower) pure Matlab code as well.}. SPIKY is not stand-alone but requires Matlab to run. XXXXX Update, now stand-alone? XXXXX.
+SPIKY is a graphical user interface (GUI) for monitoring synchrony between artificially simulated or experimentally recorded neuronal spike trains. It is an implementation of the ISI- and the SPIKE-distance (including simulations of its realtime and future variants) which allows  interactive access to all the different representations described in Section \ref{ss:Information-reduction}. SPIKY is a free software package programmed by Thomas Kreuz and Nebojsa Bozanic. All source codes are written in Matlab (MathWorks Inc, Natick, MA, USA) with the most time-consuming loops coded in MEX-files \footnote{In our case these are subroutines written in C. However, as some users may not have access to a suitable C compiler, SPIKY contains the (slower) pure Matlab code as well.}. SPIKY is not stand-alone but requires Matlab to run. XXXXX Update, now stand-alone? XXXXX
 
 
 \subsection{\label{ss:Access} Access to SPIKY and how to get started}
@@ -348,7 +347,7 @@ SPIKY is distributed under a BSD licence (Copyright (c) 2014, Thomas Kreuz, Nebo
 
 The Facebook-page include various screen recordings with voice-over in which the user is guided step by step through some of the most important features of SPIKY. All of these movies can also be viewed on the \href{https://www.youtube.com/channel/UCgSz0YQ5lWdVF0_Z1FNN0Bw}{SPIKY Youtube-channel} (\url{https://www.youtube.com/channel/UCgSz0YQ5lWdVF0_Z1FNN0Bw}).
 
-After having downloaded SPIKY from the download page the user has to first extract the zip-package which leaves all files in one folder named `SPIKY'. If the system has a suitable MEX-compiler installed, the MEX-files can be compiled from within this folder by running the m-file `SPIKY\_compile\_MEX'. The last step is to run the m-file `SPIKY'. XXXXX Stand-alone version? XXXXX 
+After having downloaded SPIKY from the download page the user has to first extract the zip-package which leaves all files in one folder named `SPIKY'. If the system has a suitable MEX-compiler installed, the MEX-files can be compiled from within this folder by running the m-file `SPIKY\_compile\_MEX'. The last step is to run the m-file `SPIKY'. XXXXX Stand-alone version? XXXXX
 
 When SPIKY is running, the user can find quick information about the individual elements of the graphical user interface by activating the `Hints'-checkbox in the `Options'-Menu. Hovering with the mouse cursor above the elements of interest will then show short hints. An overview of all the information contained in the hints can be found in the documentation file `SPIKY-Elements.doc'. Furthermore, at each step the suggested element for the next user action is highlighted by a bold font. 
 
@@ -549,7 +548,6 @@ We thank Ralph Andrzejak, Emily Caporello, Daniel Chicharro, Tim Gentner, Conor 
 
 We also thank Thomas Alderson, Black Square, Mayte Bonilla Quintana, Hamid Charkhkar, Didier Desaintjan, Mario DiPoppa, Mahboubeh Etemadi, Marion Najac, Matthew Phillips, Eugenio Piasini, Robert Rein, Rodrigo Salazar, Michael Schaub, Eitan Schechtman, Matthew Williams, Yunguo Yu for advice and user feedback.
 \end{thanks}
-
 
 \begin{thebibliography}{99}
 
