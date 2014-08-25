@@ -6,6 +6,7 @@
 \usepackage{bm}
 \usepackage{natbib}
 \usepackage{hyperref}
+\usepackage{epstopdf}
 %\usepackage[noperiod]{jabbrv}
 
 %
@@ -324,7 +325,7 @@ The local average over spike train pairs yields a dissimilarity profile for the 
 
 \subsubsection{\label{sss:Triggered-Averaging} Triggered averaging}
 
-The fact that there are no limits to the temporal resolution allows further analyses such as internally or externally triggered temporal averaging. Here, the matrices are averaged over certain trigger time instants only. The idea is to check whether this triggered temporal average is significantly different from the global average since this would indicate that something peculiar is happening at these trigger instants. The trigger times can either be obtained from external influences (such as the occurrence of certain features in a stimulus) or from internal conditions (such as the spike times of a certain spike train). External triggering is a standard tool to address questions of neuronal coding, for example, it can be used to evaluate the influence of localized stimulus features on the reliability of neurons under repeated stimulation. In multi-neuron data, internal triggering might help to uncover the connectivity in neural networks or to detect converging or diverging patterns of firing propagation. An example is shown in Fig. \ref{fig:Fig2-SPIKE-Representations}E. Here, neurons $2$, $9$, $14$, and $19$ follow neuron $7$ #####	
+The fact that there are no limits to the temporal resolution allows further analyses such as internally or externally triggered temporal averaging. Here, the matrices are averaged over certain trigger time instants only. The idea is to check whether this triggered temporal average is significantly different from the global average since this would indicate that something peculiar is happening at these trigger instants. The trigger times can either be obtained from external influences (such as the occurrence of certain features in a stimulus) or from internal conditions (such as the spike times of a certain spike train). External triggering is a standard tool to address questions of neuronal coding, for example, it can be used to evaluate the influence of localized stimulus features on the reliability of neurons under repeated stimulation. In multi-neuron data, internal triggering might help to uncover the connectivity in neural networks or to detect converging or diverging patterns of firing propagation. An example is shown in Fig. \ref{fig:Fig2-SPIKE-Representations}E. Here, neurons $2$, $9$, $14$, and $19$ follow neuron $7$ 
 
  
 A last possibility is spatial averaging such that the spike trains are manually assigned to subgroups, and a block matrix (and the corresponding dendrogram XXXXX) is obtained by averaging over the respective submatrices of the original dissimilarity matrix. In applications to real data, these groups could be different neuronal populations or responses to different stimuli, depending on whether the spike trains were recorded simultaneously or successively.
@@ -456,8 +457,7 @@ So combining these two programs it is possible to first use SPIKY for a rather e
 An important question that has not yet been asked is the one of statistical significance. Given a certain value of the SPIKE-distance how can one judge whether it reflects a significant decrease or increase in spike train synchrony and does not just lie within the range of values obtained for random fluctuations. One way to address this question is the use of spike train surrogates \citep{Kass05, Gruen09, Louis10}. The idea is to compare the results obtained for the original dataset versus the results obtained for spike train surrogates generated from that dataset. If the value obtained for the original lies outside the range of values for the surrogates this value can be assumed to be significant to a level defined by the number of surrogates used (e.g. $\alpha = 0.05$ for $19$ surrogates or $\alpha = 0.001$ for $999$ surrogates).
 
 The SPIKY-package contains a program `SPIKY\_loop\_surro' which was designed to look at significance.
-So far it includes four different types of spike train surrogates. They differ in the properties that are preserved and maintain either the individual spike numbers (obtained by shuffling the spikes), the individual interspike interval distribution (obtained by shuffling the interspike intervals), the pooled spike train (obtained by shuffling spikes among the spike trains) or the peri-stimulus time histogram (PSTH) (obtained by drawing from the probability density function (PDF) of the data).
-
+So far it includes four different types of spike train surrogates. They differ in the properties that are preserved and maintain either the individual spike numbers (obtained by shuffling the spikes), the individual interspike interval distribution (obtained by shuffling the interspike intervals), the pooled spike train (obtained by shuffling spikes among the spike trains) or the distribution using a general method for resampling from a given distribution using {\it the inverse transformation method} which is based on having a uniform (0, 1) random variable $U$, where for any distribution function $F$ if there is a defined random variable $X$ such that $X = F^{-1}(U)$ then the random variable $X$ has a distribution function $F$. [$F-'(u)$ is defined to equal that value $x$ for which $F(x) = u.$]
 
 % Daniel's Email 13.07.2011:
 %
@@ -467,32 +467,25 @@ So far it includes four different types of spike train surrogates. They differ i
 
 \subsection{\label{ss:Comparison} Comparison with other implementations}
 
-\href{https://github.com/modulus-metric/spike-train-metrics}{C++ implementations} (\url{https://github.com/modulus-metric/spike-train-metrics}) of several types of spike train metrics courtesy of R{\v a}zvan Florian \citep{Rusu14}
+Matlab provides a powerful toolbox for processing vectorized data because of the high level parallelization, while its GUI has high-level visualization capabilities. Some possible problems in using Matlab for processing spike train data could relate the fact that interpreted language are slow. Addressing this issue, we converted to C the most time consuming functions. All distance functions written in C can be called from the SPIKY GUI. (Speed boost graph) Under Matlab (2007b), we observed a speed-up of about XXX (Figure) for i.e. ISI-distance MEX compared to ISI-distance Matlab. However, under different versions of Matlab the speed-up factor can be much different. Other SPIKY functions are less computationally intense.
 
+One of the disadvantages of using Matlab while processing large spike trains is that Matlab casts all floating-point numbers to 64-bit double precision by default, thus using large amounts of memory to handle large datasets, partially this problem can be solved converting to 32-bit single precision, which has been successfully issued in SPIKY. 
 
-XXX Nebojsa figure (Performance comparison) XXX
+Current version of SPIKY focuses on handling of large spike trains, dividing input spike times into groups yet still allowing usage of massive parallelization.
 
+The benefit of writing functions in C are not only in performance, yet it is accessible to programmers with different backgrounds (i.e. in Python) to use them as a source.
 
-\href{http://jeremy.fix.free.fr/Softwares/spike.html}{Python-Implementation} (\url{http://jeremy.fix.free.fr/Softwares/spike.html}) of SPIKE-distance courtesy of Jeremy Fix
+For the sake of unbiased comparison the presented algorithms have been implemented in C++, Visual C++ 12.0, and a complete source codes are available on http://wwwold.fi.isc.cnr.it/users/thomas.kreuz/. The following results have been achieved on an Intel Core i7-4700MQ CPU @ 2.4 GHz.
 
-\href{https://pypi.python.org/pypi/ISIpy/1.0.1}{Python-Implementation} (\url{https://pypi.python.org/pypi/ISIpy/1.0.1}) of the pairwise ISI-distance courtesy of Michael Chary
+Algorithms were tested using simulated spike trains. The spike trains were generated as a homogeneous uniform process which is depending on the number of spikes. The algorithms were implemented in C++ all methods were compared to the same inputs. In order to show how different implementation of the same method can have different complexity classes, previous implementations for ISI-distance, SPIKE-distance and modulus metric are taken and compared versus novel ones (Figure XXXX).
 
-\href{https://github.com/HRLAnalysis/HRLAnalysis}{mixed C++ and Python software suite} (\url{https://github.com/HRLAnalysis/HRLAnalysis}) for analyzing spiking neural data courtesy of Corey M. Thibeault and Michael J. O'Brien \citep{Thibeault14}
+There was a considerable effort to bring performance along with usability, so SPIKY may have a higher than expected level of specificity. The variety of options included may be discouraging to potential users.
 
-While all of these previous implementations are restricted to the overall dissimilarity profile and its temporal average (the overall dissimilarity), SPIKY also allows the user to interactively access all of the many different levels of information reduction introduced in Section \ref{ss:Information-reduction}.
+\begin{figure}
+    \includegraphics[width=85mm]{Fig5_Performance_Comparison.eps}
+    \caption{\abb\label{fig:Fig5-Performance-Comparison} Performance comparison: Time needed for computing various distances, as a function of the number of spikes in the spike trains. For the ISI- and the SPIKE-distance we show the curves for both the old (sampling-based) and the new algorithm.}
+\end{figure}
 
-
-
-
-
-%
-%\begin{figure}
-%    \includegraphics[width=85mm]{FigXX_Performance_Comparison.eps}
-%    \caption{\abb\label{fig:FigXX-Performance-Comparison} XXX Add correct figure XXX Performance comparison: Time %needed for computing various distances, as a function of the number of spikes in the spike trains. For the ISI- and %the SPIKE-distance we show the curves for both the old (sampling-based) and the new algorithm.}
-%\end{figure}
-
-%
-%
 % *************************************************************************************
 % ********************************************************** Discussion ***************
 % *************************************************************************************
@@ -549,91 +542,6 @@ We thank Ralph Andrzejak, Emily Caporello, Daniel Chicharro, Tim Gentner, Conor 
 We also thank Thomas Alderson, Black Square, Mayte Bonilla Quintana, Hamid Charkhkar, Didier Desaintjan, Mario DiPoppa, Mahboubeh Etemadi, Marion Najac, Matthew Phillips, Eugenio Piasini, Robert Rein, Rodrigo Salazar, Michael Schaub, Eitan Schechtman, Matthew Williams, Yunguo Yu for advice and user feedback.
 \end{thanks}
 
-\begin{thebibliography}{99}
-
-\bibitem[{Bower et al.(2012)}]{Bower12}
-Bower MR, Stead M, Meyer FB, Marsh WR, Worrell GA. Spatiotemporal neuronal correlates of seizure generation in focal epilepsy. Epilepsia, 2012;53:807-16.
-
-\bibitem[{{Di Poppa} and Gutkin(2013)}]{DiPoppa13}
-{DiPoppa} M, Gutkin BS. Correlations in background activity control persistent state stability and allow execution of working memory tasks. Front Comp Neurosci, 2013;7:139.
-
-\bibitem[{Gruen(2009)}]{Gruen09}
-Gr{\"u}n S. Data-Driven Significance Estimation for Precise Spike Correlation. J Neurophysiol, 2009;101:1126-40.
-
-\bibitem[{Hochberg et al.(2006)}]{Hochberg06}
-Hochberg LR, Serruya MD, Friehs GM, Mukand JA, Saleh M, Caplan AH, Branner A, Chen D, Penn RD, Donoghue JP. Neuronal ensemble control of prosthetic devices by a human with tetraplegia. Nature, 2006;442:164-71.
-
-\bibitem[{Kass et al.(2005)}]{Kass05}
-Kass RS, Ventura V, Brown EN. Statistical issues in the Analysis of Neuronal Data. J Neurophysiol, 2005;94:8-25.
-
-\bibitem[{Kreuz et al.(2009)}]{Kreuz09}
-Kreuz T, Chicharro D, Andrzejak RG, Haas JS, Abarbanel HDI.
-  Measuring multiple spike train synchrony. J Neurosci Methods, 2009;183:287-99.
-
-\bibitem[{Kreuz et al.(2011)}]{Kreuz11}
-Kreuz T, Chicharro D, Greschner M, Andrzejak RG.
-  Time-resolved and time-scale adaptive measures of spike train synchrony. J Neurosci Methods, 2011;195:92-106.
-
-%\bibitem[{Kreuz(2011)}]{Kreuz11b}
-%Kreuz T. Measures of spike train synchrony. Scholarpedia, 2011;6:11934.
-
-\bibitem[{Kreuz et al.(2013)}]{Kreuz13}
-Kreuz T, Chicharro D, Houghton C, Andrzejak RG, Mormann F.
-  Monitoring spike train synchrony. J Neurophysiol, 2013;109:1457-72.
-
-\bibitem[{Kreuz et al.(2007)}]{Kreuz07c}
-Kreuz T, Haas JS, Morelli A, Abarbanel HDI, Politi A.
-  Measuring spike train synchrony. J Neurosci Methods, 2007;165:151-61.
-
-\bibitem[{Kumar et al.(2010)}]{Kumar10}
-Kumar A, Rotter S, Aertsen A. Spiking activity propagation in neuronal networks: reconciling different perspectives on neural coding. Nature Rev Neurosci, 2010;11:615-27.
-
-\bibitem[{Louis et al.(2010)}]{Louis10}
-Louis S, Gerstein GL, Gr{\"u}n S, Diesmann M. Surrogate spike train generation through dithering in operational time. Front Comp Neurosci, 2010;4:127.
-
-\bibitem[{Mainen and Sejnowski(1995)}]{Mainen95}
-Mainen Z, Sejnowski TJ. Reliability of spike timing in neocortical neurons. Science 1995;268:1503-6.
-
-\bibitem[{Miller and Wilson(2008)}]{Miller08}
-Miller EK, Wilson MA. All My Circuits: Using Multiple Electrodes to Understand Functioning Neural Networks. Neuron, 2008;60:483-8.
-
-\bibitem[{Mormann et~al.(2007)}]{Mormann07}
-Mormann F, Andrzejak RG, Elger CE, Lehnertz K. Seizure prediction: the long and winding road. Brain, 2007;130:314-33.
-
-\bibitem[{Nirenberg and Victor(2007)}]{Nirenberg07}
-Nirenberg S, Victor JD. Analyzing the activity of large populations of neurons: how tractable is the problem? Curr Opin Neurobiol 2007;17:397-400.
-
-\bibitem[{Papoutsi et~al.(2013)}]{Papoutsi13}
-Papoutsi A, Sidiropoulou K, Cutsuridis V, Poirazi P. Induction and modulation of persistent activity in a layer v pfc microcircuit model. Front Neural Circuits 2013;7:161.
-
-\bibitem[{Pikovsky et~al.(2001)}]{Pikovsky01}
-Pikovsky AS, Rosenblum MG, Kurths J. Synchronization. A universal concept in nonlinear sciences. Cambridge Univ. Press, Cambridge, UK 2001.
-
-\bibitem[{Rusu and Florian(2014)}]{Rusu14}
-Rusu CV, RV Florian. A new class of metrics for spike trains. Neural Computation, 2014;26:306-48.
-
-\bibitem[{Sacr\'{e} and Sepulchre(2014)}]{Sacre14}
-Sacr\'{e} P, Sepulchre R. Sensitivity analysis of oscillator models in the space of phase-response curves: Oscillators as open systems. Control Systems, IEEE 2014;34:50–74.
-
-\bibitem[{Sanchez(2008)}]{Sanchez08}
-Sanchez JC, Principe JC, Nishida T, Bashirullah R, Harris JG, Fortes JAB. Technology and Signal Processing for Brain-Machine Interfaces. IEEE Signal Processing, 2008;25:29-40.
-
-\bibitem[{Shlens et al.(2008)}]{Shlens08}
-Shlens J, Rieke F, Chichilnisky EJ. Synchronized firing in the retina. Curr Opin Neurobiol, 2008;18:396-402.
-
-\bibitem[{Thibeault et al.(2014)}]{Thibeault14}
-Thibeault CM, {O'Brien} MJ, Srinivasa N. Analyzing large-scale spiking neural data with HRLAnalysis. Front. Neuroinform., 2014;8:17.
-
-\bibitem[{Tiesinga et al.(2008)}]{Tiesinga08}
-Tiesinga PHE, Fellous JM, Sejnowski TJ. Regulation of spike timing in visual cortical circuits. Nature Reviews Neuroscience 2008;9:97-107.
-
-\bibitem[{Truccolo et al.(2011)}]{Truccolo11}
-Truccolo W, Donoghue JP, Hochberg LR, Eskandar EN, Madsen JR, Anderson WS, Brown EN, Halgren E, Cash SS. Single-neuron dynamics in human focal epilepsy. Nature Neurosci, 2011;14:635-41.
-
-\bibitem[{Victor(2005)}]{Victor05}
-Victor JD. Spike train metrics. Current Opinion in Neurobiology 2005;15:585-592.
-
-\end{thebibliography}
 
 \bibliographystyle{elsart-harv}
 
