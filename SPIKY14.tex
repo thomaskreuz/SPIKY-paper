@@ -5,15 +5,10 @@
 \usepackage{amssymb}
 \usepackage{bm}
 \usepackage{natbib}
-<<<<<<< HEAD:SPIKY14.tex
-=======
-\usepackage{hyperref}
-\usepackage{epstopdf}
->>>>>>> FETCH_HEAD:SPIKY13.tex
 %\usepackage[noperiod]{jabbrv}
 \usepackage{hyperref}
 
-
+%
 % Introduction
 % ============
 %
@@ -328,11 +323,7 @@ The local average over spike train pairs yields a dissimilarity profile for the 
 
 \subsubsection{\label{sss:Triggered-Averaging} Triggered averaging}
 
-<<<<<<< HEAD:SPIKY14.tex
 The fact that there are no limits to the temporal resolution allows further analyses such as internally or externally triggered temporal averaging. Here, the matrices are averaged over certain trigger time instants only. The idea is to check whether this triggered temporal average is significantly different from the global average since this would indicate that something peculiar is happening at these trigger instants. The trigger times can either be obtained from external influences (such as the occurrence of certain features in a stimulus) or from internal conditions (such as the spike times of a certain spike train). External triggering is a standard tool to address questions of neuronal coding, for example, it can be used to evaluate the influence of localized stimulus features on the reliability of neurons under repeated stimulation. In multi-neuron data, internal triggering might help to uncover the connectivity in neural networks or to detect converging or diverging patterns of firing propagation. An example is shown in Fig. \ref{fig:Fig2-SPIKE-Representations}E. Here, neurons $2$, $9$, $14$, and $19$ follow the $7$-th neuron during the 2nd and the 4th subinterval. This can be revealed by triggering on the spike times of neuron $7$ during these sub
-=======
-The fact that there are no limits to the temporal resolution allows further analyses such as internally or externally triggered temporal averaging. Here, the matrices are averaged over certain trigger time instants only. The idea is to check whether this triggered temporal average is significantly different from the global average since this would indicate that something peculiar is happening at these trigger instants. The trigger times can either be obtained from external influences (such as the occurrence of certain features in a stimulus) or from internal conditions (such as the spike times of a certain spike train). External triggering is a standard tool to address questions of neuronal coding, for example, it can be used to evaluate the influence of localized stimulus features on the reliability of neurons under repeated stimulation. In multi-neuron data, internal triggering might help to uncover the connectivity in neural networks or to detect converging or diverging patterns of firing propagation. An example is shown in Fig. \ref{fig:Fig2-SPIKE-Representations}E. Here, neurons $2$, $9$, $14$, and $19$ follow neuron $7$ 
->>>>>>> FETCH_HEAD:SPIKY13.tex
 
 A last possibility is spatial averaging such that the spike trains are manually assigned to subgroups, and a block matrix (and the corresponding dendrogram XXXXX) is obtained by averaging over the respective submatrices of the original dissimilarity matrix. An example is shown in Fig. \ref{fig:Fig2-SPIKE-Representations}F and the corresponding dendrogram is depicted in Fig. \ref{fig:Fig2-SPIKE-Representations}G. In applications to real data, these groups could be different neuronal populations or responses to different stimuli, depending on whether the spike trains were recorded simultaneously or successively.
 
@@ -464,14 +455,13 @@ So combining these two programs it is possible to first use SPIKY for a rather e
 
 An important question that has not yet been asked is the one of statistical significance. Given a certain value of the SPIKE-distance how can one judge whether it reflects a significant decrease or increase in spike train synchrony and does not just lie within the range of values obtained for random fluctuations. One way to address this question is the use of spike train surrogates \citep{Kass05, Gruen09, Louis10}. The idea is to compare the results obtained for the original dataset versus the results obtained for spike train surrogates generated from that dataset. If the value obtained for the original lies outside the range of values for the surrogates this value can be assumed to be significant to a level defined by the number of surrogates used (e.g. $\alpha = 0.05$ for $19$ surrogates or $\alpha = 0.001$ for $999$ surrogates).
 
-<<<<<<< HEAD:SPIKY14.tex
-The SPIKY-package contains a program 'Spiky\_loop\_surro' which was designed to look at significance.
-So far it includes four different types of spike train surrogates. They differ in the properties that are preserved and maintain either the individual spike numbers (obtained by shuffling the spikes), the individual interspike interval distribution (obtained by shuffling the interspike intervals), the pooled spike train (obtained by shuffling spikes among the spike trains) or the peri-stimulus time histogram (PSTH) (obtained by drawing from the probability density function (PDF) of the data).
+%The SPIKY-package contains a program 'Spiky\_loop\_surro' which was designed to look at significance.
+%So far it includes four different types of spike train surrogates. They differ in the properties that are preserved %and maintain either the individual spike numbers (obtained by shuffling the spikes), the individual interspike %interval distribution (obtained by shuffling the interspike intervals), the pooled spike train (obtained by %shuffling spikes among the spike trains) or the peri-stimulus time histogram (PSTH) (obtained by drawing from the %probability density function (PDF) of the data).
 
-=======
 The SPIKY-package contains a program `SPIKY\_loop\_surro' which was designed to look at significance.
-So far it includes four different types of spike train surrogates. They differ in the properties that are preserved and maintain either the individual spike numbers (obtained by shuffling the spikes), the individual interspike interval distribution (obtained by shuffling the interspike intervals), the pooled spike train (obtained by shuffling spikes among the spike trains) or the peri-stimulus time histogram (PSTH). The later has been accomplished through a general method for resampling from a given distribution (imminently cumulative distribution function, CDF) using {\it the inverse transformation method}. The method is based on having a uniform (0, 1) random variable $U$, where for any distribution function $F$, there is a defined random variable $X$ such that $X = F^{-1}(U)$ then the random variable $X$ has a distribution function $F$. [$F^{-1}(u)$ is defined to equal that value $x$ for which $F(x) = u.$]
->>>>>>> FETCH_HEAD:SPIKY13.tex
+So far it includes four different types of spike train surrogates. They differ in the properties that are preserved and maintain either the individual spike numbers (obtained by shuffling the spikes), the individual interspike interval distribution (obtained by shuffling the interspike intervals), the pooled spike train (obtained by shuffling spikes among the spike trains) or the distribution using a general method for resampling from a given distribution using {\it the inverse transformation method} which is based on having a uniform (0, 1) random variable $U$, where for any distribution function $F$ if there is a defined random variable $X$ such that $X = F^{-1}(U)$ then the random variable $X$ has a distribution function $F$. [$F-'(u)$ is defined to equal that value $x$ for which $F(x) = u.$]
+
+
 
 % Daniel's Email 13.07.2011:
 %
@@ -481,7 +471,6 @@ So far it includes four different types of spike train surrogates. They differ i
 
 \subsection{\label{ss:Comparison} Comparison with other implementations}
 
-<<<<<<< HEAD:SPIKY14.tex
 Python-Implementation of SPIKE-distance courtesy of Jeremy Fix:
 
 \url{http://jeremy.fix.free.fr/Softwares/spike.html}
@@ -497,21 +486,10 @@ R{\v a}zvan Florian:
 \citep{Rusu14}
 
 While all of these previous implementations are restricted to the overall dissimilarity profile and its temporal average (the overall dissimilarity), SPIKY also allows the user to interactively access all of the many different levels of information reduction introduced in Section \ref{ss:Information-reduction}.
-=======
-Matlab provides a powerful toolbox for processing vectorized data because of the high level parallelization, while its GUI has engaging visualization capabilities. Some possible problems in using Matlab for processing spike train data could relate to the fact that interpreted language are slow. Addressing this issue, we converted the most time consuming functions to C. All distance functions written in C can be called from the SPIKY GUI. Under Matlab (2007b), we observed a significant speed up of functions written in C and same written in Matlab. However, under different versions of Matlab the speed up factor can be much different. Other SPIKY functions are less computationally intense, thus they were kept in Matlab code.
 
-The benefit of writing functions in C are not only in performance, yet it is accessible to programmers with different backgrounds (i.e. in Python) to use them as a source.
 
-% One of the disadvantages of using Matlab while processing large spike trains is that Matlab casts all floating-point numbers to 64-bit double precision by default, thus using large amounts of memory to handle large datasets, partially this problem can be solved converting to 32-bit single precision, which has been successfully issued in SPIKY. 
->>>>>>> FETCH_HEAD:SPIKY13.tex
 
-%Current version of SPIKY focuses on handling of large spike trains, dividing input spike times into groups yet still allowing usage of massive parallelization.
 
-%There was a considerable effort to bring performance along with usability, so SPIKY may have a higher than expected level of specificity. The variety of options included may be discouraging to potential users.
-
-For the sake of unbiased comparison the presented algorithms have been implemented in C++, Visual C++ 12.0, and a complete source codes are available on http://wwwold.fi.isc.cnr.it/users/thomas.kreuz/. The following results have been achieved on an Intel Core i7-4700MQ CPU @ 2.4 GHz.
-
-<<<<<<< HEAD:SPIKY14.tex
 HRLAnalysis$^{TM}$ \citep{Thibeault14}
 
 XXX Nebojsa figure (Performance comparison) XXX
@@ -520,15 +498,29 @@ XXX Nebojsa figure (Performance comparison) XXX
 %    \includegraphics[width=85mm]{FigXX_Performance_Comparison.eps}
 %    \caption{\abb\label{fig:FigXX-Performance-Comparison} XXX Add correct figure XXX Performance comparison: Time %needed for computing various distances, as a function of the number of spikes in the spike trains. For the ISI- and %the SPIKE-distance we show the curves for both the old (sampling-based) and the new algorithm.}
 %\end{figure}
-=======
+
+Matlab provides a powerful toolbox for processing vectorized data because of the high level parallelization, while its GUI has high-level visualization capabilities. Some possible problems in using Matlab for processing spike train data could relate the fact that interpreted language are slow. Addressing this issue, we converted to C the most time consuming functions. All distance functions written in C can be called from the SPIKY GUI. (Speed boost graph) Under Matlab (2007b), we observed a speed-up of about XXX (Figure) for i.e. ISI-distance MEX compared to ISI-distance Matlab. However, under different versions of Matlab the speed-up factor can be much different. Other SPIKY functions are less computationally intense.
+
+One of the disadvantages of using Matlab while processing large spike trains is that Matlab casts all floating-point numbers to 64-bit double precision by default, thus using large amounts of memory to handle large datasets, partially this problem can be solved converting to 32-bit single precision, which has been successfully issued in SPIKY. 
+
+Current version of SPIKY focuses on handling of large spike trains, dividing input spike times into groups yet still allowing usage of massive parallelization.
+
+The benefit of writing functions in C are not only in performance, yet it is accessible to programmers with different backgrounds (i.e. in Python) to use them as a source.
+
+For the sake of unbiased comparison the presented algorithms have been implemented in C++, Visual C++ 12.0, and a complete source codes are available on http://wwwold.fi.isc.cnr.it/users/thomas.kreuz/. The following results have been achieved on an Intel Core i7-4700MQ CPU @ 2.4 GHz.
+
+Algorithms were tested using simulated spike trains. The spike trains were generated as a homogeneous uniform process which is depending on the number of spikes. The algorithms were implemented in C++ all methods were compared to the same inputs. In order to show how different implementation of the same method can have different complexity classes, previous implementations for ISI-distance, SPIKE-distance and modulus metric are taken and compared versus novel ones (Figure XXXX).
+
+There was a considerable effort to bring performance along with usability, so SPIKY may have a higher than expected level of specificity. The variety of options included may be discouraging to potential users.
+
 \begin{figure}
     \includegraphics[width=85mm]{Fig5_Performance_Comparison.eps}
     \caption{\abb\label{fig:Fig5-Performance-Comparison} Performance comparison: Time needed for computing various distances, as a function of the number of spikes in the spike trains. For the ISI- and the SPIKE-distance we show the curves for both the old (sampling-based) and the new algorithm.}
 \end{figure}
 
-In order to show how different implementation of the same method can have different complexity classes, previous implementations for ISI-distance, SPIKE-distance and modulus metric are taken and compared versus novel ones (Figure 5). The setup for the comparison was taken from (cite{rusu}). Algorithms were tested using simulated spike trains. The spike trains were generated as a homogeneous uniform process which is depending on the number of spikes. The figure shows average time needed to compute distances as a function of number of spikes. The results were averaged over 10,000 trials. The simulations confirmed that the new 	implementations , (see Increase of memory efficiency by avoiding sampling) of both ISI- and SPIKE-distance have linear dependence of the number of spikes, however the main improvement is not in the performance, but in the fact that algorithms now compute distances precisely, without a dependence of any integration timestep.
->>>>>>> FETCH_HEAD:SPIKY13.tex
 
+%
+%
 % *************************************************************************************
 % ********************************************************** Discussion ***************
 % *************************************************************************************
@@ -585,12 +577,8 @@ We thank Ralph Andrzejak, Emily Caporello, Daniel Chicharro, Tim Gentner, Conor 
 We also thank Thomas Alderson, Black Square, Mayte Bonilla Quintana, Hamid Charkhkar, Didier Desaintjan, Mario DiPoppa, Mahboubeh Etemadi, Marion Najac, Matthew Phillips, Eugenio Piasini, Robert Rein, Rodrigo Salazar, Michael Schaub, Eitan Schechtman, Matthew Williams, Yunguo Yu for advice and user feedback.
 \end{thanks}
 
-<<<<<<< HEAD:SPIKY14.tex
 
 \begin{thebibliography}{25}
-=======
-\begin{thebibliography} {99}
->>>>>>> FETCH_HEAD:SPIKY13.tex
 
 \bibitem[{Bower et al.(2012)}]{Bower12}
 Bower MR, Stead M, Meyer FB, Marsh WR, Worrell GA. Spatiotemporal neuronal correlates of seizure generation in focal epilepsy. Epilepsia, 2012;53:807-16.
@@ -674,9 +662,7 @@ Truccolo W, Donoghue JP, Hochberg LR, Eskandar EN, Madsen JR, Anderson WS, Brown
 \bibitem[{Victor(2005)}]{Victor05}
 Victor JD. Spike train metrics. Current Opinion in Neurobiology 2005;15:585-592.
 
-\bibitem[{Ross(1997)}]{Ross97}
-Ross, Sheldon M. Introduction to Probability Models, Sixth Edition. ACADEMIC PRESS, 1997;0-12-598470-7.
-
+\end{thebibliography}
 
 \bibliographystyle{elsart-harv}
 
