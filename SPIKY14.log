@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.8)  27 AUG 2014 03:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.8)  27 AUG 2014 13:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -337,7 +337,11 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip51
 )
-(./SPIKY14.aux)
+(./SPIKY14.aux
+
+LaTeX Warning: Label `ss:Comparison' multiply defined.
+
+)
 \openout1 = `SPIKY14.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
@@ -354,8 +358,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
-
-(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count131
 \scratchdimen=\dimen139
@@ -451,7 +454,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 136.
 Package epstopdf Info: Output file is already uptodate.
 
-<Fig2_SPIKE_Representations-eps-converted-to.pdf, id=150, 576.1525pt x 659.4637
+<Fig2_SPIKE_Representations-eps-converted-to.pdf, id=154, 576.1525pt x 659.4637
 5pt>
 File: Fig2_SPIKE_Representations-eps-converted-to.pdf Graphic file (type pdf)
  <use Fig2_SPIKE_Representations-eps-converted-to.pdf>
@@ -487,7 +490,7 @@ onverted-to.pdf Fig3_SPIKY_Flowchart.eps>
 (epstopdf)             \includegraphics on input line 201.
 Package epstopdf Info: Output file is already uptodate.
 
-<Fig3_SPIKY_Flowchart-eps-converted-to.pdf, id=195, 1158.3275pt x 1157.32375pt>
+<Fig3_SPIKY_Flowchart-eps-converted-to.pdf, id=199, 1158.3275pt x 1157.32375pt>
 File: Fig3_SPIKY_Flowchart-eps-converted-to.pdf Graphic file (type pdf)
 <use Fig3_SPIKY_Flowchart-eps-converted-to.pdf>
 Package pdftex.def Info: Fig3_SPIKY_Flowchart-eps-converted-to.pdf used on inpu
@@ -513,7 +516,7 @@ converted-to.pdf Fig4_Movie_Screenshot.eps>
 (epstopdf)             \includegraphics on input line 220.
 Package epstopdf Info: Output file is already uptodate.
 
-<Fig4_Movie_Screenshot-eps-converted-to.pdf, id=196, 572.1375pt x 422.57875pt>
+<Fig4_Movie_Screenshot-eps-converted-to.pdf, id=200, 572.1375pt x 422.57875pt>
 File: Fig4_Movie_Screenshot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig4_Movie_Screenshot-eps-converted-to.pdf>
@@ -576,7 +579,7 @@ n-eps-converted-to.pdf Fig5_Performance_Comparison.eps>
 (epstopdf)             \includegraphics on input line 348.
 Package epstopdf Info: Output file is already uptodate.
 
-<Fig5_Performance_Comparison-eps-converted-to.pdf, id=265, 578.16pt x 433.62pt>
+<Fig5_Performance_Comparison-eps-converted-to.pdf, id=269, 578.16pt x 433.62pt>
 File: Fig5_Performance_Comparison-eps-converted-to.pdf Graphic file (type pdf)
 <use Fig5_Performance_Comparison-eps-converted-to.pdf>
 Package pdftex.def Info: Fig5_Performance_Comparison-eps-converted-to.pdf used 
@@ -584,17 +587,26 @@ on input line 348.
 (pdftex.def)             Requested size: 241.84842pt x 181.38472pt.
 
 
+LaTeX Warning: Reference `Sampling' on page 7 undefined on input line 354.
+
+
+Overfull \hbox (46.06789pt too wide) in paragraph at lines 354--355
+[]\OT1/cmr/m/n/10 The setup for the com-par-i-son was taken from XXX(citerusu)X
+XXX.
+ []
+
+
 Package natbib Warning: Citation `Sacre14' on page 7 undefined on input line 36
-4.
+7.
 
 [7 <./Fig5_Performance_Comparison-eps-converted-to.pdf>]
 
 Package natbib Warning: Citation `Kreuz07a' on page 8 undefined on input line 4
-03.
+06.
 
 
 Package natbib Warning: Citation `Kreuz07a' on page 8 undefined on input line 4
-03.
+06.
 
 Package epstopdf Info: Source file: <Fig_App_PSTH_ES.eps>
 (epstopdf)                    date: 2014-08-27 02:07:02
@@ -604,19 +616,19 @@ Package epstopdf Info: Source file: <Fig_App_PSTH_ES.eps>
 (epstopdf)                    size: 38781 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig_App_PSTH_ES-eps-conver
 ted-to.pdf Fig_App_PSTH_ES.eps>
-(epstopdf)             \includegraphics on input line 435.
+(epstopdf)             \includegraphics on input line 438.
 Package epstopdf Info: Output file is already uptodate.
-<Fig_App_PSTH_ES-eps-converted-to.pdf, id=290, 528.97626pt x 665.48625pt>
+<Fig_App_PSTH_ES-eps-converted-to.pdf, id=294, 528.97626pt x 665.48625pt>
 File: Fig_App_PSTH_ES-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig_App_PSTH_ES-eps-converted-to.pdf>
 Package pdftex.def Info: Fig_App_PSTH_ES-eps-converted-to.pdf used on input lin
-e 435.
+e 438.
 (pdftex.def)             Requested size: 241.84842pt x 304.25896pt.
  [8 <./Fig_App_PSTH_ES-eps-converted-to.pdf>]
 
 LaTeX Warning: Reference `sss:Edge-effect' on page 9 undefined on input line 46
-1.
+4.
 
 Package epstopdf Info: Source file: <Fig1_SPIKE_Illustration.eps>
 (epstopdf)                    date: 2012-12-12 01:14:46
@@ -627,21 +639,21 @@ df>
 (epstopdf)                    size: 9181 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig1_SPIKE_Illustration-ep
 s-converted-to.pdf Fig1_SPIKE_Illustration.eps>
-(epstopdf)             \includegraphics on input line 493.
+(epstopdf)             \includegraphics on input line 496.
 Package epstopdf Info: Output file is already uptodate.
 
-<Fig1_SPIKE_Illustration-eps-converted-to.pdf, id=323, 534.99875pt x 315.1775pt
+<Fig1_SPIKE_Illustration-eps-converted-to.pdf, id=328, 534.99875pt x 315.1775pt
 >
 File: Fig1_SPIKE_Illustration-eps-converted-to.pdf Graphic file (type pdf)
  <use Fig1_SPIKE_Illustration-eps-converted-to.pdf>
 Package pdftex.def Info: Fig1_SPIKE_Illustration-eps-converted-to.pdf used on i
-nput line 493.
+nput line 496.
 (pdftex.def)             Requested size: 241.84842pt x 142.4778pt.
  [9 <./Fig1_SPIKE_Illustration-eps-converted-to.pdf>] [10]
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.630 \begin{thebibliography}{25}
+l.633 \begin{thebibliography}{25}
                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -650,44 +662,39 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
-
-[12
+[11] [12
 
 ]
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 729.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 729.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 735.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 735.
 (./SPIKY14.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 729.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 729.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 735.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 735.
 Package rerunfilecheck Info: File `SPIKY14.out' has not changed.
-(rerunfilecheck)             Checksum: B6AC508E0468F0B3CA095FD5ABFB6A76;1564.
+(rerunfilecheck)             Checksum: E0A1FE5CFF7AA03FFB452C9D16ED35F9;1652.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 729.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 735.
  ) 
 Here is how much of TeX's memory you used:
- 7122 strings out of 493315
- 100036 string characters out of 6137905
- 196387 words of memory out of 5000000
- 10374 multiletter control sequences out of 15000+600000
+ 7127 strings out of 493315
+ 100095 string characters out of 6137905
+ 196449 words of memory out of 5000000
+ 10377 multiletter control sequences out of 15000+600000
  21748 words of font info for 86 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 31i,8n,28p,1678b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,8n,28p,1678b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
 /usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
@@ -713,10 +720,10 @@ nts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2013/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2013/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2013/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on SPIKY14.pdf (12 pages, 735153 bytes).
+Output written on SPIKY14.pdf (12 pages, 735047 bytes).
 PDF statistics:
- 485 PDF objects out of 1000 (max. 8388607)
- 413 compressed objects within 5 object streams
- 98 named destinations out of 1000 (max. 500000)
- 207 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 490 PDF objects out of 1000 (max. 8388607)
+ 418 compressed objects within 5 object streams
+ 100 named destinations out of 1000 (max. 500000)
+ 215 words of extra memory for PDF output out of 10000 (max. 10000000)
 
