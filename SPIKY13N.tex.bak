@@ -521,9 +521,16 @@ We chose to write SPIKY in Matlab because of its ease of use, popularity in the 
 
 Stand-Alone, 
 
-%\begin{appendix} \label{Appendix}
-%
-%\end{appendix}
+\begin{appendix} \label{Appendix}
+
+\begin{figure}
+    \includegraphics[width=85mm]{Fig_App_PSTH_ES.eps}
+    \caption{\abb\label{fig:Fig_App_PSTH_ES} Performance comparison: Time needed for computing various distances, as a function of the number of spikes in the spike trains. For the ISI- and the SPIKE-distance we show the curves for both the old (sampling-based) and the new algorithm.}
+\end{figure}
+
+
+
+\end{appendix}
 
 Regarding the application to real neuronal data within any of the three different scenarios listed in the introduction,
 

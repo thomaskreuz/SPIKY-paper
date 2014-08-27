@@ -1,30 +1,14 @@
-<<<<<<< HEAD:SPIKY14.log
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.8)  26 AUG 2014 17:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.8)  27 AUG 2014 03:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **SPIKY14.tex
 (./SPIKY14.tex
-=======
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.20)  26 AUG 2014 16:17
-entering extended mode
-**SPIKY13.tex
-(C:\Users\jdjukic\Documents\GitHub\SPIKY-paper\SPIKY13.tex
->>>>>>> FETCH_HEAD:SPIKY13.log
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-(C:\Users\jdjukic\Documents\GitHub\SPIKY-paper\elsart5p.cls
+Babel <3.9f> and hyphenation patterns for 78 languages loaded.
+(./elsart5p.cls
 Document Class: elsart5p 2006/05/01, 2.19: Elsevier
-(C:\Users\jdjukic\Documents\GitHub\SPIKY-paper\elsart.cls
+(./elsart.cls
 Document Class: elsart 2006/05/01, 2.19: Elsevier
 \@frontmatterwidth=\dimen102
 \@bls=\dimen103
@@ -45,7 +29,7 @@ Document Class: elsart 2006/05/01, 2.19: Elsevier
 \c@subsubsection=\count82
 \c@paragraph=\count83
 \c@subparagraph=\count84
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latexsym.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
@@ -95,7 +79,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    Try loading font information for U+lasy on input line 1404.
 
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 \Slashbox=\box30
@@ -111,31 +95,31 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \@Lpmdec=\dimen120
 \@Rpmdec=\dimen121
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks19
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count107
@@ -143,10 +127,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen122
 \Gin@req@width=\dimen123
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\dcolumn.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/dcolumn.sty
 Package: dcolumn 2001/05/28 v1.06 decimal alignment package (DPC)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen124
 \extrarowheight=\dimen125
@@ -154,24 +138,24 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \extratabsurround=\skip44
 \backup@length=\skip45
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip46
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks21
 \ex@=\dimen126
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen127
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 LaTeX Info: Redefining \operatorname on input line 46.
 )
@@ -213,17 +197,17 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup5
 \symAMSb=\mathgroup6
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\bm.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup7
 \symboldletters=\mathgroup8
@@ -231,24 +215,23 @@ Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldlasy=\mathgroup10
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
 LaTeX Info: Redefining \bm on input line 204.
-)
-(C:\Users\jdjukic\Documents\GitHub\SPIKY-paper\natbib.sty
+) (./natbib.sty
 Package: natbib 2006/09/06 7.4a (PWD)
 \bibhang=\skip49
 \bibsep=\skip50
 LaTeX Info: Redefining \cite on input line 541.
 \c@NAT@ctr=\count120
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
-Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
-Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
@@ -279,7 +262,7 @@ Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
@@ -287,25 +270,25 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen135
 \Hy@linkcounter=\count121
 \Hy@pagecounter=\count122
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count123
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4443.
@@ -317,9 +300,9 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count124
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen136
@@ -342,19 +325,18 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count129
 \c@bookmark@seq@number=\count130
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip51
 )
-<<<<<<< HEAD:SPIKY14.log
 (./SPIKY14.aux)
 \openout1 = `SPIKY14.aux'.
 
@@ -374,39 +356,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
 
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
-=======
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
-Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-)
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-))
-(C:\Users\jdjukic\Documents\GitHub\SPIKY-paper\SPIKY13.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
->>>>>>> FETCH_HEAD:SPIKY13.log
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count131
 \scratchdimen=\dimen139
@@ -419,402 +368,280 @@ LaTeX Font Info:    ... okay on input line 43.
 \MPnumerator=\count135
 \makeMPintoPDFobject=\count136
 \everyMPtoPDFconversion=\toks27
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 \AtBeginShipoutBox=\box34
 
 
 Package hyperref Warning: Height of page (\paperheight) is invalid (0.0pt),
 (hyperref)                using 11in.
 
-Package hyperref Info: Link coloring OFF on input line 43.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package hyperref Info: Link coloring OFF on input line 42.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count137
 )
-LaTeX Info: Redefining \ref on input line 43.
-LaTeX Info: Redefining \pageref on input line 43.
-LaTeX Info: Redefining \nameref on input line 43.
+LaTeX Info: Redefining \ref on input line 42.
+LaTeX Info: Redefining \pageref on input line 42.
+LaTeX Info: Redefining \nameref on input line 42.
 
-<<<<<<< HEAD:SPIKY14.log
 (./SPIKY14.out) (./SPIKY14.out)
 \@outlinefile=\write3
 \openout3 = `SPIKY14.out'.
-=======
-(C:\Users\jdjukic\Documents\GitHub\SPIKY-paper\SPIKY13.out)
-(C:\Users\jdjukic\Documents\GitHub\SPIKY-paper\SPIKY13.out)
-\@outlinefile=\write3
-LaTeX Font Info:    Try loading font information for U+msa on input line 47.
->>>>>>> FETCH_HEAD:SPIKY13.log
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+LaTeX Font Info:    Try loading font information for U+msa on input line 46.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 47.
+LaTeX Font Info:    Try loading font information for U+msb on input line 46.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 55.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 55.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 55.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 54.
 \c@sv@footnote=\count138
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-<<<<<<< HEAD:SPIKY14.log
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 82.
-=======
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 84.
-
-
-Package natbib Warning: Citation `Pikovsky01' on page 1 undefined on input line
- 86.
-
-
-Package natbib Warning: Citation `Tiesinga08' on page 1 undefined on input line
- 86.
-
-
-Package natbib Warning: Citation `Shlens08' on page 1 undefined on input line 8
-6.
-
-
-Package natbib Warning: Citation `Nirenberg07' on page 1 undefined on input lin
-e 86.
-
-
-Package natbib Warning: Citation `Kumar10' on page 1 undefined on input line 86
-.
-
-
-Package natbib Warning: Citation `Mainen95' on page 1 undefined on input line 8
-8.
-
-
-Package natbib Warning: Citation `Victor05' on page 1 undefined on input line 8
-8.
-
-
-Package natbib Warning: Citation `Truccolo11' on page 1 undefined on input line
- 90.
-
-
-Package natbib Warning: Citation `Bower12' on page 1 undefined on input line 90
-.
-
-
-Package natbib Warning: Citation `Miller08' on page 1 undefined on input line 9
-0.
-
-
-Package natbib Warning: Citation `Mormann07' on page 1 undefined on input line 
-90.
-
-
-Package natbib Warning: Citation `Hochberg06' on page 1 undefined on input line
- 90.
-
-
-Package natbib Warning: Citation `Sanchez08' on page 1 undefined on input line 
-90.
-
->>>>>>> FETCH_HEAD:SPIKY13.log
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+ [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
 
-Package natbib Warning: Citation `Rusu14' on page 2 undefined on input line 110
-.
+LaTeX Warning: Reference `ss:Information-reduction' on page 2 undefined on inpu
+t line 107.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package natbib Warning: Citation `Kreuz07c' on page 2 undefined on input line 1
-44.
-
-
-Package natbib Warning: Citation `Kreuz09' on page 2 undefined on input line 14
-4.
-
-
-Package natbib Warning: Citation `Kreuz11' on page 2 undefined on input line 16
-2.
-
-
-Package natbib Warning: Citation `Kreuz13' on page 2 undefined on input line 16
-2.
-
-Package epstopdf Info: Source file: <Fig1_SPIKE_Illustration.eps>
-(epstopdf)                    date: 2014-08-25 15:40:35
-(epstopdf)                    size: 15248 bytes
-(epstopdf)             Output file: <Fig1_SPIKE_Illustration-eps-converted-to.p
-df>
-(epstopdf)                    date: 2014-08-25 15:40:35
-(epstopdf)                    size: 9181 bytes
-<<<<<<< HEAD:SPIKY14.log
-(epstopdf)             Command: <repstopdf --outfile=Fig1_SPIKE_Illustration-ep
-s-converted-to.pdf Fig1_SPIKE_Illustration.eps>
-(epstopdf)             \includegraphics on input line 169.
-=======
-(epstopdf)             Command: <epstopdf --outfile=Fig1_SPIKE_Illustration-eps
--converted-to.pdf Fig1_SPIKE_Illustration.eps>
-(epstopdf)             \includegraphics on input line 171.
->>>>>>> FETCH_HEAD:SPIKY13.log
-Package epstopdf Info: Output file is already uptodate.
-
-<Fig1_SPIKE_Illustration-eps-converted-to.pdf, id=82, 534.99875pt x 315.1775pt>
-File: Fig1_SPIKE_Illustration-eps-converted-to.pdf Graphic file (type pdf)
-<use Fig1_SPIKE_Illustration-eps-converted-to.pdf>
-Package pdftex.def Info: Fig1_SPIKE_Illustration-eps-converted-to.pdf used on i
-<<<<<<< HEAD:SPIKY14.log
-nput line 169.
-=======
-nput line 171.
->>>>>>> FETCH_HEAD:SPIKY13.log
-(pdftex.def)             Requested size: 241.84842pt x 142.4778pt.
- [2]
-Overfull \vbox (0.5051pt too high) has occurred while \output is active []
-
-
-[3 <C:/Users/jdjukic/Documents/GitHub/SPIKY-paper/Fig1_SPIKE_Illustration-eps-c
-onverted-to.pdf>]
-
-Package natbib Warning: Citation `Kreuz13' on page 4 undefined on input line 29
-5.
+LaTeX Warning: Reference `ss:Improvements' on page 2 undefined on input line 11
+1.
 
 Package epstopdf Info: Source file: <Fig2_SPIKE_Representations.eps>
-(epstopdf)                    date: 2014-08-25 15:40:35
-(epstopdf)                    size: 52020 bytes
+(epstopdf)                    date: 2014-08-12 01:08:45
+(epstopdf)                    size: 50289 bytes
 (epstopdf)             Output file: <Fig2_SPIKE_Representations-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2014-08-25 15:40:35
+(epstopdf)                    date: 2014-08-12 01:09:08
 (epstopdf)                    size: 21217 bytes
-<<<<<<< HEAD:SPIKY14.log
 (epstopdf)             Command: <repstopdf --outfile=Fig2_SPIKE_Representations
 -eps-converted-to.pdf Fig2_SPIKE_Representations.eps>
-(epstopdf)             \includegraphics on input line 302.
-=======
-(epstopdf)             Command: <epstopdf --outfile=Fig2_SPIKE_Representations-
-eps-converted-to.pdf Fig2_SPIKE_Representations.eps>
-(epstopdf)             \includegraphics on input line 304.
->>>>>>> FETCH_HEAD:SPIKY13.log
+(epstopdf)             \includegraphics on input line 136.
 Package epstopdf Info: Output file is already uptodate.
 
-<Fig2_SPIKE_Representations-eps-converted-to.pdf, id=133, 576.1525pt x 659.4637
+<Fig2_SPIKE_Representations-eps-converted-to.pdf, id=150, 576.1525pt x 659.4637
 5pt>
 File: Fig2_SPIKE_Representations-eps-converted-to.pdf Graphic file (type pdf)
  <use Fig2_SPIKE_Representations-eps-converted-to.pdf>
 Package pdftex.def Info: Fig2_SPIKE_Representations-eps-converted-to.pdf used o
-<<<<<<< HEAD:SPIKY14.log
-n input line 302.
-(pdftex.def)             Requested size: 241.84842pt x 276.82195pt.
- [4]
-Underfull \vbox (badness 2443) has occurred while \output is active []
-
- [5 <./Fig2_SPIKE_Representations-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 346--347
-=======
-n input line 304.
+n input line 136.
 (pdftex.def)             Requested size: 241.84842pt x 276.82195pt.
 
 
-Package natbib Warning: Citation `Kreuz13' on page 4 undefined on input line 31
-6.
+LaTeX Warning: Reference `sss:Sampling' on page 2 undefined on input line 148.
+
+[2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Package natbib Warning: Citation `Kreuz13' on page 4 undefined on input line 31
-6.
-
-[4]
-Underfull \vbox (badness 2443) has occurred while \output is active []
-
-
-Underfull \vbox (badness 3503) has occurred while \output is active []
-
- [5 <C:/Users/jdjukic/Documents/GitHub/SPIKY-paper/Fig2_SPIKE_Representations-e
-ps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
->>>>>>> FETCH_HEAD:SPIKY13.log
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 \OT1/cmr/m/n/10 ([]$\OT1/cmtt/m/n/10 http : / / www . fi . isc . cnr . it / use
-rs / thomas . kreuz /$
+rs / thomas . kreuz /
  []
 
 
-Package natbib Warning: Citation `Kreuz13' on page 6 undefined on input line 35
-5.
+Underfull \vbox (badness 2443) has occurred while \output is active []
 
+ [3 <./Fig2_SPIKE_Representations-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Fig3_SPIKY_Flowchart.eps>
-(epstopdf)                    date: 2014-08-25 15:40:35
+(epstopdf)                    date: 2014-06-17 16:58:19
 (epstopdf)                    size: 4324158 bytes
 (epstopdf)             Output file: <Fig3_SPIKY_Flowchart-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2014-08-25 15:40:35
+(epstopdf)                    date: 2014-07-03 20:55:06
 (epstopdf)                    size: 315782 bytes
-<<<<<<< HEAD:SPIKY14.log
 (epstopdf)             Command: <repstopdf --outfile=Fig3_SPIKY_Flowchart-eps-c
 onverted-to.pdf Fig3_SPIKY_Flowchart.eps>
-(epstopdf)             \includegraphics on input line 368.
-=======
-(epstopdf)             Command: <epstopdf --outfile=Fig3_SPIKY_Flowchart-eps-co
-nverted-to.pdf Fig3_SPIKY_Flowchart.eps>
-(epstopdf)             \includegraphics on input line 369.
->>>>>>> FETCH_HEAD:SPIKY13.log
+(epstopdf)             \includegraphics on input line 201.
 Package epstopdf Info: Output file is already uptodate.
 
-<Fig3_SPIKY_Flowchart-eps-converted-to.pdf, id=167, 1158.3275pt x 1157.32375pt>
+<Fig3_SPIKY_Flowchart-eps-converted-to.pdf, id=195, 1158.3275pt x 1157.32375pt>
 File: Fig3_SPIKY_Flowchart-eps-converted-to.pdf Graphic file (type pdf)
 <use Fig3_SPIKY_Flowchart-eps-converted-to.pdf>
 Package pdftex.def Info: Fig3_SPIKY_Flowchart-eps-converted-to.pdf used on inpu
-<<<<<<< HEAD:SPIKY14.log
-t line 368.
-=======
-t line 369.
->>>>>>> FETCH_HEAD:SPIKY13.log
+t line 201.
 (pdftex.def)             Requested size: 241.84842pt x 241.63242pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Reference `fig:Fig4_Movie_Screenshot' on page 6 undefined on inp
-ut line 378.
+
+
+LaTeX Warning: Reference `fig:Fig4_Movie_Screenshot' on page 4 undefined on inp
+ut line 211.
 
 Package epstopdf Info: Source file: <Fig4_Movie_Screenshot.eps>
-(epstopdf)                    date: 2014-08-25 15:40:35
+(epstopdf)                    date: 2013-03-19 02:53:16
 (epstopdf)                    size: 94413 bytes
 (epstopdf)             Output file: <Fig4_Movie_Screenshot-eps-converted-to.pdf
 >
-(epstopdf)                    date: 2014-08-25 15:40:35
+(epstopdf)                    date: 2014-07-03 20:55:07
 (epstopdf)                    size: 27270 bytes
-<<<<<<< HEAD:SPIKY14.log
 (epstopdf)             Command: <repstopdf --outfile=Fig4_Movie_Screenshot-eps-
 converted-to.pdf Fig4_Movie_Screenshot.eps>
-(epstopdf)             \includegraphics on input line 387.
-=======
-(epstopdf)             Command: <epstopdf --outfile=Fig4_Movie_Screenshot-eps-c
-onverted-to.pdf Fig4_Movie_Screenshot.eps>
-(epstopdf)             \includegraphics on input line 388.
->>>>>>> FETCH_HEAD:SPIKY13.log
+(epstopdf)             \includegraphics on input line 220.
 Package epstopdf Info: Output file is already uptodate.
 
-<Fig4_Movie_Screenshot-eps-converted-to.pdf, id=168, 572.1375pt x 422.57875pt>
+<Fig4_Movie_Screenshot-eps-converted-to.pdf, id=196, 572.1375pt x 422.57875pt>
 File: Fig4_Movie_Screenshot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig4_Movie_Screenshot-eps-converted-to.pdf>
 Package pdftex.def Info: Fig4_Movie_Screenshot-eps-converted-to.pdf used on inp
-<<<<<<< HEAD:SPIKY14.log
-ut line 387.
-=======
-ut line 388.
->>>>>>> FETCH_HEAD:SPIKY13.log
+ut line 220.
 (pdftex.def)             Requested size: 241.84842pt x 178.62961pt.
 
 
-Package natbib Warning: Citation `Kreuz11' on page 6 undefined on input line 39
-8.
-
-[6]
-
-Package natbib Warning: Citation `Kreuz13' on page 7 undefined on input line 40
-9.
+LaTeX Warning: Reference `s:Measures' on page 4 undefined on input line 230.
 
 
-Underfull \vbox (badness 3503) has occurred while \output is active []
+Underfull \vbox (badness 1708) has occurred while \output is active []
 
-<<<<<<< HEAD:SPIKY14.log
- [7 <./Fig3_SPIKY_Flowchart-eps-converted-to.pdf> <./Fig4_Movie_Screenshot-eps-
-converted-to.pdf>]
-Underfull \hbox (badness 4144) in paragraph at lines 432--433
-=======
- [7 <C:/Users/jdjukic/Documents/GitHub/SPIKY-paper/Fig3_SPIKY_Flowchart-eps-con
-verted-to.pdf> <C:/Users/jdjukic/Documents/GitHub/SPIKY-paper/Fig4_Movie_Screen
-shot-eps-converted-to.pdf>]
-Underfull \hbox (badness 4144) in paragraph at lines 433--434
->>>>>>> FETCH_HEAD:SPIKY13.log
+ [4 <./Fig3_SPIKY_Flowchart-eps-converted-to.pdf>] [5 <./Fig4_Movie_Screenshot-
+eps-converted-to.pdf>]
+Underfull \hbox (badness 4144) in paragraph at lines 265--266
 \OT1/cmr/m/n/10 workspace for fur-ther pro-cess-ing. When one clicks
  []
 
 
-<<<<<<< HEAD:SPIKY14.log
-Underfull \hbox (badness 10000) in paragraph at lines 432--433
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
 \OT1/cmr/m/n/10 ables such as 'SPIKY[]spikes', 'SPIKY[]profile[]X[]1',
  []
 
 
-Underfull \hbox (badness 4927) in paragraph at lines 435--436
+Underfull \hbox (badness 4927) in paragraph at lines 268--269
 []\OT1/cmr/m/n/10 SPIKY[]results.$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 Measure$\O
 ML/cmm/m/it/10 >$\OT1/cmr/m/n/10 .name: Name of se-lected
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 433--434
-\OT1/cmr/m/n/10 ables such as `SPIKY[]spikes', `SPIKY[]profile[]X[]1',
  []
 
 
-Package natbib Warning: Citation `Kass05' on page 8 undefined on input line 457
-.
-
-
-Package natbib Warning: Citation `Gruen09' on page 8 undefined on input line 45
-7.
-
-
-Package natbib Warning: Citation `Louis10' on page 8 undefined on input line 45
-7.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8]
-Overfull \hbox (15.25653pt too wide) in paragraph at lines 459--461
-[]\OT1/cmr/m/n/10 The SPIKY-package con-tains a pro-gram `SPIKY[]loop[]surro'
->>>>>>> FETCH_HEAD:SPIKY13.log
- []
-
-Package epstopdf Info: Source file: <Fig5_Performance_Comparison.eps>
-(epstopdf)                    date: 2014-08-25 16:48:15
-(epstopdf)                    size: 796098 bytes
-(epstopdf)             Output file: <Fig5_Performance_Comparison-eps-converted-
-to.pdf>
-(epstopdf)                    date: 2014-08-25 16:48:48
-(epstopdf)                    size: 14775 bytes
-(epstopdf)             Command: <epstopdf --outfile=Fig5_Performance_Comparison
--eps-converted-to.pdf Fig5_Performance_Comparison.eps>
-(epstopdf)             \includegraphics on input line 483.
-Package epstopdf Info: Output file is already uptodate.
-
-<<<<<<< HEAD:SPIKY14.log
-Underfull \hbox (badness 3291) in paragraph at lines 437--438
+Underfull \hbox (badness 3291) in paragraph at lines 270--271
 []\OT1/cmr/m/n/10 SPIKY[]results.$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 Measure$\O
 ML/cmm/m/it/10 >$\OT1/cmr/m/n/10 .matrix: Pair-wise dis-tance
  []
 
-[8]
-Overfull \hbox (8.45099pt too wide) in paragraph at lines 458--460
-[]\OT1/cmr/m/n/10 The SPIKY-package con-tains a pro-gram 'Spiky[]loop[]surro'
+
+Underfull \vbox (badness 3503) has occurred while \output is active []
+
+
+Overfull \hbox (15.25653pt too wide) in paragraph at lines 293--294
+[]\OT1/cmr/m/n/10 The SPIKY-package con-tains a pro-gram `SPIKY[]loop[]surro'
  []
 
-
-Overfull \hbox (37.74759pt too wide) in paragraph at lines 480--481
+[6]
+Overfull \hbox (37.74759pt too wide) in paragraph at lines 315--316
 [][]$\OT1/cmtt/m/n/10 https : / / github . com / modulus-[]metric / spike-[]tra
 in-[]metrics$[] 
  []
 
+Package epstopdf Info: Source file: <Fig5_Performance_Comparison.eps>
+(epstopdf)                    date: 2014-08-25 17:18:17
+(epstopdf)                    size: 796098 bytes
+(epstopdf)             Output file: <Fig5_Performance_Comparison-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2014-08-25 17:18:17
+(epstopdf)                    size: 14775 bytes
+(epstopdf)             Command: <repstopdf --outfile=Fig5_Performance_Compariso
+n-eps-converted-to.pdf Fig5_Performance_Comparison.eps>
+(epstopdf)             \includegraphics on input line 348.
+Package epstopdf Info: Output file is already uptodate.
 
-Package natbib Warning: Citation `Sacre14' on page 9 undefined on input line 50
-9.
+<Fig5_Performance_Comparison-eps-converted-to.pdf, id=265, 578.16pt x 433.62pt>
+File: Fig5_Performance_Comparison-eps-converted-to.pdf Graphic file (type pdf)
+<use Fig5_Performance_Comparison-eps-converted-to.pdf>
+Package pdftex.def Info: Fig5_Performance_Comparison-eps-converted-to.pdf used 
+on input line 348.
+(pdftex.def)             Requested size: 241.84842pt x 181.38472pt.
 
-[9]
+
+Package natbib Warning: Citation `Sacre14' on page 7 undefined on input line 36
+4.
+
+[7 <./Fig5_Performance_Comparison-eps-converted-to.pdf>]
+
+Package natbib Warning: Citation `Kreuz07a' on page 8 undefined on input line 4
+03.
+
+
+Package natbib Warning: Citation `Kreuz07a' on page 8 undefined on input line 4
+03.
+
+Package epstopdf Info: Source file: <Fig_App_PSTH_ES.eps>
+(epstopdf)                    date: 2014-08-27 02:07:02
+(epstopdf)                    size: 101520 bytes
+(epstopdf)             Output file: <Fig_App_PSTH_ES-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-08-27 03:25:57
+(epstopdf)                    size: 38781 bytes
+(epstopdf)             Command: <repstopdf --outfile=Fig_App_PSTH_ES-eps-conver
+ted-to.pdf Fig_App_PSTH_ES.eps>
+(epstopdf)             \includegraphics on input line 435.
+Package epstopdf Info: Output file is already uptodate.
+<Fig_App_PSTH_ES-eps-converted-to.pdf, id=290, 528.97626pt x 665.48625pt>
+File: Fig_App_PSTH_ES-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Fig_App_PSTH_ES-eps-converted-to.pdf>
+Package pdftex.def Info: Fig_App_PSTH_ES-eps-converted-to.pdf used on input lin
+e 435.
+(pdftex.def)             Requested size: 241.84842pt x 304.25896pt.
+ [8 <./Fig_App_PSTH_ES-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `sss:Edge-effect' on page 9 undefined on input line 46
+1.
+
+Package epstopdf Info: Source file: <Fig1_SPIKE_Illustration.eps>
+(epstopdf)                    date: 2012-12-12 01:14:46
+(epstopdf)                    size: 15248 bytes
+(epstopdf)             Output file: <Fig1_SPIKE_Illustration-eps-converted-to.p
+df>
+(epstopdf)                    date: 2014-07-03 20:55:03
+(epstopdf)                    size: 9181 bytes
+(epstopdf)             Command: <repstopdf --outfile=Fig1_SPIKE_Illustration-ep
+s-converted-to.pdf Fig1_SPIKE_Illustration.eps>
+(epstopdf)             \includegraphics on input line 493.
+Package epstopdf Info: Output file is already uptodate.
+
+<Fig1_SPIKE_Illustration-eps-converted-to.pdf, id=323, 534.99875pt x 315.1775pt
+>
+File: Fig1_SPIKE_Illustration-eps-converted-to.pdf Graphic file (type pdf)
+ <use Fig1_SPIKE_Illustration-eps-converted-to.pdf>
+Package pdftex.def Info: Fig1_SPIKE_Illustration-eps-converted-to.pdf used on i
+nput line 493.
+(pdftex.def)             Requested size: 241.84842pt x 142.4778pt.
+ [9 <./Fig1_SPIKE_Illustration-eps-converted-to.pdf>] [10]
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.557 \begin{thebibliography}{25}
+l.630 \begin{thebibliography}{25}
                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -823,36 +650,47 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
-[10]
+
+[12
+
+]
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 653.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 653.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 729.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 729.
 (./SPIKY14.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 653.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 653.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 729.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 729.
 Package rerunfilecheck Info: File `SPIKY14.out' has not changed.
-(rerunfilecheck)             Checksum: B9DF675E45768C9AE93DFA7FDDE0D2B9;1068.
+(rerunfilecheck)             Checksum: B6AC508E0468F0B3CA095FD5ABFB6A76;1564.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 653.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 729.
  ) 
 Here is how much of TeX's memory you used:
- 7078 strings out of 493315
- 99100 string characters out of 6137905
- 197765 words of memory out of 5000000
- 10343 multiletter control sequences out of 15000+600000
- 21447 words of font info for 85 fonts, out of 8000000 for 9000
+ 7122 strings out of 493315
+ 100036 string characters out of 6137905
+ 196387 words of memory out of 5000000
+ 10374 multiletter control sequences out of 15000+600000
+ 21748 words of font info for 86 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 31i,8n,28p,1687b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,8n,28p,1678b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
 /usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
 usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
 sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
@@ -875,89 +713,10 @@ nts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2013/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2013/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2013/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on SPIKY14.pdf (10 pages, 672436 bytes).
+Output written on SPIKY14.pdf (12 pages, 735153 bytes).
 PDF statistics:
- 423 PDF objects out of 1000 (max. 8388607)
- 360 compressed objects within 4 object streams
- 88 named destinations out of 1000 (max. 500000)
- 149 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
-<Fig5_Performance_Comparison-eps-converted-to.pdf, id=217, 578.16pt x 433.62pt>
-File: Fig5_Performance_Comparison-eps-converted-to.pdf Graphic file (type pdf)
-<use Fig5_Performance_Comparison-eps-converted-to.pdf>
-Package pdftex.def Info: Fig5_Performance_Comparison-eps-converted-to.pdf used 
-on input line 483.
-(pdftex.def)             Requested size: 241.84842pt x 181.38472pt.
-
-
-Package natbib Warning: Citation `Papoutsi13' on page 9 undefined on input line
- 498.
-
-
-Package natbib Warning: Citation `DiPoppa13' on page 9 undefined on input line 
-498.
-
-
-Package natbib Warning: Citation `Rusu14' on page 9 undefined on input line 498
-.
-
-
-Package natbib Warning: Citation `Sacre14' on page 9 undefined on input line 49
-8.
-
-[9 <C:/Users/jdjukic/Documents/GitHub/SPIKY-paper/Fig5_Performance_Comparison-e
-ps-converted-to.pdf>]
-Underfull \vbox (badness 3735) has occurred while \output is active []
-
- [10]
-
-Package natbib Warning: There were undefined citations.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 549.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 549.
-(C:\Users\jdjukic\Documents\GitHub\SPIKY-paper\SPIKY13.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 549.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 549.
-Package rerunfilecheck Info: File `SPIKY13.out' has not changed.
-(rerunfilecheck)             Checksum: 6AA0968061BBC8BC0892F47E506C96FE;1084.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 549.
- ) 
-Here is how much of TeX's memory you used:
- 7056 strings out of 493921
- 99572 string characters out of 3144870
- 192946 words of memory out of 3000000
- 10186 multiletter control sequences out of 15000+200000
- 21447 words of font info for 85 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 31i,8n,28p,1687b,330s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmsl8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmss8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmtt8.pfb>
-Output written on SPIKY13.pdf (10 pages, 710271 bytes).
-PDF statistics:
- 324 PDF objects out of 1000 (max. 8388607)
- 63 named destinations out of 1000 (max. 500000)
- 154 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> FETCH_HEAD:SPIKY13.log
+ 485 PDF objects out of 1000 (max. 8388607)
+ 413 compressed objects within 5 object streams
+ 98 named destinations out of 1000 (max. 500000)
+ 207 words of extra memory for PDF output out of 10000 (max. 10000000)
 
