@@ -2157,7 +2157,7 @@
   author =       "T. Kreuz",
   title =        "Measures of spike train synchrony",
   journal =      "Scholarpedia",
-  volume =       "6(10)",
+  volume =       "6 (10)",
   pages =        "11934",
   year =         "2011"
 }
@@ -2166,9 +2166,18 @@
   author =       "T. Kreuz",
   title =        "Measures of neuronal signal synchrony",
   journal =      "Scholarpedia",
-  volume =       "6(12)",
+  volume =       "6 (12)",
   pages =        "11922",
   year =         "2011"
+}
+
+@Article{Kreuz12,
+  author =       "T. Kreuz",
+  title =        "SPIKE-distance",
+  journal =      "Scholarpedia",
+  volume =       "7 (12)",
+  pages =        "30652",
+  year =         "2012"
 }
 
 @Article{Kreuz13,
@@ -2180,22 +2189,26 @@
   year =         "2013"
 }
 
-@Article{Kreuz12b,
-  author =       "T. Kreuz and D. Chicharro and C. Houghton",
+@InCollection{Kreuz13b,
+  author =       "C. Houghton and T. Kreuz",
   title =        "Measures of spike train synchrony: From single neurons to populations",
-  journal =      "Pesenson book chapter (in preparation)",
-  volume =       "",
-  pages =        "",
-  year =         "2012"
+  booktitle =    "Multiscale Analysis and Nonlinear Dynamics: from Molecules to the Brain",
+  editor =       "M. Pesenson and H. Schuster",
+  publisher =    "Wiley-VCH Verlag GmbH & Co. KGaA",
+  address =      "Weinheim, Germany",
+  pages=         "p. 277",
+  year =         "2013"
 }
 
-@Article{Kreuz12c,
+@InCollection{Kreuz13c,
   author =       "T. Kreuz",
-  title =        "SPIKE-distance",
-  journal =      "Scholarpedia",
-  volume =       ")",
-  pages =        "",
-  year =         "2012"
+  title =        "Synchronization measures",
+  booktitle =    "Principles of neural coding",
+  editor =       "R. {Quian Quiroga} and S. Panzeri ",
+  publisher =    "CRC Taylor and Francis",
+  address =      "Boca Raton, FL, USA",
+  pages=         "p. 97",
+  year =         "2013"
 }
 
 @Article{Kugiumtzis99,
