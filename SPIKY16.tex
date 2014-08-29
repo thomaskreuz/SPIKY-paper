@@ -90,7 +90,7 @@ In the other major scenario the neuronal spiking response is recorded in differe
 
 In both population and successive trial recordings a high temporal resolution would be very desirable. Analyzing the changing spiking patterns of large ensembles of single neurons in epilepsy patients could lead to a better understanding of the mechanisms of seizure generation, propagation, and termination \citep{Truccolo11, Bower12} in the same way as the analysis of neuronal responses to successive presentations of time-dependent stimuli could help to understand the role of synchronous firing in neuronal coding \citep{Miller08}. Moreover, in population recordings it would be even more advantageous to be able to monitor spike train synchrony in realtime. In epilepsy this would be a necessary condition for the implementation of a prospective seizure prediction algorithm \citep{Mormann07}, but it could also be very useful for the rapid online decoding of neural signals needed to control prosthetics \citep{Hochberg06, Sanchez08}.
 
-add event synchronization and multivariate extension
+CNS abtract, to be merged:
 
 Modern electrophysiology is developing fast and it sometimes provides more data than available algorithms and methods can handle and process. In particular, there is an increasing demand for methods which provide the possibility to study similarity patterns of activity across many neurons. Accordingly, a wide variety of approaches to quantify the similarity (or dissimilarity) between two or more spike trains has been suggested. Recently, the ISI- and the SPIKE-distance \citep{Kreuz07c, Kreuz13} have been proposed as parameter-free and time-scale independent measures of spike train synchrony. The key property of both measures is that they are time-resolved since they rely on instantaneous estimates of spike train dissimilarity. This makes it possible to track changes in instantaneous clustering, i.e., time-localized patterns of (dis)similarity among multiple spike trains. The SPIKE-distance also comes in a causal variant \citep{Kreuz13} which is defined such that the instantaneous values of dissimilarity are defined from past information only so that time-resolved spike train synchrony can be estimated in real-time.
 
@@ -99,11 +99,9 @@ For both the regular and the real-time SPIKE-distance, there are several levels 
 The Matlab source codes for calculating and visualizing both the ISI- and the SPIKE-distance have been made publicly available and have already been widely used in various contexts. However, the use of these codes is not very intuitive and their application requires some basic knowledge of Matlab. Thus it became desirable to provide a more user-friendly and accessible interface. Here we address this need and present an advanced version of the graphical user interface SPIKY. This interactive program facilitates the application of the ISI- and the SPIKE-distance to both simulated and real data. Once given a set of spike train data (importable from many different formats), SPIKY calculates the desired measure and allows visualization of different representations such as measure profiles and pairwise dissimilarity matrices. SPIKY also includes the possibility to generate movies which are very useful in order to track the varying patterns of (dis)similarity. Finally, SPIKY has been optimized with respect to both computation speed (by using MEX-files, i.e. C-based Matlab executables) and memory demand (by taking advantage of the piecewise linear nature of the dissimilarity profiles).
 
 
-multivariate extension of event synchronization
-
+add event synchronization and multivariate extension
 
 Many different representations, i.e. degrees of information reduction
-
 
 Need for a graphical user interface (GUI)
 
