@@ -98,11 +98,13 @@ In recent years two such time-resolved measures have been proposed. The ISI-dist
 
 For all of these measures there are several levels of information reduction \citep{Kreuz12}. The starting point is the most detailed representation in which one instantaneous value is obtained for each pair of spike trains. This results in a matrix of size ’number of sampled time instants’ × ’squared number of spike trains’ (i.e. $\#(t_n)N^2)$. By selecting a pair of spike trains one obtains a bivariate dissimilarity profile whereas the selection of a time instant yields an instantaneous matrix of pairwise spike train dissimilarities which can be used to divide the spike trains into instantaneous clusters, i.e., groups of spike trains with low intra-group and high inter-group dissimilarity. Another way to reduce the information is averaging. The spatial average over spike train pairs yields a dissimilarity profile for the selected (sub)population, whereas temporal averaging leads to a bivariate distance matrix for the selected interval or the selected trigger points. Finally, application of the remaining average results in one distance value which describes the overall level of synchrony for a group of spike trains over a given time interval.
 
-The Matlab source codes for calculating and visualizing these measures have been made publicly available (\url{http://wwwold.fi.isc.cnr.it/users/thomas.kreuz/sourcecode.html}) XXXXX and have already been widely used in various contexts (e.g., XXXXX Citations XXXXX). However, due to the many different possible representations of the results the use of these codes is not very intuitive and their application requires some basic knowledge of Matlab. Thus it became desirable to provide a more intuitive and interactive tool for analyzing spike train data. Here we address this need and present the graphical user interface (GUI) SPIKY. Once given a set of real or simulated spike train data (importable from many different formats), SPIKY calculates the measures of choice and allows to switch between many different visualizations such as measure profiles, pairwise dissimilarity matrices, or hierarchical cluster trees. SPIKY also includes the possibility to generate movies which are very useful in order to track the varying patterns of (dis)similarity. Finally, SPIKY has been optimized with respect to both computation speed (by using MEX-files, i.e. C-based Matlab executables) and memory demand (by taking advantage of the piecewise linear nature of the dissimilarity profiles).
+The Matlab source codes for calculating and visualizing these measures have been made publicly available (\url{http://wwwold.fi.isc.cnr.it/users/thomas.kreuz/sourcecode.html}) XXXXX and have already been widely used in various contexts (e.g., XXXXX Citations XXXXX). However, due to the many different possible representations of the results the use of these codes is not very intuitive and their application requires some basic knowledge of Matlab. Thus it became desirable to provide a more intuitive and interactive tool for analyzing spike train data. Here we address this need and present the graphical user interface SPIKY. Once given a set of real or simulated spike train data (importable from many different formats), SPIKY calculates the measures of choice and allows to switch between many different visualizations such as measure profiles, pairwise dissimilarity matrices, or hierarchical cluster trees. SPIKY also includes the possibility to generate movies which are very useful in order to track the varying patterns of (dis)similarity. Finally, SPIKY has been optimized with respect to both computation speed (by using MEX-files, i.e. C-based Matlab executables) and memory demand (by taking advantage of the piecewise linear nature of the dissimilarity profiles).
 
-The remainder of this paper is organized as follows. We start with an overview of the different levels of information reduction for the time-resolved measures in Section \ref{s:Information-reduction}. These range from the most detailed representation in which one instantaneous value is obtained for each pair of spike trains to the most condensed representation in which successive temporal and spatial averaging leads to one single distance value which describes the overall level of synchrony for a group of spike trains over a given time interval.
+The remainder of this paper is organized as follows. In Section \ref{s:Measures} we present the different measures available in SPIKY. These include the ISI-distance and the SPIKE-distance as well as the latter's realtime variant, and, introduced here, its future variant. In Subsection \ref{App-ss:Improvements} we present the improvements realized in this new implementation of the measures. Most prominent are the correction of the edge-effect (spurious decrease to zero) for the SPIKE-distance and the increase of memory efficiency by avoiding sampling. Recently, we added another complimentary measure to SPIKY, event synchronization. We here show how it can be modified such that it can be used within the time-resolved SPIKY-framework. An overview of the different levels of information reduction is given in Section \ref{s:Information-reduction}. These range from the most detailed representation in which one instantaneous value is obtained for each pair of spike trains to the most condensed representation in which successive temporal and spatial averaging leads to one single distance value which describes the overall level of synchrony for a group of spike trains over a given time interval.
 
-SPIKY, our graphical user interface for monitoring spike train synchrony, is presented in Section \ref{s:SPIKY}. In Subsection \ref{ss:Access} we explain how to get access to the codes and the large library of documentation (which includes text files, images, movies, as well as screen recordings with voice-over in which the user is guided step by step through some of the most important features of SPIKY). Subsequently, in Subsection \ref{ss:Structure} we introduce the structure and the workflow of the program. We show how to input spike train data, how to change the layout of the figures and how to export results. We also present two programs included in the SPIKY-package which are complementary to the graphical user interface itself. While the program `SPIKY\_loop' (Subsection \ref{ss:GUI-vs-loop}) is meant to be used for the collective analysis of many different datasets (e.g. when the statistics of a certain quantity should be evaluated over all available datasets), the program `SPIKY\_loop\_surro' (Subsection \ref{ss:Spike-train-surrogates}) was designed to evaluate the statistical significance of the results obtained for the original dataset by comparing them against the results obtained for spike train surrogates generated from that dataset. In Subsection \ref{ss:Comparison} we investigate the performance of our new implementation of the time-resolved measures of spike train synchrony and compare it with previously published codes (e.g. \citet{Rusu14} XXXXX). In Section \ref{s:Discussion} we summarize both the methods and the program, discuss their limitations and present an outlook on future developments.
+SPIKY, our graphical user interface (GUI) for monitoring spike train synchrony, is presented in Section \ref{s:SPIKY}. In Subsection \ref{ss:Access} explain how to get access to the codes and the large library of documentation (which includes text files, images, movies, as well as screen recordings with voice-over in which the user is guided step by step through some of the most important features of SPIKY). Subsequently, in Subsection \ref{ss:Structure} we introduce the structure and the workflow of the program. We show how to input spike train data, how to change the layout of the figures and how to export results. We also present two programs included in the SPIKY-package which are complementary to the graphical user interface itself. While the program 'SPIKY\_loop' (Subsection \ref{ss:GUI-vs-loop}) is meant to be used for the collective analysis of many different datasets (e.g. when the statistics of a certain quantity should be evaluated over all available datasets), the program 'SPIKY\_loop\_surro' (Subsection \ref{ss:Spike-train-surrogates}) was designed to evaluate the statistical significance of the results obtained for the original dataset by comparing them against the results obtained for spike train surrogates generated from that dataset. In Subsection \ref{ss:Comparison} we investigate the performance of our new implementation of the time-resolved measures of spike train synchrony and compare it with previously published codes (e.g. \citet{Rusu14} XXXXX). Finally, in Section \ref{s:Discussion} we summarize both the methods and the program, discuss their limitations and present an outlook on future developments.
+
+
 
 Finally, in the appendix \ref{App-s:Measures} we introduce the different measures available in SPIKY. In addition to the standard Peri-Stimulus Time Histogram (PSTH) these include event synchronization (Section \ref{App-ss:Event-Synchronization}) as well as the ISI-distance, the SPIKE-distance and the latter's realtime and future variants (Section \ref{App-ss:ISI-SPIKE-Distance}). In Subsection \ref{App-ss:Improvements} we present the improvements realized in this new implementation of the measures. Most prominent are the correction of the edge-effect (spurious decrease to zero) for the SPIKE-distance and the increase of memory efficiency by avoiding sampling. 
 
@@ -124,7 +126,7 @@ Moreover, the sensitivity to spike timing and the instantaneous reliability achi
 %
 % #########################################################################################
 % #########################################################################################
-% #################################################### Figure 2 ###########################
+% ##################################### Figure: Representations ###########################
 % #########################################################################################
 % #########################################################################################
 %
@@ -135,7 +137,7 @@ Moreover, the sensitivity to spike timing and the instantaneous reliability achi
 %
 % #########################################################################################
 % #########################################################################################
-% #################################################### Figure 2 ###########################
+% ##################################### Figure: Representations ###########################
 % #########################################################################################
 % #########################################################################################
 
@@ -165,7 +167,7 @@ The fact that there are no limits to the temporal resolution allows further anal
 %
 \section{\label{s:SPIKY} SPIKY}
 
-SPIKY is a graphical user interface (GUI) for monitoring synchrony between artificially simulated or experimentally recorded neuronal spike trains. It is an implementation of the ISI- and the SPIKE-distance (including simulations of its realtime and future variants) which allows  interactive access to all the different representations described in Section \ref{s:Information-reduction}. SPIKY is a free software package programmed by Thomas Kreuz and Nebojsa Bozanic. All source codes are written in Matlab (MathWorks Inc, Natick, MA, USA) with the most time-consuming loops coded in MEX-files \footnote{In our case these are subroutines written in C. However, as some users may not have access to a suitable C compiler, SPIKY contains the (slower) pure Matlab code as well.}. SPIKY is not stand-alone but requires Matlab to run. XXXXX Update, now stand-alone? XXXXX.
+SPIKY is a graphical user interface for monitoring synchrony between artificially simulated or experimentally recorded neuronal spike trains. It is an implementation of the ISI- and the SPIKE-distance (including simulations of its realtime and future variants) which allows  interactive access to all the different representations described in Section \ref{s:Information-reduction}. SPIKY is a free software package programmed by Thomas Kreuz and Nebojsa Bozanic. All source codes are written in Matlab (MathWorks Inc, Natick, MA, USA) with the most time-consuming loops coded in MEX-files \footnote{In our case these are subroutines written in C. However, as some users may not have access to a suitable C compiler, SPIKY contains the (slower) pure Matlab code as well.}. SPIKY is not stand-alone but requires Matlab to run. XXXXX Update, now stand-alone? XXXXX.
 
 
 \subsection{\label{ss:Access} Access to SPIKY and how to get started}
@@ -183,44 +185,45 @@ To get the user started quickly, SPIKY provides a few (artificial) example datas
 
 \subsection{\label{ss:Structure} Structure and workflow of SPIKY}
 
-Overall, SPIKY has a rather linear workflow, however, it is much more interactive than previous implementations of the ISI- and the SPIKE-distance and there are many potential shortcuts and loops along the way. As you can see in the SPIKY-flowchart in Fig. \ref{fig:Fig3-SPIKY-Flowchart}, the general flow is clearly directed from the input of spike train data to the output of results. So the first step the user has to do is to give SPIKY spike train data (i.e. sequences of spike times) to work with. There are three possibilities to do so: one can make use of predefined examples, load data from a file, or employ the spike train generator (see Section \ref{sss:Input} for more details).
+Overall, SPIKY has a rather linear workflow, however, it is much more interactive than previous implementations of the ISI- and the SPIKE-distance and there are many potential shortcuts and loops along the way. As you can see in the SPIKY-flowchart in Fig. \ref{fig:SPIKY-Flowchart}, the general flow is clearly directed from the input of spike train data to the output of results. So the first step the user has to do is to give SPIKY spike train data (i.e. sequences of spike times) to work with. There are three possibilities to do so: one can make use of predefined examples, load data from a file, or employ the spike train generator (see Section \ref{sss:Input} for more details).
 %
 % #########################################################################################
-% ######################################################################################### #################################################### Figure 3 ###########################
+% #########################################################################################
+% ########################################### Figure: Flowchart ###########################
 % #########################################################################################
 % #########################################################################################
 %
 \begin{figure}
     \includegraphics[width=85mm]{SPIKY_Flowchart.eps}
-    \caption{\abb\label{fig:Fig3-SPIKY-Flowchart} Flowchart describing the workflow of SPIKY from 	the input of spike train data to the output of results. A typical SPIKY-session begins at the top with `Get data', then goes clockwise and ends on the left with `Get results'. In the center of the circle the SPIKY-logo is depicted.}
+    \caption{\abb\label{fig:SPIKY-Flowchart} Flowchart describing the workflow of SPIKY from 	the input of spike train data to the output of results. A typical SPIKY-session begins at the top with `Get data', then goes clockwise and ends on the left with `Get results'. In the center of the circle the SPIKY-logo is depicted.}
 \end{figure}
 %
 % #########################################################################################
 % #########################################################################################
-% #################################################### Figure 3 ###########################
+% ########################################### Figure: Flowchart ###########################
 % #########################################################################################
 % #########################################################################################
 
-Once the full dataset is there, modification is still possible. One can restrict the analysis to a specific subset, e.g., select a smaller time window and/or a subset of spike trains. It is also possible to impose some external structure on the rasterplot (spike trains vs time). SPIKY allows the definition of two types of spike train separators (e.g. neurons from the left vs. neurons from the right hemisphere) and two types of time markers (e.g. specific events such as seizure onset and offset in epilepsy, trigger onset during stimulation etc.). It also enables the user to define spike train groups. Depending on the setup these could be spike trains recorded in different brain regions or upon presentation of different kinds of stimuli. Fig. \ref{fig:Fig4-Movie-Screenshot} shows an example of a raster plot with annotations marking all these different elements.
+Once the full dataset is there, modification is still possible. One can restrict the analysis to a specific subset, e.g., select a smaller time window and/or a subset of spike trains. It is also possible to impose some external structure on the rasterplot (spike trains vs time). SPIKY allows the definition of two types of spike train separators (e.g. neurons from the left vs. neurons from the right hemisphere) and two types of time markers (e.g. specific events such as seizure onset and offset in epilepsy, trigger onset during stimulation etc.). It also enables the user to define spike train groups. Depending on the setup these could be spike trains recorded in different brain regions or upon presentation of different kinds of stimuli. Fig. \ref{fig:Movie-Screenshot} shows an example of a raster plot with annotations marking all these different elements.
 %
 % #########################################################################################
 % #########################################################################################
-% #################################################### Figure 4 ###########################
+% #################################### Figure: Movie-Screenshot ###########################
 % #########################################################################################
 % #########################################################################################
 %
 \begin{figure}
     \includegraphics[width=85mm]{Movie_Screenshot.eps}
-    \caption{\abb\label{fig:Fig4-Movie-Screenshot} Annotated screenshot from a movie.   A. Artificially generated spike trains.   B. Dissimilarity matrices obtained by averaging over two separate time intervals for both the regular and the real-time SPIKE-distance as well as their averages over subgroups of spike trains (denoted by $<\cdot>_G$).   C. Corresponding dendrograms.}
+    \caption{\abb\label{fig:Movie-Screenshot} Annotated screenshot from a movie.   A. Artificially generated spike trains.   B. Dissimilarity matrices obtained by averaging over two separate time intervals for both the regular and the real-time SPIKE-distance as well as their averages over subgroups of spike trains (denoted by $<\cdot>_G$).   C. Corresponding dendrograms.}
 \end{figure}
 %
 % #########################################################################################
 % #########################################################################################
-% #################################################### Figure 4 ###########################
+% #################################### Figure: Movie-Screenshot ###########################
 % #########################################################################################
 % #########################################################################################
 
-After updating all of these data parameters the next step is to select the measures to be calculated. In addition to the measures described in the Appendix \ref{App-s:Measures} we also include the Peri-Stimulus Time Histogram as a time-resolved standard approach widely used in spike train analysis. However, note that the PSTH is a complementary approach which describes overall firing rate and (to some precision) timing. It is not a measure of spike train synchrony \citep{Kreuz11} since it is invariant to shuffling spikes among the spike trains yielding the same value regardless of how spikes are distributed among the different spike trains (see Fig. \ref{fig:App-Fig1-PSTH-ES}). At the same time the user can select successive frames for a temporal analysis of spike train patterns. These can be individual time instants for cross sections, temporal intervals for selective averages and sequences of time instants for triggered averages (see Section \ref{s:Information-reduction}).
+After updating all of these data parameters the next step is to select the measures to be calculated. In addition to the measures described in the Appendix \ref{App-s:Measures} we also include the Peri-Stimulus Time Histogram as a time-resolved standard approach widely used in spike train analysis. However, note that the PSTH is a complementary approach which describes overall firing rate and (to some precision) timing. It is not a measure of spike train synchrony \citep{Kreuz11} since it is invariant to shuffling spikes among the spike trains yielding the same value regardless of how spikes are distributed among the different spike trains (see Fig. \ref{fig:PSTH-ES}). At the same time the user can select successive frames for a temporal analysis of spike train patterns. These can be individual time instants for cross sections, temporal intervals for selective averages and sequences of time instants for triggered averages (see Section \ref{s:Information-reduction}).
 
 Now the actual calculation of the measures takes place. For reasonably sized datasets this should take at most a few seconds. Larger datasets are divided in smaller subintervals and the calculation will be performed in a loop which might take longer (cf. Section \ref{ss:Limitations}). It is at this point that SPIKY becomes truly interactive. Now the user can switch between different representations of the results (such as dissimilarity profiles, dissimilarity matrices and dendrograms). Regarding matrices and dendrograms one can decide whether one wants to compare different representations or look at them in sequence.
 
@@ -333,7 +336,7 @@ For the sake of an unbiased comparison all algorithms have been implemented in C
 %
 % #########################################################################################
 % #########################################################################################
-% #################################################### Figure 4 ###########################
+% ############################## Figure: Performance Comparison ###########################
 % #########################################################################################
 % #########################################################################################
 %
@@ -344,14 +347,14 @@ For the sake of an unbiased comparison all algorithms have been implemented in C
 %
 % #########################################################################################
 % #########################################################################################
-% #################################################### Figure 4 ###########################
+% ############################## Figure: Performance Comparison ###########################
 % #########################################################################################
 % #########################################################################################
 %
 
 In order to show how different implementation of the same method can have different complexity classes, previous implementations for ISI-distance, SPIKE-distance and modulus metric are taken and compared versus novel ones (Figure \ref{fig:Fig5-Performance-Comparison}).
 
-The setup for the comparison was taken from \cite{Rusu14}. Algorithms were tested using simulated spike trains. As spike train input we used random processes with different numbers of spikes. Figure \ref{fig:Fig5-Performance-Comparison} shows average time needed to compute distances as a function of number of spikes. The results were averaged over $10,000$ trials. The simulations confirmed that the new 	implementations of both ISI- and SPIKE-distance have linear dependence of the number of spikes (see Section \ref{App-sss:Sampling}), however, the main improvement is not in the performance, but in the fact that the algorithms now compute the exact distance values without any dependence on the integration timestep.
+The setup for the comparison was taken from \cite{Rusu14}. Algorithms were tested using simulated spike trains. As spike train input we used random processes with different numbers of spikes. Figure \ref{fig:Fig5-Performance-Comparison} shows average time needed to compute distances as a function of number of spikes. The results were averaged over $10,000$ trials. The simulations confirmed that the new implementations of both ISI- and SPIKE-distance have linear dependence of the number of spikes (see Section \ref{App-sss:Sampling}), however, the main improvement is not in the performance, but in the fact that the algorithms now compute the exact distance values without any dependence on the integration timestep.
 
 %
 %
@@ -368,37 +371,43 @@ So far the SPIKE-distance has been applied in the following papers:
 
 XXXXX Update at the end XXXXX
 
-Realtime algorithm for the SPIKE-distance
 
 \subsection{\label{ss:Summary} Summary}
 
-Modern electrophysiology is developing fast and it sometimes provides more data than available algorithms and methods can handle. In particular, there is an increasing demand for methods which provide the possibility to study similarity patterns of activity across many neurons. Accordingly, a wide variety of approaches to quantify the similarity (or dissimilarity) between two or more spike trains has been suggested. XXX Rep? XXX
+Apart from the standard Peri-Stimulus Time Histogram SPIKY contains three time-resolved measures.These measures are complementary to each other since each one addresses a different specific aspect of spike train similarity. While the ISI-distance implicitly relies on neural firing rate and the SPIKE-distance captures the relative timing of spikes, event synchronization is a sophisticated coincidence detector.
 
-Recently, the SPIKE-distance has been proposed as a measure of spike train synchrony which is both parameter-free and time-scale independent. Since it relies on instantaneous estimates of spike train dissimilarity, it is also time-resolved which makes it possible to track changes in instantaneous clustering, i.e., time-localized patterns of (dis)similarity among multiple spike trains. Further features include selective and triggered temporal averaging as well as the instantaneous comparison of spike train groups. Besides the regular SPIKE-distance, there also exists a causal variant which is defined such that the instantaneous values of dissimilarity rely on past information only so that time-resolved spike train synchrony can be estimated in real-time. Finally, here we introduce the future SPIKE-distance which can be used in triggered temporal averaging in order to evaluate the effect of certain spikes or of certain stimuli features on future spiking. In the first part of this report we address some of the computational aspects in the calculation and implementation of the SPIKE-distance while in the second part we present SPIKY, a graphical user interface which facilitates the application of the SPIKE-distance and all its variants to both simulated and real data.
+The ISI
+
+While the ISI-distance quantifies local dissimilarities based on the neurons’ firing rate profiles, the SPIKE-distance tracks dissimilarity mediated by differences in spike timing.
+
 
 
 
 \subsection{\label{ss:Limitations} Limitations}
 
-The calculation of the SPIKE-distance consists of three steps: First for each spike the distance to the nearest spike in all the other spike trains is calculated. Successively, for each time instant and each pair of spike trains, the distances of the four corner spikes are first locally weighted and then normalized. These latter steps involve matrices of the order `number of time instants' $\times$ `number of spike train pairs', which for very long datasets with many spike trains can lead to memory problems. The solution to this problem is to make the calculation sequential, i.e., to cut the recording interval into smaller segments, and to perform the averaging over all pairs of spike trains for each segment separately. In the end the dissimilarity profiles for the different segments (already averaged over pairs of spike trains) are concatenated, and its temporal average yields the distance value for the whole recording interval. If such a sequential calculation is required the user is continuously informed about the progress via a waitbar.
+The calculation of the SPIKE-distance consists of three steps: First for each spike the distance to the nearest spike in all the other spike trains is calculated. Successively, for each time instant and each pair of spike trains, the distances of the four corner spikes are first locally weighted and then normalized. These latter steps involve matrices of the order `number of time instants' $\times$ `number of spike train pairs', which for very long datasets with many spike trains can lead to memory problems. The solution to this problem is to make the calculation sequential, i.e., to cut the recording interval into smaller segments, and to perform the averaging over all pairs of spike trains for each segment separately. In the end the dissimilarity profiles for the different segments (already averaged over pairs of spike trains) are concatenated, and its temporal average yields the distance value for the whole recording interval. During this sequential calculation SPIKY uses a waitbar (which displays the \% completed) to continuously inform the user about the progress.
 
 
 
 \subsection{\label{ss:Outlook} Outlook}
 
-[[[ In both population and successive trial recordings a high temporal resolution would be very desirable. Analyzing the changing spiking patterns of large ensembles of single neurons in epilepsy patients could lead to a better understanding of the mechanisms of seizure generation, propagation, and termination \citep{Truccolo11, Bower12} in the same way as the analysis of neuronal responses to successive presentations of time-dependent stimuli could help to understand the role of synchronous firing in neural coding \citep{Miller08}. Moreover, in population recordings it would be even more advantageous to be able to monitor spike train synchrony in realtime. In epilepsy this would be a necessary condition for the implementation of a prospective seizure prediction algorithm \citep{Mormann07}, but it could also be very useful for the rapid online decoding of neural signals needed to control prosthetics \citep{Hochberg06, Sanchez08}. ]]]
 
-This manuscript is concerned with a new method and a new program primarily designed to analyze electrophysiological data such as neuronal spike trains. But in principle it is also applicable to any other kind of discrete data which comes in the form of sequences of time stamps (such as times of bouncing basketballs and coded parent and child acts during children's tantrums just to mention two examples which we already dealt with).
+This manuscript is concerned with a new program primarily designed to analyze neuronal spike trains. But in principle it is also applicable to any other kind of discrete data which comes in the form of sequences of time stamps (such as times of bouncing basketballs and coded parent and child acts during children's tantrums just to mention two examples which we already dealt with). Furthermore, in \citet{Kreuz13} we already applied the SPIKE-distance not only to discrete data but also to an example of continuous data (modified EEG). We plan to include this possibility in SPIKY; in principle the only preprocessing step missing is the transformation of the continuous data to discrete data via some kind of spike / event detection.
 
-We chose to write SPIKY in Matlab because of its ease of use, popularity in the neuroscience community, and the well-developed MEX-interface for integrating C functions for performance enhancements. However, in the future we plan to export at least some of its functionality into an open-source environment which could for example be based on Python code within a C++ core. XXXXX Check advice on alternatives again XXXXX
+One of the measures included in SPIKY is the realtime SPIKE-distance. The present algorithm calculates the realtime values by making use of past information only but it does so in a speed-optimized and parallelized manner which would not be compatible with an actual realtime-implementation. However, such a realtime-implementation should actually be simpler and less problematic even for large numbers of neurons since the only information that would have to be stored at each time instant are the time stamps of the latest spikes of each spike train and their nearest neighbors in the other spike trains.
 
-Stand-Alone, 
+We chose to write SPIKY in Matlab because of its ease of use, popularity in the neuroscience community, and the well-developed MEX-interface for integrating C functions for performance enhancements. However, in the future we plan to export at least some of its functionality into an open-source environment which could for example be based on Python code within a C++ core. We also would like to make it available in some kind of stand-alone version which does not depend on the availabilty of Matlab (MathWorks Inc, Natick, MA, USA). XXXXX Check advice on alternatives again, stand-alone? XXXXX
 
-Regarding the application to real neuronal data within any of the three different scenarios listed in the introduction,
+Another potential direction would be the extension of the methods used here from the quantification of synchrony within one population of two or more neurons to the quantification of synchrony between two (or more) neuronal populations. Similar extensions have been done for two other spike train distances \citep{Aronov03, Houghton08} but both of these methods are not time-resolved and depend on not one but two parameters. So one particular challenge for our methods could be to try to maintain the high temporal resolution of the original methods and to make the new methods parameter-free.
 
-The question whether synchrony on the single-neuron level is relevant for neural coding is not discussed here.
+Note that there are many open questions regarding neuronal synchrony. Among these questions are its role in dynamical diseases like epilepsy and its relevance for neural coding. While a thorough discussion of these issues is beyond the scope of this paper, we argue that SPIKY should be a very useful tool for investigation. If epileptic seizures and/or time-dependent stimulations lead to changes in spike train synchrony or spike train clustering, SPIKY should be able to detect them.
 
-However, if there are changes in overall spike train synchrony or in spike train clustering SPIKY should be able to detect them.
+% [[[ In both population and successive trial recordings a high temporal resolution would be very desirable. Analyzing the changing spiking patterns of large ensembles of single neurons in epilepsy patients could lead to a better understanding of the mechanisms of seizure generation, propagation, and termination \citep{Truccolo11, Bower12} in the same way as the analysis of neuronal responses to successive presentations of time-dependent stimuli could help to understand the role of synchronous firing in neural coding \citep{Miller08}. Moreover, in population recordings it would be even more advantageous to be able to monitor spike train synchrony in realtime. In epilepsy this would be a necessary condition for the implementation of a prospective seizure prediction algorithm \citep{Mormann07}, but it could also be very useful for the rapid online decoding of neural signals needed to control prosthetics \citep{Hochberg06, Sanchez08}. ]]]
+
+%Regarding potential applications, SPIKY could be very useful in both population and successive trial recordings.
+%Analyzing the changing spiking patterns of large ensembles of single neurons in epilepsy patients could lead to a better understanding of the mechanisms of seizure generation, propagation, and termination \citep{Truccolo11, Bower12} in the same way as the analysis of neuronal responses to successive presentations of time-dependent stimuli could help to understand the role of synchronous firing in neural coding \citep{Miller08}.
+
+
 
 %
 % #########################################################################################
@@ -474,25 +483,25 @@ where $\Delta n_x$ and $\Delta n_y$ are the numbers of events in the interval $[
 
 A suitably normalized distance is obtained by inversion $D_E=E-1$, with $D_E = 0$ if and only if all spikes within the window coincide (or if there are no spikes at all).
 
-Fig. \ref{fig:App-Fig1-PSTH-ES} shows a comparison between the the Peri-Stimulus Time Histogram and event synchronization. It shows that the PSTH, in contrast to event synchronization, is not a measure of spike train synchrony \citep{Kreuz11} since it is invariant to shuffling spikes among the spike trains yielding the same value regardless of how spikes are distributed among the different spike trains. XXXXX Rep XXXXX
+Fig. \ref{fig:PSTH-ES} shows a comparison between the the Peri-Stimulus Time Histogram and event synchronization. It shows that the PSTH, in contrast to event synchronization, is not a measure of spike train synchrony \citep{Kreuz11} since it is invariant to shuffling spikes among the spike trains yielding the same value regardless of how spikes are distributed among the different spike trains. XXXXX Rep XXXXX
 
 not yet finished XXXXX
 
 %
 % #########################################################################################
 % #########################################################################################
-% #################################################### App-Figure 1 #######################
+% ###################################### Figure: PSTH & ES ################################
 % #########################################################################################
 % #########################################################################################
 %
 \begin{figure}
     \includegraphics[width=85mm]{PSTH_ES.eps}
-    \caption{\abb\label{fig:App-Fig1-PSTH-ES} Comparison of PSTH and event synchronization. \citep{QuianQuiroga02b} XXXXX}
+    \caption{\abb\label{fig:PSTH-ES} Comparison of PSTH and event synchronization. \citep{QuianQuiroga02b} XXXXX}
 \end{figure}
 %
 % #########################################################################################
 % #########################################################################################
-% #################################################### App-Figure 1 #######################
+% ###################################### Figure: PSTH & ES ################################
 % #########################################################################################
 % #########################################################################################
 %
@@ -502,7 +511,7 @@ not yet finished XXXXX
 
 \subsection{\label{App-ss:ISI-SPIKE-Distance} The ISI- and the SPIKE-distance}
 
-Both the bivariate ISI- and the bivariate SPIKE-distance rely on instantaneous values in the sense that in a first step the two sequences of discrete spike times are transformed into dissimilarity profiles, $I (t)$ and $S (t)$. These dissimilarity profiles are based on three piecewise constant quantities which for each neuron $n = 1, 2$ are assigned to every time instant (see Fig. \ref{fig:App-Fig2-SPIKE-Illustration}). These are the time of the preceding spike
+Both the bivariate ISI- and the bivariate SPIKE-distance rely on instantaneous values in the sense that in a first step the two sequences of discrete spike times are transformed into dissimilarity profiles, $I (t)$ and $S (t)$. These dissimilarity profiles are based on three piecewise constant quantities which for each neuron $n = 1, 2$ are assigned to every time instant (see Fig. \ref{fig:SPIKE-Illustration}). These are the time of the preceding spike
 %
 \begin{equation} \label{eq:Prev-Spike}
     t_{\mathrm {P}}^{(n)} (t) = \max(t_i^{(n)} | t_i^{(n)} \leq t)  \quad t_1^{(n)} \leq t \leq t_{M_n}^{(n)},
@@ -525,7 +534,7 @@ The ambiguity regarding the definition of the very first and the very last inter
 
 \subsubsection{\label{App-sss:ISI-Distance} The ISI-distance}
 
-The ISI-distance, proposed as a bivariate measure in \citep{Kreuz07c} and extended to the multi-neuron case in \citep{Kreuz09}, was the first spike train distance directly defined as the temporal average of an instantaneous dissimilarity profile. This profile is calculated as the instantaneous ratio between the interspike intervals $x_{\mathrm {ISI}}^{(1)}$ and $x_{\mathrm {ISI}}^{(2)}$ (see Eq. \ref{eq:ISI} and Fig. \ref{fig:App-Fig2-SPIKE-Illustration}) according to:
+The ISI-distance, proposed as a bivariate measure in \citep{Kreuz07c} and extended to the multi-neuron case in \citep{Kreuz09}, was the first spike train distance directly defined as the temporal average of an instantaneous dissimilarity profile. This profile is calculated as the instantaneous ratio between the interspike intervals $x_{\mathrm {ISI}}^{(1)}$ and $x_{\mathrm {ISI}}^{(2)}$ (see Eq. \ref{eq:ISI} and Fig. \ref{fig:SPIKE-Illustration}) according to:
 %
 \begin{equation} \label{eq:ISI-Ratio}
     I (t) = \begin{cases}
@@ -547,20 +556,20 @@ In contrast to the ISI-distance, the SPIKE-distance (see \citet{Kreuz11} for the
 %
 % #########################################################################################
 % #########################################################################################
-% #################################################### App-Figure 2 #######################
+% ################################## Figure: SPIKE-Illustration ###########################
 % #########################################################################################
 % #########################################################################################
 %
 \begin{figure}
     \includegraphics[width=85mm]{SPIKE_Illustration.eps}
-    \caption{\abb\label{fig:App-Fig2-SPIKE-Illustration} SPIKE-distance. Illustration of the local
+    \caption{\abb\label{fig:SPIKE-Illustration} SPIKE-distance. Illustration of the local
 	    quantities needed to define the dissimilarity profile $S (t)$ for an arbitrary time 
     		instant $t$.}
 \end{figure}
 %
 % #########################################################################################
 % #########################################################################################
-% #################################################### App-Figure 2 #######################
+% ################################## Figure: SPIKE-Illustration ###########################
 % #########################################################################################
 % #########################################################################################
 
@@ -570,7 +579,7 @@ The dissimilarity profile is calculated in two steps: First for each spike the d
      \Delta t_{\mathrm {P}}^{(1)} (t) = \min_i (| t_{\mathrm {P}}^{(1)} (t) - t_i^{(2)} |)
 \end{equation}
 %
-and analogously for $t_{\mathrm {F}}^{(1)}$, $t_{\mathrm {P}}^{(2)}$, and $t_{\mathrm {F}}^{(2)}$  (see Fig. \ref{fig:App-Fig2-SPIKE-Illustration}). For each spike train separately a locally weighted average is employed such that the differences for the closer spike dominate; the weighting factors depend on
+and analogously for $t_{\mathrm {F}}^{(1)}$, $t_{\mathrm {P}}^{(2)}$, and $t_{\mathrm {F}}^{(2)}$  (see Fig. \ref{fig:SPIKE-Illustration}). For each spike train separately a locally weighted average is employed such that the differences for the closer spike dominate; the weighting factors depend on
 %
 \begin{equation} \label{eq:Prev-Spike-Dist}
      x_{\mathrm {P}}^{(n)} (t) = t - t_{\mathrm {P}}^{(n)} (t)
@@ -654,9 +663,27 @@ where we use the length of the first known interspike interval $t_2-t_1$ as an u
 \subsubsection{\label{App-sss:Sampling} Increase of memory efficiency by avoiding sampling}
 
 Earlier versions of the codes for calculating event synchronization and the ISI- and the SPIKE-distance relied on sampled dissimilarity profiles. Typically the precision was set to the sampling interval of the neuronal recording. Since the dissimilarity profile has to be calculated and stored for each pair of spike trains, this resulted, for each measure, in a matrix of order `number of sampled time instants' $\times$ `number of spike train pairs' (i.e., $\# (t_s) \times N(N-1)/2$). For small sampling intervals and a large number of recorded spike trains this lead to memory problems.
-In SPIKY we use an optimized and more memory-efficient way of storing the data where we make use of the fact that the dissimilarity profiles $I (t)$ and $E (t)$ of ISI-distance and event synchronization are piecewise constant and the dissimilarity profile $S (t)$ of the SPIKE-distance is piecewise linear with each interval running from one spike of the pooled spike train to the next one. Thus for each such interval (and for each pair of spike trains) we have to store only one value for event synchronization and the ISI-distance and two values for the SPIKE-distance, one at the beginning and one at the end of the interval. Typically the storage space required will be much smaller than for dissimilarity profiles sampled with a reasonable precision.
 
-For all three dissimilarity profiles there are instantaneous jumps at the times of the spikes since this is where the lengths of the interspike intervals and the identity of the previous and the following spikes change abruptly. In contrast to the calculation based on sampling we get the exact result since each spike is both the previous and the next spike and there is no need anymore to `cut the corners' of the dissimilarity profiles as had to be done for the sampled dissimilarity profiles. The dissimilarity profiles $S_r(t)$ and $S_f (t)$ of the real-time and the future SPIKE-distances are hyperbolic but for these measures the exact result can be obtained by piecewise integration over all intervals of the pooled spike train. While we use these integration schemes to calculate the exact values, for the time-resolved visualization we use linear interpolations within the individual intervals in order to reach the same low computational complexity that we obtain for the regular SPIKE-distance.
+In SPIKY we use an optimized and more memory-efficient way of storing the data where we make use of the fact that the dissimilarity profiles $I (t)$ of the ISI-distance is piecewise constant and the dissimilarity profile $S (t)$ of the SPIKE-distance is piecewise linear with each interval running from one spike of the pooled spike train to the next one. Thus for each such interval (and for each pair of spike trains) we have to store only one value for the ISI-distance and two values for the SPIKE-distance, one at the beginning and one at the end of the interval (see Figure \ref{fig:No-sampling}). Typically the storage space required will be much smaller than for dissimilarity profiles sampled with a reasonable precision.
+%
+% #########################################################################################
+% #########################################################################################
+% ############################################# Figure: No sampling #######################
+% #########################################################################################
+% #########################################################################################
+%
+\begin{figure}
+    \includegraphics[width=85mm]{No_sampling.eps}
+    \caption{\abb\label{fig:No-sampling} Illustration of the memory efficient storage of the dissimilarity profile for both the ISI- and the SPIKE-distance.}
+\end{figure}
+%
+% #########################################################################################
+% #########################################################################################
+% ############################################# Figure: No sampling #######################
+% #########################################################################################
+% #########################################################################################
+
+For the dissimilarity profiles of both the ISI- and the SPIKE-distance there are instantaneous jumps at the times of the spikes since this is where the lengths of the interspike intervals and the identity of the previous and the following spikes change abruptly. In contrast to the calculation based on sampling we get the exact result since each spike is both the previous and the next spike and there is no need anymore to `cut the corners' of the dissimilarity profiles as had to be done for the sampled dissimilarity profiles. The dissimilarity profiles $S_r(t)$ and $S_f (t)$ of the real-time and the future SPIKE-distances are hyperbolic but for these measures the exact result can be obtained by piecewise integration over all intervals of the pooled spike train. While we use these integration schemes to calculate the exact values, for the time-resolved visualization we use linear interpolations within the individual intervals in order to reach the same low computational complexity that we obtain for the regular SPIKE-distance.
 
 \end{appendix}
 
@@ -677,6 +704,9 @@ We also thank Thomas Alderson, Black Square, Mayte Bonilla Quintana, Hamid Chark
 
 \begin{thebibliography}{25}
 
+\bibitem[{Aronov(2003)}]{Aronov03}
+Aronov D, Reich DS, Mechler F, Victor JD. Neural coding of spatial phase in V1 of the macaque monkey. J Neurophysiol, 2003;89:3304-27.
+
 \bibitem[{Bower et al.(2012)}]{Bower12}
 Bower MR, Stead M, Meyer FB, Marsh WR, Worrell GA. Spatiotemporal neuronal correlates of seizure generation in focal epilepsy. Epilepsia, 2012;53:807-16.
 
@@ -688,6 +718,9 @@ Gr{\"u}n S. Data-Driven Significance Estimation for Precise Spike Correlation. J
 
 \bibitem[{Hochberg et al.(2006)}]{Hochberg06}
 Hochberg LR, Serruya MD, Friehs GM, Mukand JA, Saleh M, Caplan AH, Branner A, Chen D, Penn RD, Donoghue JP. Neuronal ensemble control of prosthetic devices by a human with tetraplegia. Nature, 2006;442:164-71.
+
+\bibitem[{Houghton and Sen(2008)}]{Houghton08}
+Houghton C, Sen K. A new multineuron spike train metric. Neural Comput, 2008;20:1495-511.
 
 \bibitem[{Kass et al.(2005)}]{Kass05}
 Kass RS, Ventura V, Brown EN. Statistical issues in the Analysis of Neuronal Data. J Neurophysiol, 2005;94:8-25.

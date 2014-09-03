@@ -554,7 +554,7 @@ We also thank Thomas Alderson, Black Square, Mayte Bonilla Quintana, Hamid Chark
 \end{thanks}
 
 
-\begin{thebibliography}{25}
+\begin{thebibliography}{}{25}
 
 \bibitem[{Bower et al.(2012)}]{Bower12}
 Bower MR, Stead M, Meyer FB, Marsh WR, Worrell GA. Spatiotemporal neuronal correlates of seizure generation in focal epilepsy. Epilepsia, 2012;53:807-16.
