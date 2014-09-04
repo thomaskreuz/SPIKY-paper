@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.8)  3 SEP 2014 03:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.8)  4 SEP 2014 04:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**SPIKY19.tex
-(./SPIKY19.tex
+**SPIKY20.tex
+(./SPIKY20.tex
 LaTeX2e <2011/06/27>
 Babel <3.9f> and hyphenation patterns for 78 languages loaded.
 (./elsart5p.cls
@@ -337,23 +337,23 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip51
 )
-(./SPIKY19.aux)
-\openout1 = `SPIKY19.aux'.
+(./SPIKY20.aux)
+\openout1 = `SPIKY20.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
 
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -389,7 +389,7 @@ e
 Package hyperref Warning: Height of page (\paperheight) is invalid (0.0pt),
 (hyperref)                using 11in.
 
-Package hyperref Info: Link coloring OFF on input line 48.
+Package hyperref Info: Link coloring OFF on input line 58.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -398,33 +398,33 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count137
 )
-LaTeX Info: Redefining \ref on input line 48.
-LaTeX Info: Redefining \pageref on input line 48.
-LaTeX Info: Redefining \nameref on input line 48.
+LaTeX Info: Redefining \ref on input line 58.
+LaTeX Info: Redefining \pageref on input line 58.
+LaTeX Info: Redefining \nameref on input line 58.
 
-(./SPIKY19.out) (./SPIKY19.out)
+(./SPIKY20.out) (./SPIKY20.out)
 \@outlinefile=\write3
-\openout3 = `SPIKY19.out'.
+\openout3 = `SPIKY20.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 52.
+LaTeX Font Info:    Try loading font information for U+msa on input line 62.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 52.
+LaTeX Font Info:    Try loading font information for U+msb on input line 62.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 60.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 70.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 60.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 70.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 60.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 70.
 \c@sv@footnote=\count138
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 87.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 97.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -446,15 +446,65 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
 \OT1/cmr/m/n/10 able ([]$\OT1/cmtt/m/n/10 http : / / wwwold . fi . isc . cnr . 
 it / users / thomas .
  []
 
-
-LaTeX Warning: Reference `s:Measures' on page 2 undefined on input line 103.
-
 [2]
+Package epstopdf Info: Source file: <ISI_SPIKE_ES_ILLU.eps>
+(epstopdf)                    date: 2014-09-04 04:01:33
+(epstopdf)                    size: 17446 bytes
+(epstopdf)             Output file: <ISI_SPIKE_ES_ILLU-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-09-04 04:05:23
+(epstopdf)                    size: 10246 bytes
+(epstopdf)             Command: <repstopdf --outfile=ISI_SPIKE_ES_ILLU-eps-conv
+erted-to.pdf ISI_SPIKE_ES_ILLU.eps>
+(epstopdf)             \includegraphics on input line 195.
+Package epstopdf Info: Output file is already uptodate.
+ <ISI_SPIKE_ES_ILLU-eps-converted-to.pdf, id=178, 540.0175pt x 618.31pt>
+File: ISI_SPIKE_ES_ILLU-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ISI_SPIKE_ES_ILLU-eps-converted-to.pdf>
+Package pdftex.def Info: ISI_SPIKE_ES_ILLU-eps-converted-to.pdf used on input l
+ine 195.
+(pdftex.def)             Requested size: 241.84842pt x 276.90665pt.
+ [3] [4 <./ISI_SPIKE_ES_ILLU-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <No_sampling.eps>
+(epstopdf)                    date: 2014-09-02 19:01:49
+(epstopdf)                    size: 10518 bytes
+(epstopdf)             Output file: <No_sampling-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-09-03 01:05:39
+(epstopdf)                    size: 8637 bytes
+(epstopdf)             Command: <repstopdf --outfile=No_sampling-eps-converted-
+to.pdf No_sampling.eps>
+(epstopdf)             \includegraphics on input line 305.
+Package epstopdf Info: Output file is already uptodate.
+
+<No_sampling-eps-converted-to.pdf, id=235, 521.95pt x 367.3725pt>
+File: No_sampling-eps-converted-to.pdf Graphic file (type pdf)
+
+<use No_sampling-eps-converted-to.pdf>
+Package pdftex.def Info: No_sampling-eps-converted-to.pdf used on input line 30
+5.
+(pdftex.def)             Requested size: 241.84842pt x 170.22662pt.
+ [5 <./No_sampling-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <PSTH_ES.eps>
+(epstopdf)                    date: 2014-08-27 02:07:02
+(epstopdf)                    size: 101520 bytes
+(epstopdf)             Output file: <PSTH_ES-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-09-03 01:05:37
+(epstopdf)                    size: 38781 bytes
+(epstopdf)             Command: <repstopdf --outfile=PSTH_ES-eps-converted-to.p
+df PSTH_ES.eps>
+(epstopdf)             \includegraphics on input line 374.
+Package epstopdf Info: Output file is already uptodate.
+<PSTH_ES-eps-converted-to.pdf, id=264, 528.97626pt x 665.48625pt>
+File: PSTH_ES-eps-converted-to.pdf Graphic file (type pdf)
+
+<use PSTH_ES-eps-converted-to.pdf>
+Package pdftex.def Info: PSTH_ES-eps-converted-to.pdf used on input line 374.
+(pdftex.def)             Requested size: 241.84842pt x 304.25896pt.
 Package epstopdf Info: Source file: <SPIKE_Representations.eps>
 (epstopdf)                    date: 2014-09-01 18:59:42
 (epstopdf)                    size: 50442 bytes
@@ -464,26 +514,23 @@ Package epstopdf Info: Source file: <SPIKE_Representations.eps>
 (epstopdf)                    size: 21270 bytes
 (epstopdf)             Command: <repstopdf --outfile=SPIKE_Representations-eps-
 converted-to.pdf SPIKE_Representations.eps>
-(epstopdf)             \includegraphics on input line 134.
+(epstopdf)             \includegraphics on input line 410.
 Package epstopdf Info: Output file is already uptodate.
 
-<SPIKE_Representations-eps-converted-to.pdf, id=170, 576.1525pt x 661.47125pt>
+<SPIKE_Representations-eps-converted-to.pdf, id=269, 576.1525pt x 661.47125pt>
 File: SPIKE_Representations-eps-converted-to.pdf Graphic file (type pdf)
 
 <use SPIKE_Representations-eps-converted-to.pdf>
 Package pdftex.def Info: SPIKE_Representations-eps-converted-to.pdf used on inp
-ut line 134.
+ut line 410.
 (pdftex.def)             Requested size: 241.84842pt x 277.66463pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3 <./SPIKE_Representations-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 175--176
+ [6 <./PSTH_ES-eps-converted-to.pdf>] [7 <./SPIKE_Representations-eps-converted
+-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 451--452
 \OT1/cmr/m/n/10 ([]$\OT1/cmtt/m/n/10 http : / / www . fi . isc . cnr . it / use
 rs / thomas . kreuz /
  []
 
-[4]
 Package epstopdf Info: Source file: <SPIKY_Flowchart.eps>
 (epstopdf)                    date: 2014-06-17 16:58:19
 (epstopdf)                    size: 4324158 bytes
@@ -492,14 +539,14 @@ Package epstopdf Info: Source file: <SPIKY_Flowchart.eps>
 (epstopdf)                    size: 315782 bytes
 (epstopdf)             Command: <repstopdf --outfile=SPIKY_Flowchart-eps-conver
 ted-to.pdf SPIKY_Flowchart.eps>
-(epstopdf)             \includegraphics on input line 197.
+(epstopdf)             \includegraphics on input line 473.
 Package epstopdf Info: Output file is already uptodate.
- <SPIKY_Flowchart-eps-converted-to.pdf, id=211, 1158.3275pt x 1157.32375pt>
+<SPIKY_Flowchart-eps-converted-to.pdf, id=314, 1158.3275pt x 1157.32375pt>
 File: SPIKY_Flowchart-eps-converted-to.pdf Graphic file (type pdf)
 
 <use SPIKY_Flowchart-eps-converted-to.pdf>
 Package pdftex.def Info: SPIKY_Flowchart-eps-converted-to.pdf used on input lin
-e 197.
+e 473.
 (pdftex.def)             Requested size: 241.84842pt x 241.63242pt.
 Package epstopdf Info: Source file: <Movie_Screenshot.eps>
 (epstopdf)                    date: 2013-03-19 02:53:16
@@ -509,54 +556,53 @@ Package epstopdf Info: Source file: <Movie_Screenshot.eps>
 (epstopdf)                    size: 27270 bytes
 (epstopdf)             Command: <repstopdf --outfile=Movie_Screenshot-eps-conve
 rted-to.pdf Movie_Screenshot.eps>
-(epstopdf)             \includegraphics on input line 216.
+(epstopdf)             \includegraphics on input line 492.
 Package epstopdf Info: Output file is already uptodate.
 
-<Movie_Screenshot-eps-converted-to.pdf, id=212, 572.1375pt x 422.57875pt>
+<Movie_Screenshot-eps-converted-to.pdf, id=315, 572.1375pt x 422.57875pt>
 File: Movie_Screenshot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Movie_Screenshot-eps-converted-to.pdf>
 Package pdftex.def Info: Movie_Screenshot-eps-converted-to.pdf used on input li
-ne 216.
+ne 492.
 (pdftex.def)             Requested size: 241.84842pt x 178.62961pt.
- [5 <./SPIKY_Flowchart-eps-converted-to.pdf> <./Movie_Screenshot-eps-converted-
-to.pdf>]
-Underfull \vbox (badness 3503) has occurred while \output is active []
-
-
-Underfull \hbox (badness 4144) in paragraph at lines 261--262
+ [8 <./SPIKY_Flowchart-eps-converted-to.pdf>] [9 <./Movie_Screenshot-eps-conver
+ted-to.pdf>]
+Underfull \hbox (badness 4144) in paragraph at lines 537--538
 \OT1/cmr/m/n/10 workspace for fur-ther pro-cess-ing. When one clicks
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
+Underfull \hbox (badness 10000) in paragraph at lines 537--538
 \OT1/cmr/m/n/10 ables such as `SPIKY[]spikes', `SPIKY[]profile[]X[]1',
  []
 
 
-Underfull \hbox (badness 4927) in paragraph at lines 264--265
+Underfull \hbox (badness 4927) in paragraph at lines 540--541
 []\OT1/cmr/m/n/10 SPIKY[]results.$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 Measure$\O
 ML/cmm/m/it/10 >$\OT1/cmr/m/n/10 .name: Name of se-lected
  []
 
-[6]
-Underfull \hbox (badness 3291) in paragraph at lines 266--267
+
+Underfull \hbox (badness 3291) in paragraph at lines 542--543
 []\OT1/cmr/m/n/10 SPIKY[]results.$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 Measure$\O
 ML/cmm/m/it/10 >$\OT1/cmr/m/n/10 .matrix: Pair-wise dis-tance
  []
 
 
-Overfull \hbox (15.25653pt too wide) in paragraph at lines 289--290
+Underfull \vbox (badness 3503) has occurred while \output is active []
+
+ [10]
+Overfull \hbox (15.25653pt too wide) in paragraph at lines 565--566
 []\OT1/cmr/m/n/10 The SPIKY-package con-tains a pro-gram `SPIKY[]loop[]surro'
  []
 
 
-Overfull \hbox (37.74759pt too wide) in paragraph at lines 311--312
+Overfull \hbox (37.74759pt too wide) in paragraph at lines 587--588
 [][]$\OT1/cmtt/m/n/10 https : / / github . com / modulus-[]metric / spike-[]tra
 in-[]metrics$[] 
  []
 
-[7]
 Package epstopdf Info: Source file: <Performance_Comparison.eps>
 (epstopdf)                    date: 2014-08-28 16:36:02
 (epstopdf)                    size: 812126 bytes
@@ -566,82 +612,26 @@ f>
 (epstopdf)                    size: 18510 bytes
 (epstopdf)             Command: <repstopdf --outfile=Performance_Comparison-eps
 -converted-to.pdf Performance_Comparison.eps>
-(epstopdf)             \includegraphics on input line 344.
+(epstopdf)             \includegraphics on input line 620.
 Package epstopdf Info: Output file is already uptodate.
- <Performance_Comparison-eps-converted-to.pdf, id=279, 578.16pt x 433.62pt>
+<Performance_Comparison-eps-converted-to.pdf, id=383, 578.16pt x 433.62pt>
 File: Performance_Comparison-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Performance_Comparison-eps-converted-to.pdf>
 Package pdftex.def Info: Performance_Comparison-eps-converted-to.pdf used on in
-put line 344.
+put line 620.
 (pdftex.def)             Requested size: 241.84842pt x 181.38472pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [8 <./Performance_Comparison-eps-converted-to.pdf>] [9]
-Package epstopdf Info: Source file: <PSTH_ES.eps>
-(epstopdf)                    date: 2014-08-27 02:07:02
-(epstopdf)                    size: 101520 bytes
-(epstopdf)             Output file: <PSTH_ES-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-09-03 01:05:37
-(epstopdf)                    size: 38781 bytes
-(epstopdf)             Command: <repstopdf --outfile=PSTH_ES-eps-converted-to.p
-df PSTH_ES.eps>
-(epstopdf)             \includegraphics on input line 495.
-Package epstopdf Info: Output file is already uptodate.
+ [11 <./Performance_Comparison-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<PSTH_ES-eps-converted-to.pdf, id=336, 528.97626pt x 665.48625pt>
-File: PSTH_ES-eps-converted-to.pdf Graphic file (type pdf)
-
-<use PSTH_ES-eps-converted-to.pdf>
-Package pdftex.def Info: PSTH_ES-eps-converted-to.pdf used on input line 495.
-(pdftex.def)             Requested size: 241.84842pt x 304.25896pt.
-Package epstopdf Info: Source file: <SPIKE_Illustration.eps>
-(epstopdf)                    date: 2012-12-12 01:14:46
-(epstopdf)                    size: 15248 bytes
-(epstopdf)             Output file: <SPIKE_Illustration-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-09-03 01:05:38
-(epstopdf)                    size: 9181 bytes
-(epstopdf)             Command: <repstopdf --outfile=SPIKE_Illustration-eps-con
-verted-to.pdf SPIKE_Illustration.eps>
-(epstopdf)             \includegraphics on input line 561.
-Package epstopdf Info: Output file is already uptodate.
-
-<SPIKE_Illustration-eps-converted-to.pdf, id=349, 534.99875pt x 315.1775pt>
-File: SPIKE_Illustration-eps-converted-to.pdf Graphic file (type pdf)
-
-<use SPIKE_Illustration-eps-converted-to.pdf>
-Package pdftex.def Info: SPIKE_Illustration-eps-converted-to.pdf used on input 
-line 561.
-(pdftex.def)             Requested size: 241.84842pt x 142.4778pt.
- [10 <./PSTH_ES-eps-converted-to.pdf>] [11 <./SPIKE_Illustration-eps-converted-
-to.pdf>]
-Package epstopdf Info: Source file: <No_sampling.eps>
-(epstopdf)                    date: 2014-09-02 19:01:49
-(epstopdf)                    size: 10518 bytes
-(epstopdf)             Output file: <No_sampling-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-09-03 01:05:39
-(epstopdf)                    size: 8637 bytes
-(epstopdf)             Command: <repstopdf --outfile=No_sampling-eps-converted-
-to.pdf No_sampling.eps>
-(epstopdf)             \includegraphics on input line 673.
-Package epstopdf Info: Output file is already uptodate.
-
-<No_sampling-eps-converted-to.pdf, id=406, 521.95pt x 367.3725pt>
-File: No_sampling-eps-converted-to.pdf Graphic file (type pdf)
-
-<use No_sampling-eps-converted-to.pdf>
-Package pdftex.def Info: No_sampling-eps-converted-to.pdf used on input line 67
-3.
-(pdftex.def)             Requested size: 241.84842pt x 170.22662pt.
-
+ [12]
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.702 \begin{thebibliography}{25}
+l.715 \begin{thebibliography}{25}
                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -650,38 +640,27 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-
-Underfull \vbox (badness 6110) has occurred while \output is active []
-
- [12 <./No_sampling-eps-converted-to.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 812.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 812.
-
-(./SPIKY19.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 812.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 812.
-Package rerunfilecheck Info: File `SPIKY19.out' has not changed.
-(rerunfilecheck)             Checksum: D49EDE5FB92C45BBA276A34F46E3F8EA;1308.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 812.
+[13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 825.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 825.
+ (./SPIKY20.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 825.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 825.
+Package rerunfilecheck Info: File `SPIKY20.out' has not changed.
+(rerunfilecheck)             Checksum: 898F9F65448712683FBFBEDD024100A3;1304.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 825.
  ) 
 Here is how much of TeX's memory you used:
- 7137 strings out of 493315
- 100145 string characters out of 6137905
- 197848 words of memory out of 5000000
- 10378 multiletter control sequences out of 15000+600000
+ 7134 strings out of 493315
+ 100066 string characters out of 6137905
+ 196956 words of memory out of 5000000
+ 10375 multiletter control sequences out of 15000+600000
  21748 words of font info for 86 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 31i,8n,28p,1693b,408s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,8n,28p,1693b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
 /usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
@@ -707,7 +686,7 @@ nts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2013/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2013/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2013/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on SPIKY19.pdf (13 pages, 749868 bytes).
+Output written on SPIKY20.pdf (13 pages, 750608 bytes).
 PDF statistics:
  537 PDF objects out of 1000 (max. 8388607)
  461 compressed objects within 5 object streams

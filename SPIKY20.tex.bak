@@ -16,6 +16,16 @@
 % Introduction     															    Done	
 % ============
 %
+% Measures
+% ========
+% ISI        																	Done
+% SPIKE      																	Done
+% SPIKE-realtime      															Done
+% SPIKE-future      																Done
+% Improvements      																Done
+% Edge effect																	Done
+% Sampling   																	Done
+
 % Representations      															Done
 % ===============
 %
@@ -78,12 +88,12 @@ Techniques for recording neuronal spiking activity are developing so fast that t
 \newcommand{\abb}{\small\sf}
 
 %
-%
 % *************************************************************************************
-% ******************************************************** Introduction ***************
 % *************************************************************************************
-%
-%
+% *********************************** Section: Introduction ***************************
+% *************************************************************************************
+% *************************************************************************************
+	%
 \section{\label{s:Intro} Introduction}
 
 Spike train distances are measures that when applied to a set of spike trains yield low values for very similar spike trains and high values for very dissimilar spike trains. Essentially there are two major scenarios for using spike train distances to estimate the degree of synchrony between two or more spike trains.
@@ -100,23 +110,289 @@ For all of these measures there are several levels of information reduction \cit
 
 The Matlab source codes for calculating and visualizing these measures have been made publicly available (\url{http://wwwold.fi.isc.cnr.it/users/thomas.kreuz/sourcecode.html}) XXXXX and have already been widely used in various contexts (e.g., XXXXX Citations XXXXX). However, due to the many different possible representations of the results the use of these codes is not very intuitive and their application requires some basic knowledge of Matlab. Thus it became desirable to provide a more intuitive and interactive tool for analyzing spike train data. Here we address this need and present the graphical user interface SPIKY. Once given a set of real or simulated spike train data (importable from many different formats), SPIKY calculates the measures of choice and allows to switch between many different visualizations such as measure profiles, pairwise dissimilarity matrices, or hierarchical cluster trees. SPIKY also includes the possibility to generate movies which are very useful in order to track the varying patterns of (dis)similarity. Finally, SPIKY has been optimized with respect to both computation speed (by using MEX-files, i.e. C-based Matlab executables) and memory demand (by taking advantage of the piecewise linear nature of the dissimilarity profiles).
 
-The remainder of this paper is organized as follows. In Section \ref{s:Measures} we present the different measures available in SPIKY. These include the ISI-distance and the SPIKE-distance as well as the latter's realtime variant, and, introduced here, its future variant. In Subsection \ref{App-ss:Improvements} we present the improvements realized in this new implementation of the measures. Most prominent are the correction of the edge-effect (spurious decrease to zero) for the SPIKE-distance and the increase of memory efficiency by avoiding sampling. Recently, we added another complimentary measure to SPIKY, event synchronization. We here show how it can be modified such that it can be used within the time-resolved SPIKY-framework. An overview of the different levels of information reduction is given in Section \ref{s:Information-reduction}. These range from the most detailed representation in which one instantaneous value is obtained for each pair of spike trains to the most condensed representation in which successive temporal and spatial averaging leads to one single distance value which describes the overall level of synchrony for a group of spike trains over a given time interval.
+The remainder of this paper is organized as follows. In Section \ref{s:Measures} we present the different measures available in SPIKY. These include the ISI-distance and the SPIKE-distance as well as the latter's realtime variant, and, introduced here, its future variant (Subsection \ref{ss:ISI-SPIKE-Distance}). In Subsection \ref{ss:Improvements} we present the improvements realized in this new implementation of the measures. Most prominent are the correction of the edge-effect (spurious decrease to zero) for the SPIKE-distance and the increase of memory efficiency by avoiding sampling. Recently, we added another complimentary measure to SPIKY, event synchronization. In Subsection \ref{ss:Event-Synchronization} we show how it can be modified such that it can be used within the time-resolved SPIKY-framework. An overview of the different levels of information reduction is given in Section \ref{s:Information-reduction}. These range from the most detailed representation in which one instantaneous value is obtained for each pair of spike trains to the most condensed representation in which successive temporal and spatial averaging leads to one single distance value which describes the overall level of synchrony for a group of spike trains over a given time interval.
 
 SPIKY, our graphical user interface (GUI) for monitoring spike train synchrony, is presented in Section \ref{s:SPIKY}. In Subsection \ref{ss:Access} explain how to get access to the codes and the large library of documentation (which includes text files, images, movies, as well as screen recordings with voice-over in which the user is guided step by step through some of the most important features of SPIKY). Subsequently, in Subsection \ref{ss:Structure} we introduce the structure and the workflow of the program. We show how to input spike train data, how to change the layout of the figures and how to export results. We also present two programs included in the SPIKY-package which are complementary to the graphical user interface itself. While the program 'SPIKY\_loop' (Subsection \ref{ss:GUI-vs-loop}) is meant to be used for the collective analysis of many different datasets (e.g. when the statistics of a certain quantity should be evaluated over all available datasets), the program 'SPIKY\_loop\_surro' (Subsection \ref{ss:Spike-train-surrogates}) was designed to evaluate the statistical significance of the results obtained for the original dataset by comparing them against the results obtained for spike train surrogates generated from that dataset. In Subsection \ref{ss:Comparison} we investigate the performance of our new implementation of the time-resolved measures of spike train synchrony and compare it with previously published codes (e.g. \citet{Rusu14} XXXXX). Finally, in Section \ref{s:Discussion} we summarize both the methods and the program, discuss their limitations and present an outlook on future developments.
-
-
-
-Finally, in the appendix \ref{App-s:Measures} we introduce the different measures available in SPIKY. In addition to the standard Peri-Stimulus Time Histogram (PSTH) these include event synchronization (Section \ref{App-ss:Event-Synchronization}) as well as the ISI-distance, the SPIKE-distance and the latter's realtime and future variants (Section \ref{App-ss:ISI-SPIKE-Distance}). In Subsection \ref{App-ss:Improvements} we present the improvements realized in this new implementation of the measures. Most prominent are the correction of the edge-effect (spurious decrease to zero) for the SPIKE-distance and the increase of memory efficiency by avoiding sampling. 
-
-%
+ 
 %
 % *************************************************************************************
-% ********************************************************** Measures *****************
+% *************************************************************************************
+% *********************************************** Section: Measures *******************
+% *************************************************************************************
 % *************************************************************************************
 %
+\section{\label{s:Measures} Measures}
+
+SPIKY contains implementations of four measures. The first one, included for comparison, is the standard multivariate Peri-Stimulus Time Histogram (PSTH), a measure of overall firing rate. In this appendix we give an overview over the other three time-resolved measures: Event synchronization (here extended to a multivariate framework), the ISI-distance and the SPIKE-distance (including the latter's realtime and future variants).
+
+We here show the definitions of the bivariate variants but for all of these measures there exists a straightforward extension to the case $N > 2$ (with $N$ denoting the number of spike trains), the averaged bivariate distance. This average over all pairs of neurons commutes with the average over time, so it is possible to achieve the same kind of time-resolved visualization as in the bivariate case by first calculating the instantaneous average $S^{\mathrm {a}} (t)$ (here for the regular SPIKE-distance) over all pairwise instantaneous values $S^{mn} (t)$,
 %
+\begin{equation} \label{eq:Bivariate-Average}
+    S^{\mathrm {a}} (t) = \frac{1}{N(N-1)/2}\sum_{n=1}^{N-1} \sum_{m=n+1}^N S^{mn} (t).
+\end{equation}
+
+Also, all of these measures are time-resolved and rely on instantaneous values which taken together result in a dissimilarity profile (cf. Section \ref{ss:Full-matrix-and-cross-sections}). The overall measure values are defined as the temporal average of these dissimilarity profile, e.g for the regular SPIKE-distance:
+%
+\begin{equation} \label{eq:Temporal-Average2}
+    D_S^{\mathrm {a}} = \frac{1}{T} \int_0^T dt S^{\mathrm {a}} (t).
+\end{equation}
+
+In the following we denote with $\{t_i^{(n)}\} = {t_1^{(n)},...,t_{M_n}^{(n)}}$ the spike times and with $M_n$ the number of spikes for neuron $n$ with $n = 1,...,N$.
+
+
+\subsection{\label{ss:ISI-SPIKE-Distance} The ISI- and the SPIKE-distance}
+
+Both the bivariate ISI- and the bivariate SPIKE-distance rely on instantaneous values in the sense that in a first step the two sequences of discrete spike times are transformed into dissimilarity profiles, $I (t)$ and $S (t)$. These dissimilarity profiles are based on three piecewise constant quantities which for each neuron $n = 1, 2$ are assigned to every time instant (see Fig. \ref{fig:SPIKE-Illustration}A). These are the time of the preceding spike
+%
+\begin{equation} \label{eq:Prev-Spike}
+    t_{\mathrm {P}}^{(n)} (t) = \max(t_i^{(n)} | t_i^{(n)} \leq t)  \quad t_1^{(n)} \leq t \leq t_{M_n}^{(n)},
+\end{equation}
+%
+the time of the following spike
+%
+\begin{equation} \label{eq:Foll-Spike}
+    t_{\mathrm {F}}^{(n)} (t) = \min(t_i^{(n)} | t_i^{(n)} > t)  \quad t_1^{(n)} \leq t \leq t_{M_n}^{(n)},
+\end{equation}
+%
+as well as the interspike interval
+%
+\begin{equation} \label{eq:ISI}
+    x_{\mathrm {ISI}}^{(n)} (t) = t_{\mathrm {F}}^{(n)} (t) - t_{\mathrm {P}}^{(n)} (t).
+\end{equation}
+%
+The ambiguity regarding the definition of the very first and the very last interspike interval is resolved by placing for each spike train auxiliary leading spikes at time $t = 0$ and auxiliary trailing spikes at time $t = T$ (but see also Section \ref{sss:Edge-effect}).
+
+
+\subsubsection{\label{sss:ISI-Distance} The ISI-distance}
+
+The ISI-distance, proposed as a bivariate measure in \citep{Kreuz07c} and extended to the multi-neuron case in \citep{Kreuz09}, was the first spike train distance directly defined as the temporal average of an instantaneous dissimilarity profile. This profile is calculated as the instantaneous ratio between the interspike intervals $x_{\mathrm {ISI}}^{(1)}$ and $x_{\mathrm {ISI}}^{(2)}$ (see Eq. \ref{eq:ISI} and Fig. \ref{fig:SPIKE-Illustration}) according to:
+%
+\begin{equation} \label{eq:ISI-Ratio}
+    I (t) = \begin{cases}
+           x_{\mathrm {ISI}}^{(1)} (t) / x_{\mathrm {ISI}}^{(2)} (t) - 1 & {\rm if} ~~ x_{\mathrm {ISI}}^{(1)} (t) \leq x_{\mathrm {ISI}}^{(2)} (t) \cr
+                      - (x_{\mathrm {ISI}}^{(2)} (t) / x_{\mathrm {ISI}}^{(1)} (t) -1)     & {\rm otherwise}.
+                  \end{cases}
+\end{equation}
+%
+Since the ISI-values only change at the times of spikes, the dissimilarity profile is piecewise constant (with potential discontinuities at the spikes). The ISI-ratio equals $0$ for identical ISI in the two spike trains, and approaches $-1$ and $1$, respectively, in intervals in which the first or the second spike train is much faster than the other. In order to treat both kinds of deviations equally, the temporal averaging is performed on the absolute value of the ISI-ratio:
+%
+\begin{equation} \label{eq:Temporal-Average}
+    D_I = \frac{1}{T} \int_0^T dt |I (t)|.
+\end{equation}
+
+
+\subsubsection{\label{sss:SPIKE-Distance} The SPIKE-distance}
+
+In contrast to the ISI-distance, the SPIKE-distance (see \citet{Kreuz11} for the original proposal and \citet{Kreuz13, Kreuz12} for the definite version presented here) considers the exact timing of the spikes since it is extracted from differences between the spike times of the two spike trains. 
+%
+% #########################################################################################
+% #########################################################################################
+% ################################## Figure: SPIKE-Illustration ###########################
+% #########################################################################################
+% #########################################################################################
+%
+\begin{figure}
+    \includegraphics[width=85mm]{ISI_SPIKE_ES_ILLU.eps}
+    \caption{\abb\label{fig:SPIKE-Illustration} A.  ISI- and SPIKE-distance. Illustration of the local quantities needed to define the dissimilarity profiles $I (t)$ and $S (t)$ for an arbitrary time instant $t$.    B. Event synchronization. Illustration of the first variant with adaptive coincidence window. While the middle spikes in the first half are coincident, the middle spikes in the second half are not.}
+\end{figure}
+%
+% #########################################################################################
+% #########################################################################################
+% ################################## Figure: SPIKE-Illustration ###########################
+% #########################################################################################
+% #########################################################################################
+
+The dissimilarity profile is calculated in two steps: First for each spike the distance to the nearest spike in the other spike train is calculated, then for each time instant the relevant spike time differences are selected, weighted, and normalized. Here `relevant' means local; each time instant is surrounded by four corner spikes: the preceding spike from the first spike train $t_{\mathrm {P}}^{(1)}$, the following spike from the first spike train $t_{\mathrm {F}}^{(1)}$, the preceding spike from the second spike train $t_{\mathrm {P}}^{(2)}$, and, finally, the following spike from the second spike train $t_{\mathrm {F}}^{(2)}$. Each of these corner spikes can be identified with a spike time difference, for example, for the previous spike of the first spike train
+%
+\begin{equation} \label{eq:Delta-Corner-Spike}
+     \Delta t_{\mathrm {P}}^{(1)} (t) = \min_i (| t_{\mathrm {P}}^{(1)} (t) - t_i^{(2)} |)
+\end{equation}
+%
+and analogously for $t_{\mathrm {F}}^{(1)}$, $t_{\mathrm {P}}^{(2)}$, and $t_{\mathrm {F}}^{(2)}$  (see Fig. \ref{fig:SPIKE-Illustration}). For each spike train separately a locally weighted average is employed such that the differences for the closer spike dominate; the weighting factors depend on
+%
+\begin{equation} \label{eq:Prev-Spike-Dist}
+     x_{\mathrm {P}}^{(n)} (t) = t - t_{\mathrm {P}}^{(n)} (t)
+\end{equation}
+%
+and
+%
+\begin{equation} \label{eq:Foll-Spike-Dist}
+     x_{\mathrm {F}}^{(n)} (t) = t_{\mathrm {F}}^{(n)} (t) - t,
+\end{equation}
+%
+the intervals to the previous and the following spikes for each neuron $n = 1, 2$. The local weighting for the spike time differences of the first spike train reads
+%
+\begin{equation} \label{eq:Bi-Spike-Diss-First}
+     S_1 (t) = \frac{\Delta t_{\mathrm {P}}^{(1)} (t) x_{\mathrm {F}}^{(1)} (t) + \Delta t_{\mathrm {F}}^{(1)} (t) x_{\mathrm {P}}^{(1)} (t)}{x_{\mathrm {ISI}}^{(1)} (t)}
+\end{equation}
+%
+and analogously $S_2 (t)$ is obtained for the second spike train. Averaging over the two spike train contributions and normalizing by the mean interspike interval yields
+%
+\begin{equation} \label{eq:Bi-Spike-Diss-Intermediate}
+     S'' (t) = \frac{S_1 (t) + S_2 (t)}{2 \langle x_{\mathrm {ISI}}^{(n)} (t) \rangle_n}.
+\end{equation}
+
+This quantity weights the spike time differences for each spike train according to the relative distance of the corner spike from the time instant under investigation. This way relative distances within each spike train are taken care of, while relative distances between spike trains are not. In order to get these ratios straight and to account for differences in firing rate, in a last step the two contributions from the two spike trains are locally weighted by their instantaneous interspike intervals. This leads to the definition of the dissimilarity profile
+%
+\begin{equation} \label{eq:Bi-Spike-Diss-Improved}
+     S (t) = \frac{S_1 (t) x_{\mathrm {ISI}}^{(2)} (t) + S_2 (t) x_{\mathrm {ISI}}^{(1)} (t)}{2 \langle x_{\mathrm {ISI}}^{(n)} (t) \rangle_n^2}.
+\end{equation}
+%
+Since the dissimilarity profile $S (t)$ is obtained from a linear interpolation of piecewise constant quantities, it is piecewise linear (with potential discontinuities at the spikes). This dissimilarity profile and the SPIKE-distance $D_S$ as its average are both bounded in the interval $[0, 1]$. The distance value $D_S = 0$ is obtained for identical spike trains only.
+
+
+
+\subsubsection{\label{sss:Realtime-Spike-Distance} Realtime SPIKE-distance}
+
+The realtime SPIKE-distance $D_{S_r}$ is a modification of the SPIKE-distance with the key difference that the corresponding time profile $S_r(t)$ can be calculated online because it relies on past information only \footnote{For the ISI-distance no such causal realtime extension is possible, since it relies on the instantaneous ISI-values and thus requires knowledge about the following spikes.}. From the perspective of an online measure, the information provided by the following spikes, both their position and the length of the interspike interval, is not yet available. Like the regular (improved) SPIKE-distance $D_S$, this causal variant is also based on local spike time differences but now only two corner spikes are available, and the spikes of comparison are restricted to past spikes, e.g., for the preceding spike of the first spike train
+%
+\begin{equation} \label{eq:Delta-Corner-Spike-Realtime}
+     \Delta t_{\mathrm {P}}^{(1)} (t) = \min_i (| t_{\mathrm {P}}^{(1)} (t) - t_i^{(2)} |), t_i \leq t.
+\end{equation}
+%
+Since there are no following spikes available, there is no local weighting, and since there is no interspike interval, the normalization is achieved by dividing the average corner spike difference by twice the average time interval to the preceding spikes (Eq. \ref{eq:Prev-Spike-Dist}). This yields a causal indicator of local spike train dissimilarity:
+%
+\begin{equation} \label{eq:Bi-Spike-Diss-RT}
+    S_r (t) = \frac{ \Delta t_{\mathrm {P}}^{(1)} (t) + \Delta t_{\mathrm {P}}^{(2)} (t)} {4 \langle x_{\mathrm {P}}^{(n)} (t) \rangle_n}.
+\end{equation}
+
+
+\subsubsection{\label{sss:Future-Spike-Distance} Future SPIKE-distance}
+
+The future SPIKE-distance $D_{S_f}$ can be used in triggered temporal averaging in order to evaluate the effect of certain spikes or of certain stimuli features on future spiking. It is the inverse measure to the realtime SPIKE-distance but instead of relying on past information only it relies on future information only. Again for each time instant there are just two corner spikes and the potential nearest spikes in the other spike train are future spikes only. Thus the spike time difference for the following spike of the first spike train reads
+%
+\begin{equation} \label{eq:Delta-Corner-Spike-Future}
+     \Delta t_{\mathrm {F}}^{(1)} (t) = \min_i (| t_{\mathrm {F}}^{(1)} (t) - t_i^{(2)} |), t_i > t,
+\end{equation}
+%
+and accordingly for the following spike of the second spike train. In analogy to Eq. \ref{eq:Bi-Spike-Diss-RT}, an indicator of local spike train dissimilarity is obtained as follows:
+%
+\begin{equation} \label{eq:Bi-Spike-Diss-FT}
+    S_f (t) = \frac{ \Delta t_{\mathrm {F}}^{(1)} (t) + \Delta t_{\mathrm {F}}^{(2)} (t)} {4 \langle x_{\mathrm {F}}^{(n)} (t) \rangle_n}.
+\end{equation}	
+
+
+
+
+\subsection{\label{ss:Improvements} Improvements in this implementation}
+
+\subsubsection{\label{sss:Edge-effect} Correction of the edge effect for the SPIKE-distance}
+
+In previous versions of the SPIKE-distance the ambiguity regarding the definition of the initial (final) distance to the preceding (following) spike as well as the very first and the very last interspike intervals was resolved by adding to each spike train an auxiliary leading spike at time $t = 0$ and an auxiliary trailing spike at time $t = T$. This lead to spurious synchrony at the edges where by construction the dissimilarity profile reached the zero value. Here we follow a suggestion by Conor Houghton (personal communication) and at least partly correct this edge effect. We describe the correction for the beginning of the recording, it is an analogous mirror image at the end of the recording.
+
+We count the auxiliary spikes as normal spikes which can be nearest neighbor to other spikes. But instead of calculating their spike time distance (which is always zero) we use the spike time difference of the first real spike. For the first interspike interval we know that it is at least the distance to the first spike $t_1-t_0 = t_1$ but it could be longer. So to take the local firing rate (or its inverse) into consideration we set
+%
+\begin{equation} \label{eq:Corrected-First-ISI}
+    x_{\mathrm {ISI}} (0) = \max ( t_1, t_2 - t_1 ).
+\end{equation}
+%
+where we use the length of the first known interspike interval $t_2-t_1$ as an upper limit of the inverse firing rate. This way we get at least a crude estimate of how much longer the first interspike interval could be.
+
+
+\subsubsection{\label{sss:Sampling} Increase of memory efficiency by avoiding sampling}
+
+Earlier versions of the codes for calculating event synchronization and the ISI- and the SPIKE-distance relied on sampled dissimilarity profiles. Typically the precision was set to the sampling interval of the neuronal recording. Since the dissimilarity profile has to be calculated and stored for each pair of spike trains, this resulted, for each measure, in a matrix of order `number of sampled time instants' $\times$ `number of spike train pairs' (i.e., $\# (t_s) \times N(N-1)/2$). For small sampling intervals and a large number of recorded spike trains this lead to memory problems.
+
+In SPIKY we use an optimized and more memory-efficient way of storing the data where we make use of the fact that the dissimilarity profiles $I (t)$ of the ISI-distance is piecewise constant and the dissimilarity profile $S (t)$ of the SPIKE-distance is piecewise linear with each interval running from one spike of the pooled spike train to the next one. Thus for each such interval (and for each pair of spike trains) we have to store only one value for the ISI-distance and two values for the SPIKE-distance, one at the beginning and one at the end of the interval (see Figure \ref{fig:No-sampling}). Typically the storage space required will be much smaller than for dissimilarity profiles sampled with a reasonable precision.
+%
+% #########################################################################################
+% #########################################################################################
+% ############################################# Figure: No sampling #######################
+% #########################################################################################
+% #########################################################################################
+%
+\begin{figure}
+    \includegraphics[width=85mm]{No_sampling.eps}
+    \caption{\abb\label{fig:No-sampling} Illustration of the memory efficient storage of the dissimilarity profile for both the ISI- and the SPIKE-distance.}
+\end{figure}
+%
+% #########################################################################################
+% #########################################################################################
+% ############################################# Figure: No sampling #######################
+% #########################################################################################
+% #########################################################################################
+
+For the dissimilarity profiles of both the ISI- and the SPIKE-distance there are instantaneous jumps at the times of the spikes since this is where the lengths of the interspike intervals and the identity of the previous and the following spikes change abruptly. In contrast to the calculation based on sampling we get the exact result since each spike is both the previous and the next spike and there is no need anymore to `cut the corners' of the dissimilarity profiles as had to be done for the sampled dissimilarity profiles. The dissimilarity profiles $S_r(t)$ and $S_f (t)$ of the real-time and the future SPIKE-distances are hyperbolic but for these measures the exact result can be obtained by piecewise integration over all intervals of the pooled spike train. While we use these integration schemes to calculate the exact values, for the time-resolved visualization we use linear interpolations within the individual intervals in order to reach the same low computational complexity that we obtain for the regular SPIKE-distance.
+
+
+
+\subsection{\label{ss:Event-Synchronization} Event synchronization}
+
+Event synchronization (\citeauthor{QuianQuiroga02b}, \citeyear{QuianQuiroga02b}; cf. \citeauthor{Kreuz07c}, \citeyear{Kreuz07c} and \citeauthor{Kreuz11b}, \citeyear{Kreuz11b}) works as a coincidence detector quantifying the level of synchrony from the number of quasi-simultaneous appearances of spikes. There are two variants. The main variant is parameter- and scale-free, since the time lag $\tau_{ij}$ up to which two spikes $t_i^{(1)}$ and $t_j^{(2)}$ are considered to be synchronous is adapted to the local spike rates (see Fig. \ref{fig:SPIKE-Illustration}B):
+%
+\begin{equation} \label{eq:Event-MaxDist}
+    \tau_{ij} = \min \{t_{i+1}^{(1)} - t_i^{(1)}, t_i^{(1)} - t_{i-1}^{(1)},
+                           t_{j+1}^{(2)} - t_j^{(2)}, t_j^{(2)} - t_{j-1}^{(2)}\}/2.
+\end{equation}
+%
+In contrast, the second variant uses a fixed coincidence window $\tau$.
+
+The function $c(x|y)$ counts the appearances of a spike in $x$ shortly after a spike in $y$:
+%
+\begin{equation} \label{eq:Event-Count}
+    c (x|y) = \sum_{i=1}^{M_x} \sum_{j=1}^{M_y} J_{ij},
+\end{equation}
+%
+where
+%
+\begin{equation} \label{eq:Event-Synchronicity}
+    J_{ij} = \begin{cases}
+                      1     & {\rm if} ~~ 0 < t_i^{(1)} - t_j^{(2)} \leq \tau_{ij} \cr
+                      1/2   & {\rm if} ~~ t^{(1)}_i = t^{(2)}_j \cr
+                      0     & {\rm otherwise}.
+                  \end{cases}
+\end{equation}
+%
+Here we used the definition of the first (scale-free) variant, for the second variant just replace $\tau_{ij}$ with $\tau$. Then with $c(y|x)$ defined accordingly, event synchronization can be written as
+%
+\begin{equation} \label{eq:Event-Synchro}
+    Q = \frac {c (y|x) + c (x|y)} {\sqrt{M_x M_y}}.
+\end{equation}
+%
+In order to get a time-resolved measure of event synchronization, we calculate the local derivative of the $Q$-function
+%
+\begin{equation} \label{eq:Window-Event-Synchro}
+    E = \frac {Q (n) - Q (n-\Delta n)} {\sqrt{\Delta n_x \Delta n_y}}.
+\end{equation}
+%
+where $\Delta n_x$ and $\Delta n_y$ are the numbers of events in the interval $[n-\Delta n, n]$. Unfortunately, $E$ is not any longer parameter-free. The time resolution is governed by the window size $\Delta n$. For the second variant of event synchronization the fixed coincidence window $\tau$ constitutes a second parameter.
+
+A suitably normalized distance is obtained by inversion $D_E=E-1$, with $D_E = 0$ if and only if all spikes within the window coincide (or if there are no spikes at all).
+
+Fig. \ref{fig:PSTH-ES} shows a comparison between the the Peri-Stimulus Time Histogram and event synchronization. It shows that the PSTH, in contrast to event synchronization, is not a measure of spike train synchrony \citep{Kreuz11} since it is invariant to shuffling spikes among the spike trains yielding the same value regardless of how spikes are distributed among the different spike trains. XXXXX Rep XXXXX
+
+not yet finished XXXXX
+
+%
+% #########################################################################################
+% #########################################################################################
+% ###################################### Figure: PSTH & ES ################################
+% #########################################################################################
+% #########################################################################################
+%
+\begin{figure}
+    \includegraphics[width=85mm]{PSTH_ES.eps}
+    \caption{\abb\label{fig:PSTH-ES} Comparison of PSTH and event synchronization. \citep{QuianQuiroga02b} XXXXX}
+\end{figure}
+%
+% #########################################################################################
+% #########################################################################################
+% ###################################### Figure: PSTH & ES ################################
+% #########################################################################################
+% #########################################################################################
+%
+
+% Important question: Does the average over the windowed event synchronization coincide with the `normal' cumulative event synchronization? XXXXX
+
+
 	
-
+%
+% *************************************************************************************
+% *************************************************************************************
+% ********************************** Section: Information reduction *******************
+% *************************************************************************************
+% *************************************************************************************
+%
 
 \section{\label{s:Information-reduction} Levels of information reduction}
 
@@ -143,7 +419,7 @@ Moreover, the sensitivity to spike timing and the instantaneous reliability achi
 
 \subsection{\label{ss:Full-matrix-and-cross-sections} Full matrix and cross sections}
 
-The starting point is the most detailed representation in which one instantaneous value is obtained for each pair of spike trains (see Eq. \ref{eq:Bi-Spike-Diss-Improved}). This representation could be viewed as a movie of a symmetric pairwise dissimilarity matrix in which each frame corresponds to one time instant (an example can be found in the supplementary material of \citep{Kreuz13}). For a movie of finite length the time axis necessarily has to be sampled but in principle this most detailed representation is continuous and consists of an infinite number of values. However, since all dissimilarity profiles are piecewise linear (with potential discontinuities only at the times of the spikes) there is a lot of redundancy. Using the most compact and memory-efficient representation one can store all pairwise dissimilarity profiles in a matrix of size `number of interspike intervals in the pooled spike train' $\times$ `number of spike train pairs' ($\times 2$ for the SPIKE-distance, see Section \ref{App-sss:Sampling}).
+The starting point is the most detailed representation in which one instantaneous value is obtained for each pair of spike trains (see Eq. \ref{eq:Bi-Spike-Diss-Improved}). This representation could be viewed as a movie of a symmetric pairwise dissimilarity matrix in which each frame corresponds to one time instant (an example can be found in the supplementary material of \citep{Kreuz13}). For a movie of finite length the time axis necessarily has to be sampled but in principle this most detailed representation is continuous and consists of an infinite number of values. However, since all dissimilarity profiles are piecewise linear (with potential discontinuities only at the times of the spikes) there is a lot of redundancy. Using the most compact and memory-efficient representation one can store all pairwise dissimilarity profiles in a matrix of size `number of interspike intervals in the pooled spike train' $\times$ `number of spike train pairs' ($\times 2$ for the SPIKE-distance, see Section \ref{sss:Sampling}).
 
 From this matrix, it is possible to extract any desired information. By selecting a pair of spike trains, one obtains the bivariate dissimilarity profile $S (t)$ for this pair of spike trains. Selecting a time instant $t_s$ (and using linear interpolation for time instants in between spikes) yields an instantaneous matrix of pairwise spike train dissimilarities $S_{mn}(t_s)$ (see Fig. \ref{fig:SPIKE-Representations}B). This matrix can be used to divide the spike trains into instantaneous clusters, that is, groups of spike trains with low intra-group and high inter-group dissimilarity.
 
@@ -159,11 +435,11 @@ A combination of temporal and spatial averaging can be seen in Fig. \ref{fig:SPI
 The fact that there are no limits to the temporal resolution allows further analyses such as internally or externally triggered temporal averaging. Here, the matrices are averaged over certain trigger time instants only. The idea is to check whether this triggered temporal average is significantly different from the global average since this would indicate that something peculiar is happening at these trigger instants. The trigger times can either be obtained from external influences (such as the occurrence of certain features in a stimulus) or from internal conditions (such as the spike times of a certain spike train). External triggering is a standard tool to address questions of neural coding, for example, it can be used to evaluate the influence of localized stimulus features on the reliability of neurons under repeated stimulation. In multi-neuron data, internal triggering might help to uncover the connectivity in neural networks or to detect converging or diverging patterns of firing propagation. An example is shown in Fig. \ref{fig:SPIKE-Representations}E. Here, neurons $2$, $9$, $14$, and $19$ follow the $7$-th neuron during the 2nd and the 4th $500$-ms subinterval. This can be revealed by triggering on the spike times of neuron $7$ during these subintervals. The difference between the triggered dissimilarity matrix of \ref{fig:SPIKE-Representations}E and the dissimilarity matrix of the full interval in Fig. \ref{fig:SPIKE-Representations}E can be seen best by comparing the respective dendrograms in Fig. \ref{fig:SPIKE-Representations}H and I.
 
 %
-%
 % *************************************************************************************
-% **************************************************************** SPIKY **************
 % *************************************************************************************
-%
+% ************************************* Section: SPIKY ********************************
+% *************************************************************************************
+% *************************************************************************************
 %
 \section{\label{s:SPIKY} SPIKY}
 
@@ -223,7 +499,7 @@ Once the full dataset is there, modification is still possible. One can restrict
 % #########################################################################################
 % #########################################################################################
 
-After updating all of these data parameters the next step is to select the measures to be calculated. In addition to the measures described in the Appendix \ref{App-s:Measures} we also include the Peri-Stimulus Time Histogram as a time-resolved standard approach widely used in spike train analysis. However, note that the PSTH is a complementary approach which describes overall firing rate and (to some precision) timing. It is not a measure of spike train synchrony \citep{Kreuz11} since it is invariant to shuffling spikes among the spike trains yielding the same value regardless of how spikes are distributed among the different spike trains (see Fig. \ref{fig:PSTH-ES}). At the same time the user can select successive frames for a temporal analysis of spike train patterns. These can be individual time instants for cross sections, temporal intervals for selective averages and sequences of time instants for triggered averages (see Section \ref{s:Information-reduction}).
+After updating all of these data parameters the next step is to select the measures to be calculated. In addition to the measures described in the Appendix \ref{s:Measures} we also include the Peri-Stimulus Time Histogram as a time-resolved standard approach widely used in spike train analysis. However, note that the PSTH is a complementary approach which describes overall firing rate and (to some precision) timing. It is not a measure of spike train synchrony \citep{Kreuz11} since it is invariant to shuffling spikes among the spike trains yielding the same value regardless of how spikes are distributed among the different spike trains (see Fig. \ref{fig:PSTH-ES}). At the same time the user can select successive frames for a temporal analysis of spike train patterns. These can be individual time instants for cross sections, temporal intervals for selective averages and sequences of time instants for triggered averages (see Section \ref{s:Information-reduction}).
 
 Now the actual calculation of the measures takes place. For reasonably sized datasets this should take at most a few seconds. Larger datasets are divided in smaller subintervals and the calculation will be performed in a loop which might take longer (cf. Section \ref{ss:Limitations}). It is at this point that SPIKY becomes truly interactive. Now the user can switch between different representations of the results (such as dissimilarity profiles, dissimilarity matrices and dendrograms). Regarding matrices and dendrograms one can decide whether one wants to compare different representations or look at them in sequence.
 
@@ -354,14 +630,14 @@ For the sake of an unbiased comparison all algorithms have been implemented in C
 
 In order to show how different implementation of the same method can have different complexity classes, previous implementations for ISI-distance, SPIKE-distance and modulus metric are taken and compared versus novel ones (Figure \ref{fig:Fig5-Performance-Comparison}).
 
-The setup for the comparison was taken from \cite{Rusu14}. Algorithms were tested using simulated spike trains. As spike train input we used random processes with different numbers of spikes. Figure \ref{fig:Fig5-Performance-Comparison} shows average time needed to compute distances as a function of number of spikes. The results were averaged over $10,000$ trials. The simulations confirmed that the new implementations of both ISI- and SPIKE-distance have linear dependence of the number of spikes (see Section \ref{App-sss:Sampling}), however, the main improvement is not in the performance, but in the fact that the algorithms now compute the exact distance values without any dependence on the integration timestep.
+The setup for the comparison was taken from \cite{Rusu14}. Algorithms were tested using simulated spike trains. As spike train input we used random processes with different numbers of spikes. Figure \ref{fig:Fig5-Performance-Comparison} shows average time needed to compute distances as a function of number of spikes. The results were averaged over $10,000$ trials. The simulations confirmed that the new implementations of both ISI- and SPIKE-distance have linear dependence of the number of spikes (see Section \ref{sss:Sampling}), however, the main improvement is not in the performance, but in the fact that the algorithms now compute the exact distance values without any dependence on the integration timestep.
 
 %
-%
 % *************************************************************************************
-% ********************************************************** Discussion ***************
 % *************************************************************************************
-%
+% ************************************** Section: Discussion **************************
+% *************************************************************************************
+% *************************************************************************************
 %
 \section{\label{s:Discussion} Discussion}
 
@@ -417,275 +693,9 @@ Note that there are many open questions regarding neuronal synchrony. Among thes
 % #########################################################################################
 %
 
-\begin{appendix} \label{Appendix}
+%\begin{appendix} \label{Appendix}
 
-\section{\label{App-s:Measures} Measures}
-
-SPIKY contains implementations of four measures. The first one, included for comparison, is the standard multivariate Peri-Stimulus Time Histogram (PSTH), a measure of overall firing rate. In this appendix we give an overview over the other three time-resolved measures: Event synchronization (here extended to a multivariate framework), the ISI-distance and the SPIKE-distance (including the latter's realtime and future variants).
-
-We here show the definitions of the bivariate variants but for all of these measures there exists a straightforward extension to the case $N > 2$ (with $N$ denoting the number of spike trains), the averaged bivariate distance. This average over all pairs of neurons commutes with the average over time, so it is possible to achieve the same kind of time-resolved visualization as in the bivariate case by first calculating the instantaneous average $S^{\mathrm {a}} (t)$ (here for the regular SPIKE-distance) over all pairwise instantaneous values $S^{mn} (t)$,
-%
-\begin{equation} \label{eq:Bivariate-Average}
-    S^{\mathrm {a}} (t) = \frac{1}{N(N-1)/2}\sum_{n=1}^{N-1} \sum_{m=n+1}^N S^{mn} (t).
-\end{equation}
-
-Also, all of these measures are time-resolved and rely on instantaneous values which taken together result in a dissimilarity profile (cf. Section \ref{ss:Full-matrix-and-cross-sections}). The overall measure values are defined as the temporal average of these dissimilarity profile, e.g for the regular SPIKE-distance:
-%
-\begin{equation} \label{eq:Temporal-Average2}
-    D_S^{\mathrm {a}} = \frac{1}{T} \int_0^T dt S^{\mathrm {a}} (t).
-\end{equation}
-
-In the following we denote with $\{t_i^{(n)}\} = {t_1^{(n)},...,t_{M_n}^{(n)}}$ the spike times and with $M_n$ the number of spikes for neuron $n$ with $n = 1,...,N$.
-
-
-
-
-\subsection{\label{App-ss:Event-Synchronization} Event synchronization}
-
-Event synchronization (\citeauthor{QuianQuiroga02b}, \citeyear{QuianQuiroga02b}; cf. \citeauthor{Kreuz07c}, \citeyear{Kreuz07c} and \citeauthor{Kreuz11b}, \citeyear{Kreuz11b}) works as a coincidence detector quantifying the level of synchrony from the number of quasi-simultaneous appearances of spikes. There are two variants. The main variant is parameter- and scale-free, since the time lag $\tau_{ij}$ up to which two spikes $t_i^{(1)}$ and $t_j^{(2)}$ are considered to be synchronous is adapted to the local spike rates:
-%
-\begin{equation} \label{eq:Event-MaxDist}
-    \tau_{ij} = \min \{t_{i+1}^{(1)} - t_i^{(1)}, t_i^{(1)} - t_{i-1}^{(1)},
-                           t_{j+1}^{(2)} - t_j^{(2)}, t_j^{(2)} - t_{j-1}^{(2)}\}/2.
-\end{equation}
-%
-In contrast, the second variant uses a fixed coincidence window $\tau$.
-
-The function $c(x|y)$ counts the appearances of a spike in $x$ shortly after a spike in $y$:
-%
-\begin{equation} \label{eq:Event-Count}
-    c (x|y) = \sum_{i=1}^{M_x} \sum_{j=1}^{M_y} J_{ij},
-\end{equation}
-%
-where
-%
-\begin{equation} \label{eq:Event-Synchronicity}
-    J_{ij} = \begin{cases}
-                      1     & {\rm if} ~~ 0 < t_i^{(1)} - t_j^{(2)} \leq \tau_{ij} \cr
-                      1/2   & {\rm if} ~~ t^{(1)}_i = t^{(2)}_j \cr
-                      0     & {\rm otherwise}.
-                  \end{cases}
-\end{equation}
-%
-Here we used the definition of the first (scale-free) variant, for the second variant just replace $\tau_{ij}$ with $\tau$. Then with $c(y|x)$ defined accordingly, event synchronization can be written as
-%
-\begin{equation} \label{eq:Event-Synchro}
-    Q = \frac {c (y|x) + c (x|y)} {\sqrt{M_x M_y}}.
-\end{equation}
-%
-In order to get a time-resolved measure of event synchronization, we calculate the local derivative of the $Q$-function
-%
-\begin{equation} \label{eq:Window-Event-Synchro}
-    E = \frac {Q (n) - Q (n-\Delta n)} {\sqrt{\Delta n_x \Delta n_y}}.
-\end{equation}
-%
-where $\Delta n_x$ and $\Delta n_y$ are the numbers of events in the interval $[n-\Delta n, n]$. Unfortunately, $E$ is not any longer parameter-free. The time resolution is governed by the window size $\Delta n$. For the second variant of event synchronization the fixed coincidence window $\tau$ constitutes a second parameter.
-
-A suitably normalized distance is obtained by inversion $D_E=E-1$, with $D_E = 0$ if and only if all spikes within the window coincide (or if there are no spikes at all).
-
-Fig. \ref{fig:PSTH-ES} shows a comparison between the the Peri-Stimulus Time Histogram and event synchronization. It shows that the PSTH, in contrast to event synchronization, is not a measure of spike train synchrony \citep{Kreuz11} since it is invariant to shuffling spikes among the spike trains yielding the same value regardless of how spikes are distributed among the different spike trains. XXXXX Rep XXXXX
-
-not yet finished XXXXX
-
-%
-% #########################################################################################
-% #########################################################################################
-% ###################################### Figure: PSTH & ES ################################
-% #########################################################################################
-% #########################################################################################
-%
-\begin{figure}
-    \includegraphics[width=85mm]{PSTH_ES.eps}
-    \caption{\abb\label{fig:PSTH-ES} Comparison of PSTH and event synchronization. \citep{QuianQuiroga02b} XXXXX}
-\end{figure}
-%
-% #########################################################################################
-% #########################################################################################
-% ###################################### Figure: PSTH & ES ################################
-% #########################################################################################
-% #########################################################################################
-%
-
-% Important question: Does the average over the windowed event synchronization coincide with the `normal' cumulative event synchronization? XXXXX
-
-
-\subsection{\label{App-ss:ISI-SPIKE-Distance} The ISI- and the SPIKE-distance}
-
-Both the bivariate ISI- and the bivariate SPIKE-distance rely on instantaneous values in the sense that in a first step the two sequences of discrete spike times are transformed into dissimilarity profiles, $I (t)$ and $S (t)$. These dissimilarity profiles are based on three piecewise constant quantities which for each neuron $n = 1, 2$ are assigned to every time instant (see Fig. \ref{fig:SPIKE-Illustration}). These are the time of the preceding spike
-%
-\begin{equation} \label{eq:Prev-Spike}
-    t_{\mathrm {P}}^{(n)} (t) = \max(t_i^{(n)} | t_i^{(n)} \leq t)  \quad t_1^{(n)} \leq t \leq t_{M_n}^{(n)},
-\end{equation}
-%
-the time of the following spike
-%
-\begin{equation} \label{eq:Foll-Spike}
-    t_{\mathrm {F}}^{(n)} (t) = \min(t_i^{(n)} | t_i^{(n)} > t)  \quad t_1^{(n)} \leq t \leq t_{M_n}^{(n)},
-\end{equation}
-%
-as well as the interspike interval
-%
-\begin{equation} \label{eq:ISI}
-    x_{\mathrm {ISI}}^{(n)} (t) = t_{\mathrm {F}}^{(n)} (t) - t_{\mathrm {P}}^{(n)} (t).
-\end{equation}
-%
-The ambiguity regarding the definition of the very first and the very last interspike interval is resolved by placing for each spike train auxiliary leading spikes at time $t = 0$ and auxiliary trailing spikes at time $t = T$ (but see also Section \ref{App-sss:Edge-effect}).
-
-
-\subsubsection{\label{App-sss:ISI-Distance} The ISI-distance}
-
-The ISI-distance, proposed as a bivariate measure in \citep{Kreuz07c} and extended to the multi-neuron case in \citep{Kreuz09}, was the first spike train distance directly defined as the temporal average of an instantaneous dissimilarity profile. This profile is calculated as the instantaneous ratio between the interspike intervals $x_{\mathrm {ISI}}^{(1)}$ and $x_{\mathrm {ISI}}^{(2)}$ (see Eq. \ref{eq:ISI} and Fig. \ref{fig:SPIKE-Illustration}) according to:
-%
-\begin{equation} \label{eq:ISI-Ratio}
-    I (t) = \begin{cases}
-           x_{\mathrm {ISI}}^{(1)} (t) / x_{\mathrm {ISI}}^{(2)} (t) - 1 & {\rm if} ~~ x_{\mathrm {ISI}}^{(1)} (t) \leq x_{\mathrm {ISI}}^{(2)} (t) \cr
-                      - (x_{\mathrm {ISI}}^{(2)} (t) / x_{\mathrm {ISI}}^{(1)} (t) -1)     & {\rm otherwise}.
-                  \end{cases}
-\end{equation}
-%
-Since the ISI-values only change at the times of spikes, the dissimilarity profile is piecewise constant (with potential discontinuities at the spikes). The ISI-ratio equals $0$ for identical ISI in the two spike trains, and approaches $-1$ and $1$, respectively, in intervals in which the first or the second spike train is much faster than the other. In order to treat both kinds of deviations equally, the temporal averaging is performed on the absolute value of the ISI-ratio:
-%
-\begin{equation} \label{eq:Temporal-Average}
-    D_I = \frac{1}{T} \int_0^T dt |I (t)|.
-\end{equation}
-
-
-\subsubsection{\label{App-sss:SPIKE-Distance} The SPIKE-distance}
-
-In contrast to the ISI-distance, the SPIKE-distance (see \citet{Kreuz11} for the original proposal and \citet{Kreuz13, Kreuz12} for the definite version presented here) considers the exact timing of the spikes since it is extracted from differences between the spike times of the two spike trains. 
-%
-% #########################################################################################
-% #########################################################################################
-% ################################## Figure: SPIKE-Illustration ###########################
-% #########################################################################################
-% #########################################################################################
-%
-\begin{figure}
-    \includegraphics[width=85mm]{SPIKE_Illustration.eps}
-    \caption{\abb\label{fig:SPIKE-Illustration} SPIKE-distance. Illustration of the local
-	    quantities needed to define the dissimilarity profile $S (t)$ for an arbitrary time 
-    		instant $t$.}
-\end{figure}
-%
-% #########################################################################################
-% #########################################################################################
-% ################################## Figure: SPIKE-Illustration ###########################
-% #########################################################################################
-% #########################################################################################
-
-The dissimilarity profile is calculated in two steps: First for each spike the distance to the nearest spike in the other spike train is calculated, then for each time instant the relevant spike time differences are selected, weighted, and normalized. Here `relevant' means local; each time instant is surrounded by four corner spikes: the preceding spike from the first spike train $t_{\mathrm {P}}^{(1)}$, the following spike from the first spike train $t_{\mathrm {F}}^{(1)}$, the preceding spike from the second spike train $t_{\mathrm {P}}^{(2)}$, and, finally, the following spike from the second spike train $t_{\mathrm {F}}^{(2)}$. Each of these corner spikes can be identified with a spike time difference, for example, for the previous spike of the first spike train
-%
-\begin{equation} \label{eq:Delta-Corner-Spike}
-     \Delta t_{\mathrm {P}}^{(1)} (t) = \min_i (| t_{\mathrm {P}}^{(1)} (t) - t_i^{(2)} |)
-\end{equation}
-%
-and analogously for $t_{\mathrm {F}}^{(1)}$, $t_{\mathrm {P}}^{(2)}$, and $t_{\mathrm {F}}^{(2)}$  (see Fig. \ref{fig:SPIKE-Illustration}). For each spike train separately a locally weighted average is employed such that the differences for the closer spike dominate; the weighting factors depend on
-%
-\begin{equation} \label{eq:Prev-Spike-Dist}
-     x_{\mathrm {P}}^{(n)} (t) = t - t_{\mathrm {P}}^{(n)} (t)
-\end{equation}
-%
-and
-%
-\begin{equation} \label{eq:Foll-Spike-Dist}
-     x_{\mathrm {F}}^{(n)} (t) = t_{\mathrm {F}}^{(n)} (t) - t,
-\end{equation}
-%
-the intervals to the previous and the following spikes for each neuron $n = 1, 2$. The local weighting for the spike time differences of the first spike train reads
-%
-\begin{equation} \label{eq:Bi-Spike-Diss-First}
-     S_1 (t) = \frac{\Delta t_{\mathrm {P}}^{(1)} (t) x_{\mathrm {F}}^{(1)} (t) + \Delta t_{\mathrm {F}}^{(1)} (t) x_{\mathrm {P}}^{(1)} (t)}{x_{\mathrm {ISI}}^{(1)} (t)}
-\end{equation}
-%
-and analogously $S_2 (t)$ is obtained for the second spike train. Averaging over the two spike train contributions and normalizing by the mean interspike interval yields
-%
-\begin{equation} \label{eq:Bi-Spike-Diss-Intermediate}
-     S'' (t) = \frac{S_1 (t) + S_2 (t)}{2 \langle x_{\mathrm {ISI}}^{(n)} (t) \rangle_n}.
-\end{equation}
-
-This quantity weights the spike time differences for each spike train according to the relative distance of the corner spike from the time instant under investigation. This way relative distances within each spike train are taken care of, while relative distances between spike trains are not. In order to get these ratios straight and to account for differences in firing rate, in a last step the two contributions from the two spike trains are locally weighted by their instantaneous interspike intervals. This leads to the definition of the dissimilarity profile
-%
-\begin{equation} \label{eq:Bi-Spike-Diss-Improved}
-     S (t) = \frac{S_1 (t) x_{\mathrm {ISI}}^{(2)} (t) + S_2 (t) x_{\mathrm {ISI}}^{(1)} (t)}{2 \langle x_{\mathrm {ISI}}^{(n)} (t) \rangle_n^2}.
-\end{equation}
-%
-Since the dissimilarity profile $S (t)$ is obtained from a linear interpolation of piecewise constant quantities, it is piecewise linear (with potential discontinuities at the spikes). This dissimilarity profile and the SPIKE-distance $D_S$ as its average are both bounded in the interval $[0, 1]$. The distance value $D_S = 0$ is obtained for identical spike trains only.
-
-
-
-\subsubsection{\label{App-sss:Realtime-Spike-Distance} Realtime SPIKE-distance}
-
-The realtime SPIKE-distance $D_{S_r}$ is a modification of the SPIKE-distance with the key difference that the corresponding time profile $S_r(t)$ can be calculated online because it relies on past information only \footnote{For the ISI-distance no such causal realtime extension is possible, since it relies on the instantaneous ISI-values and thus requires knowledge about the following spikes.}. From the perspective of an online measure, the information provided by the following spikes, both their position and the length of the interspike interval, is not yet available. Like the regular (improved) SPIKE-distance $D_S$, this causal variant is also based on local spike time differences but now only two corner spikes are available, and the spikes of comparison are restricted to past spikes, e.g., for the preceding spike of the first spike train
-%
-\begin{equation} \label{eq:Delta-Corner-Spike-Realtime}
-     \Delta t_{\mathrm {P}}^{(1)} (t) = \min_i (| t_{\mathrm {P}}^{(1)} (t) - t_i^{(2)} |), t_i \leq t.
-\end{equation}
-%
-Since there are no following spikes available, there is no local weighting, and since there is no interspike interval, the normalization is achieved by dividing the average corner spike difference by twice the average time interval to the preceding spikes (Eq. \ref{eq:Prev-Spike-Dist}). This yields a causal indicator of local spike train dissimilarity:
-%
-\begin{equation} \label{eq:Bi-Spike-Diss-RT}
-    S_r (t) = \frac{ \Delta t_{\mathrm {P}}^{(1)} (t) + \Delta t_{\mathrm {P}}^{(2)} (t)} {4 \langle x_{\mathrm {P}}^{(n)} (t) \rangle_n}.
-\end{equation}
-
-
-\subsubsection{\label{App-sss:Future-Spike-Distance} Future SPIKE-distance}
-
-The future SPIKE-distance $D_{S_f}$ can be used in triggered temporal averaging in order to evaluate the effect of certain spikes or of certain stimuli features on future spiking. It is the inverse measure to the realtime SPIKE-distance but instead of relying on past information only it relies on future information only. Again for each time instant there are just two corner spikes and the potential nearest spikes in the other spike train are future spikes only. Thus the spike time difference for the following spike of the first spike train reads
-%
-\begin{equation} \label{eq:Delta-Corner-Spike-Future}
-     \Delta t_{\mathrm {F}}^{(1)} (t) = \min_i (| t_{\mathrm {F}}^{(1)} (t) - t_i^{(2)} |), t_i > t,
-\end{equation}
-%
-and accordingly for the following spike of the second spike train. In analogy to Eq. \ref{eq:Bi-Spike-Diss-RT}, an indicator of local spike train dissimilarity is obtained as follows:
-%
-\begin{equation} \label{eq:Bi-Spike-Diss-FT}
-    S_f (t) = \frac{ \Delta t_{\mathrm {F}}^{(1)} (t) + \Delta t_{\mathrm {F}}^{(2)} (t)} {4 \langle x_{\mathrm {F}}^{(n)} (t) \rangle_n}.
-\end{equation}	
-
-
-
-
-\subsection{\label{App-ss:Improvements} Improvements in this implementation}
-
-\subsubsection{\label{App-sss:Edge-effect} Correction of the edge effect for the SPIKE-distance}
-
-In previous versions of the SPIKE-distance the ambiguity regarding the definition of the initial (final) distance to the preceding (following) spike as well as the very first and the very last interspike intervals was resolved by adding to each spike train an auxiliary leading spike at time $t = 0$ and an auxiliary trailing spike at time $t = T$. This lead to spurious synchrony at the edges where by construction the dissimilarity profile reached the zero value. Here we follow a suggestion by Conor Houghton (personal communication) and at least partly correct this edge effect. We describe the correction for the beginning of the recording, it is an analogous mirror image at the end of the recording.
-
-We count the auxiliary spikes as normal spikes which can be nearest neighbor to other spikes. But instead of calculating their spike time distance (which is always zero) we use the spike time difference of the first real spike. For the first interspike interval we know that it is at least the distance to the first spike $t_1-t_0 = t_1$ but it could be longer. So to take the local firing rate (or its inverse) into consideration we set
-%
-\begin{equation} \label{eq:Corrected-First-ISI}
-    x_{\mathrm {ISI}} (0) = \max ( t_1, t_2 - t_1 ).
-\end{equation}
-%
-where we use the length of the first known interspike interval $t_2-t_1$ as an upper limit of the inverse firing rate. This way we get at least a crude estimate of how much longer the first interspike interval could be.
-
-
-\subsubsection{\label{App-sss:Sampling} Increase of memory efficiency by avoiding sampling}
-
-Earlier versions of the codes for calculating event synchronization and the ISI- and the SPIKE-distance relied on sampled dissimilarity profiles. Typically the precision was set to the sampling interval of the neuronal recording. Since the dissimilarity profile has to be calculated and stored for each pair of spike trains, this resulted, for each measure, in a matrix of order `number of sampled time instants' $\times$ `number of spike train pairs' (i.e., $\# (t_s) \times N(N-1)/2$). For small sampling intervals and a large number of recorded spike trains this lead to memory problems.
-
-In SPIKY we use an optimized and more memory-efficient way of storing the data where we make use of the fact that the dissimilarity profiles $I (t)$ of the ISI-distance is piecewise constant and the dissimilarity profile $S (t)$ of the SPIKE-distance is piecewise linear with each interval running from one spike of the pooled spike train to the next one. Thus for each such interval (and for each pair of spike trains) we have to store only one value for the ISI-distance and two values for the SPIKE-distance, one at the beginning and one at the end of the interval (see Figure \ref{fig:No-sampling}). Typically the storage space required will be much smaller than for dissimilarity profiles sampled with a reasonable precision.
-%
-% #########################################################################################
-% #########################################################################################
-% ############################################# Figure: No sampling #######################
-% #########################################################################################
-% #########################################################################################
-%
-\begin{figure}
-    \includegraphics[width=85mm]{No_sampling.eps}
-    \caption{\abb\label{fig:No-sampling} Illustration of the memory efficient storage of the dissimilarity profile for both the ISI- and the SPIKE-distance.}
-\end{figure}
-%
-% #########################################################################################
-% #########################################################################################
-% ############################################# Figure: No sampling #######################
-% #########################################################################################
-% #########################################################################################
-
-For the dissimilarity profiles of both the ISI- and the SPIKE-distance there are instantaneous jumps at the times of the spikes since this is where the lengths of the interspike intervals and the identity of the previous and the following spikes change abruptly. In contrast to the calculation based on sampling we get the exact result since each spike is both the previous and the next spike and there is no need anymore to `cut the corners' of the dissimilarity profiles as had to be done for the sampled dissimilarity profiles. The dissimilarity profiles $S_r(t)$ and $S_f (t)$ of the real-time and the future SPIKE-distances are hyperbolic but for these measures the exact result can be obtained by piecewise integration over all intervals of the pooled spike train. While we use these integration schemes to calculate the exact values, for the time-resolved visualization we use linear interpolations within the individual intervals in order to reach the same low computational complexity that we obtain for the regular SPIKE-distance.
-
-\end{appendix}
+%\end{appendix}
 
 \vspace{1cm}
 
