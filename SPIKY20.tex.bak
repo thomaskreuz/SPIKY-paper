@@ -5,7 +5,6 @@
 \usepackage{amssymb}
 \usepackage{bm}
 \usepackage{natbib}
-%\usepackage{appendix}
 %\usepackage[noperiod]{jabbrv}
 \usepackage{hyperref}
 
@@ -25,6 +24,7 @@
 % Improvements      																Done
 % Edge effect																	Done
 % Sampling   																	Done
+% Event Synchronization															(Done)
 
 % Representations      															Done
 % ===============
@@ -34,7 +34,7 @@
 % SPIKY-Intro   																	Done
 % Structure     																	Done
 % Input (data format), Spike Train Generator (Patterns, by hand)					Done 
-% Output      																	Done
+% Output      								f									Done
 % Figure Layout      															Done
 % GUI vs Loop      																Done
 % Spike train surrogates (Significance), Comparison with Poisson					Done
@@ -42,18 +42,10 @@
 %
 % Discussion
 % ==========
+% Summary
 % Limitations
-% Outlook
+% Outlook      																    Done
 %
-% Appendix: Measures
-% ==================
-% Event synchronization															(Done)
-% ISI        																	Done
-% SPIKE      																	Done
-% SPIKE-realtime      															Done
-% SPIKE-future      																Done
-% Edge effect																	Done
-% Sampling   																	Done
 
 \begin{document}
 
@@ -74,7 +66,7 @@
 
 \begin{abstract}
 
-Techniques for recording neuronal spiking activity are developing so fast that there is an increasing demand for algorithms which provide the possibility to study the similarity patterns of larger and larger number of spike trains across different spatial scales and with a very high temporal resolution. In recent years, three such time-resolved measures of spike train synchrony have been proposed, ISI-distance, SPIKE-distance, and event synchronization. The Matlab source codes for calculating and visualizing these measures have been made publicly available. However, due to the many different possible representations of the results the use of these codes is not very intuitive and their application requires some basic knowledge of Matlab. Thus it became desirable to provide a more user-friendly and interactive interface. Here we address this need and present the graphical user interface SPIKY which facilitates the application of all three methods to both simulated and real data. SPIKY has been optimized with respect to both computation speed (by using MEX-files, i.e. C-based Matlab executables) and memory demand (by taking advantage of the piecewise linear nature of the dissimilarity profiles). XXXXX Rep. XXXXX
+Techniques for recording neuronal spiking activity are developing so fast that there is an increasing demand for algorithms which provide the possibility to study the similarity patterns of larger and larger number of spike trains across different spatial scales and with a very high temporal resolution. In recent years, three such time-resolved measures of spike train synchrony have been proposed, ISI-distance, SPIKE-distance, and event synchronization. The Matlab source codes for calculating and visualizing these measures have been made publicly available. However, due to the many different possible representations of the results the use of these codes is not very intuitive and their application requires some basic knowledge of Matlab. Thus it became desirable to provide a more user-friendly and interactive interface. Here we address this need and present the graphical user interface SPIKY which facilitates the application of all three methods to both simulated and real data. We optimized SPIKY with respect to computation speed and memory demand.
 
 \end{abstract}
 
@@ -93,7 +85,8 @@ Techniques for recording neuronal spiking activity are developing so fast that t
 % *********************************** Section: Introduction ***************************
 % *************************************************************************************
 % *************************************************************************************
-	%
+%
+
 \section{\label{s:Intro} Introduction}
 
 Spike train distances are measures that when applied to a set of spike trains yield low values for very similar spike trains and high values for very dissimilar spike trains. Essentially there are two major scenarios for using spike train distances to estimate the degree of synchrony between two or more spike trains.
@@ -123,9 +116,9 @@ SPIKY, our graphical user interface (GUI) for monitoring spike train synchrony, 
 %
 \section{\label{s:Measures} Measures}
 
-SPIKY contains implementations of four measures. The first one, included for comparison, is the standard multivariate Peri-Stimulus Time Histogram (PSTH), a measure of overall firing rate. In this appendix we give an overview over the other three time-resolved measures: Event synchronization (here extended to a multivariate framework), the ISI-distance and the SPIKE-distance (including the latter's realtime and future variants).
+SPIKY contains implementations of four measures. The first one, included for comparison, is the standard multivariate Peri-Stimulus Time Histogram (PSTH), a measure of overall firing rate. In this Section we give an overview over the other three measures: First we review the ISI-distance and the SPIKE-distance (including the latter's realtime and future variants). We also discuss the improvements in the implementation of the algorithm. Finally, we show how event synchronization can be extended and modified such that we can make use of the multivariate and time-resolved framework of SPIKY.
 
-We here show the definitions of the bivariate variants but for all of these measures there exists a straightforward extension to the case $N > 2$ (with $N$ denoting the number of spike trains), the averaged bivariate distance. This average over all pairs of neurons commutes with the average over time, so it is possible to achieve the same kind of time-resolved visualization as in the bivariate case by first calculating the instantaneous average $S^{\mathrm {a}} (t)$ (here for the regular SPIKE-distance) over all pairwise instantaneous values $S^{mn} (t)$,
+In the following we show the definitions of the bivariate variants but for all of these measures there exists a straightforward extension to the case $N > 2$ (with $N$ denoting the number of spike trains), the averaged bivariate distance. This average over all pairs of neurons commutes with the average over time, so it is possible to achieve the same kind of time-resolved visualization as in the bivariate case by first calculating the instantaneous average $S^{\mathrm {a}} (t)$ (here for the regular SPIKE-distance) over all pairwise instantaneous values $S^{mn} (t)$,
 %
 \begin{equation} \label{eq:Bivariate-Average}
     S^{\mathrm {a}} (t) = \frac{1}{N(N-1)/2}\sum_{n=1}^{N-1} \sum_{m=n+1}^N S^{mn} (t).
@@ -142,7 +135,7 @@ In the following we denote with $\{t_i^{(n)}\} = {t_1^{(n)},...,t_{M_n}^{(n)}}$ 
 
 \subsection{\label{ss:ISI-SPIKE-Distance} The ISI- and the SPIKE-distance}
 
-Both the bivariate ISI- and the bivariate SPIKE-distance rely on instantaneous values in the sense that in a first step the two sequences of discrete spike times are transformed into dissimilarity profiles, $I (t)$ and $S (t)$. These dissimilarity profiles are based on three piecewise constant quantities which for each neuron $n = 1, 2$ are assigned to every time instant (see Fig. \ref{fig:SPIKE-Illustration}A). These are the time of the preceding spike
+Both the bivariate ISI- and the bivariate SPIKE-distance rely on instantaneous values in the sense that in a first step the two sequences of discrete spike times are transformed into dissimilarity profiles, $I (t)$ and $S (t)$. These dissimilarity profiles are based on three piecewise constant quantities which for each neuron $n = 1, 2$ are assigned to every time instant (see Fig. \ref{fig:ISI-SPIKE-ES-Illustration}A). These are the time of the preceding spike
 %
 \begin{equation} \label{eq:Prev-Spike}
     t_{\mathrm {P}}^{(n)} (t) = \max(t_i^{(n)} | t_i^{(n)} \leq t)  \quad t_1^{(n)} \leq t \leq t_{M_n}^{(n)},
@@ -165,7 +158,7 @@ The ambiguity regarding the definition of the very first and the very last inter
 
 \subsubsection{\label{sss:ISI-Distance} The ISI-distance}
 
-The ISI-distance, proposed as a bivariate measure in \citep{Kreuz07c} and extended to the multi-neuron case in \citep{Kreuz09}, was the first spike train distance directly defined as the temporal average of an instantaneous dissimilarity profile. This profile is calculated as the instantaneous ratio between the interspike intervals $x_{\mathrm {ISI}}^{(1)}$ and $x_{\mathrm {ISI}}^{(2)}$ (see Eq. \ref{eq:ISI} and Fig. \ref{fig:SPIKE-Illustration}) according to:
+The ISI-distance, proposed as a bivariate measure in \citep{Kreuz07c} and extended to the multi-neuron case in \citep{Kreuz09}, was the first spike train distance directly defined as the temporal average of an instantaneous dissimilarity profile. This profile is calculated as the instantaneous ratio between the interspike intervals $x_{\mathrm {ISI}}^{(1)}$ and $x_{\mathrm {ISI}}^{(2)}$ (see Eq. \ref{eq:ISI} and Fig. \ref{fig:ISI-SPIKE-ES-Illustration}) according to:
 %
 \begin{equation} \label{eq:ISI-Ratio}
     I (t) = \begin{cases}
@@ -187,18 +180,18 @@ In contrast to the ISI-distance, the SPIKE-distance (see \citet{Kreuz11} for the
 %
 % #########################################################################################
 % #########################################################################################
-% ################################## Figure: SPIKE-Illustration ###########################
+% ################################## Figure: ISI-SPIKE-ES-Illustration ###########################
 % #########################################################################################
 % #########################################################################################
 %
 \begin{figure}
     \includegraphics[width=85mm]{ISI_SPIKE_ES_ILLU.eps}
-    \caption{\abb\label{fig:SPIKE-Illustration} A.  ISI- and SPIKE-distance. Illustration of the local quantities needed to define the dissimilarity profiles $I (t)$ and $S (t)$ for an arbitrary time instant $t$.    B. Event synchronization. Illustration of the first variant with adaptive coincidence window. While the middle spikes in the first half are coincident, the middle spikes in the second half are not.}
+    \caption{\abb\label{fig:ISI-SPIKE-ES-Illustration} A.  ISI- and SPIKE-distance. Illustration of the local quantities needed to define the dissimilarity profiles $I (t)$ and $S (t)$ for an arbitrary time instant $t$.    B. Event synchronization. Illustration of the first variant with adaptive coincidence window. While the middle spikes in the first half are coincident, the middle spikes in the second half are not.}
 \end{figure}
 %
 % #########################################################################################
 % #########################################################################################
-% ################################## Figure: SPIKE-Illustration ###########################
+% ################################## Figure: ISI-SPIKE-ES-Illustration ###########################
 % #########################################################################################
 % #########################################################################################
 
@@ -208,7 +201,7 @@ The dissimilarity profile is calculated in two steps: First for each spike the d
      \Delta t_{\mathrm {P}}^{(1)} (t) = \min_i (| t_{\mathrm {P}}^{(1)} (t) - t_i^{(2)} |)
 \end{equation}
 %
-and analogously for $t_{\mathrm {F}}^{(1)}$, $t_{\mathrm {P}}^{(2)}$, and $t_{\mathrm {F}}^{(2)}$  (see Fig. \ref{fig:SPIKE-Illustration}). For each spike train separately a locally weighted average is employed such that the differences for the closer spike dominate; the weighting factors depend on
+and analogously for $t_{\mathrm {F}}^{(1)}$, $t_{\mathrm {P}}^{(2)}$, and $t_{\mathrm {F}}^{(2)}$  (see Fig. \ref{fig:ISI-SPIKE-ES-Illustration}). For each spike train separately a locally weighted average is employed such that the differences for the closer spike dominate; the weighting factors depend on
 %
 \begin{equation} \label{eq:Prev-Spike-Dist}
      x_{\mathrm {P}}^{(n)} (t) = t - t_{\mathrm {P}}^{(n)} (t)
@@ -318,7 +311,7 @@ For the dissimilarity profiles of both the ISI- and the SPIKE-distance there are
 
 \subsection{\label{ss:Event-Synchronization} Event synchronization}
 
-Event synchronization (\citeauthor{QuianQuiroga02b}, \citeyear{QuianQuiroga02b}; cf. \citeauthor{Kreuz07c}, \citeyear{Kreuz07c} and \citeauthor{Kreuz11b}, \citeyear{Kreuz11b}) works as a coincidence detector quantifying the level of synchrony from the number of quasi-simultaneous appearances of spikes. There are two variants. The main variant is parameter- and scale-free, since the time lag $\tau_{ij}$ up to which two spikes $t_i^{(1)}$ and $t_j^{(2)}$ are considered to be synchronous is adapted to the local spike rates (see Fig. \ref{fig:SPIKE-Illustration}B):
+Event synchronization (\citeauthor{QuianQuiroga02b}, \citeyear{QuianQuiroga02b}; cf. \citeauthor{Kreuz07c}, \citeyear{Kreuz07c} and \citeauthor{Kreuz11b}, \citeyear{Kreuz11b}) works as a coincidence detector quantifying the level of synchrony from the number of quasi-simultaneous appearances of spikes. There are two variants. The main variant is parameter- and scale-free, since the time lag $\tau_{ij}$ up to which two spikes $t_i^{(1)}$ and $t_j^{(2)}$ are considered to be synchronous is adapted to the local spike rates (see Fig. \ref{fig:ISI-SPIKE-ES-Illustration}B):
 %
 \begin{equation} \label{eq:Event-MaxDist}
     \tau_{ij} = \min \{t_{i+1}^{(1)} - t_i^{(1)}, t_i^{(1)} - t_{i-1}^{(1)},
@@ -327,10 +320,10 @@ Event synchronization (\citeauthor{QuianQuiroga02b}, \citeyear{QuianQuiroga02b};
 %
 In contrast, the second variant uses a fixed coincidence window $\tau$.
 
-The function $c(x|y)$ counts the appearances of a spike in $x$ shortly after a spike in $y$:
+The function $c(1|2)$ counts the appearances of a spike in the first spike train shortly after a spike in the second spike train:
 %
 \begin{equation} \label{eq:Event-Count}
-    c (x|y) = \sum_{i=1}^{M_x} \sum_{j=1}^{M_y} J_{ij},
+    c (1|2) = \sum_{i=1}^{M_1} \sum_{j=1}^{M_2} J_{ij},
 \end{equation}
 %
 where
@@ -343,19 +336,19 @@ where
                   \end{cases}
 \end{equation}
 %
-Here we used the definition of the first (scale-free) variant, for the second variant just replace $\tau_{ij}$ with $\tau$. Then with $c(y|x)$ defined accordingly, event synchronization can be written as
+Here we used the definition of the first (scale-free) variant, for the second variant just replace $\tau_{ij}$ with $\tau$. Then with $c(2|1)$ defined accordingly, event synchronization can be written as
 %
 \begin{equation} \label{eq:Event-Synchro}
-    Q = \frac {c (y|x) + c (x|y)} {\sqrt{M_x M_y}}.
+    Q = \frac {c (2|1) + c (1|2)} {\sqrt{M_1 M_2}}.
 \end{equation}
 %
 In order to get a time-resolved measure of event synchronization, we calculate the local derivative of the $Q$-function
 %
 \begin{equation} \label{eq:Window-Event-Synchro}
-    E = \frac {Q (n) - Q (n-\Delta n)} {\sqrt{\Delta n_x \Delta n_y}}.
+    E = \frac {Q (n) - Q (n-\Delta n)} {\sqrt{\Delta n_1 \Delta n_2}}.
 \end{equation}
 %
-where $\Delta n_x$ and $\Delta n_y$ are the numbers of events in the interval $[n-\Delta n, n]$. Unfortunately, $E$ is not any longer parameter-free. The time resolution is governed by the window size $\Delta n$. For the second variant of event synchronization the fixed coincidence window $\tau$ constitutes a second parameter.
+where $\Delta n_1$ and $\Delta n_2$ are the numbers of events in the interval $[n-\Delta n, n]$. Unfortunately, $E$ is not any longer parameter-free. The time resolution is governed by the window size $\Delta n$. For the second variant of event synchronization the fixed coincidence window $\tau$ constitutes a second parameter.
 
 A suitably normalized distance is obtained by inversion $D_E=E-1$, with $D_E = 0$ if and only if all spikes within the window coincide (or if there are no spikes at all).
 
@@ -443,7 +436,7 @@ The fact that there are no limits to the temporal resolution allows further anal
 %
 \section{\label{s:SPIKY} SPIKY}
 
-SPIKY is a graphical user interface for monitoring synchrony between artificially simulated or experimentally recorded neuronal spike trains. It is an implementation of the ISI- and the SPIKE-distance (including simulations of its realtime and future variants) which allows  interactive access to all the different representations described in Section \ref{s:Information-reduction}. SPIKY is a free software package programmed by Thomas Kreuz and Nebojsa Bozanic. All source codes are written in Matlab (MathWorks Inc, Natick, MA, USA) with the most time-consuming loops coded in MEX-files \footnote{In our case these are subroutines written in C. However, as some users may not have access to a suitable C compiler, SPIKY contains the (slower) pure Matlab code as well.}. SPIKY is not stand-alone but requires Matlab to run. XXXXX Update, now stand-alone? XXXXX.
+SPIKY is a graphical user interface for monitoring synchrony between artificially simulated or experimentally recorded neuronal spike trains. It is an implementation of the ISI- and the SPIKE-distance (including simulations of its realtime and future variants) which allows  interactive access to all the different representations described in Section \ref{s:Information-reduction}. SPIKY is a free software package programmed by Thomas Kreuz and Nebojsa Bozanic. All source codes are written in Matlab (MathWorks Inc, Natick, MA, USA) with the most time-consuming loops coded in MEX-files \footnote{In our case these are subroutines written in C. However, as some users may not have access to a suitable C compiler, SPIKY contains the (slower) pure Matlab code as well.}. SPIKY is not stand-alone but requires Matlab to run.
 
 
 \subsection{\label{ss:Access} Access to SPIKY and how to get started}
@@ -452,7 +445,7 @@ SPIKY is distributed under a BSD licence (Copyright (c) 2014, Thomas Kreuz, Nebo
 
 The Facebook-page includes various screen recordings with voice-over in which the user is guided step by step through some of the most important features of SPIKY. All of these movies can also be viewed on the \href{https://www.youtube.com/channel/UCgSz0YQ5lWdVF0_Z1FNN0Bw}{SPIKY Youtube-channel} (\url{https://www.youtube.com/channel/UCgSz0YQ5lWdVF0_Z1FNN0Bw}).
 
-After having downloaded SPIKY from the download page the user has to first extract the zip-package which leaves all files in one folder named `SPIKY'. If the system has a suitable MEX-compiler installed, the MEX-files can be compiled from within this folder by running the m-file `SPIKY\_compile\_MEX'. The last step is to run the m-file `SPIKY'. XXXXX Stand-alone version? XXXXX 
+After having downloaded SPIKY from the download page the user has to first extract the zip-package which leaves all files in one folder named `SPIKY'. If the system has a suitable MEX-compiler installed, the MEX-files can be compiled from within this folder by running the m-file `SPIKY\_compile\_MEX'. The last step is to run the m-file `SPIKY'.
 
 When SPIKY is running, the user can find quick information about the individual elements of the graphical user interface by activating the `Hints'-checkbox in the `Options'-Menu. Hovering with the mouse cursor above the elements of interest will then show short hints. An overview of all the information contained in the hints can be found in the documentation file `SPIKY-Elements.doc'. Furthermore, at each step the suggested element for the next user action is highlighted by a bold font. 
 
@@ -672,7 +665,8 @@ This manuscript is concerned with a new program primarily designed to analyze ne
 
 One of the measures included in SPIKY is the realtime SPIKE-distance. The present algorithm calculates the realtime values by making use of past information only but it does so in a speed-optimized and parallelized manner which would not be compatible with an actual realtime-implementation. However, such a realtime-implementation should actually be simpler and less problematic even for large numbers of neurons since the only information that would have to be stored at each time instant are the time stamps of the latest spikes of each spike train and their nearest neighbors in the other spike trains.
 
-We chose to write SPIKY in Matlab because of its ease of use, popularity in the neuroscience community, and the well-developed MEX-interface for integrating C functions for performance enhancements. However, in the future we plan to export at least some of its functionality into an open-source environment which could for example be based on Python code within a C++ core. We also would like to make it available in some kind of stand-alone version which does not depend on the availabilty of Matlab (MathWorks Inc, Natick, MA, USA). XXXXX Check advice on alternatives again, stand-alone? XXXXX
+We chose to write SPIKY in Matlab because of its ease of use, popularity in the neuroscience community, and the well-developed MEX-interface for integrating C functions for performance enhancements. However, in the future we plan to export at least some of its functionality into an open-source environment which could for example be based on Python code within a C++ core.
+%We also would like to make it available in some kind of stand-alone version which does not depend on the availabilty of Matlab (MathWorks Inc, Natick, MA, USA). XXXXX Check advice on alternatives again, XXXXX
 
 Another potential direction would be the extension of the methods used here from the quantification of synchrony within one population of two or more neurons to the quantification of synchrony between two (or more) neuronal populations. Similar extensions have been done for two other spike train distances \citep{Aronov03, Houghton08} but both of these methods are not time-resolved and depend on not one but two parameters. So one particular challenge for our methods could be to try to maintain the high temporal resolution of the original methods and to make the new methods parameter-free.
 

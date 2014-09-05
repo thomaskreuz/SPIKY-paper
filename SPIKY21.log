@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.8)  4 SEP 2014 14:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.8)  5 SEP 2014 03:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**SPIKY20.tex
-(./SPIKY20.tex
+**SPIKY21.tex
+(./SPIKY21.tex
 LaTeX2e <2011/06/27>
 Babel <3.9f> and hyphenation patterns for 78 languages loaded.
 (./elsart5p.cls
@@ -337,8 +337,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip51
 )
-(./SPIKY20.aux)
-\openout1 = `SPIKY20.aux'.
+(./SPIKY21.aux)
+\openout1 = `SPIKY21.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
@@ -402,9 +402,9 @@ LaTeX Info: Redefining \ref on input line 50.
 LaTeX Info: Redefining \pageref on input line 50.
 LaTeX Info: Redefining \nameref on input line 50.
 
-(./SPIKY20.out) (./SPIKY20.out)
+(./SPIKY21.out) (./SPIKY21.out)
 \@outlinefile=\write3
-\openout3 = `SPIKY20.out'.
+\openout3 = `SPIKY21.out'.
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 54.
 
@@ -453,11 +453,11 @@ it / users / thomas .
 
 [2]
 Package epstopdf Info: Source file: <ISI_SPIKE_ES_ILLU.eps>
-(epstopdf)                    date: 2014-09-04 04:01:33
-(epstopdf)                    size: 17446 bytes
+(epstopdf)                    date: 2014-09-05 03:46:48
+(epstopdf)                    size: 19317 bytes
 (epstopdf)             Output file: <ISI_SPIKE_ES_ILLU-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-09-04 04:05:23
-(epstopdf)                    size: 10246 bytes
+(epstopdf)                    date: 2014-09-05 03:47:07
+(epstopdf)                    size: 11200 bytes
 (epstopdf)             Command: <repstopdf --outfile=ISI_SPIKE_ES_ILLU-eps-conv
 erted-to.pdf ISI_SPIKE_ES_ILLU.eps>
 (epstopdf)             \includegraphics on input line 188.
@@ -543,7 +543,7 @@ Package epstopdf Info: Source file: <SPIKY_Flowchart.eps>
 ted-to.pdf SPIKY_Flowchart.eps>
 (epstopdf)             \includegraphics on input line 466.
 Package epstopdf Info: Output file is already uptodate.
-<SPIKY_Flowchart-eps-converted-to.pdf, id=314, 1158.3275pt x 1157.32375pt>
+<SPIKY_Flowchart-eps-converted-to.pdf, id=315, 1158.3275pt x 1157.32375pt>
 File: SPIKY_Flowchart-eps-converted-to.pdf Graphic file (type pdf)
 
 <use SPIKY_Flowchart-eps-converted-to.pdf>
@@ -561,18 +561,17 @@ rted-to.pdf Movie_Screenshot.eps>
 (epstopdf)             \includegraphics on input line 485.
 Package epstopdf Info: Output file is already uptodate.
 
-<Movie_Screenshot-eps-converted-to.pdf, id=315, 572.1375pt x 422.57875pt>
+<Movie_Screenshot-eps-converted-to.pdf, id=316, 572.1375pt x 422.57875pt>
 File: Movie_Screenshot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Movie_Screenshot-eps-converted-to.pdf>
 Package pdftex.def Info: Movie_Screenshot-eps-converted-to.pdf used on input li
 ne 485.
 (pdftex.def)             Requested size: 241.84842pt x 178.62961pt.
- [8]
+ [8 <./SPIKY_Flowchart-eps-converted-to.pdf>]
 Underfull \vbox (badness 3503) has occurred while \output is active []
 
- [9 <./SPIKY_Flowchart-eps-converted-to.pdf> <./Movie_Screenshot-eps-converted-
-to.pdf>]
+ [9 <./Movie_Screenshot-eps-converted-to.pdf>]
 Underfull \hbox (badness 4144) in paragraph at lines 530--531
 \OT1/cmr/m/n/10 workspace for fur-ther pro-cess-ing. When one clicks
  []
@@ -616,7 +615,7 @@ f>
 -converted-to.pdf Performance_Comparison.eps>
 (epstopdf)             \includegraphics on input line 613.
 Package epstopdf Info: Output file is already uptodate.
-<Performance_Comparison-eps-converted-to.pdf, id=380, 578.16pt x 433.62pt>
+<Performance_Comparison-eps-converted-to.pdf, id=381, 578.16pt x 433.62pt>
 File: Performance_Comparison-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Performance_Comparison-eps-converted-to.pdf>
@@ -627,7 +626,7 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
-Underfull \vbox (badness 5417) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11 <./Performance_Comparison-eps-converted-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -636,8 +635,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.708 \begin{thebibliography}{25}
-                                 
+l.709 	\begin{thebibliography}{25}
+                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -649,19 +648,19 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 818.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 818.
- (./SPIKY20.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 818.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 818.
-Package rerunfilecheck Info: File `SPIKY20.out' has not changed.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 819.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 819.
+ (./SPIKY21.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 819.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 819.
+Package rerunfilecheck Info: File `SPIKY21.out' has not changed.
 (rerunfilecheck)             Checksum: 898F9F65448712683FBFBEDD024100A3;1304.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 818.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 819.
  ) 
 Here is how much of TeX's memory you used:
  7134 strings out of 493315
  100066 string characters out of 6137905
- 197957 words of memory out of 5000000
+ 196957 words of memory out of 5000000
  10375 multiletter control sequences out of 15000+600000
  21748 words of font info for 86 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -678,23 +677,24 @@ al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local
 /texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texli
-ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/
-2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/201
-3/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsl8.pfb></usr/local/texlive/2013/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2013/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2013/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2013/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2013/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2013/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on SPIKY20.pdf (13 pages, 750583 bytes).
+ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/
+2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/201
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2013/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsl8.pfb></usr/local/texlive/2013/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2013/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2013/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2013/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2013/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmtt8.pfb>
+Output written on SPIKY21.pdf (13 pages, 755830 bytes).
 PDF statistics:
- 537 PDF objects out of 1000 (max. 8388607)
- 461 compressed objects within 5 object streams
+ 541 PDF objects out of 1000 (max. 8388607)
+ 464 compressed objects within 5 object streams
  108 named destinations out of 1000 (max. 500000)
  188 words of extra memory for PDF output out of 10000 (max. 10000000)
 
