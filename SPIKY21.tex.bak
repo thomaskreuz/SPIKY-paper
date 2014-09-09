@@ -706,7 +706,7 @@ We also thank Thomas Alderson, Black Square, Mayte Bonilla Quintana, Hamid Chark
 \end{thanks}
 
 
-\begin{thebibliography}{25}
+	\begin{thebibliography}{25}
 
 \bibitem[{Aronov(2003)}]{Aronov03}
 Aronov D, Reich DS, Mechler F, Victor JD. Neural coding of spatial phase in V1 of the macaque monkey. J Neurophysiol, 2003;89:3304-27.
