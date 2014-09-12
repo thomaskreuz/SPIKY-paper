@@ -58,6 +58,10 @@
 % SPIKY_loop (many datasets)
 % SPIKY_loop_surro (significance)
 
+
+% Mario: Problems with GitHub
+% Event Sync not yet completely finished
+
 \begin{document}
 
 \begin{frontmatter}
@@ -583,15 +587,13 @@ The SPIKY-package contains a program `Spiky\_loop\_\-surro' which was designed t
 
 \subsection{\label{ss:Comparison} Comparison with other implementations}
 
-% Intro: In Subsection \ref{ss:Comparison} we investigate the performance of our new implementation of the time-resolved measures of spike train synchrony and compare it with previously published source codes.
-% A wide usage of ISI- and SPIKE-distance, which even aroused curiosity beyond the neuroscience community, 
+% A wide usage of ISI- and SPIKE-distance, which even aroused curiosity beyond the neuroscience community, ### this is already dealt with in the discussion, note that I moved some other parts there as well ###  
  	
 %Algorithm complexity of all previous implementations of ISI- and SPIKE- distance were $O(N^2 \cdot gcd(pooledISI)$, $O(N^2 \cdot (gcd(pooledISI) + n)$, respectively, where $N$ is the number of spike trains, gcd the greatest common divisor, and $n$ the total number of spikes. While C (MEX) files, provided with SPIKY have, again for ISI- and SPIKE-distance, both have $O(N * n)$, with a remark that SPIKE-distance is slower by a constant factor. ### unclear, discuss later ###
 
 The very first all-in-one implementation of the ISI- and the (improved) SPIKE-distance was published online at the time of the publication of \cite{Kreuz13}. It was entirely written in Matlab (an interpreted language) and used sampled dissimiarity profiles which made the software both computationally expensive and memory demanding. SPIKY and its additions (`SPIKY\_loop' and `SPIKY\_loop\_surro') presented in this paper address both of these issues by using C-based Matlab executables (MEX)-files and eliminating equidistantly sampled dissimilarity profiles (see Fig. \ref{fig:No-sampling}).
 
 In between these two releases, several other source codes versions written in various languages on different platforms have been made available. Most prominent examples are the Python-Implementation of the SPIKE-distance courtesy of Jeremy Fix and available on \url{http://jeremy.fix.free.fr/Softwares/spike.html}, a the C++-Implementation of both ISI- and SPIKE-distance courtesy of R{\v a}zvan Florian and available \url{https://github.com/modulus-metric/spike-train-metrics}. Finally, the SPIKE-distance was also implemented in the commercially distributed HRLAnalysis$^{TM}$ software suite \citep{Thibeault14} designed for the analysis of large-scale spiking neural data. However, all of these implementations are restricted to the overall dissimilarity profile and its temporal average (the overall dissimilarity). In contrast, SPIKY also allows the user to interactively access all the other different levels of information reduction introduced in Section \ref{s:Information-reduction}.
-
 
 Most of the speed-up of the SPIKY-codes with respect to the source codes published along with \citet{Kreuz13} is due to the use of MEX-files (performance is increased by a factor of ~XXXXX-XXXXX). But also the step from equidistant sampling to an optimized spike train-dependent sampling leads to a further increase in performance. To show this (and to provide relative computational costs for the SPIKY-methods) we here compare the computation times of the new implementations of the SPIKE- and the ISI-distance with the old ones and for the sake of completeness we also include event synchronization.
 
