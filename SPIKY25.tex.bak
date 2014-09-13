@@ -58,10 +58,6 @@
 % SPIKY_loop (many datasets)
 % SPIKY_loop_surro (significance)
 
-
-% Mario: Problems with GitHub
-% Event Sync not yet completely finished
-
 \begin{document}
 
 \begin{frontmatter}
@@ -103,6 +99,8 @@ Techniques for recording neuronal spiking activity are developing so fast that t
 %
 
 \section{\label{s:Intro} Introduction}
+
+XXXXX Note: This not yet the final 'final version'. There are a few XXXXX now and then where a few bits and pieces are still missing. XXXXX
 
 Spike train distances are measures that when applied to a set of spike trains yield low values for very similar spike trains and high values for very dissimilar spike trains. Essentially there are two major scenarios for using spike train distances to estimate the degree of synchrony between two or more spike trains.
 
@@ -325,7 +323,7 @@ For the dissimilarity profiles of both the ISI- and the SPIKE-distance there are
 
 \subsection{\label{ss:Event-Synchronization} Event synchronization}
 
-Event synchronization (\citeauthor{QuianQuiroga02b}, \citeyear{QuianQuiroga02b}; cf. \citeauthor{Kreuz07c}, \citeyear{Kreuz07c} and \citeauthor{Kreuz11b}, \citeyear{Kreuz11b}) works as a coincidence detector quantifying the level of synchrony from the number of quasi-simultaneous appearances of spikes. There are two variants. The main variant is parameter- and scale-free, since the time lag $\tau_{ij}$ up to which two spikes $t_i^{(1)}$ and $t_j^{(2)}$ are considered to be synchronous is adapted to the local spike rates (see Fig. \ref{fig:ISI-SPIKE-ES-Illustration}B):
+Event synchronization (\citeauthor{QuianQuiroga02b}, \citeyear{QuianQuiroga02b}; cf. \citeauthor{Kreuz07c}, \citeyear{Kreuz07c} and \citeauthor{Kreuz11b}, \citeyear{Kreuz11b}) works as a coincidence detector quantifying the level of synchrony from the number of quasi-simultaneous appearances of spikes. There are two variants. The main variant is parameter- and scale-free, since the coincidence window $\tau_{ij}$, i.e., the time lag  up to which two spikes $t_i^{(1)}$ and $t_j^{(2)}$ are considered to be synchronous, is adapted to the local spike rates (see Fig. \ref{fig:ISI-SPIKE-ES-Illustration}B):
 %
 \begin{equation} \label{eq:Event-MaxDist}
     \tau_{ij} = \min \{t_{i+1}^{(1)} - t_i^{(1)}, t_i^{(1)} - t_{i-1}^{(1)},
@@ -356,27 +354,24 @@ Here we used the definition of the first (scale-free) variant, for the second va
     Q = \frac {c (2|1) + c (1|2)} {\sqrt{M_1 M_2}}.
 \end{equation}
 %
+A suitably normalized measure of dissimilarity is obtained by inversion $Q'=1-Q$, with $Q' = 0$ if and only if all spikes within the window coincide (or if there are no spikes at all).
+%
 In order to get a time-resolved measure of event synchronization, we calculate the local `derivative' of the $Q$-function
 %
 \begin{equation} \label{eq:Window-Event-Synchro}
-    E = \frac {Q (n+\Delta n) - Q (n-\Delta n)} {\sqrt{\Delta n_1 \Delta n_2}}.
+    E = \frac {Q' (n+\Delta n) - Q' (n-\Delta n)} {\sqrt{\Delta n_1 \Delta n_2}}.
 \end{equation}
 %
 where $\Delta n_1$ and $\Delta n_2$ are the numbers of events in the interval $[n-\Delta n, n+\Delta n]$ with $n$ here referring to the number of intervals in the pooled spike train.
 
-Unfortunately, $E$ is not any longer parameter-free. The time resolution is governed by the window size $\Delta n$. For the second variant of event synchronization the fixed coincidence window $\tau$ constitutes a second parameter.
+Unfortunately, $E$ is not any longer parameter-free. The temporal resolution is governed by the window size $\Delta n$. For the second variant of event synchronization there is also a second parameter, the fixed coincidence window $\tau$. In order to find reasonable results it is indeed necessary to adapt the parameters to the spike train data. In particular, the window size $\Delta n$
+should been chosen according to the number of spike trains.
 
-A suitably normalized distance is obtained by inversion $D_E=E-1$, with $D_E = 0$ if and only if all spikes within the window coincide (or if there are no spikes at all). XXXXX Orientation in figures? XXXXX
+Note that in Eq. \ref{eq:Window-Event-Synchro} we have taken the local derivative with respect to the number of events $n$, not with respect to time, as in the original proposal of event synchronization \citep{QuianQuiroga02b}. This allows us to use $E$ within the SPIKY-framework since we obtain a dissimilarity profile which is piecewise constant, exactly like the one of the ISI-distance. But there are also a few differences.
 
-In the SPIKY-framework the overall value within a certain time interval is obtained as the temporal average of the dissimilarity profile over this interval. While this is the actual definition of the ISI- and the SPIKE-distance this (cf. Eq. \ref{eq:Temporal-Average}), for event synchronization it is more complicated since there the temporal profile has been obtained as the derivative of the cumulative function $Q$. XXXXXXXXXXXX
+For the ISI- and the SPIKE-distance the overall value within a certain time interval is obtained as the temporal average of the dissimilarity profile over this interval (cf. Eq. \ref{eq:Temporal-Average}). For event synchronization it is more complicated since here the dissimilarity profile has been calculated as the `derivative' of the cumulative function $Q$ (Eq. \ref{eq:Window-Event-Synchro}). The average over this dissimilarity profile (which is performed without weighting the values with 	the intervals between the spikes) is not necessarily identical to the regular event synchronization which is equal to the final value of the cumulative function $Q$\ref{eq:Event-Synchro}. However, numerical analysis reveals that the deviation is typically less than XXXXX.
 
-This is not necessarily identical to the regular event synchronization obtained from the cumulative function $Q$\ref{eq:Event-Synchro}. But numerical analysis reveals that the deviation is typically less than XXXXX.
-
-Fig. \ref{fig:PSTH-ES} shows a comparison between the Peri-Stimulus Time Histogram and event synchronization. It shows that the PSTH, in contrast to event synchronization, is not a measure of spike train synchrony (see also \citeauthor{Kreuz11}, \citeyear{Kreuz11}). Since it is invariant to shuffling spikes among the spike trains yields the same value regardless of how spikes are distributed among the different spike trains.
-
-stress: often optimization of parameters needed
-
-not yet finished XXXXX
+Fig. \ref{fig:PSTH-ES} presents a comparison between the Peri-Stimulus Time Histogram and event synchronization. While Fig. \ref{fig:PSTH-ES}A demonstrates the similarities between the temporal profiles of the two measures on a general example, Fig. \ref{fig:PSTH-ES}B-D also shows that event synchronization, in contrast to  the PSTH, is a true measure of spike train synchrony (see also \citeauthor{Kreuz11}, \citeyear{Kreuz11}). Since the PSTH is invariant to shuffling spikes among the spike trains yields the same value regardless of how spikes are distributed among the different spike trains.
 
 %
 % #########################################################################################
@@ -387,8 +382,7 @@ not yet finished XXXXX
 %
 \begin{figure}
     \includegraphics[width=85mm]{PSTH_ES.eps}
-    \caption{\abb\label{fig:PSTH-ES} Comparison of PSTH and event synchronization. A. multivariate example with $50$
-spike trains. In the first half within the noisy background there are $4$ regularly spaced spiking events with increasing jitter. The second half consists of $10$ spiking events with decreasing jitter but now without any noisy background. PSTH and event synchronization exhibit very similar profiles. The dissimilarity profile of the SPIKE-distance for the same example can be found in Fig. 2B of \citet{Kreuz13}.    B-D. By construction the pooled spike train of these examples is identical consisting of $10$ evenly spaced bursts. The only difference is the distribution of the spikes among the individual spike trains. B. High reliability. C. Random distribution of spikes among spike trains. D. Synfire chain. Whereas the PSTH is identical, event synchronization correctly transitions from high to intermediate and low synchrony.}
+    \caption{\abb\label{fig:PSTH-ES} Comparison of PSTH and event synchronization. A. multivariate example with $50$ spike trains. In the first half within the noisy background there are $4$ regularly spaced spiking events with increasing jitter. The second half consists of $10$ spiking events with decreasing jitter but now without any noisy background. PSTH and event synchronization exhibit very similar profiles. The dissimilarity profile of the SPIKE-distance for the same example can be found in Fig. 2B of \citet{Kreuz13}.    B-D. By construction the pooled spike train of these examples is identical consisting of $10$ evenly spaced bursts. The only difference is the distribution of the spikes among the individual spike trains. B. High reliability. C. Random distribution of spikes among spike trains. D. Synfire chain. Whereas the PSTH is identical, event synchronization correctly transitions from high to intermediate and low synchrony.}
 \end{figure}
 %
 % #########################################################################################
@@ -571,7 +565,7 @@ So by combining these two programs it is possible to first use SPIKY for a rathe
 
 An important question that has not yet been asked is the one of statistical significance. Given a certain value of the SPIKE-distance how can one judge whether it reflects a significant decrease or increase in spike train synchrony and does not just lie within the range of values obtained for random fluctuations. One way to address this question is the use of spike train surrogates \citep{Kass05, Gruen09, Louis10}. The idea is to compare the results obtained for the original dataset versus the results obtained for spike train surrogates generated from that dataset. If the value obtained for the original lies outside the range of values for the surrogates this value can be assumed to be significant to a level defined by the number of surrogates used (e.g. $\alpha = 0.05$ for $19$ surrogates or $\alpha = 0.001$ for $999$ surrogates).
 
-The SPIKY-package contains a program `Spiky\_loop\_\-surro' which was designed to look at significance. So far it includes four different types of spike train surrogates. They differ in the properties that are preserved and maintain either the individual spike numbers (obtained by shuffling the spikes), the individual interspike interval distribution (obtained by shuffling the interspike intervals), the pooled spike train (obtained by shuffling spikes among the spike trains) or the Peri-Stimulus Time Histogram (PSTH). In the last case an estimate of the PSTH is obtained by means of the inverse transformation method, i.e., by generating random sample numbers from the PSTH given its cumulative distribution function (CDF) \citep{Ross97}. XXXXX
+The SPIKY-package contains a program `Spiky\_loop\_\-surro' which was designed to look at significance. So far it includes four different types of spike train surrogates. They differ in the properties that are preserved and maintain either the individual spike numbers (obtained by shuffling the spikes), the individual interspike interval distribution (obtained by shuffling the interspike intervals), the pooled spike train (obtained by shuffling spikes among the spike trains) or the Peri-Stimulus Time Histogram (PSTH). In the last case an estimate of the PSTH is obtained by means of the inverse transformation method, i.e., by generating random sample numbers from the PSTH given its cumulative distribution function (CDF) \citep{Ross97}.
 
 % PSTH distribution using a general method for resampling from a given distribution using {\it the inverse transformation method} which is based on having a uniform random variable $U$, where for any distribution function $F$ if there is a defined random variable $X$ such that $X = F^{-1}(U)$ then the random variable $X$ has a distribution function $F$. [$F-'(u)$ is defined to equal that value $x$ for which $F(x) = u.$]
 %
@@ -609,7 +603,7 @@ In a first step we reproduced the results of \cite{Rusu14}. Their ISI- and SPIKE
 %
 \begin{figure}
     \includegraphics[width=85mm]{Performance_Comparison.eps}
-    \caption{\abb\label{fig:Fig5-Performance-Comparison} Performance comparison.   A. Time needed for computing the ISI-distance, the SPIKE-distance, and event synchronization as a function of the number of spikes in each of the two spike trains. For the ISI- and the SPIKE-distance we show the performance improvement from the old (dissimilarity profiles are equidistantly sampled with a sampling interval of $1$ ms) to the new algorithms (optimal spike-dependent sampling). Among the three measures included in SPIKY, event synchronization ranks in between the slower SPIKE-distance and the faster ISI-distance.   B. Dependence of the performance gain between old and new implementation on the sampling interval used for the old implementations. XXXXX Better plot gain factor. This would avoid the two constant lines. XXXXX}
+    \caption{\abb\label{fig:Fig5-Performance-Comparison} Performance comparison.   A. Time needed for computing the ISI-distance, the SPIKE-distance, and event synchronization as a function of the number of spikes in each of the two spike trains. For the ISI- and the SPIKE-distance we show the performance improvement from the old (dissimilarity profiles are equidistantly sampled with a sampling interval of $1$ ms) to the new algorithms (optimal spike-dependent sampling). Among the three measures included in SPIKY, event synchronization ranks in between the slower SPIKE-distance and the faster ISI-distance.   B. Dependence of the performance gain between old and new implementation on the sampling interval used for the old implementations.}
 \end{figure}
 %
 % #########################################################################################
@@ -660,10 +654,6 @@ Another potential direction would be the extension of the methods used here from
 
 Note that there are many open questions regarding neuronal synchrony. Among these questions are its role in dynamical diseases like epilepsy and its relevance for neural coding. While a thorough discussion of these issues is beyond the scope of this paper, we argue that SPIKY should be a very useful tool for investigation. If epileptic seizures and/or time-dependent stimulations lead to changes in spike train synchrony or spike train clustering, SPIKY should be able to detect them.
 
-%A comprehensive comparison of all proposed methods, done by \cite{Rusu14}, already indicates that the speed of computing distances is converging towards the realtime application. Reaching memory efficiency and solving temporal resolution, would add up to a useful tool to analyze huge amount of data. 
-
-
-
 \vspace{1cm}
 
 \begin{thanks}
@@ -677,7 +667,8 @@ We thank Ralph Andrzejak, Emily Caporello, Daniel Chicharro, Tim Gentner, Conor 
 
 We also thank Thomas Alderson, Black Square, Mayte Bonilla Quintana, Hamid Charkhkar, Didier Desaintjan, Mario DiPoppa, Mahboubeh Etemadi, Marion Najac, Matthew Phillips, Eugenio Piasini, Robert Rein, Rodrigo Salazar, Michael Schaub, Eitan Schechtman, Matthew Williams, Yunguo Yu for advice and user feedback.
 
-Finally, we thank Conor Houghton, Mario Mulansky, and Andreea Sburlea for carefully reading the manuscript. XXXXX Check for completeness in the end XXXXX
+% Finally, we thank Conor Houghton, Mario Mulansky, Andreea Sburlea, and Alessandro Torcini for carefully reading the manuscript. XXXXX Check for completeness in the end XXXXX
+
 \end{thanks}
 
 
